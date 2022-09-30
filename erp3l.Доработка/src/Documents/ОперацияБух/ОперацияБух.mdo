@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c4cea349-a658-4f0a-b40b-c1483600ec63" extendedConfigurationObject="310bcfb3-5577-4190-b808-6682f4e49b2c">
+  <producedTypes>
+    <objectType typeId="71d5e76a-d728-4627-b107-7f441ce4b344" valueTypeId="c76a0980-b53d-4ba9-b0d6-e63dfec7135c"/>
+    <refType typeId="0f34fc5b-7d84-4918-9ab2-be6b42b2bcec" valueTypeId="c207ddf4-99df-46fb-9d59-44afda7121f9"/>
+    <selectionType typeId="76855925-85fb-449d-b813-3484f4b11251" valueTypeId="8aa7df6b-a8a3-4375-aeef-332e87f55a39"/>
+    <listType typeId="0b40da7d-2bdb-4a07-bb60-6a5b9ffaa30c" valueTypeId="67ee48dc-1574-4147-815e-7821b9073bc6"/>
+    <managerType typeId="43126402-b275-453d-8b87-539ba69db34e" valueTypeId="ab4e143b-8bec-45f0-9ecf-5cbea827887a"/>
+  </producedTypes>
+  <name>ОперацияБух</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="017cc9c7-9680-46ac-86a0-5c9e6755ed54" extendedConfigurationObject="285d4c05-b261-43a2-88d7-b2975176ef9f">
+    <name>УдалитьСторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="72d483b5-8ef0-4173-a624-d43760d65f80" extendedConfigurationObject="1e51aace-8c66-45c4-a047-824592d7dd91">
+    <producedTypes>
+      <objectType typeId="caa0d14a-ba97-45a4-8aa6-0f143dd54e99" valueTypeId="b39795ac-a5bc-47d0-bade-2d010ebf4663"/>
+      <rowType typeId="3881d473-8932-46a1-9102-ae49ed0d202c" valueTypeId="58d8c8af-d24d-4c94-9674-1e4f372fa499"/>
+    </producedTypes>
+    <name>ЗаполнениеДвижений</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="c2074279-71d2-4067-a1e0-e8f4c729e692" extendedConfigurationObject="a2726d59-cb88-4c16-85e9-69e4fddc4679">
+      <name>Документ</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

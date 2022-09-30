@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="3c233e0f-5bb2-45cd-b37b-b5840a1c2962" extendedConfigurationObject="12bb22aa-1116-42cb-9a3e-2b5db18d14b1">
+  <producedTypes>
+    <objectType typeId="d92ff656-c7c9-4861-8edc-749b859b5f25" valueTypeId="3c364d65-33f1-4399-8749-fdef27a3510d"/>
+    <refType typeId="2f91607a-3e95-4201-aa59-b245051f1ffa" valueTypeId="7720024f-6b62-40d1-b80b-be8cd429098a"/>
+    <selectionType typeId="791a96c8-438a-47e0-9fe9-579555b04437" valueTypeId="6a575f71-1de3-41c6-a986-60ffd54a0d0c"/>
+    <listType typeId="fa7c25a5-6e05-4220-aea1-83855bff92e4" valueTypeId="9da82df3-dd48-4ea5-abbd-34f494910cd7"/>
+    <managerType typeId="b0a11fbc-3d98-4270-bf3e-8cfc0fe07a5d" valueTypeId="8c138939-6dda-45c4-b5ef-44cede60a0e2"/>
+  </producedTypes>
+  <name>РегистрацияПрочихКонтролируемыхСделок</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="87ed0e22-bb83-40ce-a78a-9c5c1009a76b" extendedConfigurationObject="0c5cfbd2-a42f-46b8-96d5-85468f4b91df">
+    <name>УведомлениеОКонтролируемойСделке</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.УведомлениеОКонтролируемыхСделках</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

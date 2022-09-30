@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="16b5bfb0-6816-40cc-8b01-dc725275a80c" extendedConfigurationObject="db8c07bb-61d7-4026-a20f-811bed0a743a">
+  <producedTypes>
+    <objectType typeId="0eb419eb-8610-4c79-b2fe-b5febf2fe92f" valueTypeId="d476ff03-8493-46a1-b4a2-437ac085858c"/>
+    <refType typeId="ada7f418-6420-489f-9823-0abc17dd4f02" valueTypeId="7899f0d3-2c39-4a04-80f0-5eff7b0b5d94"/>
+    <selectionType typeId="b43262cc-a2b5-49ac-90e1-f48cce628df7" valueTypeId="c988132e-08c6-4a28-85c0-3eb9e294cfbb"/>
+    <listType typeId="62d4cbb1-110c-435a-ae52-3854305ad532" valueTypeId="0f256b32-a6d1-4acb-8fc0-943dad381835"/>
+    <managerType typeId="ef29b091-d902-4b63-a5a6-914627fe2d28" valueTypeId="c3c9a1e9-3713-4b2e-b249-8fa65ff3a665"/>
+  </producedTypes>
+  <name>ПеремаркировкаТоваровГИСМ</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="e9636020-e338-4c82-9580-9904c542ec81" extendedConfigurationObject="723c13ed-eed0-4aee-b4ea-14b557cdfd2c">
+    <name>НазначениеКиЗ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Назначения</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="a11b2ada-53cf-4084-b875-c68a54857238" extendedConfigurationObject="4d7314c1-e484-44e9-86fe-68a8bcf826c6">
+    <name>АналитикаРасходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

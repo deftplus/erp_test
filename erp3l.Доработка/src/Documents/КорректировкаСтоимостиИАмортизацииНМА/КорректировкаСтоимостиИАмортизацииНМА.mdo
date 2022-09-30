@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ea81951c-edae-4769-8447-0708d4a2bba5" extendedConfigurationObject="9a10cf19-e56f-44c2-ad62-6b7524bd28e8">
+  <producedTypes>
+    <objectType typeId="76b7f5e8-89d7-4ffc-85c9-aaec432525db" valueTypeId="bb09b945-133f-48bb-b5d9-fa372ae35279"/>
+    <refType typeId="699563ec-86ca-44a3-9837-d384467c987e" valueTypeId="f46be268-1d65-4e09-8062-90c106942c8d"/>
+    <selectionType typeId="442fe413-cb03-4bfd-a65d-40ca0e96f847" valueTypeId="e38e25c7-9f65-49df-a271-d2d6a517564a"/>
+    <listType typeId="51459b90-ea0d-4ec6-853a-6ca0c3e879cf" valueTypeId="87ed3a77-07aa-41fe-9cdb-9e1a6a431298"/>
+    <managerType typeId="7a9933b2-7950-4a0e-a16e-a7f4bd1662fa" valueTypeId="1e6f660e-4b7e-46e0-9c7f-46bd62f8d0ca"/>
+  </producedTypes>
+  <name>КорректировкаСтоимостиИАмортизацииНМА</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="a817416a-73c1-454c-8601-a3aeed8dbcd3" extendedConfigurationObject="8043115a-07e4-4a9c-9988-ef49a0e38ea1">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="2ab21d6c-6582-4ab0-982f-bea85c7e96ee" extendedConfigurationObject="f7a74b5f-73b8-4231-8d78-6b9ecd00794c">
+    <name>АналитикаРасходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

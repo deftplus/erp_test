@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="6251b16c-6f21-4eed-9922-f3be55ea3c04" extendedConfigurationObject="07045492-603c-499e-9a36-f835b1e3f9f5">
+  <producedTypes>
+    <objectType typeId="1fdfce3a-3a82-4272-ae9e-6970c3481590" valueTypeId="0de45e05-9ac6-41e7-8699-601b51b1690a"/>
+    <refType typeId="c6972952-be4c-4555-a1ef-23686b61eb8c" valueTypeId="76a3ac51-2ff1-44cd-89d9-4d89aa63ac30"/>
+    <selectionType typeId="c6f43675-fa9d-4736-aca1-b7081f5cdebb" valueTypeId="6012927b-1920-4f1a-bd06-bbb1381f92d1"/>
+    <listType typeId="fc931592-83a3-47ef-abc6-151f60212784" valueTypeId="f670e511-e99d-4f80-b174-ca5653db99d2"/>
+    <managerType typeId="85cc7329-c2c0-41b0-a11e-04cfe3269e47" valueTypeId="9e34846e-98b7-410a-8880-f4c8ad91e568"/>
+  </producedTypes>
+  <name>ВнесениеДенежныхСредствВКассуККМ</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="99750a2a-83e4-4797-b96d-ac4b8e1a01dd" extendedConfigurationObject="3a7a68b9-0e1b-4e3e-875a-995467d640d7">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.РасходныйКассовыйОрдер</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="eff258de-24e6-43d0-b89e-36c0d3db2edf" extendedConfigurationObject="bf23ae7e-0b2b-4ae1-b772-6627db4f5c48">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ВнесениеДенежныхСредствВКассуККМ</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

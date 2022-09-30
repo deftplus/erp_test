@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4884a322-42ef-4774-b8db-37f6c892d8da" extendedConfigurationObject="cc0dd031-a0e2-4b88-abf1-5ab5416b13bc">
+  <producedTypes>
+    <objectType typeId="20679d37-a62b-4c69-9ac9-d7e4e1b9a979" valueTypeId="d15fb182-26b3-4199-bda1-11be2fced2e9"/>
+    <refType typeId="c514e36b-c3b0-46c7-96d6-d93882f60d1b" valueTypeId="34bec5bc-700c-4d95-8666-d554f0b55acd"/>
+    <selectionType typeId="eff131b5-6cd2-47e6-a9f7-4eea1d79e133" valueTypeId="68c5da9d-0ab8-4e3c-afd7-1fca22bae136"/>
+    <listType typeId="33de639e-ddb6-46e9-83cc-52ff7b1c40d2" valueTypeId="672e0ef0-b36f-4501-a7f5-d1516c0a98b5"/>
+    <managerType typeId="64f00977-ae81-4b96-9576-f126a33989e2" valueTypeId="3b7c8d8d-b73e-4485-9def-620da92508ab"/>
+  </producedTypes>
+  <name>Лоты</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="4aa1b32c-2aa6-4260-8d21-5dbb684f8e0e" extendedConfigurationObject="8461d3c0-0608-46e5-90dd-07dca0cae74e">
+    <name>ЗакупочнаяПроцедура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ЗакупочныеПроцедуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="ce1ce228-f823-4484-9b0e-057fd37e1011" extendedConfigurationObject="992ec53c-279e-4d19-8a64-3513c3f10b41">
+    <name>СтрокаПланаЗакупок</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.СтрокаПланаЗакупок</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Catalog>

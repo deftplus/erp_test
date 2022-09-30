@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ed65f566-6796-4b61-a024-06abe7488435" extendedConfigurationObject="a56c2265-64b9-41f8-9da0-848e56a8734d">
+  <producedTypes>
+    <refType typeId="4650b05a-db28-4709-afaf-a2cdc90eb4a2" valueTypeId="87b1d22c-bb0c-4358-b0eb-223fc8bb9f85"/>
+    <listType typeId="10e16cf0-2b78-4e37-8d3b-290474514db8" valueTypeId="908e5398-bc8a-4c05-81b7-16448bd2b412"/>
+    <objectType typeId="5d210964-be0d-461c-876e-31e2b84b5be5" valueTypeId="0463a1ed-b182-44c8-b18d-2372b0db8168"/>
+    <managerType typeId="2bf913a4-dcc4-4dc0-a37d-b3c28bd91715" valueTypeId="3a559d3c-d7fd-481c-9ad3-0845e8e4ebf7"/>
+    <recordManagerType typeId="453e852d-ccbc-484a-a962-c2e8ad2e5630" valueTypeId="159a12fb-3f56-46b4-80e0-3315ddf3c7eb"/>
+    <recordSetType typeId="b51a8004-49d0-415a-865b-2cf4a9705dc0" valueTypeId="b472cad0-2cf3-49c2-ab62-dd31730695c4"/>
+    <recordType typeId="ef714f3e-54f1-4eba-a525-9cb1e26e79dd" valueTypeId="a441678c-f1a6-4a73-81f1-332d559b02e4"/>
+    <recordKeyType typeId="5aa61b4a-1e6e-440d-849c-35365e3ba00e" valueTypeId="7de8a89e-4cd4-49fa-9f03-8948e979d86e"/>
+  </producedTypes>
+  <name>CORR</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:TableExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <parentDataSource>ExternalDataSource.ТаблицыРС</parentDataSource>
+  <tableFields uuid="d1385696-b352-45cc-a3f3-46e8e3cc35d2" extendedConfigurationObject="37ef25c1-0181-4952-b5f7-fbccea5be6a1">
+    <name>CORR_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="3a058222-d5b6-4640-9c64-1d78cda6ba55" extendedConfigurationObject="da979a4e-a1bd-4dc2-bde3-cbbe9747a72a">
+    <name>CORR_NAME</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>50</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="9f6c46f2-60ad-47e1-9d57-9adfbed35b46" extendedConfigurationObject="b6977387-4b1c-4662-8157-7fa7c0c5669b">
+    <name>CORR_ISRESIDENT</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="ea63eeed-c055-4e3a-a7ec-97b022768142" extendedConfigurationObject="1d4ed29c-d764-4eb5-972b-6ba9214f5a49">
+    <name>CORR_ISTAMSOYUZ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>5</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+</mdclass:Table>

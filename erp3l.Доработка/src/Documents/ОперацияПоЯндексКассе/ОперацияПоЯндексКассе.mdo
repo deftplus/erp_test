@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="8689eee5-014d-4388-af7a-dc5811de4aa0" extendedConfigurationObject="05f5329f-ef4d-49d7-8f98-759a62444841">
+  <producedTypes>
+    <objectType typeId="70db916a-962f-4628-8c81-968b9669b7a7" valueTypeId="1d7a22bf-f40a-41fb-bebe-21f8fd8ae8c3"/>
+    <refType typeId="7146803d-2eec-4aaf-ad47-e58a9d439e0b" valueTypeId="a9574715-866b-4379-abfe-3f2afd66fe9f"/>
+    <selectionType typeId="76a099af-895c-48d3-899c-6d6cdcafceb8" valueTypeId="89a1e204-f4be-43cb-a950-109b9e21e3c2"/>
+    <listType typeId="7a0657f9-3c9d-464d-b521-6582362040d3" valueTypeId="fa756731-35ef-430e-a745-46594787c9cc"/>
+    <managerType typeId="aa11dde7-17d4-4365-a916-835fa177ba16" valueTypeId="75dc08a5-b179-44d3-957a-819fec9e1159"/>
+  </producedTypes>
+  <name>ОперацияПоЯндексКассе</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="ac87318c-12b4-4387-8536-0ac60ffd243b" extendedConfigurationObject="af0cc5ab-d741-44ef-818f-e0312afa5b6e">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ОперацияПоЯндексКассе</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="1524d2f8-2042-453c-9d5f-2ac527d8d559" extendedConfigurationObject="ab7cb612-24f8-4727-bb3f-d59bb74e0aee">
+    <name>ОснованиеПлатежа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ОснованиеПлатежаЧерезЯндексКассу</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

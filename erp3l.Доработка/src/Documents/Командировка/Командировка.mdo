@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="ee682b8d-ae32-45b2-b1e9-ea6f2bd856b2" extendedConfigurationObject="376acf9e-1be3-4cdc-8820-399d07079be4">
+  <producedTypes>
+    <objectType typeId="9a054204-3050-4d5c-a7b8-e2a04d319634" valueTypeId="aa6ce8a8-d9b5-42f6-a548-84465fafadeb"/>
+    <refType typeId="38353516-b68a-4acf-8892-c36a2babf1b3" valueTypeId="fe753782-8aff-40cd-a91b-6e9f0b967a5a"/>
+    <selectionType typeId="c1dbc102-c669-4f6e-9eea-bbb026d35567" valueTypeId="148709c6-a598-47a1-99b8-44ee22cb7af2"/>
+    <listType typeId="bfbc4974-14f3-486c-b685-2c19adbef6d1" valueTypeId="84044539-396c-4b3e-aa17-8981fc4a48c1"/>
+    <managerType typeId="fd17563a-f34b-4bc5-9656-1558bcfac924" valueTypeId="c12cd237-e08f-473d-a253-930e3cd65585"/>
+  </producedTypes>
+  <name>Командировка</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="44bd7374-f7ee-4067-859d-527ba7d4d815" extendedConfigurationObject="b9e70bfc-4bf5-4463-bd83-5b5dd054ab91">
+    <name>ЗаявкаСотрудника</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЗаявкаНаКомандировку</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="44285bdb-8d4e-4ebc-b96f-c52fd97893a8" extendedConfigurationObject="74198f42-0816-4eee-9b0c-947cd1a1309f">
+    <producedTypes>
+      <objectType typeId="a2cc1dd3-dc46-4e09-9d00-ebef922d26f9" valueTypeId="fc8fe7e5-32ca-47dd-8527-07fec0c0e713"/>
+      <rowType typeId="86074d3d-b695-49eb-bd1e-2ec810057157" valueTypeId="99a6d5b0-1a41-4edb-ad76-4761f3c0c8a6"/>
+    </producedTypes>
+    <name>НачисленияПерерасчет</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="25cf65a5-0b32-485a-8d48-957278fb1a92" extendedConfigurationObject="32b4e6dd-f2ed-4be2-bd94-08143cb839a4">
+      <name>СторнируемыйДокумент</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.СторнируемыйДокумент</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

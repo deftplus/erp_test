@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="a09d2d4d-74eb-473c-839f-16b41d6d1804" extendedConfigurationObject="f117edea-75bf-4c92-a7f2-cedf43ea043f">
+  <producedTypes>
+    <objectType typeId="a736c7fc-a1ba-4256-a44b-2e5e848a51ba" valueTypeId="f20f680f-8a7c-45d4-871f-2cc6b7c51b55"/>
+    <refType typeId="4e6a07a5-7c09-40d5-8c20-652cf0e95cb5" valueTypeId="99325c04-798b-4791-ad03-a3df8183acd2"/>
+    <selectionType typeId="3c2c0fa1-bf7d-41da-ad86-bb6bede768d1" valueTypeId="40f0872b-e70d-4ddd-93b4-82e95fa76be1"/>
+    <listType typeId="8dc91f8f-bb0d-4331-9311-1217d1ce350e" valueTypeId="2d51df85-b240-41e8-85d7-ab34b1d46943"/>
+    <managerType typeId="cdb3c737-3b7f-42ab-9801-3168e61be998" valueTypeId="55aefc75-696c-483c-9c7b-162667f27dc2"/>
+  </producedTypes>
+  <name>ВводОстатковПрочихАктивовПассивов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="43b0430d-4ecd-42d0-a365-40b43ef35fd8" extendedConfigurationObject="f823fe84-f1fc-454f-bf79-e344a573b2c4">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ВводОстатковПрочихАктивовПассивов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

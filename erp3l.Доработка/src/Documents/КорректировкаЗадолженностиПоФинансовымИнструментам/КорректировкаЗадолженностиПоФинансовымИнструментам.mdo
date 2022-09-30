@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="5ea264df-ee7f-424c-b200-74eb8271eb45" extendedConfigurationObject="a94d1443-00fc-40b2-a418-a96499db3b90">
+  <producedTypes>
+    <objectType typeId="f61ca648-f410-467b-b946-aecc368608cd" valueTypeId="3b9f7af8-ef80-4af2-916d-93879a889adb"/>
+    <refType typeId="b1f64f40-e682-4009-a6a9-1facca568e54" valueTypeId="cf26ab7a-91bd-448d-85db-830c024c2e78"/>
+    <selectionType typeId="06062e7c-36de-4446-b973-ffbdc865c499" valueTypeId="47740ef9-6584-47fa-950a-2e1065729dc9"/>
+    <listType typeId="85c86afb-6d33-497a-b293-3c0ca2b6bcf1" valueTypeId="46256d91-1aee-4374-9101-07ad80c71c1a"/>
+    <managerType typeId="5194be01-e06a-4c2b-8705-18f253460335" valueTypeId="86a66b91-3407-4e38-9519-fae0b3314b0d"/>
+  </producedTypes>
+  <name>КорректировкаЗадолженностиПоФинансовымИнструментам</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="993543b5-863f-4789-b049-4161c03e8a82" extendedConfigurationObject="e2e3d48a-45a5-436b-ba3d-e891c9ac8b26">
+    <name>АналитикаРасходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="3858463f-d2a1-417d-b31a-28c3e7f2da9f" extendedConfigurationObject="ed5eee5e-7281-490e-a7db-d44c9760e0d9">
+    <name>АналитикаДоходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиДоходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="b7f2cd79-30dc-403f-a600-b0d556f73dec" extendedConfigurationObject="62ba02d8-a463-4bba-a511-69ff4233fc52">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.КорректировкаЗадолженностиПоФинансовымИнструментам</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

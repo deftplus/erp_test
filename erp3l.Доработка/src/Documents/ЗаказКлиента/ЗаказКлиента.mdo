@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="6ade29dd-9215-4479-a148-06fa9666d894" extendedConfigurationObject="1ceef4a2-6b58-45a0-8a75-bb6e3004590f">
+  <producedTypes>
+    <objectType typeId="dda46046-476d-418c-9b9d-4b6da72b8b60" valueTypeId="cc7ae32c-acf0-4e66-a636-dd6b9ec2d2c9"/>
+    <refType typeId="c5c5158d-423c-4ac4-8823-5343a8e2a4bc" valueTypeId="002e4972-77fb-43f4-8e7f-d7a3e25affff"/>
+    <selectionType typeId="e9ef40c1-b965-416c-8a95-9bfdab840bc9" valueTypeId="82243953-a293-4c9d-82a5-feb59bfdbfa0"/>
+    <listType typeId="02b1859b-b1ed-4d64-b480-aaad3a61f0e5" valueTypeId="5faaec67-b27f-4111-a7f8-13732092ffca"/>
+    <managerType typeId="5a3e9162-8350-41e4-9a7b-34a9979da379" valueTypeId="30309727-31ab-4c75-93c4-f4c21c95e79e"/>
+  </producedTypes>
+  <name>ЗаказКлиента</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="a3a40753-7426-457f-8b23-05351f253686" extendedConfigurationObject="37cf8891-f7e5-4223-a4fe-8aa0212b88aa">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="53821285-d67b-4f12-bdee-15a9195404a3" extendedConfigurationObject="bfffbaed-91a9-4294-9f16-b3a80205fb4b">
+    <name>Назначение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Назначения</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

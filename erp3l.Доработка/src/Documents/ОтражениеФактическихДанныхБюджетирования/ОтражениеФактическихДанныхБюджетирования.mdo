@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="d6a3c788-8e7d-4ddb-b960-e5d099d4746e" extendedConfigurationObject="76000626-456b-428b-bfc1-72531c875b91">
+  <producedTypes>
+    <objectType typeId="f2075c5f-020d-4bc8-a707-f1f05862f593" valueTypeId="6ac708fe-edc8-4e58-87e6-469551ca0325"/>
+    <refType typeId="b35bd50e-0929-49f4-bb6d-fa7505220a4a" valueTypeId="11b34dc0-dc60-431c-bb69-1a59f094cff7"/>
+    <selectionType typeId="7bc01e79-d374-4586-931b-951f811e6a6b" valueTypeId="af1d4011-3512-4803-a1e1-4da4b75e1f2a"/>
+    <listType typeId="0e78b393-09f6-4d86-965a-a017c205eb8c" valueTypeId="696ac92a-25f9-48a6-a855-6f6602eddc62"/>
+    <managerType typeId="f3c530f4-3e79-480c-9066-bab3fdf20f72" valueTypeId="e79f1c51-089f-4fb4-81b2-43a31d52df3d"/>
+  </producedTypes>
+  <name>ОтражениеФактическихДанныхБюджетирования</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="2dfdcbd9-be6f-4b42-8616-a238704e00da" extendedConfigurationObject="786ca917-8c44-4bf5-af65-87b3034e0bca">
+    <name>ИсходныйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

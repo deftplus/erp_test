@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="fea6d8e3-cc9c-4a6a-b75d-24f0ae292168" extendedConfigurationObject="e450f78d-67a0-4f67-8aa8-48beeb4a1b14">
+  <producedTypes>
+    <objectType typeId="034a0bac-4f05-4d80-afc1-44e97bf734c2" valueTypeId="19e89a90-0350-44d9-9e4c-6ea12eab028e"/>
+    <refType typeId="74e68f7f-362e-4760-834a-145461e1e83c" valueTypeId="bc4c54d1-4eb1-49a7-89e5-d8ab40c53e45"/>
+    <selectionType typeId="8c2accf0-b185-45f5-ac94-7187ba23b373" valueTypeId="c86742d2-fa6b-4ff8-a78a-ac3fec495cdd"/>
+    <listType typeId="4389519f-d00f-47a5-9c4a-4296212d5e4f" valueTypeId="3cae948f-9708-4cd8-a579-c6479aa03c6e"/>
+    <managerType typeId="abaefe07-5cd2-446c-962e-c1d205cc6e3d" valueTypeId="fc4772ed-bdee-4ff5-8159-8223dce43e8c"/>
+  </producedTypes>
+  <name>ВозвратСырьяДавальцу</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="1c0dc75e-97b4-4cdf-8a5f-ac287ec556a2" extendedConfigurationObject="e34343dd-f5dc-4937-9043-9e22a139d434">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="b0c968f8-f60c-4e4d-94e3-9665b7f38ed1" extendedConfigurationObject="7d40034b-b773-40fe-a199-c30340cadb7f">
+    <name>ЗаказДавальца</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЗаказДавальца</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="1a896215-3521-4b93-85f6-bd9ab6b0372c" extendedConfigurationObject="2dd0183c-d668-42be-96df-4b5051397ec2">
+    <producedTypes>
+      <objectType typeId="aaf91a5a-03ef-4155-9abf-372e092bf161" valueTypeId="03768a99-b2fc-4294-bb3b-893e5ec2ff48"/>
+      <rowType typeId="2021ab64-1af2-4e26-b947-1361f4d3a5d6" valueTypeId="ade31569-2ca1-44bc-b227-96bb3f4a49df"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="c1932bca-e1b0-40d7-8f4b-5cdf8142e385" extendedConfigurationObject="1aa69696-c3a3-4e78-ada6-a0b3021bd1aa">
+      <name>ЗаказДавальца</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.ЗаказДавальца</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+    <attributes uuid="ed9d8664-0ac7-4d45-91c4-e1e7f2a5108d" extendedConfigurationObject="3bd0a121-16c7-43b9-80ba-c36e1ddd3a20">
+      <name>Назначение</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Назначения</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

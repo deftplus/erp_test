@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="af76e65e-813f-4e61-bde4-51835f8e1452" extendedConfigurationObject="1b8b67c9-d102-4098-9ab2-841322b60f6e">
+  <producedTypes>
+    <objectType typeId="993f810e-3b64-4225-8228-a261d6840633" valueTypeId="138573e8-d515-4ed6-b7ab-92b9f4f22a74"/>
+    <refType typeId="f8743bfe-71d5-4f8c-ab4d-932a1ee5d142" valueTypeId="1218752d-bf15-49d4-9192-1be6f63ba1c7"/>
+    <selectionType typeId="edca8050-65c5-4878-93f6-6f67be1d0ee8" valueTypeId="1eee7e17-046a-42a3-b32d-03b282e9a512"/>
+    <listType typeId="93a1fb5d-6ce8-4998-88b5-8259beed4dfd" valueTypeId="2c530ab5-66e1-4497-8573-d979155c9c69"/>
+    <managerType typeId="4c3b064f-5c90-4f6b-8265-38fc0716e479" valueTypeId="5e01ed5a-0d84-4ff4-b546-c97b7e9a3b5f"/>
+  </producedTypes>
+  <name>КоммерческоеПредложениеКлиенту</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="6f923293-e763-4bea-9e12-3c1e40c3ccef" extendedConfigurationObject="b596749b-e018-470f-817f-d9f00c5a20cc">
+    <name>УдалитьДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.КоммерческоеПредложениеКлиенту</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="0b00ae6a-19b5-4674-af58-662ff4f1c67b" extendedConfigurationObject="a33d75a9-4c3d-41b2-a687-37eb78c263ac">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ОснованияКоммерческогоПредложенияКлиенту</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

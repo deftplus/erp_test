@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="412cbeb5-c171-4b8d-801f-094d826dd64e" extendedConfigurationObject="859f5bc3-d6ec-4535-8118-255328276d06">
+  <producedTypes>
+    <objectType typeId="15944a83-ff40-48d0-9a37-801c752545a3" valueTypeId="aa825e7e-a6c1-4b9f-9f1f-6ba0206b90b0"/>
+    <refType typeId="0ea0b5ac-eb53-47e2-b59b-184ca71f14f9" valueTypeId="39394278-8a78-4d0a-8bb5-2dccc0084cc9"/>
+    <selectionType typeId="26b8edb9-ec45-4e0e-9eb1-6afe5781e603" valueTypeId="a55cdccd-3020-4d7f-986b-4d11f74a323f"/>
+    <listType typeId="3cfe5c28-f88e-4d32-931d-747a00ee1b99" valueTypeId="3e9c292e-b6ec-4f2d-acab-d62f323a5432"/>
+    <managerType typeId="fcccd39e-8aa4-4ad5-a775-4fdce196f20c" valueTypeId="9ee2f6e1-175b-4d28-a4ad-b502b889e8c9"/>
+  </producedTypes>
+  <name>БлокировкаВычетаНДС</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="04284767-7e8e-4e5e-8e62-3360bf6e4ce8" extendedConfigurationObject="32047154-c139-4801-8493-9f697554beff">
+    <producedTypes>
+      <objectType typeId="a52a7ed0-49f1-4911-97da-246c4e9fea55" valueTypeId="be447cbd-bf89-45d7-b7b1-f77798f56835"/>
+      <rowType typeId="ff35b4dc-e2af-412c-b5e3-cae67fc262c4" valueTypeId="cbe92e93-e2d7-45e1-b19a-68e9723b67d5"/>
+    </producedTypes>
+    <name>СчетаФактуры</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="f5b1ca93-1da1-4a09-837c-85bf6df9679a" extendedConfigurationObject="b0f0fddc-17b9-41d0-be18-0e47d5b68803">
+      <name>СчетФактура</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.СчетФактура</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

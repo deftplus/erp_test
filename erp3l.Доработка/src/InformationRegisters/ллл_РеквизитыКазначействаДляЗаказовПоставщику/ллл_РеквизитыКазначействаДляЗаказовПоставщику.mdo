@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a3dc4288-85e1-4dc9-a379-2af99811c7f9">
+  <producedTypes>
+    <selectionType typeId="2c0d57b2-75d7-49d0-9a89-bd0e23efa4a2" valueTypeId="cd04e871-df7a-467d-86bb-fd39ac6c5b95"/>
+    <listType typeId="8dcebadb-f8a7-4c78-a4f9-9dc35a83f049" valueTypeId="d5d355f4-6286-4268-8aee-905261a3039e"/>
+    <managerType typeId="e1b14dfc-99ad-4f1d-ad86-1543c6f26fbf" valueTypeId="0e2754a9-53bf-4be6-b37f-1a2677d3039c"/>
+    <recordSetType typeId="7e2bdfed-f3dc-4d9d-b6a3-ea87a7ac5da6" valueTypeId="9f003ea1-e5d7-4434-b1a4-c3bd54f5c4c0"/>
+    <recordKeyType typeId="4c8b4c48-9b33-4b6b-8cf7-f0971df7763c" valueTypeId="0c609353-2283-4a88-9ab7-7e932ec844e8"/>
+    <recordType typeId="96fe352b-b72e-461a-913d-a5fa1f42405c" valueTypeId="0b10e7cb-c5e4-429e-a44a-9b9f0b1769da"/>
+    <recordManagerType typeId="2f2f6548-fe85-4267-944c-e89c5bcb9732" valueTypeId="fafa9791-2701-4e8d-8fdf-3c25ce8d58ef"/>
+  </producedTypes>
+  <name>ллл_РеквизитыКазначействаДляЗаказовПоставщику</name>
+  <synonym>
+    <key>ru</key>
+    <value>Реквизиты казначейства для заказов поставщику (3l)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="caa9f00b-91a8-474b-959e-24a6a539b436">
+    <name>ОбработаноРуководителемКазначейства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обработано руководителем казначейства</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="f4abfd8c-6224-45dd-88a9-8687c211f360">
+    <name>ОрганизацияПлательщик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация - плательщик</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="0c8fe64e-f585-465b-8900-4037bd8e1d6f">
+    <name>КонтрагентПолучатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент-получатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="5a5f27d3-37ff-45d5-a284-79e0c5f2a8c1">
+    <name>ДоговорОплаты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор для оплаты</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ДоговорыКонтрагентов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <dimensions uuid="d6092ff4-f7ba-43ba-859f-415d37651d72">
+    <name>Заказ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Заказ</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.ЗаказПоставщику</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

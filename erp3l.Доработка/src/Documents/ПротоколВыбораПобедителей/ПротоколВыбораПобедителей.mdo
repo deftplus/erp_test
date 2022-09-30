@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="7fad2f1f-4f9b-46e2-9fff-5ccc54550798" extendedConfigurationObject="193dac4f-b3d0-4cd5-b467-b86896773e2a">
+  <producedTypes>
+    <objectType typeId="c1d8c825-bd57-4c0c-ad90-60eb2cfe71f7" valueTypeId="7e91fca5-48e4-4830-a62a-b6cb5883a063"/>
+    <refType typeId="69d57849-db71-4b1d-a17c-6c7f8e5625ce" valueTypeId="9ebd992a-0a39-454d-8d4b-37cc52f97524"/>
+    <selectionType typeId="c9f53ec7-b695-4405-92f9-c2ec32177f16" valueTypeId="25d7b85d-0bf5-4b6b-bc25-c6757646e305"/>
+    <listType typeId="7a547db5-7eb0-44de-98ca-872f6bcc9169" valueTypeId="c2d4379e-67cf-4350-aea7-57d028428740"/>
+    <managerType typeId="a7e419a2-ed18-4a01-b295-6b7cffe4fc9a" valueTypeId="b03c3509-f87b-45a8-9fdc-4c21eefa7f2f"/>
+  </producedTypes>
+  <name>ПротоколВыбораПобедителей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="d71bdfc7-4b48-43db-9d46-69ded3be0199" extendedConfigurationObject="d600b513-a8e8-421f-b59a-805ae77531bb">
+    <name>ЗакупочнаяПроцедура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ЗакупочныеПроцедуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="a0a5ce66-df6e-46bf-bde2-4a5c3bc71e0f" extendedConfigurationObject="f11625f1-755a-4755-ab31-84525a54cfe8">
+    <producedTypes>
+      <objectType typeId="89d73114-b007-442a-90f8-b4cf8e51cdc3" valueTypeId="e0b3ccd4-359b-4e97-963d-e624303f2f5d"/>
+      <rowType typeId="9db4087a-b957-4cf2-927a-ab6c6d5f5432" valueTypeId="9bfdbc83-16b8-416f-a8cd-609752c77ca2"/>
+    </producedTypes>
+    <name>ПредложенияПобедителей</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="664737ed-cd46-4679-817c-c291e166cfad" extendedConfigurationObject="0fb147c6-17d2-4990-928d-ee87eef2fc9f">
+      <name>ПредложениеПоставщика</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.ПредложениеПоставщика</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

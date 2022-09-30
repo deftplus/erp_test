@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="aeb4cc07-603c-41e0-9e4e-12742c162c5e" extendedConfigurationObject="155cf595-f20d-4b68-8548-8fe4c23a3b5e">
+  <producedTypes>
+    <objectType typeId="ad6aad1e-0bf5-4b15-a091-a24acd6ba687" valueTypeId="afe277c9-039e-4770-97ca-f90211dcca63"/>
+    <refType typeId="f9e749a6-0024-4223-92a6-6d72ab6a26a3" valueTypeId="fbb4e479-cd0b-4e25-a913-f71a81e83d3f"/>
+    <selectionType typeId="8e68e21d-0db4-4131-8003-eeffe012da74" valueTypeId="2d92e1fa-3015-41fa-82b2-9e0cdf29ea38"/>
+    <listType typeId="de7a7b93-ddc5-4f9c-8fca-8f1a94b854c3" valueTypeId="a7667dd9-2574-4cdd-9870-9743a897c3ab"/>
+    <managerType typeId="740669ce-8916-4ac9-9501-07857cd3daaf" valueTypeId="8a21ae9a-4c10-42cb-95f4-4a95a342875a"/>
+  </producedTypes>
+  <name>ЗакрытиеПлатежнойПозиции</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="238a268b-ee6c-4940-9ea6-8ed9be8c772e" extendedConfigurationObject="04609152-4b1e-4cb5-9a59-f36ddf32fe5a">
+    <name>ЗаявкаНаОперацию</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ДокументыПлатежнойПозиции</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

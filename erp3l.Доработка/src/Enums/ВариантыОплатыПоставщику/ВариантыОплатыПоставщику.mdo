@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="1c26c55f-a74e-4df0-b756-dcb8aab881ee" extendedConfigurationObject="e4cf4ba5-6ee2-40b5-9c32-851af1a09ef6">
+  <producedTypes>
+    <refType typeId="1a480415-aea3-4825-9c8b-96450c89890e" valueTypeId="52dd2266-beb2-497e-97a6-e5fa39fcebab"/>
+    <listType typeId="4baabf43-8a83-4cd5-b728-f2bcc3465e91" valueTypeId="9aa4085c-7e5b-4cae-a78f-3f4bc6543f47"/>
+    <managerType typeId="372527ae-e3c2-4da8-a766-3cb025d5c58e" valueTypeId="10007f5a-d4e0-49bf-af73-ee8f5dcd03fd"/>
+  </producedTypes>
+  <name>ВариантыОплатыПоставщику</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:EnumExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <enumValues uuid="5aec8a13-042d-4316-bdba-a906ece14330" extendedConfigurationObject="b974320b-d857-4590-86ba-2fd9299af145">
+    <name>ПредоплатаДоПоступления</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+  <enumValues uuid="a96c91d6-0ddd-4c2a-85cb-4f4dd4da48ac" extendedConfigurationObject="e4160da0-0b58-4879-bd77-87e3c4ebf10f">
+    <name>КредитПослеПоступления</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="83949176-a93d-4d4b-b96e-ce9883ad5e0a" extendedConfigurationObject="f5661083-8399-4044-a48e-ea7c8c9d4933">
+  <producedTypes>
+    <objectType typeId="ed4ac2a2-6d9a-4f08-a3d1-e3830711c533" valueTypeId="4678d8b1-641f-4848-b7a8-fe76a3db2963"/>
+    <refType typeId="db526a92-422e-4794-b26c-95ba6ae71e14" valueTypeId="e63bfa5d-6aa4-40e1-b929-4a4cde121db3"/>
+    <selectionType typeId="2ccef8c7-caa8-4378-bbe0-9b260d80b9b5" valueTypeId="227185ae-46eb-4401-a4ec-1e666b6842c5"/>
+    <listType typeId="3fcc4c08-df5e-4559-b352-71af309a351d" valueTypeId="39ec768d-548f-4472-a93f-ea0fe53e8d3a"/>
+    <managerType typeId="66307df4-ef7b-4b09-9f67-d7cb824fa089" valueTypeId="63f0e442-6416-49c3-87f2-fb8828f14077"/>
+  </producedTypes>
+  <name>СчетФактураКомиссионеру</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="405d6bad-3869-4a0f-b36e-5bdacc886c4d" extendedConfigurationObject="e85fa4df-5a45-41c7-b60c-a27f78d929cb">
+    <name>СчетФактураОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.СчетФактураКомиссионеру</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="9ad13250-5481-44db-be18-30738d669c03" extendedConfigurationObject="31072c42-6b44-491c-b6aa-df853e39a721">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ОснованиеСчетФактураКомиссионеру</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

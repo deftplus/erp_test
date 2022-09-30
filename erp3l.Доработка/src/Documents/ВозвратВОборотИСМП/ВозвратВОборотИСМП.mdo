@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="50a54abc-5b0f-4a9e-81a6-43de775c57e8" extendedConfigurationObject="fed06ebd-7382-42c7-a4a0-f0ee84c5220c">
+  <producedTypes>
+    <objectType typeId="cb39f1cb-b1bb-46db-83df-38c3541f11d8" valueTypeId="cafcc803-73b8-4e9f-83e0-71bc3d41d819"/>
+    <refType typeId="a63ccd94-017e-4e90-bbd3-2989b669517e" valueTypeId="52416ca9-f197-4175-a4eb-40b5dcbe2137"/>
+    <selectionType typeId="3284aa0b-3a4b-4415-b4ae-8d81fb468737" valueTypeId="cc30f83b-88a6-4fd1-b43a-cea83f0d8920"/>
+    <listType typeId="72f6a93c-b009-411c-94ae-2faca39e3ff6" valueTypeId="f97021c0-fb99-4775-939a-38916f72381b"/>
+    <managerType typeId="7f86eef4-123e-48d6-98b5-2ff63cc44b38" valueTypeId="0f3dfa24-6f24-40c9-a80f-206f5b0e96f7"/>
+  </producedTypes>
+  <name>ВозвратВОборотИСМП</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="80bc9d3c-35e8-4697-9736-0dda6eda404f" extendedConfigurationObject="1019d3d3-16ef-4973-bfdb-38c34ec6ab41">
+    <producedTypes>
+      <objectType typeId="604a275f-b145-489f-8d6f-6cf6cdb063d7" valueTypeId="4eb7dd61-2421-413e-906d-5a84cce5d703"/>
+      <rowType typeId="27940f58-b746-42ea-b787-a06cb2e8ec9c" valueTypeId="3e4ccd29-4024-4e7b-950e-89bd36c92161"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="c6b0f90c-7ff0-4c0e-88ed-53dfbd36712b" extendedConfigurationObject="8886980f-d1f8-4dff-9e07-d019e9cd8448">
+      <name>ПервичныйДокумент</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.ДокументПродажиИСМП</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

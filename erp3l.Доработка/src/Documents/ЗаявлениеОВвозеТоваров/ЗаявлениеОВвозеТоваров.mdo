@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="9f88ad92-7857-417a-8756-eaec081e69b3" extendedConfigurationObject="1dd62206-de70-45ec-87ab-b89bc5270844">
+  <producedTypes>
+    <objectType typeId="bb6fa02a-7ff0-4f68-bc74-225c094db550" valueTypeId="a1d93f1d-96f1-4eaa-9e65-21dde70c21b9"/>
+    <refType typeId="3cca4624-e94a-4eb3-9f9a-abe0c21de537" valueTypeId="c4509479-3075-4a69-9b98-a637d40fa272"/>
+    <selectionType typeId="eaba7a14-d4a3-4a9f-af2c-81e563c6b32f" valueTypeId="d424187a-dcc7-4322-94a2-1f9be52f852a"/>
+    <listType typeId="f1144277-06a8-41f5-aa28-cf9fbb44a726" valueTypeId="eabfd078-fe6d-4b21-a682-c691081255ce"/>
+    <managerType typeId="4729cd37-9b3b-467a-bbbf-0d3f0e6791f5" valueTypeId="8bcabfcd-6220-4eba-bcab-0cf0166154c9"/>
+  </producedTypes>
+  <name>ЗаявлениеОВвозеТоваров</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="7178debd-129b-450f-92d9-fd21f385f040" extendedConfigurationObject="d0c123e3-f55e-4a02-80e1-b87dfa9d6001">
+    <producedTypes>
+      <objectType typeId="36b97355-4156-4cd5-8761-3b601375a688" valueTypeId="81f88bca-a735-4bb3-8ea9-41d326fdc7d7"/>
+      <rowType typeId="d07714f8-b1ba-491a-9a15-66c16c22e5aa" valueTypeId="2307f50d-2841-4656-b245-ff9ae718fad7"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="51edd7bd-4f7f-4952-84a8-11e2f2004c01" extendedConfigurationObject="530fbf41-626c-49f7-88ce-de7c9b72c9da">
+      <name>ДокументПоступления</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.ПриобретениеТоваровУслуг</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

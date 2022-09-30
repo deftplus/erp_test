@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="d39c5aca-f945-42e6-964e-993e46b3e61c" extendedConfigurationObject="ce8a99f2-736a-4a5a-8510-bc1214a517e6">
+  <producedTypes>
+    <objectType typeId="552acb44-0855-4d76-b56d-6506616b2b9a" valueTypeId="34398f31-2ef7-4f40-9d20-7942ae73d030"/>
+    <refType typeId="539b0a67-0918-4ca8-8710-a2d348c3ccd1" valueTypeId="4b220d19-c4a4-4ae1-98fa-dbb080906cb6"/>
+    <selectionType typeId="b8344adb-e9dc-47ca-b470-78a2a60a2209" valueTypeId="ca4548ae-45c2-4161-bd1e-f5ef781620dd"/>
+    <listType typeId="9f789080-3e0f-4df4-98b1-c72838aa8d9f" valueTypeId="d5be5fdc-015b-483b-aa69-202fe706cd21"/>
+    <managerType typeId="6016bd24-2cea-48de-96c6-3a10a9bb4d5e" valueTypeId="a18600fe-2216-4b90-a607-ab29fa56a1c7"/>
+  </producedTypes>
+  <name>ОбоснованиеТребованийКЗакупочнойПроцедуре</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="b31911cb-b271-444f-801f-ca03403a21f1" extendedConfigurationObject="01d4cd25-f7aa-4c33-bda9-1c0866daa092">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.СтрокаПланаЗакупок</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

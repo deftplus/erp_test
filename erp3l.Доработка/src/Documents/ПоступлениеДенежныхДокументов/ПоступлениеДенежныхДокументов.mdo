@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="17a3dbf6-d9c7-4e59-87ca-31042595ef43" extendedConfigurationObject="363672e2-1c36-418d-bd7d-de088307284a">
+  <producedTypes>
+    <objectType typeId="0bc6d093-6ca7-47dc-a54c-7d657f9a9e0e" valueTypeId="f0ae3197-b411-4317-a1c1-6899105c9956"/>
+    <refType typeId="db9376ca-4277-4acb-8b44-6005cb023b0b" valueTypeId="e4bcdaed-ac01-4e86-8f7f-b4721f4d09b1"/>
+    <selectionType typeId="667e4d86-5eca-4865-a0f9-ff2ba183ff07" valueTypeId="4fe87a96-8742-46de-9dda-1c13b36b2b18"/>
+    <listType typeId="02cc3623-6066-4e71-b1ce-d769f6033201" valueTypeId="2a7b8585-5919-4e71-b97e-e094960a72d6"/>
+    <managerType typeId="7c65c619-59f6-4e78-9f51-53f12937a994" valueTypeId="9d7367d2-803f-480d-a921-236253d3c996"/>
+  </producedTypes>
+  <name>ПоступлениеДенежныхДокументов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="053f1216-7373-4a28-8a71-60301b4e5d33" extendedConfigurationObject="b98acd33-85f1-4630-87d6-254f202ddeeb">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ПоступлениеДенежныхДокументов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="40a7b102-790c-431f-8732-e076b8f9b6da" extendedConfigurationObject="10cefb2f-fb51-481f-87d1-cb8d023dd564">
+  <producedTypes>
+    <objectType typeId="baf502b0-c703-4562-b248-6d728639feef" valueTypeId="e4bd69be-2e23-46f4-9cd3-9096a3a2cfe5"/>
+    <refType typeId="2862763e-fe95-44bf-9fb8-38ca7d4ddea6" valueTypeId="0aa58422-3296-4d66-996f-c79ffe1077ff"/>
+    <selectionType typeId="012e5921-d3d7-46eb-b025-bb4369475d39" valueTypeId="1c23111c-2fa1-42b1-ac03-7e280bc18ec5"/>
+    <listType typeId="14afc03a-15c9-488b-9f9d-98ad67c513a4" valueTypeId="672edaeb-35a6-4af1-8a0e-0a4e04cc8004"/>
+    <managerType typeId="5f7653b8-651d-45df-ad72-31e9f618eb3f" valueTypeId="b0037b67-ceb6-4740-b25b-d2885263ec92"/>
+  </producedTypes>
+  <name>ОтчетБанкаПоОперациямЭквайринга</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="7a58d0f0-112e-41bc-8903-3f4100d3f9c0" extendedConfigurationObject="49194143-4473-4b26-ab29-6ba6fe040f3a">
+    <name>АналитикаРасходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="e551dbeb-f922-4bdb-a5bc-616e22503e5d" extendedConfigurationObject="9aae8bb8-2bab-4b5c-baa8-7263b7b3ed80">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ОтчетБанкаПоОперациямЭквайринга</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

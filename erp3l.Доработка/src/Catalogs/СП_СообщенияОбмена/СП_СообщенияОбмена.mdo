@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="2151eecf-547a-4ac4-9f02-c96ee0feaf4f" extendedConfigurationObject="778fe4b6-0531-4473-bc47-6df6ebb18386">
+  <producedTypes>
+    <objectType typeId="79eab2df-4499-45ed-810b-5505ed2bce99" valueTypeId="9ff18c7e-6f12-46e3-9f24-05011a9194de"/>
+    <refType typeId="80bd5af9-512f-49a7-81d6-210503ff5ebb" valueTypeId="eff6cf23-4768-494a-a796-8ad792daecf9"/>
+    <selectionType typeId="d0bd4976-5853-404b-bcce-17d1daa593f8" valueTypeId="a3c15a70-6834-4be2-9d38-6e338d9aeb68"/>
+    <listType typeId="69e36b80-b66a-4890-ad44-3c9c0d7661df" valueTypeId="611165be-6636-453e-a289-b388ae426431"/>
+    <managerType typeId="a1e3957c-3002-4aea-b099-9549e17be37e" valueTypeId="7d485279-e2e5-406d-adf0-237dd1b615af"/>
+  </producedTypes>
+  <name>СП_СообщенияОбмена</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="29e6d4fc-4205-49dd-a2b6-c6c5b514c340" extendedConfigurationObject="9d1d8732-3f2b-4b4e-b174-3cf647c951c0">
+    <name>СсылкаНаОбъект</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+        <types>
+          <state>Extended</state>
+          <type>DocumentRef.ллл_ПредварительныйЗаказЗаводуИзготовителю</type>
+        </types>
+        <types>
+          <state>Extended</state>
+          <type>DocumentRef.ллл_ЛогистическаяСделка</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Catalog>

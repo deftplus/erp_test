@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c536e4cd-f303-49a6-8574-cce274abaebf">
+  <producedTypes>
+    <selectionType typeId="5ae44215-27a3-4fc2-a6d7-944c17b39500" valueTypeId="53b5d4e5-e8b1-4b96-ab2e-8bfb7b3c68de"/>
+    <listType typeId="67919d1a-9ed9-46cc-afac-5e433c0ab25a" valueTypeId="8ab08086-0452-44da-9595-fe522a21a3d9"/>
+    <managerType typeId="a530275a-3fbe-4216-9112-0e93a6676064" valueTypeId="c034cc0c-17ef-423f-b87e-7c514f5c2a1f"/>
+    <recordSetType typeId="309f2d89-dc89-4b67-9a03-2f80e3b808ff" valueTypeId="f53ce2fa-e207-43a5-9e8e-6404b24e89dd"/>
+    <recordKeyType typeId="b9ad4185-5ca0-4a29-aa50-c26cfaf507c4" valueTypeId="5de7bf65-55a1-4f10-a7d7-08e66863d2f9"/>
+    <recordType typeId="27fc4f99-24b0-4017-b199-8d3c7914a6fd" valueTypeId="8960c67c-ce64-4521-a3a5-d0eb5f079ef8"/>
+    <recordManagerType typeId="4d4614dd-cb8f-454e-ba83-19583bdc98ec" valueTypeId="a5a38f4b-f74b-4626-a9d0-6e7dbffdaf4e"/>
+  </producedTypes>
+  <name>ллл_ВосстановлениеПоследовательностиДокументов</name>
+  <synonym>
+    <key>ru</key>
+    <value>(3L) Восстановление последовательности документов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <editType>InDialog</editType>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <mainFilterOnPeriod>true</mainFilterOnPeriod>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <resources uuid="252af626-2cd1-41f0-bcfd-bac4d994e6fb">
+    <name>ПроведеноДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Проведено документов</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <resources uuid="af2efc2c-43ed-468b-965c-da35ce239427">
+    <name>ВремяВыполнения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Время выполнения</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </resources>
+  <attributes uuid="c91aa9e0-9d49-43ce-883c-a85c51ed7df2">
+    <name>Результат</name>
+    <synonym>
+      <key>ru</key>
+      <value>Результат</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+  </attributes>
+  <dimensions uuid="8d76bec9-ab25-4595-855f-b7b4db4ac04d">
+    <name>Старт</name>
+    <synonym>
+      <key>ru</key>
+      <value>Старт</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <mainFilter>true</mainFilter>
+  </dimensions>
+</mdclass:InformationRegister>

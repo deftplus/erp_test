@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="00fd0f75-9c95-4673-b54d-d4ebafe275cd" extendedConfigurationObject="c8bd216e-a49a-4ffd-9d65-4d0cd1d700eb">
+  <producedTypes>
+    <objectType typeId="36a161e4-7a50-4709-81c5-219971a6ac7f" valueTypeId="f901011d-2f1c-4c64-9bef-2c2e89f98339"/>
+    <refType typeId="ec3a6f74-a26f-4c9f-8ba8-3f5b7f21b56d" valueTypeId="bf4a5f5e-c45c-4026-a2f4-b3847db4fa5c"/>
+    <selectionType typeId="478ba2b8-2a87-464c-8a71-c020d9eaf381" valueTypeId="82b16655-db73-4891-b3da-10e36968996c"/>
+    <listType typeId="047e0946-4fa3-46ff-b595-2516cfa23285" valueTypeId="18a93b14-4afb-4486-880c-eb6395734a01"/>
+    <managerType typeId="3846b3a9-df1d-4f5a-9ac1-2d271aae14e9" valueTypeId="e4ed0ce9-bd4c-4ba4-83dd-e39d09e8ad7e"/>
+  </producedTypes>
+  <name>АккредитацияПоставщика</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="a204752f-a828-4d63-ad66-58636c8c2591" extendedConfigurationObject="fdc224e3-dea7-4810-9cf9-6511417959bc">
+    <name>ПредыдущаяАккредитация</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.АккредитацияПоставщика</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

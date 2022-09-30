@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="5bc0dd8d-73e9-42db-824b-337e873cee9b" extendedConfigurationObject="1d13b946-7d1b-49df-b8cb-d50a7e93045c">
+  <producedTypes>
+    <objectType typeId="73be1712-0726-47a1-b611-14c9b5d88e80" valueTypeId="8f66f238-d798-4274-9f50-47690b9a0e44"/>
+    <refType typeId="5b824660-42c5-4a6b-826c-7af709bfe48c" valueTypeId="bfd08cbc-160f-4d81-8443-aac384f133d9"/>
+    <selectionType typeId="a33bf9b2-7dcc-4aab-864f-1c2e9d9ec8da" valueTypeId="56753005-67fb-4dbb-bdd9-867d14159e00"/>
+    <listType typeId="fd0ed3a1-dcbe-4f58-b1ef-ec9e549d5d93" valueTypeId="12737bdc-def3-4a03-859a-a1b0a8569e1e"/>
+    <managerType typeId="5901793a-25be-4160-9144-829264495b8c" valueTypeId="b47d9366-019a-4e96-8cb6-25dc4bd1bd81"/>
+  </producedTypes>
+  <name>ЗаявкаНаВыпускКиЗГИСМ</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="4b7ada4a-b89c-4b4e-9576-5e86ff8cb91d" extendedConfigurationObject="9aeced8b-7607-41cd-ac23-41c0b2741948">
+    <name>Основание</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ОснованиеЗаявкиНаВыпускКиЗ</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="97499ca6-23d3-4ea1-a187-b3f3dd2e29d5" extendedConfigurationObject="b34828d8-8050-4da1-8f78-2e7aeba24b15">
+    <producedTypes>
+      <objectType typeId="92301a65-6460-407e-b3f7-881867899cbc" valueTypeId="9989f61a-2692-471a-8a7b-5b39642935c0"/>
+      <rowType typeId="45944496-dfd5-4877-9cc4-3690d2b86979" valueTypeId="d6c555ea-4015-4a7f-bc8d-4ec54b0f6923"/>
+    </producedTypes>
+    <name>ВыпущенныеКиЗ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="7b0ce25b-93cb-4d48-806d-047c29e3e5b7" extendedConfigurationObject="3642d003-5b9b-4c42-9673-2354306c8d95">
+      <name>ДокументПоступления</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.ДокументПоступленияМаркированныхТоваровГИСМ</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

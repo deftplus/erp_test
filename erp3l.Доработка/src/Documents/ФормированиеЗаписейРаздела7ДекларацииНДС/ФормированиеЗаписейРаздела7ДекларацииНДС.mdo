@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="416882ff-9ebf-4429-8949-7579939bd5d9" extendedConfigurationObject="1aac9ddc-616f-4843-88cf-60ea232ed04f">
+  <producedTypes>
+    <objectType typeId="90e8e929-7c3e-494a-91ef-627095193920" valueTypeId="a8c7716d-cbb4-47d8-be16-62eea84a22d0"/>
+    <refType typeId="e1c8f8ab-d017-48b6-99d0-e18b260bb48f" valueTypeId="d88bd4c8-7c3f-475c-9f66-d3360e42ea12"/>
+    <selectionType typeId="97289544-d1e2-4566-8af5-f254551e5044" valueTypeId="bfcd514e-dcf6-4dd0-b6cb-6b333b1dfb30"/>
+    <listType typeId="8816533c-9d89-4d42-805e-4b79b36fbe6b" valueTypeId="5c829451-4be3-4b4d-9e42-d51f66ca40eb"/>
+    <managerType typeId="37ba6022-4855-4ae2-ae7b-c3aebeb0cf1e" valueTypeId="6b6d478d-e806-41a2-ba52-a12d32525968"/>
+  </producedTypes>
+  <name>ФормированиеЗаписейРаздела7ДекларацииНДС</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="8617ecd5-9131-4a16-acc1-4c139920ad1f" extendedConfigurationObject="c862e5f7-6ebe-456c-b30c-aa26e0c78c67">
+    <producedTypes>
+      <objectType typeId="c4ff8ecb-9075-4432-ae2b-edfc81256736" valueTypeId="8fc16abd-0df1-4995-b1a1-28c038ed9a65"/>
+      <rowType typeId="facf3805-d30f-4093-b7d9-c6efa2765f50" valueTypeId="624390ec-16e8-4dfd-b22b-c9aac9877dd4"/>
+    </producedTypes>
+    <name>НеоблагаемыеНДСОперации</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="05acf177-82d5-48e6-b864-8384fa548df5" extendedConfigurationObject="40d0ceac-047b-4d09-8afa-611c9dfa4887">
+      <name>ДокументРеализации</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.ДокументыРеализацииДляРаздела7ДекларацииПоНДС</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

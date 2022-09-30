@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="e3f438f4-def0-422f-a7e3-efbb2b2ad13f">
+  <producedTypes>
+    <objectType typeId="a1a9723a-b427-4a08-95d7-545cf3514441" valueTypeId="3ecae790-ad6d-4617-b26d-79b8b88081f7"/>
+    <managerType typeId="ee9eeea6-f719-4c58-b410-d5667503eaaf" valueTypeId="017ff4a9-d547-4976-a11a-bd4965ec5e73"/>
+  </producedTypes>
+  <name>ллл_ИсторияСогласования</name>
+  <synonym>
+    <key>ru</key>
+    <value>История согласования (3l)</value>
+  </synonym>
+  <comment>Типовой отчет задваивает историю согласования</comment>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>Report.ллл_ИсторияСогласования.Form.ФормаОтчета</defaultForm>
+  <mainDataCompositionSchema>Report.ллл_ИсторияСогласования.Template.МакетСКД</mainDataCompositionSchema>
+  <defaultSettingsForm>CommonForm.ВспомогательнаяФормаНастроекОтчета</defaultSettingsForm>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <attributes uuid="41ce0a7f-9df9-47ed-b7ed-707fe6d8ce87">
+    <name>КлючевойОбъектПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ключевой объект процесса</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ОбъектыДляСогласования</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="a7e99bbc-b309-4940-8872-6cb571506b86">
+    <name>ФормаОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма отчета</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="a180ce90-c39c-4daf-a7fc-c28d81a2cc57">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+  <templates uuid="914e859a-80b1-4e3c-9578-dcc47bf8dfc5">
+    <name>МакетСКД</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет СКД</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="d7785fc3-f63b-483f-9965-eb91f6581df2">
+    <name>МакетКомментарии</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет комментарии</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:Report>

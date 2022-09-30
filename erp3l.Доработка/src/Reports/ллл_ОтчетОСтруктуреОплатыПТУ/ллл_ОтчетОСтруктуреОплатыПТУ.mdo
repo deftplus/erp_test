@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Report xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d3b28e80-a7fa-41b6-99c2-9d8274aa0279">
+  <producedTypes>
+    <objectType typeId="9a48907e-d6fb-485a-b95c-6018b38ff1dd" valueTypeId="3d2d347d-9849-40d0-9269-7212f0cb3d14"/>
+    <managerType typeId="ae418966-d0fa-41f0-83bc-90de24e05509" valueTypeId="8217d195-a0b6-4a02-85e9-66ebe6c177af"/>
+  </producedTypes>
+  <name>ллл_ОтчетОСтруктуреОплатыПТУ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчет о структуре оплаты ПТУ (3l)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <mainDataCompositionSchema>Report.ллл_ОтчетОСтруктуреОплатыПТУ.Template.ОсновнаяСхемаКомпоновкиДанных</mainDataCompositionSchema>
+  <variantsStorage>SettingsStorage.ХранилищеВариантовОтчетов</variantsStorage>
+  <templates uuid="2da52ce5-08e4-45ab-aadb-e5901644b503">
+    <name>ОсновнаяСхемаКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Основная схема компоновки данных</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <commands uuid="1c96d009-c947-409a-89e5-4c25d0bbbf2b">
+    <name>ллл_Команда</name>
+    <synonym>
+      <key>ru</key>
+      <value>Ллл команда</value>
+    </synonym>
+    <group>ActionsPanelReports</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:Report>

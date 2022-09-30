@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="410ae793-65f6-4841-bfa9-3a5a5d6e803a" extendedConfigurationObject="cdc2c220-e8ea-476c-aa22-53f4d55738ae">
+  <producedTypes>
+    <objectType typeId="63c27c06-fbd6-45ef-91e1-eb725d721231" valueTypeId="5481897a-a448-4d47-a4de-49e75bbe4685"/>
+    <refType typeId="0ac8d3f4-6061-48b1-9c0d-df55a275a59d" valueTypeId="1247e1c4-6d5d-4d0f-84af-8f9774dc405b"/>
+    <selectionType typeId="69c87f35-6e61-456b-a1e2-a495f6f9d8b0" valueTypeId="a498de5b-ac14-44b5-ab49-4ac02b526cea"/>
+    <listType typeId="648214f7-ae33-4bdb-9a9d-fd09b7c53e65" valueTypeId="8ecc86d1-3083-455f-ad63-ab3a29284d7c"/>
+    <managerType typeId="a3662602-15c1-43a7-896d-15a7a9341b96" valueTypeId="154764e3-18d3-4356-880a-9f60e3b4439e"/>
+  </producedTypes>
+  <name>ИсполнениеКовенантов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="601df7de-af1b-43ea-802c-bd87dda5b39b" extendedConfigurationObject="ad2adc54-4cfa-4e49-bb6c-130980b93603">
+    <name>ДоговорКонтрагента</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ДоговорыКредитовИДепозитов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

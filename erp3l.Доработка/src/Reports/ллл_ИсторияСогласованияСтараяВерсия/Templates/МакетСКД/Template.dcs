@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Событие</dataPath>
+			<field>Событие</field>
+			<presentationExpression>Представление(СобытиеПредставление)</presentationExpression>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДокументПроцесса</dataPath>
+			<field>ДокументПроцесса</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Пользователь</dataPath>
+			<field>Пользователь</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапПроцесса</dataPath>
+			<field>ЭтапПроцесса</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инициатор</dataPath>
+			<field>Инициатор</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициатор</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:CatalogRef.Пользователи</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСортировки</dataPath>
+			<field>ПериодСортировки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеестрСогласования</dataPath>
+			<field>РеестрСогласования</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реестр согласования</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СобытиеПредставление</dataPath>
+			<field>СобытиеПредставление</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Событие представление</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторСообщения</dataPath>
+			<field>ИдентификаторСообщения</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СостояниеОбъекта</dataPath>
+			<field>СостояниеОбъекта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние объекта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	МАКСИМУМ(ИсторияВыполненияПроцессов.Пользователь) КАК Пользователь,
+	МАКСИМУМ(ИсторияВыполненияПроцессов.Событие) КАК Событие,
+	ИсторияВыполненияПроцессов.ДокументПроцесса КАК ДокументПроцесса
+ПОМЕСТИТЬ ВТ_ЗапускПроцесса
+ИЗ
+	РегистрСведений.ИсторияВыполненияПроцессов КАК ИсторияВыполненияПроцессов
+ГДЕ
+	ИсторияВыполненияПроцессов.ДокументПроцесса.КлючевойОбъектПроцесса = &amp;КлючевойОбъектПроцесса
+	И ИсторияВыполненияПроцессов.Событие = ЗНАЧЕНИЕ(Перечисление.ВидыОповещенийПользователейУХ.ПроцессЗапущен)
+
+СГРУППИРОВАТЬ ПО
+	ИсторияВыполненияПроцессов.ДокументПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	РеестрыСогласуемыхОбъектовОбъектыКСогласованию.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ_Реестры
+ИЗ
+	Справочник.РеестрыСогласуемыхОбъектов.ОбъектыКСогласованию КАК РеестрыСогласуемыхОбъектовОбъектыКСогласованию
+ГДЕ
+	РеестрыСогласуемыхОбъектовОбъектыКСогласованию.СогласуемыйОбъект = &amp;КлючевойОбъектПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	МАКСИМУМ(ИсторияВыполненияПроцессовСрезПоследних.Пользователь) КАК Пользователь,
+	МАКСИМУМ(ИсторияВыполненияПроцессовСрезПоследних.Событие) КАК Событие,
+	ИсторияВыполненияПроцессовСрезПоследних.ДокументПроцесса КАК ДокументПроцесса
+ПОМЕСТИТЬ ВТ_ЗапускРеестра
+ИЗ
+	РегистрСведений.ИсторияВыполненияПроцессов.СрезПоследних(, ) КАК ИсторияВыполненияПроцессовСрезПоследних
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Реестры КАК ВТ_Реестры
+		ПО ИсторияВыполненияПроцессовСрезПоследних.ДокументПроцесса.КлючевойОбъектПроцесса = ВТ_Реестры.Ссылка
+ГДЕ
+	ИсторияВыполненияПроцессовСрезПоследних.Событие = ЗНАЧЕНИЕ(Перечисление.ВидыОповещенийПользователейУХ.ПроцессЗапущен)
+
+СГРУППИРОВАТЬ ПО
+	ИсторияВыполненияПроцессовСрезПоследних.ДокументПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ВТ_ЗапускРеестра.Пользователь КАК Пользователь,
+	ВТ_ЗапускРеестра.Событие КАК Событие,
+	ВТ_ЗапускРеестра.ДокументПроцесса КАК ДокументПроцесса,
+	ВЫРАЗИТЬ(ВТ_ЗапускРеестра.ДокументПроцесса.КлючевойОбъектПроцесса КАК Справочник.РеестрыСогласуемыхОбъектов) КАК КлючевойОбъектПроцесса
+ПОМЕСТИТЬ ВТ_РеестрыКлючевыеОбъекты
+ИЗ
+	ВТ_ЗапускРеестра КАК ВТ_ЗапускРеестра
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ИсторияВыполненияПроцессов.Пользователь КАК Пользователь,
+	ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.КомментарийСистемы КАК СТРОКА(500))) = ""
+			ТОГДА ИсторияВыполненияПроцессов.Комментарий
+		ИНАЧЕ (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.КомментарийСистемы КАК СТРОКА(500))) + ": " + (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.Комментарий КАК СТРОКА(500)))
+	КОНЕЦ КАК Комментарий,
+	ИсторияВыполненияПроцессов.Событие КАК Событие,
+	ИсторияВыполненияПроцессов.ЭтапПроцесса КАК ЭтапПроцесса,
+	ИсторияВыполненияПроцессов.ДокументПроцесса КАК ДокументПроцесса,
+	ИсторияВыполненияПроцессов.Период КАК Период,
+	ЕСТЬNULL(ВТ_ЗапускПроцесса.Пользователь.Наименование, " &lt;неизвестный пользователь&gt; ") КАК Инициатор,
+	ИсторияВыполненияПроцессов.ПериодСортировкиМс КАК ПериодСортировки,
+	ЗНАЧЕНИЕ(Справочник.РеестрыСогласуемыхОбъектов.ПустаяСсылка) КАК РеестрСогласования,
+	ВЫБОР
+		КОГДА ИсторияВыполненияПроцессов.Событие = ЗНАЧЕНИЕ(Перечисление.ВидыОповещенийПользователейУХ.ЭтапСогласован)
+			ТОГДА ВЫБОР
+					КОГДА ИсторияВыполненияПроцессов.ЭтапПроцесса.ТипЭтапа = ЗНАЧЕНИЕ(Перечисление.ТипыЭтаповУниверсальныхПроцессов.Обработка)
+						ТОГДА "Этап выполнен"
+					ИНАЧЕ ИсторияВыполненияПроцессов.Событие
+				КОНЕЦ
+		ИНАЧЕ ИсторияВыполненияПроцессов.Событие
+	КОНЕЦ КАК СобытиеПредставление,
+	ИсторияВыполненияПроцессов.ИдентификаторСообщения КАК ИдентификаторСообщения
+ПОМЕСТИТЬ ВТ_Объединение
+ИЗ
+	РегистрСведений.ИсторияВыполненияПроцессов КАК ИсторияВыполненияПроцессов
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ЗапускПроцесса КАК ВТ_ЗапускПроцесса
+		ПО ИсторияВыполненияПроцессов.ДокументПроцесса = ВТ_ЗапускПроцесса.ДокументПроцесса
+ГДЕ
+	ИсторияВыполненияПроцессов.ДокументПроцесса.КлючевойОбъектПроцесса = &amp;КлючевойОбъектПроцесса
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ИсторияВыполненияПроцессов.Пользователь,
+	ВЫБОР
+		КОГДА ВТ_РеестрыКлючевыеОбъекты.КлючевойОбъектПроцесса = ЗНАЧЕНИЕ(Справочник.РеестрыСогласуемыхОбъектов.ПустаяСсылка)
+			ТОГДА ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.Комментарий КАК СТРОКА(500))
+		ИНАЧЕ "(В составе реестра " + (ВЫРАЗИТЬ(ВТ_РеестрыКлючевыеОбъекты.КлючевойОбъектПроцесса.Код КАК СТРОКА(50))) + ") " + ВЫБОР
+				КОГДА (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.КомментарийСистемы КАК СТРОКА(500))) = ""
+					ТОГДА ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.Комментарий КАК СТРОКА(500))
+				ИНАЧЕ (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.КомментарийСистемы КАК СТРОКА(500))) + " " + (ВЫРАЗИТЬ(ИсторияВыполненияПроцессов.Комментарий КАК СТРОКА(500)))
+			КОНЕЦ
+	КОНЕЦ,
+	ИсторияВыполненияПроцессов.Событие,
+	ИсторияВыполненияПроцессов.ЭтапПроцесса,
+	ИсторияВыполненияПроцессов.ДокументПроцесса,
+	ИсторияВыполненияПроцессов.Период,
+	ЕСТЬNULL(ВТ_РеестрыКлючевыеОбъекты.Пользователь.Наименование, " &lt;неизвестный пользователь&gt; "),
+	ИсторияВыполненияПроцессов.ПериодСортировкиМс,
+	ВТ_РеестрыКлючевыеОбъекты.КлючевойОбъектПроцесса,
+	ВЫБОР
+		КОГДА ИсторияВыполненияПроцессов.Событие = ЗНАЧЕНИЕ(Перечисление.ВидыОповещенийПользователейУХ.ЭтапСогласован)
+			ТОГДА ВЫБОР
+					КОГДА ИсторияВыполненияПроцессов.ЭтапПроцесса.ТипЭтапа = ЗНАЧЕНИЕ(Перечисление.ТипыЭтаповУниверсальныхПроцессов.Обработка)
+						ТОГДА "Этап выполнен"
+					ИНАЧЕ ИсторияВыполненияПроцессов.Событие
+				КОНЕЦ
+		ИНАЧЕ ИсторияВыполненияПроцессов.Событие
+	КОНЕЦ,
+	ИсторияВыполненияПроцессов.ИдентификаторСообщения
+ИЗ
+	РегистрСведений.ИсторияВыполненияПроцессов КАК ИсторияВыполненияПроцессов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_РеестрыКлючевыеОбъекты КАК ВТ_РеестрыКлючевыеОбъекты
+		ПО ИсторияВыполненияПроцессов.ДокументПроцесса = ВТ_РеестрыКлючевыеОбъекты.ДокументПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	РегистрСостоянийОбъектов.Период КАК Период,
+	РегистрСостоянийОбъектов.Объект КАК Объект,
+	РегистрСостоянийОбъектов.СостояниеОбъекта КАК СостояниеОбъекта,
+	РегистрСостоянийОбъектов.Автор КАК Автор,
+	РегистрСостоянийОбъектов.ИдентификаторСообщения КАК ИдентификаторСообщения
+ПОМЕСТИТЬ ВТ_СостояниеОбъекта
+ИЗ
+	РегистрСведений.РегистрСостоянийОбъектов КАК РегистрСостоянийОбъектов
+ГДЕ
+	РегистрСостоянийОбъектов.Объект = &amp;КлючевойОбъектПроцесса
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЕСТЬNULL(ВТ_Объединение.Пользователь, ВТ_СостояниеОбъекта.Автор) КАК Пользователь,
+	ВЫРАЗИТЬ(ЕСТЬNULL(ВТ_Объединение.Комментарий, "") КАК СТРОКА(500)) КАК Комментарий,
+	ЕСТЬNULL(ВТ_Объединение.Событие, ЗНАЧЕНИЕ(Перечисление.ВидыОповещенийПользователейУХ.ПустаяСсылка)) КАК Событие,
+	ЕСТЬNULL(ВТ_Объединение.ЭтапПроцесса, ЗНАЧЕНИЕ(Справочник.ЭтапыУниверсальныхПроцессов.ПустаяСсылка)) КАК ЭтапПроцесса,
+	ЕСТЬNULL(ВТ_Объединение.ДокументПроцесса, ЗНАЧЕНИЕ(Документ.ЭкземплярПроцесса.ПустаяСсылка)) КАК ДокументПроцесса,
+	ЕСТЬNULL(ВТ_Объединение.Период, ВТ_СостояниеОбъекта.Период) КАК Период,
+	ЕСТЬNULL(ВТ_Объединение.Инициатор, ВТ_СостояниеОбъекта.Автор) КАК Инициатор,
+	ЕСТЬNULL(ВТ_Объединение.РеестрСогласования, ЗНАЧЕНИЕ(Справочник.РеестрыСогласуемыхОбъектов.ПустаяСсылка)) КАК РеестрСогласования,
+	ЕСТЬNULL(ВТ_Объединение.СобытиеПредставление, "&lt;состояние изменено&gt;") КАК СобытиеПредставление,
+	ЕСТЬNULL(ВТ_Объединение.ПериодСортировки, 0) КАК ПериодСортировки,
+	ЕСТЬNULL(ВТ_СостояниеОбъекта.СостояниеОбъекта, ЗНАЧЕНИЕ(Перечисление.СостоянияСогласования.ПустаяСсылка)) КАК СостояниеОбъекта,
+	ВТ_Объединение.ИдентификаторСообщения КАК ИдентификаторСообщения
+ИЗ
+	ВТ_Объединение КАК ВТ_Объединение
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_СостояниеОбъекта КАК ВТ_СостояниеОбъекта
+		ПО ВТ_Объединение.ИдентификаторСообщения = ВТ_СостояниеОбъекта.ИдентификаторСообщения</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>ДокументПроцесса</dataPath>
+		<expression>ВЫБОР КОГДА
+ДокументПроцесса = ЗНАЧЕНИЕ(Документ.ЭкземплярПроцесса.ПустаяСсылка)
+ТОГДА
+Период
+ИНАЧЕ
+ДокументПроцесса
+КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Документ процесса</v8:content>
+			</v8:item>
+		</title>
+		<presentationExpression>ВЫБОР КОГДА
+ДокументПроцесса = ЗНАЧЕНИЕ(Документ.ЭкземплярПроцесса.ПустаяСсылка)
+ТОГДА
+Строка(Период) + " Ручное изменение состояния"
+ИНАЧЕ
+ВЫБОР КОГДА РеестрСогласования = ЗНАЧЕНИЕ(Справочник.РеестрыСогласуемыхОбъектов.ПустаяСсылка) ТОГДА
+	Строка(ДокументПроцесса.Дата) + " Запущен процесс согласования (" + Строка(Инициатор) + ")"
+ИНАЧЕ
+	Строка(ДокументПроцесса.Дата) + " Запущено согласования реестра (" + Строка(Инициатор) + ")"
+КОНЕЦ
+КОНЕЦ</presentationExpression>
+		<orderExpression>
+			<dcscom:expression>Период</dcscom:expression>
+			<dcscom:orderType>Asc</dcscom:orderType>
+			<dcscom:autoOrder>false</dcscom:autoOrder>
+		</orderExpression>
+		<orderExpression>
+			<dcscom:expression>ДокументПроцесса.Дата</dcscom:expression>
+			<dcscom:orderType>Asc</dcscom:orderType>
+			<dcscom:autoOrder>false</dcscom:autoOrder>
+		</orderExpression>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>Комментарий_</dataPath>
+		<expression>ллл_ПОискЗначений.ПолучитьКомментарийИсторииСогласований(ДокументПроцесса,ЭтапПроцесса,ИдентификаторСообщения)</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Комментарий </v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>1000</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+	</calculatedField>
+	<parameter>
+		<name>КлючевойОбъектПроцесса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Ключевой объект процесса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:TypeSet xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:DocumentRef</v8:TypeSet>
+			<v8:TypeSet xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef</v8:TypeSet>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Период</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДокументПроцесса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЭтапПроцесса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Пользователь</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Событие</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СостояниеОбъекта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий_</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>КлючевойОбъектПроцесса</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>de3af6bd-4241-420e-89af-fd9bdf85d049</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект согласования</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardBeginningDate">
+						<v8:variant xsi:type="v8:StandardBeginningDateVariant">BeginningOfNextDay</v8:variant>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПериодСортировки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Период</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Событие</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance/>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ДокументПроцесса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Событие</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ПроцессЗапущен</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Период</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭтапПроцесса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Пользователь</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Событие</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СостояниеОбъекта</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:field>Комментарий</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДокументПроцесса</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Комментарий_</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

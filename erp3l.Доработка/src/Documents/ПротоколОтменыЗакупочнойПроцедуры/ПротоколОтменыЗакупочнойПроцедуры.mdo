@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c6b17559-19e6-4615-a99b-57a333dda85e" extendedConfigurationObject="570cf680-2b7b-4910-8388-81beeec6a39e">
+  <producedTypes>
+    <objectType typeId="4b766da6-4ede-4327-b5d4-43b405954692" valueTypeId="c5c147b9-8487-4ac7-bde7-30018c3d538d"/>
+    <refType typeId="760cae2c-bf6b-42ed-abde-f4fac885804c" valueTypeId="c70b540d-7fc0-4f02-acf0-a160a72f351f"/>
+    <selectionType typeId="033ed180-fce6-4804-81e5-7d353b88ee34" valueTypeId="04cf8f59-44a9-4570-9538-1646cda607d3"/>
+    <listType typeId="40b56810-aad5-4ad7-bece-0fdf45f5e917" valueTypeId="817d1c49-351a-4ba3-8607-0fefd6edde01"/>
+    <managerType typeId="cde74d21-2a95-4bba-b8f3-d92491811ba4" valueTypeId="3e300743-6014-4f17-95fe-0df9c614481d"/>
+  </producedTypes>
+  <name>ПротоколОтменыЗакупочнойПроцедуры</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="29038633-a090-4702-890f-0d74f171ddf8" extendedConfigurationObject="cece06be-b81a-4a2f-a061-dd7deab84b5e">
+    <name>ЗакупочнаяПроцедура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ЗакупочныеПроцедуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

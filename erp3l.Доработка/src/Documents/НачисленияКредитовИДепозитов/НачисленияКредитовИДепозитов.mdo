@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="12003cd4-ac22-433c-91a0-93a8a2b9398e" extendedConfigurationObject="8b84ed48-f371-48d6-be7c-fda11c0fb81d">
+  <producedTypes>
+    <objectType typeId="54b76e76-9e4a-4303-8f7d-c4a10d3d29d5" valueTypeId="01a5add1-dd81-43a1-8af2-b9030cd9bc51"/>
+    <refType typeId="376bdaa7-a38d-4ede-a748-60add2462a81" valueTypeId="4cb26896-3b95-4543-bfdb-015f76222ad4"/>
+    <selectionType typeId="f9c14284-ce2a-4b3d-bf85-df6bdd8d5f71" valueTypeId="59c5bfde-3222-450e-8285-c91f3c94cca7"/>
+    <listType typeId="2265c2d8-c797-4c8b-b640-7e0ca787eda7" valueTypeId="44890612-4198-4d96-8952-566064f41a0b"/>
+    <managerType typeId="6af65607-3a8e-4185-b0c0-ecb341086b59" valueTypeId="eca06ad5-85c8-4168-8f0b-e0dd81ce28ed"/>
+  </producedTypes>
+  <name>НачисленияКредитовИДепозитов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="108ef819-5f7d-43f9-8eb0-fe054eb65bfd" extendedConfigurationObject="f0f59b28-d624-45cd-84f6-ca521e3a23dd">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.НачисленияКредитовИДепозитов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

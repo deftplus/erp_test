@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="656f555f-5537-4efe-9760-77070e0e7fc8" extendedConfigurationObject="7155d921-3d57-400d-b22c-6e0bae52fe6f">
+  <producedTypes>
+    <objectType typeId="c8f37eba-1b65-49aa-8121-07ebf41ddc6d" valueTypeId="dfb18147-00f4-4658-8df2-57c31b9e96a8"/>
+    <refType typeId="1cce4c75-aa65-448f-a5d1-5846a3ae6ad9" valueTypeId="b7588b8e-492e-44b4-9732-3b059946ec54"/>
+    <selectionType typeId="91abaeb6-e10d-4fba-810e-0b035ee758ca" valueTypeId="8955b4f4-7792-4856-b612-82476b22df3b"/>
+    <listType typeId="b3dda77a-ca1c-4091-a9c4-30d5afcba365" valueTypeId="b1ddc19b-1956-4ce9-8cbb-2f3ea0696d89"/>
+    <managerType typeId="2efb98a5-a57c-4670-a13b-68f476bf41ca" valueTypeId="9ec60ea9-3f21-4754-bd37-d6e3b36a6294"/>
+  </producedTypes>
+  <name>СписаниеТоваровУХранителя</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="72983fce-79ff-40b5-bb10-c7feb7933057" extendedConfigurationObject="e52ef311-31b3-4b07-91bc-af033bc68ffc">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.СписаниеТоваровУХранителя</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

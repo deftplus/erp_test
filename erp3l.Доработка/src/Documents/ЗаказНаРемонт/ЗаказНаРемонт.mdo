@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="669a6b86-b92f-4f02-8c8c-898cc26ac229" extendedConfigurationObject="4e6f7959-9963-4982-8f8e-9ec46dc2ec1c">
+  <producedTypes>
+    <objectType typeId="dd958099-01b9-45b9-881e-f72ec176b918" valueTypeId="ecc8cde4-7956-492d-b3cd-b95f64dc7e3c"/>
+    <refType typeId="cd77fc9a-6e21-4afe-a11c-f0fc2915d2ca" valueTypeId="3b67a56d-5a0f-4913-987f-be79776e443a"/>
+    <selectionType typeId="ed913500-72fd-4542-b5c5-094a136cf5f9" valueTypeId="35c98cca-a75c-4702-95a0-ea92ede0536c"/>
+    <listType typeId="8e50aa18-4280-4a5b-8825-78e3f986612d" valueTypeId="d4d9bef6-e404-410b-a7dc-0b92a177c65a"/>
+    <managerType typeId="fcaa03da-b55a-40ec-bcff-ed931946934c" valueTypeId="efd87dbf-891d-414c-8a9b-07c78715da93"/>
+  </producedTypes>
+  <name>ЗаказНаРемонт</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="cf68ad24-1771-4f12-8de0-5bee63438ce7" extendedConfigurationObject="fc6c0ad7-9182-4e14-8615-7d8c9beff42e">
+    <name>Назначение</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Назначения</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="c2f956b9-ae5e-4d5e-8bc8-41e50ce44b73" extendedConfigurationObject="455208da-a349-4329-b183-210a8ac91b30">
+    <producedTypes>
+      <objectType typeId="ec38ddde-732c-450b-99cb-929520102870" valueTypeId="f8f6c60f-9e83-46bd-9f02-3d1bc9f78f5a"/>
+      <rowType typeId="dc6ac914-284b-48af-9e23-7a16e5d44dc7" valueTypeId="a37037ba-d957-4af2-adbf-9af95636d4da"/>
+    </producedTypes>
+    <name>УстраняемыеДефекты</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="264ae43b-b1af-4de4-9df0-952db20ced01" extendedConfigurationObject="24845ce6-764c-418c-9237-ca14a5d70163">
+      <name>Дефект</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.РегистрацияДефекта</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

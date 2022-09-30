@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b98acade-c7fd-4986-a8f0-2bb65cc69d1e">
+  <producedTypes>
+    <refType typeId="a559692e-e6e9-41e3-817d-389f5f41b87d" valueTypeId="ef317381-9d46-4e86-aac9-4acd6f7bb4ee"/>
+    <listType typeId="1bd1d906-cd72-4363-beb5-bcf3ab679a78" valueTypeId="c1243e74-204d-46e7-8432-a6d5ce574683"/>
+    <managerType typeId="948fe69d-998a-4877-b3fd-fae10a1e5e0a" valueTypeId="a8386b88-22f7-47a6-beae-7658e409b73b"/>
+  </producedTypes>
+  <name>ллл_СтатусыРеестровСогласованийплатежей</name>
+  <synonym>
+    <key>ru</key>
+    <value>Статусы реестров согласований платежей (3L)</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="32bb4427-60ee-4c34-8398-cfd53f6238dc">
+    <name>Формируется</name>
+    <synonym>
+      <key>ru</key>
+      <value>Формируется</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c33a0036-3b31-43e8-9b7b-95c446afde6c">
+    <name>ОтправленСогласующему</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отправлен согласующему</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="786125a9-0cf4-4b89-8ab7-690f8ba6c6f0">
+    <name>ПолученОтветОтСогласующего</name>
+    <synonym>
+      <key>ru</key>
+      <value>Получен ответ от согласующего</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

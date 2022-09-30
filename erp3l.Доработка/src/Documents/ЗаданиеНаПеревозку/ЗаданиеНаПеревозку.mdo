@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="36daee0a-60d3-410f-b917-a092e21a924e" extendedConfigurationObject="d371a3f9-8a6a-4f41-8820-d9a12b2d57af">
+  <producedTypes>
+    <objectType typeId="5a0bc408-ca5d-45d3-8586-1ca6549d2266" valueTypeId="aed59b91-2dc4-4849-a134-cee06f7c77cf"/>
+    <refType typeId="d04c6a41-1325-46a7-8f9c-df8f661592e6" valueTypeId="12f536c7-9d8f-4a6e-b6ce-fc758f9717a5"/>
+    <selectionType typeId="dc7faf15-b1c0-4db3-a87b-4ba11bc5a710" valueTypeId="4b00a5e4-f306-4915-8f93-aa44ae1cc5bd"/>
+    <listType typeId="0026e578-c846-46bf-b01b-7c46fb14b0ca" valueTypeId="33fb40bc-855b-4d04-a185-f426171bf31c"/>
+    <managerType typeId="bf007e43-4a27-4251-9451-eb2500559ea8" valueTypeId="3996d48f-7495-41e0-b31f-c224fa4cabd7"/>
+  </producedTypes>
+  <name>ЗаданиеНаПеревозку</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="efa88b3f-4350-4bd8-ab2a-bbb9460aa1e0" extendedConfigurationObject="fc7e7f69-66c0-4524-9af0-f84439c47b6b">
+    <producedTypes>
+      <objectType typeId="1a6f14c4-5037-41b5-b18b-7b207414f051" valueTypeId="1aa16175-a9d5-476c-801a-1d54ad33e11e"/>
+      <rowType typeId="88dcdaa0-3495-44d0-85b6-aadb9e0ac607" valueTypeId="983f4259-0069-452a-bd41-6e141b591e98"/>
+    </producedTypes>
+    <name>Распоряжения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="1d3f2eeb-ca11-4273-a6fd-172babb9d9f3" extendedConfigurationObject="89a28c00-b22c-4a61-a9e9-df53927e4978">
+      <name>Распоряжение</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DefinedType.РаспоряжениеНаДоставку</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

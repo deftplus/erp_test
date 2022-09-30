@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="a7e2d000-ff8d-4f57-b05c-5150a295eebb" extendedConfigurationObject="de4be57e-14d1-4ffd-9a6d-0db8c2e190fb">
+  <producedTypes>
+    <objectType typeId="b99ad4e4-4058-440e-9aff-f61550ac410c" valueTypeId="c942de3e-ed3e-46b7-9aef-85931904fb02"/>
+    <refType typeId="7016c185-0653-4334-9e08-d8f822fa8c68" valueTypeId="2b5c01d5-81e7-4ed9-84ae-663e606a9452"/>
+    <selectionType typeId="c5dc7572-18e5-48c6-9cc3-08722b961b6b" valueTypeId="0020cf4a-d656-4542-b2d1-8418534a178d"/>
+    <listType typeId="f8bc5163-6aa8-4851-88a3-2dca225ac4b6" valueTypeId="ddfc0245-4d95-4367-9667-734d0e461159"/>
+    <managerType typeId="c33be5a7-aa1f-46ce-ba49-cc8a82168821" valueTypeId="2afd1141-a90d-4f63-9e40-31117bc3ec08"/>
+  </producedTypes>
+  <name>КорректировкаСтоимостиИАмортизацииОС</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="c413b8d9-4ae0-4bc6-a7df-65ffc406ea17" extendedConfigurationObject="0589e64e-ac45-445d-ac36-0f19ff8be207">
+    <name>АналитикаРасходов</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Characteristic.СтатьиРасходов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="5dea6016-de27-4d7d-8898-d708655a44ca" extendedConfigurationObject="0510c092-78c6-426b-b16e-2cbfb1d07695">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>AnyRef</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

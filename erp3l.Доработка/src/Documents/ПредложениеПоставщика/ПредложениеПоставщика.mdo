@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4e5031a0-cc4f-40f6-86e6-3a6b52389b71" extendedConfigurationObject="7cdaaab5-61a8-414f-9aa0-41e728cf059f">
+  <producedTypes>
+    <objectType typeId="da54d5d0-aaf4-4730-9f24-72d7eed899d3" valueTypeId="71e89e95-3e89-407c-896b-befb725ad723"/>
+    <refType typeId="c81a0723-c779-4d77-85d7-0823f7b49f23" valueTypeId="b8bdd3b0-449b-453c-adfa-bee5c7e91e89"/>
+    <selectionType typeId="eb16cef3-6101-4a46-affc-03b43c46f1b1" valueTypeId="0c1d7972-89ba-402d-bcc1-48c9871bee57"/>
+    <listType typeId="6285a718-1256-4d73-ba51-425ffc7c966b" valueTypeId="c1a3e4a0-82d3-4169-9d15-c7bd308005cd"/>
+    <managerType typeId="0075a8c7-47db-4f9b-b80b-810c010e8109" valueTypeId="7d7fe2b9-71a9-4203-a1e7-e052ba5be62a"/>
+  </producedTypes>
+  <name>ПредложениеПоставщика</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="4f1fd928-3fe9-4a0d-a4c7-8625b70fc590" extendedConfigurationObject="0b7a2b76-90d6-49da-8056-d8ebf9066e21">
+    <name>Лот</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Лоты</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

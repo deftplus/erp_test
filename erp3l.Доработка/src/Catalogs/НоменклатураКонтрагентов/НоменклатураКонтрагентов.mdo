@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="0decdaf1-8e84-4510-b5cf-f1bde5fb4112" extendedConfigurationObject="fb652c53-8b80-4555-a9eb-dba4d24c612d">
+  <producedTypes>
+    <objectType typeId="e8ad4076-0eb0-49d0-a18c-3cb3d39c9c62" valueTypeId="5488f695-7e03-4711-a6fe-b486e5bdb708"/>
+    <refType typeId="f3ae3155-a57b-4b31-8afa-bc69bef86e70" valueTypeId="b82d3176-e3a3-4e89-a28c-4014d057afe4"/>
+    <selectionType typeId="989c9fc1-dd86-4033-9cf6-72e8216f7fb1" valueTypeId="8e30e948-7e7f-4713-b9f5-217a14c18bf0"/>
+    <listType typeId="b21c38d3-dcaa-4f33-b815-565a4ae9ab21" valueTypeId="47c81e2f-7dfa-4b94-84b2-2f6dc83ccbc4"/>
+    <managerType typeId="f2237cde-6067-4482-99b5-5d15b0253189" valueTypeId="931ae3b3-914e-44f0-99d7-43d81f9588e5"/>
+  </producedTypes>
+  <name>НоменклатураКонтрагентов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <codeLength>Checked</codeLength>
+    <codeType>Checked</codeType>
+    <codeAllowedLength>Checked</codeAllowedLength>
+  </extension>
+  <codeLength>11</codeLength>
+  <codeType>String</codeType>
+  <attributes uuid="9fec927f-8d21-4ede-a0f9-9bae591509f5" extendedConfigurationObject="a2c26441-ecdb-4656-bfd2-15f5621bd867">
+    <name>Артикул</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>100</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Catalog>

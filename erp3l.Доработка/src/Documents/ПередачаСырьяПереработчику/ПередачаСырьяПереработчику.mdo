@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="332b352f-bc27-4c29-b89a-6b9a5fd0bfad" extendedConfigurationObject="875880ed-82fe-442b-a3d0-193a359c10f3">
+  <producedTypes>
+    <objectType typeId="3aed3c78-c5f4-45c9-a711-fdbba84122f9" valueTypeId="bbbea2bf-868a-4d22-aa66-00794a860d79"/>
+    <refType typeId="6d05d8a5-5c76-46c0-99b7-4f6e68950372" valueTypeId="d3abf5da-367a-454c-afa8-a46db2dd6249"/>
+    <selectionType typeId="007c2a68-fe83-4814-92ae-0c726ed19358" valueTypeId="79019bf5-93ba-44d0-95d5-505e2820a335"/>
+    <listType typeId="deb8a0da-364d-4ef9-a896-ad5a047dd6aa" valueTypeId="2fe396d1-1222-469e-9628-04d084cdcd7c"/>
+    <managerType typeId="e840d829-63e0-464c-b540-1e33af9919b9" valueTypeId="e89b091a-a845-4301-a2a2-b5d5880dc181"/>
+  </producedTypes>
+  <name>ПередачаСырьяПереработчику</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="0751975d-e4e6-45af-bc67-0ba1b8e05e16" extendedConfigurationObject="4c13cbd3-afc6-4678-a0ff-2b6f24c7abf4">
+    <name>ЗаказПереработчику</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЗаказПереработчику</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="03513b46-250a-41c4-9d22-b59f5e8f9c46" extendedConfigurationObject="d1c555ed-9a77-4f73-ac59-71d2d0abe2f7">
+    <producedTypes>
+      <objectType typeId="7a91a544-1ece-4c98-860d-a8825d0b4888" valueTypeId="23e2ff02-eb4b-4b68-9d69-ad445ef1baef"/>
+      <rowType typeId="aeef5e38-724c-4a38-958b-ea9b406c12fe" valueTypeId="f3387935-69ec-4a62-9e80-8e012daa16f8"/>
+    </producedTypes>
+    <name>Товары</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="18b14459-8ba9-4fcf-a7ac-62eb5276c221" extendedConfigurationObject="daae57b4-1449-42d2-a9ff-5220e68f63a6">
+      <name>Назначение</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.Назначения</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+    <attributes uuid="75fd7e3c-280a-4053-98c4-ad526ed76f8f" extendedConfigurationObject="75db9fa1-a3f6-47ab-bcbe-b25f3b95fd65">
+      <name>ЗаказПереработчику</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.ЗаказПереработчику</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

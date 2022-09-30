@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="27aade77-405b-44da-897c-f0cd0925e9cc" extendedConfigurationObject="e50db800-fd05-4745-a78e-694cc11250ee">
+  <producedTypes>
+    <objectType typeId="32e7825e-59c9-4e38-9ab9-49fff9441625" valueTypeId="73be5312-afdb-4603-9ecc-bcf69290e717"/>
+    <refType typeId="e0e6967a-b122-416d-aaab-6ae3d4896146" valueTypeId="91524711-0205-4b24-8810-11adf1cf0c78"/>
+    <selectionType typeId="d907b326-6b2e-494f-9d4d-079ca3eea571" valueTypeId="887690b3-d7f8-4132-8f57-6e2c57bf63b2"/>
+    <listType typeId="4a1c0aad-c475-4e0e-9d83-0318b1ae4b5a" valueTypeId="69caef29-4ea9-4c8a-97a0-900fc138c9df"/>
+    <managerType typeId="812ad7fb-5a65-4bff-af9e-3662530f6cd4" valueTypeId="39817b19-273d-4a69-af03-aa1cff525480"/>
+  </producedTypes>
+  <name>ЛистКассовойКниги</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <tabularSections uuid="cb6926a7-f649-4162-b51c-0dd9b35f28de" extendedConfigurationObject="43a49f94-94c4-44b6-8da1-188754de0d02">
+    <producedTypes>
+      <objectType typeId="b5ef59fd-57e2-4820-98a2-ccc82c12b0a0" valueTypeId="a3d3d0df-0cf7-403f-ad15-9ce01eb79d6f"/>
+      <rowType typeId="af256838-12f7-41a8-9cc0-5b34d201b950" valueTypeId="f1782fca-78be-4cb7-badb-79a8162b2308"/>
+    </producedTypes>
+    <name>КассовыеОрдера</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="ef5cdb71-10ff-4505-9a73-5edd2db87a02" extendedConfigurationObject="a5b1fd75-e23f-4525-a7ee-512b0257167d">
+      <name>Документ</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>AnyRef</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

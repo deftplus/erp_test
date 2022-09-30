@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="239fb216-d64b-45ae-92c4-7af02685f50a" extendedConfigurationObject="cab8e6cd-62a2-492b-b82a-0ecf62cbd56d">
+  <producedTypes>
+    <objectType typeId="4a469446-bbef-46b2-8cfc-a07717305bd8" valueTypeId="924d8ff4-6cb5-4a52-a3b5-5571d814b2dd"/>
+    <refType typeId="b3ac07c0-ed1c-446e-9dfa-fbad336eb34b" valueTypeId="63ec2b8d-c15f-401a-85bd-629a4e2d760f"/>
+    <selectionType typeId="aca9ed52-15d1-4842-a915-ebfcbc2d3a0b" valueTypeId="5bc977b6-5204-4339-bf6a-cb2f06a2b746"/>
+    <listType typeId="ca091fa1-97ec-475e-a5b8-de1b38e42806" valueTypeId="8beb18b0-9a92-4117-8a99-aa7003927a5a"/>
+    <managerType typeId="10794db9-d072-4da0-9c54-11df7d9567d0" valueTypeId="ac59add0-9127-4f57-a573-9ac7bbb83974"/>
+  </producedTypes>
+  <name>ЧекККМКоррекции</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="0e322915-1dce-41e3-8367-7fc99604fc9d" extendedConfigurationObject="712145a0-9546-4f91-b8be-37b7009ee934">
+    <name>ЧекККМ</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЧекККМ</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="9bd96194-4143-4ffb-b105-1193bc84f00d" extendedConfigurationObject="5612da5a-1f2f-47f7-a15e-ab6b7a31b8ea">
+    <name>КассоваяСмена</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.КассоваяСмена</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c8caf22b-0afd-4778-a0e3-d30969d5caa5" extendedConfigurationObject="82f67ff9-8a7e-42cf-a8c7-e7887d3c08ee">
+  <producedTypes>
+    <selectionType typeId="c33b72ab-0dbb-463d-bce7-110fc6e24856" valueTypeId="5f5b6e10-30d8-4bff-909f-ccfb6171e5f2"/>
+    <listType typeId="4aee75e6-69a9-45b3-bf81-0f88c94549ce" valueTypeId="8eb69c51-8540-4a54-8659-8678a0153073"/>
+    <managerType typeId="75e04457-f82c-4ed2-b561-726519934e21" valueTypeId="0d485f7e-2498-4d75-8c39-d5bbcbcb933e"/>
+    <recordSetType typeId="9ce650b9-466d-4b0d-a75d-956ac92ed2c0" valueTypeId="dc790932-d0cb-497c-b351-f3865dd7b0b5"/>
+    <recordKeyType typeId="9d0cf5ac-29ec-4ef8-b77d-982912341c83" valueTypeId="9894d39a-64fc-44ea-a04c-356400b62bc1"/>
+    <recordType typeId="fa768090-43cb-4bf8-8b16-05968a58df8e" valueTypeId="75031258-bc10-4efe-8c3f-4e4289843c84"/>
+    <recordManagerType typeId="112bc80c-c08f-4c60-8e42-8788521abe2c" valueTypeId="c30fee7f-a025-4496-bfc6-dae34c64bab0"/>
+  </producedTypes>
+  <name>ОповещенияПользователей</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <resources uuid="bf7177ab-5294-4338-9c95-60eb79953b75" extendedConfigurationObject="07a9eca5-0446-4b19-b10e-688561c33a4f">
+    <name>Задача</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Задачи</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <resources uuid="c4e40f5e-adf9-48f2-a2be-2ea3754893ac" extendedConfigurationObject="bd5472d3-db56-42e7-9263-23957e426ba7">
+    <name>Прочитано</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <resources uuid="0fc29f44-5d39-4009-8316-bc06eca2de61" extendedConfigurationObject="acc65159-044c-48f8-8c96-7120b10ffec6">
+    <name>Тема</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>200</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </resources>
+  <attributes uuid="3755ff30-e13f-43b6-9bca-5900adc27072" extendedConfigurationObject="58ed14a5-d300-468c-b675-2a917bac27a4">
+    <name>Флажок</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.ЦветаФлажковОповещений</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <dimensions uuid="c0061a65-d246-4fcc-b55b-1f73fbd78610" extendedConfigurationObject="2f7187f6-51a8-476d-9255-b9e1bbf4bb10">
+    <name>КатегорияОповещений</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.КатегорииСобытийОповещений</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="ed7e4617-3c40-474a-952b-41dc98cbf6f1" extendedConfigurationObject="66a248b9-de71-4c24-98ba-53083d77cad0">
+    <name>ДатаСоздания</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers/>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="d92514be-959d-4a33-84cc-ca767417a7f6" extendedConfigurationObject="9ba9bb01-9490-4b95-bb35-99b52e8cef0b">
+    <name>Пользователь</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Пользователи</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="b7984831-8a31-4f45-9def-e92b7dc33045" extendedConfigurationObject="bd5833c4-b3f0-4b4f-b42b-7db2f189f4de">
+    <name>ВидОповещения</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ВидыСобытийОповещений</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+</mdclass:InformationRegister>

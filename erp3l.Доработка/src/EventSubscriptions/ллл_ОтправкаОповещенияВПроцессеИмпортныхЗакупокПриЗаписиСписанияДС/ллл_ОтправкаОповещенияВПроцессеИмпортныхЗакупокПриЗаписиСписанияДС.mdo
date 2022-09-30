@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="f53732c9-0afa-47d8-a20f-30588f723a82">
+  <name>ллл_ОтправкаОповещенияВПроцессеИмпортныхЗакупокПриЗаписиСписанияДС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка оповещения в процессе импортных закупок при записи списания ДС (3l)</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.СписаниеБезналичныхДенежныхСредств</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ллл_МодульКазначействоОбщегоНазначения.КазначействоИмпортныеЗакупкиПередЗаписьюСписанияДС</handler>
+</mdclass:EventSubscription>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:InformationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="b184a49b-e50c-4894-b0f4-86f0fa9893eb" extendedConfigurationObject="1a284b2e-cec5-4114-894e-93127b34b39f">
+  <producedTypes>
+    <selectionType typeId="99195532-a9c7-4ac3-aeed-6d53b4abf462" valueTypeId="3e8e410b-2ba8-4efd-8d52-afee957e5d87"/>
+    <listType typeId="6ebdc1d1-4cc2-4a0a-a61f-9cd8aa04fb4c" valueTypeId="9e23c339-2db1-479f-bf24-6df84a665546"/>
+    <managerType typeId="3bdcf453-ff24-42e8-baeb-f86f29730528" valueTypeId="858f2b0a-a95f-461f-9b10-ee8933e07020"/>
+    <recordSetType typeId="e02f2fb3-b820-4d02-84c3-fb820f8dbc9f" valueTypeId="63b3e2ed-65c5-4dd7-98b7-8c4050ee1bf0"/>
+    <recordKeyType typeId="bdbe25c1-1c6b-4935-b550-fb9d75666429" valueTypeId="cbfe0b31-7c46-4a62-86c3-737ecf738004"/>
+    <recordType typeId="383c0a7b-baef-497b-ab04-afc0fb1fa661" valueTypeId="dfa41ae6-d21e-4fe7-ba58-33ba7b931614"/>
+    <recordManagerType typeId="da004548-f747-4dd5-b5b7-b05e5b9cc792" valueTypeId="02f78608-e638-4fb5-bcad-78521bbb5e77"/>
+  </producedTypes>
+  <name>ОтложеннаяОбработкаЭтаповПроцессов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:InformationRegisterExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    <informationRegisterPeriodicity>Checked</informationRegisterPeriodicity>
+    <writeMode>Checked</writeMode>
+  </extension>
+  <informationRegisterPeriodicity>Second</informationRegisterPeriodicity>
+  <dimensions uuid="671efb94-2179-4428-8e71-c942630b19e3" extendedConfigurationObject="0d1195b1-3f4b-4e7a-9510-4f653f5405fb">
+    <name>ВидДействия</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>EnumRef.СобытияОтложеннойОбработкиПроцессов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="167cd122-c514-4042-8b86-76c896868a2e" extendedConfigurationObject="9058e8ef-9d76-4307-95c4-849ff69805b6">
+    <name>Задача</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Задачи</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="dce2b922-6048-432d-acdb-0d067fa6f9bb" extendedConfigurationObject="aebe595a-4502-4471-86f4-8ae0a6cf69bd">
+    <name>Ответственный</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.Пользователи</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+  <dimensions uuid="6aa7c294-f4d3-4ebe-a848-9643cebece71" extendedConfigurationObject="f7594020-3931-4506-b03a-53e3226ff390">
+    <name>Выполнено</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Boolean</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </dimensions>
+</mdclass:InformationRegister>

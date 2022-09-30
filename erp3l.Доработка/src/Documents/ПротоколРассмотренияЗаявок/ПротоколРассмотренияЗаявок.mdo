@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="708c1669-1c0e-4fbf-8cab-54ccb6709474" extendedConfigurationObject="a5dbfcd7-56df-4a39-ac30-798899f77f59">
+  <producedTypes>
+    <objectType typeId="d7ed2be8-d40f-4c52-a8a3-471bb547dbe6" valueTypeId="40cd3f2e-8153-4556-b62e-1208efc116d8"/>
+    <refType typeId="5c3c284c-0ff0-4e1e-96bf-adc28356daba" valueTypeId="aae53c2e-75c0-42f3-bec4-74e351fbb2d5"/>
+    <selectionType typeId="9dff21d3-b6ab-4a88-a5ca-efb74f194752" valueTypeId="348620d6-62c6-4974-8cc3-5efd8ea8e3fa"/>
+    <listType typeId="bc1c0838-596d-4a8f-92bf-cdae3eb28d2a" valueTypeId="8e946956-02a7-4b26-b84e-003f84883c95"/>
+    <managerType typeId="19c5091e-b76b-4f46-9ed7-67f5ff76da18" valueTypeId="303fac1d-f003-4878-bbb6-8baa9da7c714"/>
+  </producedTypes>
+  <name>ПротоколРассмотренияЗаявок</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="3546400a-6962-40a0-84bd-e517da5e4b14" extendedConfigurationObject="e779ca17-5b45-4093-bdf7-6c3c2123f249">
+    <name>ЗакупочнаяПроцедура</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>CatalogRef.ЗакупочныеПроцедуры</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

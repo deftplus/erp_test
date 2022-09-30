@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4e84d93e-19d4-49cd-9ac1-fd8a94784817" extendedConfigurationObject="d150f9d5-d1c8-4ce9-be08-88c954e2bd28">
+  <producedTypes>
+    <objectType typeId="f37f2ee1-d4ca-4c65-aef3-033d1ce89f9c" valueTypeId="9d47a5e9-f47c-4d8f-be63-96d5d23ada28"/>
+    <refType typeId="33b8eaed-d038-4e02-a56f-c153ecb23c96" valueTypeId="8bd409cc-34d7-4a61-97ec-110b5a205155"/>
+    <selectionType typeId="50072590-8020-4191-afb0-3f2443349dca" valueTypeId="cc1a9c01-e775-4417-94a6-22ddb021c8cd"/>
+    <listType typeId="0723c7a7-d2fc-4a88-a936-55996e8f2039" valueTypeId="ba685bf9-51eb-434e-9dbe-d7f629406349"/>
+    <managerType typeId="c92f2195-702a-4e5c-ad5a-83d68220b477" valueTypeId="eab0a13b-5640-46b2-b0c1-fbe6e69f4e37"/>
+  </producedTypes>
+  <name>ВводОстатковВзаиморасчетов</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="d58d7178-6da2-44b5-8825-23288246e24f" extendedConfigurationObject="8206424a-1098-4862-a8c7-d87c096aa124">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ВводОстатковВзаиморасчетов</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="1fcdb626-01c6-4cb2-8c16-83f94ef9a6cb" extendedConfigurationObject="dfd8bcbd-128d-4840-b9f5-eb14854d8f63">
+    <producedTypes>
+      <objectType typeId="57b23e7b-b25f-49cf-9c1a-f883afcb5175" valueTypeId="362eb44d-49c1-481c-b1d7-d4a0c727665d"/>
+      <rowType typeId="a1f9bef8-8575-4839-8ffd-93b9a473e76f" valueTypeId="fab4587e-fa17-4d9a-8078-bd3ae2f04751"/>
+    </producedTypes>
+    <name>РасчетыСПартнерами</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="c432418d-57a8-4285-8916-16a5e42598e3" extendedConfigurationObject="4bee255d-37d2-4eb4-9d06-d37903d5ffc5">
+      <name>ДокументРасчетов</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>DocumentRef.ПервичныйДокумент</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="d2910d59-3d4b-4d57-9114-2bd92e8dd4e0" extendedConfigurationObject="157d7cf9-7e60-4b74-be70-949b478d9d07">
+  <producedTypes>
+    <objectType typeId="bdaaf6dc-0e8e-48b5-acf5-b298e37fac55" valueTypeId="f1f25d5e-7f8c-4bba-bb26-df6fe8b88b3a"/>
+    <refType typeId="b418a3cf-80e9-4070-9fa7-145b2ec8ab44" valueTypeId="1a8f871e-3433-4caa-a05b-386cff111322"/>
+    <selectionType typeId="56ba4a0c-8862-4fe0-b974-8aea9edc29d6" valueTypeId="c6980825-5f84-4fca-891a-1da778d70f0f"/>
+    <listType typeId="c133be7b-b643-453b-80b9-0544f2227ed4" valueTypeId="c9b59ee1-a068-40ed-881a-27b2e24fcde4"/>
+    <managerType typeId="31999a42-97ff-415f-a0c9-4321e3266915" valueTypeId="097ee7f3-2bc8-489f-a65d-ae5146fbeaa4"/>
+  </producedTypes>
+  <name>ОперацияПоПлатежнойКарте</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="c4e01b63-d5a2-45a1-b984-f48c660615f0" extendedConfigurationObject="f4097631-e975-4a3f-8833-fe1af35f610c">
+    <name>ЗаявкаНаРасходованиеДенежныхСредств</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ЗаявкаНаРасходованиеДенежныхСредств</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="9e2777e9-996c-4fc8-8f17-955c834cd91e" extendedConfigurationObject="da516cfa-072b-403c-9ef9-87c8fa80d785">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ОперацияПоПлатежнойКарте</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <tabularSections uuid="425b74c8-5784-4989-862d-32016646a140" extendedConfigurationObject="a78be934-b1f9-4f8f-a5f8-c7991dd31166">
+    <producedTypes>
+      <objectType typeId="591c6a22-3a5a-4fae-8b5d-e2671f81b24e" valueTypeId="94842d3f-0fce-4c41-985d-140e3503c995"/>
+      <rowType typeId="8ada281c-340c-4407-8cb1-50d536cf6790" valueTypeId="cc96370f-da53-4873-8187-877d87a23f00"/>
+    </producedTypes>
+    <name>РасшифровкаПлатежа</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:MdObjectExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+    </extension>
+    <attributes uuid="bbab9e82-bd73-4db1-a8ee-99acc6eba10b" extendedConfigurationObject="6c5a8800-191a-48a9-9b0e-48bd750d33c5">
+      <name>ОснованиеПлатежа</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>AnyRef</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+    <attributes uuid="31a84d45-93ba-4052-b84b-28475264ca60" extendedConfigurationObject="a541d62a-f5c4-47ea-ad22-49d5a7899410">
+      <name>УдалитьЗаказ</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>AnyRef</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+    <attributes uuid="ae3aab0b-0f6a-4a8f-87e4-0154aed262b3" extendedConfigurationObject="855c6534-ffa9-4192-93d5-baabbf4e3f5d">
+      <name>ОбъектРасчетов</name>
+      <objectBelonging>Adopted</objectBelonging>
+      <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+        <extendedConfigurationObject>Checked</extendedConfigurationObject>
+        <typeExtension>
+          <types>
+            <state>Checked</state>
+            <type>CatalogRef.ОбъектыРасчетов</type>
+          </types>
+        </typeExtension>
+      </extension>
+      <type/>
+    </attributes>
+  </tabularSections>
+</mdclass:Document>

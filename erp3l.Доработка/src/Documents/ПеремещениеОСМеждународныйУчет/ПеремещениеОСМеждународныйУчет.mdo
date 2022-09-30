@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="9d252b9b-be0f-4cd8-8ebc-963a84ddb7cd" extendedConfigurationObject="b8c420b7-5870-46a1-ac59-b1111b717649">
+  <producedTypes>
+    <objectType typeId="62f6609a-fec6-4566-b373-efbb4a8266de" valueTypeId="ea8893cd-b15c-46c5-a237-864fd1f15aa0"/>
+    <refType typeId="e882063c-4207-4db6-a66a-117398cee624" valueTypeId="ba8a591e-74a6-44d8-b945-f78c31767355"/>
+    <selectionType typeId="f3dcdb6a-eb12-4b46-afde-805a02dfe28c" valueTypeId="a3f39c76-a179-498b-81a5-9745d1d0cc7d"/>
+    <listType typeId="d07a0d01-2d0c-49fd-b6c2-28d3c1163e2f" valueTypeId="798cb3d1-b7b6-4e1e-9443-138bd668ee81"/>
+    <managerType typeId="6472d152-d6e9-40b4-87fc-893b10cbd91d" valueTypeId="7d6ec02e-4071-40ad-ae80-cc87556c3529"/>
+  </producedTypes>
+  <name>ПеремещениеОСМеждународныйУчет</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="9e83a091-238e-4fd0-9dfe-6ae18cdfcdba" extendedConfigurationObject="63694113-c050-4909-b955-303be98342ca">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ПеремещениеОС</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

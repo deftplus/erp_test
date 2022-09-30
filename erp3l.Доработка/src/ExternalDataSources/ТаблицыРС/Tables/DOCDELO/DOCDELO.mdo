@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="c5d5d009-0157-4496-9b5f-f436152a1f8d" extendedConfigurationObject="1e2845f0-4dd3-472d-8562-a2fd2b876a9c">
+  <producedTypes>
+    <refType typeId="47d95392-64d5-45ac-947a-22d650c65ce7" valueTypeId="857ed562-c004-461f-a525-78dcc5e3425a"/>
+    <listType typeId="9061f038-8430-4de7-a4fb-52ce38935341" valueTypeId="dddb5bde-555f-491d-97cd-2c411a70f73f"/>
+    <objectType typeId="83120e07-f750-4d3a-8cf8-b856f58c5ccf" valueTypeId="5c346408-b77b-4507-9a20-760611e26293"/>
+    <managerType typeId="c74a30ad-0801-4e72-86f3-5e1bc8afdf05" valueTypeId="33f44ea5-39de-4f46-81bd-c0e05db7ec6e"/>
+    <recordManagerType typeId="73f05dec-20bc-468f-9ac2-9591072be7d8" valueTypeId="4669fce6-4530-4191-b45d-d25c1f1ebdfb"/>
+    <recordSetType typeId="f007b916-21e6-4a15-8bba-05ec5f87732a" valueTypeId="dedb6a49-8d93-4b40-ab17-d9b10497000a"/>
+    <recordType typeId="e472f62f-fc59-440c-b5a4-8d8ba827c04a" valueTypeId="705138c6-8693-44f1-8d75-e82a65dfdea4"/>
+    <recordKeyType typeId="18e510c3-2225-4951-8d0b-e2055c2a6c97" valueTypeId="f7f28ff1-f294-49b0-9f74-82f35a993ce8"/>
+  </producedTypes>
+  <name>DOCDELO</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:TableExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <parentDataSource>ExternalDataSource.ТаблицыРС</parentDataSource>
+  <tableFields uuid="38896e6a-e5ab-4304-b5fa-fdf28d7f5144" extendedConfigurationObject="60c60765-9dc3-4af7-826f-6fef0549a6ed">
+    <name>DD_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="ed16d630-e12c-4d4a-9eb3-876b8df36cee" extendedConfigurationObject="5b699319-b5bd-4364-b9f2-1e9b292e5d9f">
+    <name>DDK_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="53b09d5e-bd9e-42fa-aa4f-f05dc2185fae" extendedConfigurationObject="ab5b320a-bf1f-4421-bdca-414a0874f68f">
+    <name>CORR_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="158cc642-fd22-4a97-9c6d-8297d910bb07" extendedConfigurationObject="1ca5383d-60ff-4538-bb08-a286d791ec6a">
+    <name>CURR_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="23df1467-7c84-4ef9-af59-29459431e428" extendedConfigurationObject="016e0490-a7d4-4dbc-98dc-19c59768754f">
+    <name>DD_NO</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>String</type>
+        </types>
+        <stringQualifiers>
+          <length>40</length>
+        </stringQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="b18b5040-a567-460f-a760-be0589bd8f37" extendedConfigurationObject="41793c89-935c-4332-9854-01327200f246">
+    <name>DD_DATE</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Date</type>
+        </types>
+        <dateQualifiers/>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="6d6a69cd-88de-402f-8b71-2c4e33fb3cec" extendedConfigurationObject="f27b0f43-c79b-4d9d-a8fa-a9f4e4627667">
+    <name>DD_SUM</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>38</precision>
+          <scale>8</scale>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="0b5d87f7-1a8e-4f0f-b0c2-ad4120b47842" extendedConfigurationObject="70ba0b6d-9688-47b1-bf97-40063741110b">
+    <name>STO_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+  <tableFields uuid="c419a6a4-dbba-4bed-ab96-964f41745418" extendedConfigurationObject="9a760950-7c57-43de-a362-c2e30589c473">
+    <name>CNT_ID</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:FieldExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>Number</type>
+        </types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </typeExtension>
+    </extension>
+    <type/>
+  </tableFields>
+</mdclass:Table>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="4448eb7f-8314-49bd-9bbe-0b311261be64" extendedConfigurationObject="783b801e-6f0d-4cbb-88e8-f165a94ff6e6">
+  <producedTypes>
+    <objectType typeId="3799e3ac-7836-46ab-83ed-1221609dcabb" valueTypeId="5297a909-3a25-4af3-96b9-d95245734e46"/>
+    <refType typeId="5837ad79-fb78-4ba8-ba8a-7e4a007a2ca1" valueTypeId="67c70d50-76e9-4624-b328-15fdc7adecc9"/>
+    <selectionType typeId="1c94f92a-8db7-42b8-9189-cc74bc5cb3ea" valueTypeId="2fa51f6c-80c9-40c7-bc40-26b62a630303"/>
+    <listType typeId="9ce07f0c-620c-484e-be7d-6f133a749f44" valueTypeId="f54ffcb9-5471-47c4-82d9-bc3c71e7b951"/>
+    <managerType typeId="beb6d5fd-2415-40df-be6c-d589bbeda82a" valueTypeId="ca40c5cb-72fd-4032-8dee-56da78c40c12"/>
+  </producedTypes>
+  <name>ИнвентаризацияНаличныхДенежныхСредств</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="d529fee3-ab86-4bdf-a17b-3337ab9b5499" extendedConfigurationObject="00ba2fde-26f1-4d7a-808e-b2f45a9a222c">
+    <name>СторнируемыйДокумент</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.ИнвентаризацияНаличныхДенежныхСредств</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

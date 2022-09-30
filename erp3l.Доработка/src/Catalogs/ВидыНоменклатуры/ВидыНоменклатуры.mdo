@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="db4cf809-71a1-4a67-8fd3-6a6bd2eefeb4" extendedConfigurationObject="f3b86010-6dc9-4bd6-9fda-850ce2f2ea58">
+  <producedTypes>
+    <objectType typeId="34b6a673-66ff-4219-9fee-b16d33743bc3" valueTypeId="3987f488-cd23-4346-bd79-35ef8e82d197"/>
+    <refType typeId="96fa0a7f-da25-4ce5-a77b-e35ee89839f2" valueTypeId="34f9ab5e-7553-4ece-a414-59960c0c4e54"/>
+    <selectionType typeId="5f0bb8a1-c341-4273-bb7f-b783b5c23797" valueTypeId="0c8cdf30-264f-4b36-9983-aed4c514a340"/>
+    <listType typeId="41ed5deb-3102-4f21-8cf9-f116d1814b09" valueTypeId="14757b24-5b71-48a8-bd0b-0d4a78a7e632"/>
+    <managerType typeId="082aeb44-8ec4-493d-bd6f-3f9d468670ad" valueTypeId="57dd282f-9333-42c8-91ba-1a6ea94b7c29"/>
+  </producedTypes>
+  <name>ВидыНоменклатуры</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:CatalogExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="df8fc187-489a-4aa4-b188-9b825ac5a3fb">
+    <name>КодРС</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код РС</value>
+    </synonym>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension"/>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>15</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+</mdclass:Catalog>

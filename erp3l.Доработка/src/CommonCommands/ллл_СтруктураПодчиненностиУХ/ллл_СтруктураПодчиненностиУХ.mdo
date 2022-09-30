@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="dcd3d46c-edc3-4bf6-be8d-ea8dec456ce1">
+  <name>ллл_СтруктураПодчиненностиУХ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Связанные документы (3l)</value>
+  </synonym>
+  <group>FormCommandBarImportant</group>
+  <commandParameterType>
+    <types>DocumentRef.ллл_ПредварительныйЗаказЗаводуИзготовителю</types>
+    <types>DocumentRef.ллл_ЛогистическаяСделка</types>
+    <types>DocumentRef.СчетНаОплатуКлиенту</types>
+    <types>DocumentRef.КорректировкаРеализации</types>
+    <types>DocumentRef.ВозвратТоваровПоставщику</types>
+    <types>DocumentRef.РеализацияТоваровУслуг</types>
+    <types>DocumentRef.ПоступлениеБезналичныхДенежныхСредств</types>
+    <types>DocumentRef.ЗаказПоставщику</types>
+    <types>DocumentRef.РеестрПлатежей</types>
+    <types>DocumentRef.РасходныйКассовыйОрдер</types>
+    <types>DocumentRef.ЗаказКлиента</types>
+    <types>DocumentRef.ПриобретениеТоваровУслуг</types>
+    <types>DocumentRef.ллл_РеестрСогласованийПлатежей</types>
+    <types>DocumentRef.ПоступлениеТоваровНаСклад</types>
+    <types>DocumentRef.ЗаявкаНаРасходованиеДенежныхСредств</types>
+    <types>DocumentRef.СписаниеБезналичныхДенежныхСредств</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Перейти к иерархическому списку связанных документов (3l)</value>
+  </toolTip>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.СтруктураПодчиненностиДокумента</picture>
+  </picture>
+</mdclass:CommonCommand>

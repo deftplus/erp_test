@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Document xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" xmlns:mdclassExtension="http://g5.1c.ru/v8/dt/metadata/mdclass/extension" uuid="df3dc621-4252-4394-b78b-e14aa7e3a5ca" extendedConfigurationObject="c8faf8b3-7159-4bef-a992-488520d78559">
+  <producedTypes>
+    <objectType typeId="8a951bf2-3e93-485d-af0c-11bbfaefcef1" valueTypeId="4a26881e-863b-4e19-a20b-f8f63d917e04"/>
+    <refType typeId="7f96a221-eacc-4261-bb5f-5e90b8922740" valueTypeId="0597f543-7b44-4536-b6f1-b33ac6940369"/>
+    <selectionType typeId="9cca9442-2d4b-4197-93b9-d0be6c09c608" valueTypeId="44891da3-b38d-49fe-be49-f92d8644712a"/>
+    <listType typeId="c87cf98c-da81-49df-a080-3f47aced1038" valueTypeId="17d1c218-1c2f-4609-8bb4-22083fff9270"/>
+    <managerType typeId="4eb634ad-12d0-4f58-8ac3-150adb40a9eb" valueTypeId="5f6ee97f-4fe2-4c85-ab61-870962034469"/>
+  </producedTypes>
+  <name>АктПостановкиНаБалансЕГАИС</name>
+  <objectBelonging>Adopted</objectBelonging>
+  <extension xsi:type="mdclassExtension:DocumentExtension">
+    <extendedConfigurationObject>Checked</extendedConfigurationObject>
+  </extension>
+  <attributes uuid="c3455b10-67c6-4754-8ab1-d0b5570c9a22" extendedConfigurationObject="b1278662-9a41-461e-b787-32aab5af154e">
+    <name>ДокументОснование</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DefinedType.ОснованиеАктаПостановкиНаБалансЕГАИС</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+  <attributes uuid="00f06cde-363a-42f4-b7f5-4660c04e5131" extendedConfigurationObject="32083659-a07a-4d60-8693-ef4eebd4af8a">
+    <name>АктСписанияЕГАИС</name>
+    <objectBelonging>Adopted</objectBelonging>
+    <extension xsi:type="mdclassExtension:BasicFeatureExtension">
+      <extendedConfigurationObject>Checked</extendedConfigurationObject>
+      <typeExtension>
+        <types>
+          <state>Checked</state>
+          <type>DocumentRef.АктСписанияЕГАИС</type>
+        </types>
+      </typeExtension>
+    </extension>
+    <type/>
+  </attributes>
+</mdclass:Document>

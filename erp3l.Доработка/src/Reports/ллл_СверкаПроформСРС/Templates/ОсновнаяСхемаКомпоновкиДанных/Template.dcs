@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CURR_ID</dataPath>
+			<field>CURR_ID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) код валюты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DD_ID</dataPath>
+			<field>DD_ID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) номер проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CORR_ID</dataPath>
+			<field>CORR_ID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) код контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DD_SUM</dataPath>
+			<field>DD_SUM</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) сумма</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DD_NO</dataPath>
+			<field>DD_NO</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) номер проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>DD_DATE</dataPath>
+			<field>DD_DATE</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) дата проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CNT_ID</dataPath>
+			<field>CNT_ID</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) код договора</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CORR_ISTAMSOYUZ</dataPath>
+			<field>CORR_ISTAMSOYUZ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) таможенный союз</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CORR_ISRESIDENT</dataPath>
+			<field>CORR_ISRESIDENT</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) резидент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>CORR_NAME</dataPath>
+			<field>CORR_NAME</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(рс) наименование контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	DOCDELO.DD_ID КАК DD_ID,
+	DOCDELO.CORR_ID КАК CORR_ID,
+	DOCDELO.CURR_ID КАК CURR_ID,
+	DOCDELO.DD_NO КАК DD_NO,
+	DOCDELO.DD_DATE КАК DD_DATE,
+	DOCDELO.DD_SUM КАК DD_SUM,
+	DOCDELO.CNT_ID КАК CNT_ID,
+	ВЫБОР
+		КОГДА CORR.CORR_ISRESIDENT = 1
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК CORR_ISRESIDENT,
+	ВЫБОР
+		КОГДА CORR.CORR_ISTAMSOYUZ = 1
+			ТОГДА ИСТИНА
+		ИНАЧЕ ЛОЖЬ
+	КОНЕЦ КАК CORR_ISTAMSOYUZ,
+	CORR.CORR_NAME КАК CORR_NAME
+ИЗ
+	ВнешнийИсточникДанных.ТаблицыРС.Таблица.DOCDELO КАК DOCDELO
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВнешнийИсточникДанных.ТаблицыРС.Таблица.CORR КАК CORR
+		ПО DOCDELO.CORR_ID = CORR.CORR_ID
+ГДЕ
+	DOCDELO.DDK_ID = 5
+	И DOCDELO.DD_DATE МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных2</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПредзаказ</dataPath>
+			<field>ЗаказПредзаказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) Документ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПоДаннымПоставщика</dataPath>
+			<field>НомерПоДаннымПоставщика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) номер проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодРСПроформы</dataPath>
+			<field>КодРСПроформы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) код проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТаможенныйСоюз</dataPath>
+			<field>ТаможенныйСоюз</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) таможенный союз</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоДаннымПоставщика</dataPath>
+			<field>ДатаПоДаннымПоставщика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) дата проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодРСКонтрагента</dataPath>
+			<field>КодРСКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) код контрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Резидент</dataPath>
+			<field>Резидент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) резидент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) валюта</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>(1с) сумма документа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент КАК Контрагент,
+	МАКСИМУМ(ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_НомерВерсии) КАК ллл_НомерВерсии
+ПОМЕСТИТЬ ВТ_МакисмальныеВерсииПредзаказов
+ИЗ
+	Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+ГДЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗаказПоставщику.Контрагент КАК Контрагент
+ПОМЕСТИТЬ ВТ_Контрагенты
+ИЗ
+	Документ.ЗаказПоставщику КАК ЗаказПоставщику
+ГДЕ
+	ЗаказПоставщику.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент
+ИЗ
+	ВТ_МакисмальныеВерсииПредзаказов КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Контрагенты.Контрагент КАК Контрагент,
+	КонтрагентыДополнительныеРеквизиты.Значение КАК КодРС
+ПОМЕСТИТЬ ВТ_КонтрагентыСКодомРС
+ИЗ
+	ВТ_Контрагенты КАК ВТ_Контрагенты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_Контрагенты.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "КодРС")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КонтрагентыСКодомРС.Контрагент КАК Контрагент,
+	ВТ_КонтрагентыСКодомРС.КодРС КАК КодРС,
+	ЕСТЬNULL(КонтрагентыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК Резидент
+ПОМЕСТИТЬ ВТ_КонтрагентыСКодомРСИФлагомРезидента
+ИЗ
+	ВТ_КонтрагентыСКодомРС КАК ВТ_КонтрагентыСКодомРС
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_КонтрагентыСКодомРС.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "Резидент")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.Контрагент КАК Контрагент,
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.КодРС КАК КодРС,
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.Резидент КАК Резидент,
+	ЕСТЬNULL(КонтрагентыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК ТаможенныйСоюз
+ПОМЕСТИТЬ ВТ_Контрагент
+ИЗ
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента КАК ВТ_КонтрагентыСКодомРСИФлагомРезидента
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_КонтрагентыСКодомРСИФлагомРезидента.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "ТаможенныйСоюз")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Ссылка КАК ЗаказПредзаказ,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_КодРС КАК КодРСПроформы,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент КАК Контрагент,
+	ВТ_Контрагент.КодРС КАК КодРСКонтрагента,
+	ВТ_Контрагент.Резидент КАК Резидент,
+	ВТ_Контрагент.ТаможенныйСоюз КАК ТаможенныйСоюз,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Валюта КАК Валюта,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.СуммаДокумента КАК СуммаДокумента
+ПОМЕСТИТЬ ВТ_Предзаказы
+ИЗ
+	Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_МакисмальныеВерсииПредзаказов КАК ВТ_МакисмальныеВерсииПредзаказов
+		ПО ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент = ВТ_МакисмальныеВерсииПредзаказов.Контрагент
+			И (ВТ_МакисмальныеВерсииПредзаказов.ллл_НомерВерсии = ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_НомерВерсии)
+			И (ВТ_МакисмальныеВерсииПредзаказов.НомерПоДаннымПоставщика = ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Контрагент КАК ВТ_Контрагент
+		ПО (ВТ_Контрагент.Контрагент = ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказПоставщику.Контрагент КАК Контрагент,
+	ЗаказПоставщику.Ссылка КАК Ссылка,
+	ЗаказПоставщику.СуммаДокумента КАК СуммаДокумента,
+	ЗаказПоставщику.Валюта КАК Валюта,
+	ЗаказПоставщику.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ЗаказПоставщику.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ЗаказПоставщикуДополнительныеРеквизиты.Значение КАК КодРСПроформы,
+	ВТ_Контрагент.КодРС КАК КодРСКонтрагента,
+	ВТ_Контрагент.Резидент КАК Резидент,
+	ВТ_Контрагент.ТаможенныйСоюз КАК ТаможенныйСоюз
+ПОМЕСТИТЬ ВТ_Заказы
+ИЗ
+	Документ.ЗаказПоставщику КАК ЗаказПоставщику
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказПоставщику.ДополнительныеРеквизиты КАК ЗаказПоставщикуДополнительныеРеквизиты
+		ПО (ЗаказПоставщикуДополнительныеРеквизиты.Ссылка = ЗаказПоставщику.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Контрагент КАК ВТ_Контрагент
+		ПО ЗаказПоставщику.Контрагент = ВТ_Контрагент.Контрагент
+ГДЕ
+	ЗаказПоставщику.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ТИПЗНАЧЕНИЯ(ЗаказПоставщику.ДокументОснование) &lt;&gt; ТИП(Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Предзаказы.ЗаказПредзаказ КАК ЗаказПредзаказ,
+	ВТ_Предзаказы.КодРСПроформы КАК КодРСПроформы,
+	ВТ_Предзаказы.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ВТ_Предзаказы.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ВТ_Предзаказы.Контрагент КАК Контрагент,
+	ВТ_Предзаказы.КодРСКонтрагента КАК КодРСКонтрагента,
+	ВТ_Предзаказы.Резидент КАК Резидент,
+	ВТ_Предзаказы.ТаможенныйСоюз КАК ТаможенныйСоюз,
+	ВТ_Предзаказы.Валюта КАК Валюта,
+	ВТ_Предзаказы.СуммаДокумента КАК СуммаДокумента
+ИЗ
+	ВТ_Предзаказы КАК ВТ_Предзаказы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Заказы.Ссылка,
+	ВТ_Заказы.КодРСПроформы,
+	ВТ_Заказы.НомерПоДаннымПоставщика,
+	ВТ_Заказы.ДатаПоДаннымПоставщика,
+	ВТ_Заказы.Контрагент,
+	ВТ_Заказы.КодРСКонтрагента,
+	ВТ_Заказы.Резидент,
+	ВТ_Заказы.ТаможенныйСоюз,
+	ВТ_Заказы.Валюта,
+	ВТ_Заказы.СуммаДокумента
+ИЗ
+	ВТ_Заказы КАК ВТ_Заказы
+
+</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных3</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказПредзаказ</dataPath>
+			<field>ЗаказПредзаказ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПоДаннымПоставщика</dataPath>
+			<field>НомерПоДаннымПоставщика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодРСПроформы</dataPath>
+			<field>КодРСПроформы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код РСПроформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТаможенныйСоюз</dataPath>
+			<field>ТаможенныйСоюз</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таможенный союз</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоДаннымПоставщика</dataPath>
+			<field>ДатаПоДаннымПоставщика</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодРСКонтрагента</dataPath>
+			<field>КодРСКонтрагента</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код РСКонтрагента</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Резидент</dataPath>
+			<field>Резидент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Резидент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаДокумента</dataPath>
+			<field>СуммаДокумента</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>         ВЫБРАТЬ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент КАК Контрагент,
+	МАКСИМУМ(ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_НомерВерсии) КАК ллл_НомерВерсии
+ПОМЕСТИТЬ ВТ_МакисмальныеВерсииПредзаказов
+ИЗ
+	Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+ГДЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+СГРУППИРОВАТЬ ПО
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗаказПоставщику.Контрагент КАК Контрагент
+ПОМЕСТИТЬ ВТ_Контрагенты
+ИЗ
+	Документ.ЗаказПоставщику КАК ЗаказПоставщику
+ГДЕ
+	ЗаказПоставщику.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент
+ИЗ
+	ВТ_МакисмальныеВерсииПредзаказов КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Контрагенты.Контрагент КАК Контрагент,
+	КонтрагентыДополнительныеРеквизиты.Значение КАК КодРС
+ПОМЕСТИТЬ ВТ_КонтрагентыСКодомРС
+ИЗ
+	ВТ_Контрагенты КАК ВТ_Контрагенты
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_Контрагенты.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "КодРС")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КонтрагентыСКодомРС.Контрагент КАК Контрагент,
+	ВТ_КонтрагентыСКодомРС.КодРС КАК КодРС,
+	ЕСТЬNULL(КонтрагентыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК Резидент
+ПОМЕСТИТЬ ВТ_КонтрагентыСКодомРСИФлагомРезидента
+ИЗ
+	ВТ_КонтрагентыСКодомРС КАК ВТ_КонтрагентыСКодомРС
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_КонтрагентыСКодомРС.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "Резидент")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.Контрагент КАК Контрагент,
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.КодРС КАК КодРС,
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента.Резидент КАК Резидент,
+	ЕСТЬNULL(КонтрагентыДополнительныеРеквизиты.Значение, ЛОЖЬ) КАК ТаможенныйСоюз
+ПОМЕСТИТЬ ВТ_Контрагент
+ИЗ
+	ВТ_КонтрагентыСКодомРСИФлагомРезидента КАК ВТ_КонтрагентыСКодомРСИФлагомРезидента
+		ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Контрагенты.ДополнительныеРеквизиты КАК КонтрагентыДополнительныеРеквизиты
+		ПО ВТ_КонтрагентыСКодомРСИФлагомРезидента.Контрагент = КонтрагентыДополнительныеРеквизиты.Ссылка
+			И (КонтрагентыДополнительныеРеквизиты.Свойство.Имя = "ТаможенныйСоюз")
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Ссылка КАК ЗаказПредзаказ,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_КодРС КАК КодРСПроформы,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент КАК Контрагент,
+	ВТ_Контрагент.КодРС КАК КодРСКонтрагента,
+	ВТ_Контрагент.Резидент КАК Резидент,
+	ВТ_Контрагент.ТаможенныйСоюз КАК ТаможенныйСоюз,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Валюта КАК Валюта,
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.СуммаДокумента КАК СуммаДокумента
+ПОМЕСТИТЬ ВТ_Предзаказы
+ИЗ
+	Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_МакисмальныеВерсииПредзаказов КАК ВТ_МакисмальныеВерсииПредзаказов
+		ПО ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент = ВТ_МакисмальныеВерсииПредзаказов.Контрагент
+			И (ВТ_МакисмальныеВерсииПредзаказов.ллл_НомерВерсии = ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_НомерВерсии)
+			И (ВТ_МакисмальныеВерсииПредзаказов.НомерПоДаннымПоставщика = ллл_ПредварительныйЗаказЗаводуИзготовителю.НомерПоДаннымПоставщика)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_Контрагент КАК ВТ_Контрагент
+		ПО (ВТ_Контрагент.Контрагент = ллл_ПредварительныйЗаказЗаводуИзготовителю.Контрагент)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЗаказПоставщику.Контрагент КАК Контрагент,
+	ЗаказПоставщику.Ссылка КАК Ссылка,
+	ЗаказПоставщику.СуммаДокумента КАК СуммаДокумента,
+	ЗаказПоставщику.Валюта КАК Валюта,
+	ЗаказПоставщику.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ЗаказПоставщику.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ЗаказПоставщикуДополнительныеРеквизиты.Значение КАК КодРСПроформы,
+	ВТ_Контрагент.КодРС КАК КодРСКонтрагента,
+	ВТ_Контрагент.Резидент КАК Резидент,
+	ВТ_Контрагент.ТаможенныйСоюз КАК ТаможенныйСоюз
+ПОМЕСТИТЬ ВТ_Заказы
+ИЗ
+	Документ.ЗаказПоставщику КАК ЗаказПоставщику
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказПоставщику.ДополнительныеРеквизиты КАК ЗаказПоставщикуДополнительныеРеквизиты
+		ПО (ЗаказПоставщикуДополнительныеРеквизиты.Ссылка = ЗаказПоставщику.Ссылка)
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Контрагент КАК ВТ_Контрагент
+		ПО ЗаказПоставщику.Контрагент = ВТ_Контрагент.Контрагент
+ГДЕ
+	ЗаказПоставщику.ДатаПоДаннымПоставщика МЕЖДУ &amp;ДатаНачала И &amp;ДатаОкончания
+	И ТИПЗНАЧЕНИЯ(ЗаказПоставщику.ДокументОснование) &lt;&gt; ТИП(Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Предзаказы.ЗаказПредзаказ КАК ЗаказПредзаказ,
+	ВТ_Предзаказы.КодРСПроформы КАК КодРСПроформы,
+	ВТ_Предзаказы.НомерПоДаннымПоставщика КАК НомерПоДаннымПоставщика,
+	ВТ_Предзаказы.ДатаПоДаннымПоставщика КАК ДатаПоДаннымПоставщика,
+	ВТ_Предзаказы.Контрагент КАК Контрагент,
+	ВТ_Предзаказы.КодРСКонтрагента КАК КодРСКонтрагента,
+	ВТ_Предзаказы.Резидент КАК Резидент,
+	ВТ_Предзаказы.ТаможенныйСоюз КАК ТаможенныйСоюз,
+	ВТ_Предзаказы.Валюта КАК Валюта,
+	ВТ_Предзаказы.СуммаДокумента КАК СуммаДокумента
+ИЗ
+	ВТ_Предзаказы КАК ВТ_Предзаказы
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ВТ_Заказы.Ссылка,
+	ВТ_Заказы.КодРСПроформы,
+	ВТ_Заказы.НомерПоДаннымПоставщика,
+	ВТ_Заказы.ДатаПоДаннымПоставщика,
+	ВТ_Заказы.Контрагент,
+	ВТ_Заказы.КодРСКонтрагента,
+	ВТ_Заказы.Резидент,
+	ВТ_Заказы.ТаможенныйСоюз,
+	ВТ_Заказы.Валюта,
+	ВТ_Заказы.СуммаДокумента
+ИЗ
+	ВТ_Заказы КАК ВТ_Заказы
+
+</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных2</destinationDataSet>
+		<sourceExpression>DD_ID</sourceExpression>
+		<destinationExpression>КодРСПроформы</destinationExpression>
+	</dataSetLink>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных3</sourceDataSet>
+		<destinationDataSet>НаборДанных1</destinationDataSet>
+		<sourceExpression>КодРСПроформы</sourceExpression>
+		<destinationExpression>DD_ID</destinationExpression>
+	</dataSetLink>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="xs:string">Дата начала</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="xs:string">Дата окончания</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;период.Датаокончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="xs:string">Период</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+			<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+			<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:userFields>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле1</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходятся данные контрагента</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда CORR_ID &lt;&gt; КодРСКонтрагента Или CORR_ISTAMSOYUZ &lt;&gt; ТаможенныйСоюз Или CORR_ISRESIDENT &lt;&gt; Резидент
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [(рс) код контрагента] &lt;&gt; [(1с) код контрагента] Или [(рс) таможенный союз] &lt;&gt; [(1с) таможенный союз] Или [(рс) резидент] &lt;&gt; [(1с) резидент]
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression/>
+					<dcsset:totalExpressionPresentation/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле2</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходятся данные проформ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда НомерПоДаннымПоставщика &lt;&gt; DD_NO Или ДатаПоДаннымПоставщика &lt;&gt; DD_DATE
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [(1с) номер проформы] &lt;&gt; [(рс) номер проформы] Или [(1с) дата проформы] &lt;&gt; [(рс) дата проформы]
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression/>
+					<dcsset:totalExpressionPresentation/>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:UserFieldExpression">
+					<dcsset:dataPath>ПользовательскиеПоля.Поле3</dcsset:dataPath>
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходятся суммы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:detailExpression>Выбор
+	Когда СуммаДокумента &lt;&gt; DD_SUM
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpression>
+					<dcsset:detailExpressionPresentation>Выбор
+	Когда [(1с) сумма документа] &lt;&gt; [(рс) сумма]
+		Тогда Истина
+	Иначе Ложь
+Конец</dcsset:detailExpressionPresentation>
+					<dcsset:totalExpression/>
+					<dcsset:totalExpressionPresentation/>
+				</dcsset:item>
+			</dcsset:userFields>
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные РС</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CORR_ID</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CORR_NAME</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CORR_ISRESIDENT</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CORR_ISTAMSOYUZ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CURR_ID</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>CNT_ID</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>DD_SUM</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>DD_ID</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>DD_NO</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>DD_DATE</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные 1С</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодРСКонтрагента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Резидент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ТаможенныйСоюз</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Валюта</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаДокумента</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>КодРСПроформы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказПредзаказ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>НомерПоДаннымПоставщика</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПоДаннымПоставщика</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результаты сверки</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле1</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле2</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПользовательскиеПоля.Поле3</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisWeek</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>b3d68914-bc94-4c42-aa6b-82b0fc6de55f</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>DD_DATE</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаПоДаннымПоставщика</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДЛФ=D</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>DD_SUM</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СуммаДокумента</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>КодРСКонтрагента</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>КодРСПроформы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=0</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

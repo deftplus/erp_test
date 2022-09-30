@@ -1,0 +1,888 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаЗаказа</dataPath>
+			<field>ВалютаЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта заказа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаПредварительногоЗаказа</dataPath>
+			<field>ВалютаПредварительногоЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта предварительного заказа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОбъектРасчетов</dataPath>
+			<field>ОбъектРасчетов</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаводИзготовитель</dataPath>
+			<field>ЗаводИзготовитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завод изготовитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПредварительногоЗаказаЗаводуИзготовителю</dataPath>
+			<field>СуммаПредварительногоЗаказаЗаводуИзготовителю</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма предварительного заказа заводу изготовителю</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЗаказаЧерезАгентаПоДоставке</dataPath>
+			<field>СуммаЗаказаЧерезАгентаПоДоставке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа через агента по доставке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаЗаказаЧерезАгентаПоОплате</dataPath>
+			<field>СуммаЗаказаЧерезАгентаПоОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма заказа через агента по оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПриходПоРегиструРасчетовСКонтрагентом</dataPath>
+			<field>ПриходПоРегиструРасчетовСКонтрагентом</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приход по регистру расчетов с контрагентом</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодРС</dataPath>
+			<field>КодРС</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерВерсии</dataPath>
+			<field>НомерВерсии</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер версии</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НомерПроформы</dataPath>
+			<field>НомерПроформы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПроформы</dataPath>
+			<field>ДатаПроформы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата проформы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаПоЗаказуАгентуПоДоставке</dataPath>
+			<field>ОплатаПоЗаказуАгентуПоДоставке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата по заказу агенту по доставке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АгентПоОплате</dataPath>
+			<field>АгентПоОплате</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КонтрагентЗаказа</dataPath>
+			<field>КонтрагентЗаказа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент заказа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>АгентПоДоставке</dataPath>
+			<field>АгентПоДоставке</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказаноУАгентаПоОплате</dataPath>
+			<field>ЗаказаноУАгентаПоОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказано у агента по оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаПолученнаяЗаводомФакт</dataPath>
+			<field>СуммаПолученнаяЗаводомФакт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма полученная заводом факт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Заказ</dataPath>
+			<field>Заказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПредЗаказ</dataPath>
+			<field>ПредЗаказ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пред заказ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказОбъектРасчетов</dataPath>
+			<field>ЗаказОбъектРасчетов</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ объект расчетов</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказЗаводуИзготовителю</dataPath>
+			<field>ЗаказЗаводуИзготовителю</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ заводу изготовителю</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказАгентуПоДоставке</dataPath>
+			<field>ЗаказАгентуПоДоставке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ агенту по доставке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказАгентуПоОплате</dataPath>
+			<field>ЗаказАгентуПоОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказ агенту по оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказаноУЗаводаИзготовителя</dataPath>
+			<field>ЗаказаноУЗаводаИзготовителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказано у завода изготовителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаказаноУАгентаПоДоставке</dataPath>
+			<field>ЗаказаноУАгентаПоДоставке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказано у агента по доставке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаЗаказаУЗаводаИзготовителя</dataPath>
+			<field>ВалютаЗаказаУЗаводаИзготовителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта заказа у завода изготовителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаЗаказаАгентаПоДоставке</dataPath>
+			<field>ВалютаЗаказаАгентаПоДоставке</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта заказа агента по доставке</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВалютаЗаказаУАгентаПоОплате</dataPath>
+			<field>ВалютаЗаказаУАгентаПоОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта заказа у агента по оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаПоЗаказуЗаводуИзготовителю</dataPath>
+			<field>ОплатаПоЗаказуЗаводуИзготовителю</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата по заказу заводу изготовителю</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ОплатаПоЗаказуАгентуПоОплате</dataPath>
+			<field>ОплатаПоЗаказуАгентуПоОплате</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оплата по заказу агенту по оплате</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_КодРС КАК ллл_КодРС
+ПОМЕСТИТЬ ВТ_0
+ИЗ
+	Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+ГДЕ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика &gt;= &amp;ДатаНачала
+	И ллл_ПредварительныйЗаказЗаводуИзготовителю.ДатаПоДаннымПоставщика &lt;= КОНЕЦПЕРИОДА(&amp;ДатаОкончания, ДЕНЬ)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ллл_РеквизитыКазначействаДляПредварительныхЗаказов.КодРС КАК КодРС,
+	ллл_РеквизитыКазначействаДляПредварительныхЗаказов.ОбрабатывалсяНомерВерсии КАК ОбрабатывалсяНомерВерсии,
+	ллл_РеквизитыКазначействаДляПредварительныхЗаказов.АгентПоОплате КАК АгентПоОплате,
+	ллл_РеквизитыКазначействаДляПредварительныхЗаказов.АгентПоДоставке КАК АгентПоДоставке
+ПОМЕСТИТЬ ВТ_ОбработанныеКодыРС
+ИЗ
+	РегистрСведений.ллл_РеквизитыКазначействаДляПредварительныхЗаказов КАК ллл_РеквизитыКазначействаДляПредварительныхЗаказов
+ГДЕ
+	ллл_РеквизитыКазначействаДляПредварительныхЗаказов.ОбработаноРуководителемКазначейства = ИСТИНА
+	И ллл_РеквизитыКазначействаДляПредварительныхЗаказов.КодРС В
+			(ВЫБРАТЬ
+				з.ллл_КодРС
+			ИЗ
+				ВТ_0 КАК з)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ллл_ПредварительныйЗаказЗаводуИзготовителю.Ссылка КАК ПредЗаказ,
+	ВТ_ОбработанныеКодыРС.КодРС КАК КодРС,
+	ВТ_ОбработанныеКодыРС.ОбрабатывалсяНомерВерсии КАК НомерВерсии,
+	ВТ_ОбработанныеКодыРС.АгентПоОплате КАК АгентПоОплате,
+	ВТ_ОбработанныеКодыРС.АгентПоДоставке КАК АгентПоДоставке
+ПОМЕСТИТЬ ВТ_Предзаказы
+ИЗ
+	ВТ_ОбработанныеКодыРС КАК ВТ_ОбработанныеКодыРС
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю КАК ллл_ПредварительныйЗаказЗаводуИзготовителю
+		ПО ВТ_ОбработанныеКодыРС.КодРС = ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_КодРС
+			И (ллл_ПредварительныйЗаказЗаводуИзготовителю.ллл_НомерВерсии = ВТ_ОбработанныеКодыРС.ОбрабатывалсяНомерВерсии)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Предзаказы.ПредЗаказ.Контрагент КАК ЗаводИзготовитель,
+	ВТ_Предзаказы.ПредЗаказ.Валюта КАК ВалютаПредварительногоЗаказа,
+	СУММА(ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.СуммаСНДС) КАК СуммаПредварительногоЗаказаЗаводуИзготовителю,
+	СУММА(ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.СуммаАгентуПоДоставке) КАК СуммаЗаказаЧерезАгентаПоДоставке,
+	СУММА(ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.СуммаАгентуПоОплате) КАК СуммаЗаказаЧерезАгентаПоОплате,
+	ВТ_Предзаказы.КодРС КАК КодРС,
+	ВТ_Предзаказы.НомерВерсии КАК НомерВерсии,
+	ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.Ссылка.НомерПоДаннымПоставщика КАК НомерПроформы,
+	ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.Ссылка.ДатаПоДаннымПоставщика КАК ДатаПроформы,
+	ВТ_Предзаказы.АгентПоОплате КАК АгентПоОплате,
+	ВТ_Предзаказы.АгентПоДоставке КАК АгентПоДоставке,
+	ВТ_Предзаказы.ПредЗаказ КАК ПредЗаказ
+ПОМЕСТИТЬ ВТ_3
+ИЗ
+	ВТ_Предзаказы КАК ВТ_Предзаказы
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ллл_ПредварительныйЗаказЗаводуИзготовителю.Товары КАК ллл_ПредварительныйЗаказЗаводуИзготовителюТовары
+		ПО ВТ_Предзаказы.ПредЗаказ = ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.Ссылка
+
+СГРУППИРОВАТЬ ПО
+	ВТ_Предзаказы.ПредЗаказ.Контрагент,
+	ВТ_Предзаказы.ПредЗаказ.Валюта,
+	ВТ_Предзаказы.КодРС,
+	ВТ_Предзаказы.НомерВерсии,
+	ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.Ссылка.НомерПоДаннымПоставщика,
+	ллл_ПредварительныйЗаказЗаводуИзготовителюТовары.Ссылка.ДатаПоДаннымПоставщика,
+	ВТ_Предзаказы.АгентПоОплате,
+	ВТ_Предзаказы.АгентПоДоставке,
+	ВТ_Предзаказы.ПредЗаказ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_3.ЗаводИзготовитель КАК ЗаводИзготовитель,
+	ВТ_3.ВалютаПредварительногоЗаказа КАК ВалютаПредварительногоЗаказа,
+	ВТ_3.СуммаПредварительногоЗаказаЗаводуИзготовителю КАК СуммаПредварительногоЗаказаЗаводуИзготовителю,
+	ВТ_3.СуммаЗаказаЧерезАгентаПоДоставке КАК СуммаЗаказаЧерезАгентаПоДоставке,
+	ВТ_3.СуммаЗаказаЧерезАгентаПоОплате КАК СуммаЗаказаЧерезАгентаПоОплате,
+	ВТ_3.КодРС КАК КодРС,
+	ВТ_3.НомерВерсии КАК НомерВерсии,
+	ВТ_3.НомерПроформы КАК НомерПроформы,
+	ВТ_3.ДатаПроформы КАК ДатаПроформы,
+	ВТ_3.АгентПоОплате КАК АгентПоОплате,
+	ВТ_3.АгентПоДоставке КАК АгентПоДоставке,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ллл_РеквизитыОтделаЗакупокДляПредварительныхЗаказов.ЗаводИзготовительПолучилДенежныеСредства = ИСТИНА
+				ТОГДА ллл_РеквизитыОтделаЗакупокДляПредварительныхЗаказов.СуммаПолученнаяЗаводомИзготовителем
+			ИНАЧЕ 0
+		КОНЕЦ, 0) КАК СуммаПолученнаяЗаводомФакт,
+	ВТ_3.ПредЗаказ КАК ПредЗаказ
+ПОМЕСТИТЬ ВТ_4
+ИЗ
+	ВТ_3 КАК ВТ_3
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ллл_РеквизитыОтделаЗакупокДляПредварительныхЗаказов КАК ллл_РеквизитыОтделаЗакупокДляПредварительныхЗаказов
+		ПО ВТ_3.КодРС = ллл_РеквизитыОтделаЗакупокДляПредварительныхЗаказов.КодРС
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_4.ЗаводИзготовитель КАК ЗаводИзготовитель,
+	ВТ_4.ВалютаПредварительногоЗаказа КАК ВалютаПредварительногоЗаказа,
+	ВТ_4.СуммаПредварительногоЗаказаЗаводуИзготовителю КАК СуммаПредварительногоЗаказаЗаводуИзготовителю,
+	ВТ_4.СуммаЗаказаЧерезАгентаПоДоставке КАК СуммаЗаказаЧерезАгентаПоДоставке,
+	ВТ_4.СуммаЗаказаЧерезАгентаПоОплате КАК СуммаЗаказаЧерезАгентаПоОплате,
+	ВТ_4.КодРС КАК КодРС,
+	ВТ_4.НомерВерсии КАК НомерВерсии,
+	ВТ_4.НомерПроформы КАК НомерПроформы,
+	ВТ_4.ДатаПроформы КАК ДатаПроформы,
+	ВТ_4.АгентПоОплате КАК АгентПоОплате,
+	ВТ_4.АгентПоДоставке КАК АгентПоДоставке,
+	ВТ_4.СуммаПолученнаяЗаводомФакт КАК СуммаПолученнаяЗаводомФакт,
+	ВТ_4.ПредЗаказ КАК ПредЗаказ,
+	ЗаказПоставщику.Ссылка КАК Заказ,
+	ЗаказПоставщику.Контрагент КАК КонтрагентЗаказа,
+	ЗаказПоставщику.ОбъектРасчетов КАК ЗаказОбъектРасчетов,
+	ЕСТЬNULL(РасчетыСПоставщикамиОбороты.СуммаПриход, 0) КАК ПриходПоРегиструРасчетовСКонтрагентом,
+	ЗаказПоставщику.Валюта КАК ВалютаЗаказа
+ПОМЕСТИТЬ ВТ_5
+ИЗ
+	ВТ_4 КАК ВТ_4
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ЗаказПоставщику КАК ЗаказПоставщику
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.РасчетыСПоставщиками.Обороты(, , Период, ) КАК РасчетыСПоставщикамиОбороты
+			ПО ЗаказПоставщику.ОбъектРасчетов = РасчетыСПоставщикамиОбороты.ОбъектРасчетов
+		ПО ВТ_4.ПредЗаказ = ЗаказПоставщику.ДокументОснование
+			И (ЗаказПоставщику.Проведен)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_5.ЗаводИзготовитель КАК ЗаводИзготовитель,
+	ВТ_5.ВалютаПредварительногоЗаказа КАК ВалютаПредварительногоЗаказа,
+	ВТ_5.СуммаПредварительногоЗаказаЗаводуИзготовителю КАК СуммаПредварительногоЗаказаЗаводуИзготовителю,
+	ВТ_5.СуммаЗаказаЧерезАгентаПоДоставке КАК СуммаЗаказаЧерезАгентаПоДоставке,
+	ВТ_5.СуммаЗаказаЧерезАгентаПоОплате КАК СуммаЗаказаЧерезАгентаПоОплате,
+	ВТ_5.КодРС КАК КодРС,
+	ВТ_5.НомерВерсии КАК НомерВерсии,
+	ВТ_5.НомерПроформы КАК НомерПроформы,
+	ВТ_5.ДатаПроформы КАК ДатаПроформы,
+	ВТ_5.АгентПоОплате КАК АгентПоОплате,
+	ВТ_5.АгентПоДоставке КАК АгентПоДоставке,
+	ВТ_5.СуммаПолученнаяЗаводомФакт КАК СуммаПолученнаяЗаводомФакт,
+	ВТ_5.ПредЗаказ КАК ПредЗаказ,
+	ВТ_5.Заказ КАК Заказ,
+	ВТ_5.КонтрагентЗаказа КАК КонтрагентЗаказа,
+	ВТ_5.ЗаказОбъектРасчетов КАК ЗаказОбъектРасчетов,
+	ЕСТЬNULL(ВТ_5.ПриходПоРегиструРасчетовСКонтрагентом, 0) КАК ПриходПоРегиструРасчетовСКонтрагентом,
+	ВТ_5.ВалютаЗаказа КАК ВалютаЗаказа,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.ЗаводИзготовитель
+			ТОГДА ВТ_5.Заказ
+		ИНАЧЕ ЗНАЧЕНИЕ(Документ.ЗаказПоставщику.ПустаяСсылка)
+	КОНЕЦ КАК ЗаказЗаводуИзготовителю,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоДоставке
+			ТОГДА ВТ_5.Заказ
+		ИНАЧЕ ЗНАЧЕНИЕ(Документ.ЗаказПоставщику.ПустаяСсылка)
+	КОНЕЦ КАК ЗаказАгентуПоДоставке,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоОплате
+			ТОГДА ВТ_5.Заказ
+		ИНАЧЕ ЗНАЧЕНИЕ(Документ.ЗаказПоставщику.ПустаяСсылка)
+	КОНЕЦ КАК ЗаказАгентуПоОплате,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.ЗаводИзготовитель
+			ТОГДА ВТ_5.Заказ.СуммаДокумента
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗаказаноУЗаводаИзготовителя,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоДоставке
+			ТОГДА ВТ_5.Заказ.СуммаДокумента
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗаказаноУАгентаПоДоставке,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоОплате
+			ТОГДА ВТ_5.Заказ.СуммаДокумента
+		ИНАЧЕ 0
+	КОНЕЦ КАК ЗаказаноУАгентаПоОплате,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.ЗаводИзготовитель
+			ТОГДА ВТ_5.Заказ.Валюта
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Валюты.ПустаяСсылка)
+	КОНЕЦ КАК ВалютаЗаказаУЗаводаИзготовителя,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоДоставке
+			ТОГДА ВТ_5.Заказ.Валюта
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Валюты.ПустаяСсылка)
+	КОНЕЦ КАК ВалютаЗаказаАгентаПоДоставке,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоОплате
+			ТОГДА ВТ_5.Заказ.Валюта
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.Валюты.ПустаяСсылка)
+	КОНЕЦ КАК ВалютаЗаказаУАгентаПоОплате,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.ЗаводИзготовитель
+			ТОГДА ЕСТЬNULL(ВТ_5.ПриходПоРегиструРасчетовСКонтрагентом, 0)
+		КОГДА ВТ_5.КонтрагентЗаказа &lt;&gt; ВТ_5.ЗаводИзготовитель
+			ТОГДА ВТ_5.СуммаПолученнаяЗаводомФакт
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОплатаПоЗаказуЗаводуИзготовителю,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоДоставке
+			ТОГДА ЕСТЬNULL(ВТ_5.ПриходПоРегиструРасчетовСКонтрагентом, 0)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОплатаПоЗаказуАгентуПоДоставке,
+	ВЫБОР
+		КОГДА ВТ_5.КонтрагентЗаказа = ВТ_5.АгентПоОплате
+			ТОГДА ЕСТЬNULL(ВТ_5.ПриходПоРегиструРасчетовСКонтрагентом, 0)
+		ИНАЧЕ 0
+	КОНЕЦ КАК ОплатаПоЗаказуАгентуПоОплате
+ИЗ
+	ВТ_5 КАК ВТ_5</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ОплатаПоЗаказуАгентуПоДоставке</dataPath>
+		<expression>Сумма(ОплатаПоЗаказуАгентуПоДоставке)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаПоЗаказуАгентуПоОплате</dataPath>
+		<expression>Сумма(ОплатаПоЗаказуАгентуПоОплате)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ОплатаПоЗаказуЗаводуИзготовителю</dataPath>
+		<expression>Сумма(ОплатаПоЗаказуЗаводуИзготовителю)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЗаказаЧерезАгентаПоДоставке</dataPath>
+		<expression>Сумма(СуммаЗаказаЧерезАгентаПоДоставке)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаЗаказаЧерезАгентаПоОплате</dataPath>
+		<expression>Сумма(СуммаЗаказаЧерезАгентаПоОплате)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаПредварительногоЗаказаЗаводуИзготовителю</dataPath>
+		<expression>Сумма(СуммаПредварительногоЗаказаЗаводуИзготовителю)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗаказаноУАгентаПоДоставке</dataPath>
+		<expression>Сумма(ЗаказаноУАгентаПоДоставке)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗаказаноУАгентаПоОплате</dataPath>
+		<expression>Сумма(ЗаказаноУАгентаПоОплате)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<totalField>
+		<dataPath>ЗаказаноУЗаводаИзготовителя</dataPath>
+		<expression>Сумма(ЗаказаноУЗаводаИзготовителя)</expression>
+		<group>АгентПоДоставке</group>
+		<group>АгентПоОплате</group>
+		<group>ДатаПроформы</group>
+		<group>ЗаводИзготовитель</group>
+		<group>КодРС</group>
+		<group>НомерПроформы</group>
+		<group>ПредЗаказ</group>
+		<group>ОбщийИтог</group>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаНачала</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата начала</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>ДатаОкончания</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата окончания</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаОкончания</expression>
+		<availableAsField>false</availableAsField>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаводИзготовитель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АгентПоДоставке</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АгентПоОплате</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НомерПроформы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПроформы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПредЗаказ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаПредварительногоЗаказа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказАгентуПоОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаЗаказаУАгентаПоОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказАгентуПоДоставке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаЗаказаАгентаПоДоставке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказЗаводуИзготовителю</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВалютаЗаказаУЗаводаИзготовителя</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаЗаказаЧерезАгентаПоОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаЗаказаЧерезАгентаПоДоставке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаПредварительногоЗаказаЗаводуИзготовителю</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказаноУАгентаПоОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказаноУАгентаПоДоставке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗаказаноУЗаводаИзготовителя</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаПоЗаказуАгентуПоОплате</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаПоЗаказуАгентуПоДоставке</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ОплатаПоЗаказуЗаводуИзготовителю</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ЗаводИзготовитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>238100c8-b00e-4758-bc06-0a76db19437a</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">АгентПоДоставке</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>141df50e-59c4-48cf-a44b-55841419038f</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">АгентПоОплате</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>fdf9b67e-564a-46da-8f23-f0ad27937fcc</dcsset:userSettingID>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">НомерПроформы</dcsset:left>
+					<dcsset:comparisonType>Contains</dcsset:comparisonType>
+					<dcsset:right xsi:type="xs:string"/>
+					<dcsset:userSettingID>bc0fd394-ee96-4625-bdb7-d3e8aed6f859</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>cc7423c2-55cf-4dcb-ad8d-88b6b0870288</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЗаводИзготовитель</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
