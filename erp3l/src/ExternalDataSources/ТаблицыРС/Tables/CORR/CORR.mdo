@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a56c2265-64b9-41f8-9da0-848e56a8734d">
+  <producedTypes>
+    <refType typeId="9853e69f-895e-4150-b0a4-c9b9df714d12" valueTypeId="52837d51-c9c1-4555-af3c-d4f489243885"/>
+    <listType typeId="20cdd16e-cffd-454e-9ebe-f0e241a03bf5" valueTypeId="168df7db-b588-4577-b06c-f93eb4d34fb6"/>
+    <objectType typeId="0f4e9e45-e313-4c31-8837-ff8771bfa4b4" valueTypeId="c7dc3ee7-13f9-4841-a310-381e06bb66b9"/>
+    <managerType typeId="647e6268-f2d6-4c94-bbb3-4a5c29392af7" valueTypeId="c01eb310-a0fe-40f1-903d-0d8b72ed1579"/>
+    <recordManagerType typeId="fe729fc5-ced4-426f-96f9-0f11ac03ad80" valueTypeId="dfebb874-9929-4bc5-b6d3-a795057d6849"/>
+    <recordSetType typeId="d05ba11a-f40b-465d-afbc-f69dad2286a3" valueTypeId="52ea96ad-373d-4a18-890e-c768a87691d4"/>
+    <recordType typeId="95f2b6fa-b384-42c6-ab6e-7dda95144797" valueTypeId="80aea411-e20d-4bb2-8b62-40b372359305"/>
+    <recordKeyType typeId="5a84ef1c-e874-492e-80be-c1e8f59fd12e" valueTypeId="f4dfa859-17ea-4a32-bf7f-7721af17c5f0"/>
+  </producedTypes>
+  <name>CORR</name>
+  <parentDataSource>ExternalDataSource.ТаблицыРС</parentDataSource>
+  <nameInDataSource>CORR</nameInDataSource>
+  <keyFields>ExternalDataSource.ТаблицыРС.Table.CORR.Field.CORR_ID</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.ТаблицыРС.Table.CORR.Field.CORR_ID</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="37ef25c1-0181-4952-b5f7-fbccea5be6a1">
+    <name>CORR_ID</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CORR_ID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="da979a4e-a1bd-4dc2-bde3-cbbe9747a72a">
+    <name>CORR_NAME</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>50</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>CORR_NAME</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="2c719119-3d13-4e1a-8abe-6b7688eab06d">
+    <name>CORR_INN</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>20</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>CORR_INN</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="53e932f7-f870-47c2-9e6f-36193c03d97e">
+    <name>CORR_KPP</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>CORR_KPP</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="5446b66b-7d5d-4479-8195-15326ad34445">
+    <name>PersonType</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>PersonType</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="b6977387-4b1c-4662-8157-7fa7c0c5669b">
+    <name>CORR_ISRESIDENT</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CORR_ISRESIDENT</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="1d4ed29c-d764-4eb5-972b-6ba9214f5a49">
+    <name>CORR_ISTAMSOYUZ</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>5</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CORR_ISTAMSOYUZ</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+</mdclass:Table>

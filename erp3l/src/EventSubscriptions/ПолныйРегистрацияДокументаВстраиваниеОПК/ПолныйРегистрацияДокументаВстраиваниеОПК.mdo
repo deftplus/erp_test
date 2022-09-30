@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="329f226f-cb32-4f82-b413-c28ca386cfe5">
+  <name>ПолныйРегистрацияДокументаВстраиваниеОПК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полный регистрация документа встраивание ОПК</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЗаявкаНаКорректировкуЛимитов</types>
+    <types>DocumentObject.ОперативныйПлан</types>
+    <types>DocumentObject.ОтражениеФактическихДанныхБюджетирования</types>
+    <types>DocumentObject.КорректировкаЛимитов</types>
+    <types>DocumentObject.ПереносЛимитов</types>
+    <types>DocumentObject.УправлениеЛимитами</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОПК.ОбменДаннымиПолныйПередЗаписьюДокумента</handler>
+</mdclass:EventSubscription>

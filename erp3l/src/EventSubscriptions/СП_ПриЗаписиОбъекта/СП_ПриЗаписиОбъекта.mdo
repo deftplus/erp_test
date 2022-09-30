@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="a8d7f2a5-1a75-4faf-9e3e-3ff79790a0bf">
+  <name>СП_ПриЗаписиОбъекта</name>
+  <synonym>
+    <key>ru</key>
+    <value>При записи объекта (СП)</value>
+  </synonym>
+  <source>
+    <types>ChartOfCharacteristicTypesObject</types>
+    <types>CatalogObject</types>
+    <types>TaskObject</types>
+    <types>DocumentObject</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.СП_ПодпискиНаСобытия.ЗарегистрироватьИсходящееСообщениеПриЗаписиОбъекта</handler>
+</mdclass:EventSubscription>

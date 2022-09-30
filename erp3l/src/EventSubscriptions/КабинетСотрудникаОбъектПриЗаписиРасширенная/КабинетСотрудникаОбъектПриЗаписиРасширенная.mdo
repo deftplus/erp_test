@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="ef77d346-043e-4f33-94d8-53fe26a23480">
+  <name>КабинетСотрудникаОбъектПриЗаписиРасширенная</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кабинет сотрудника объект при записи расширенная</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Employee account object on saving advanced</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаСправкаОстаткиОтпусков</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаСправкаСМестаРаботы</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаОтсутствие</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаДобровольныеСтраховыеВзносы</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.КабинетСотрудникаСобытияРасширенный.ОбъектПриЗаписи</handler>
+</mdclass:EventSubscription>

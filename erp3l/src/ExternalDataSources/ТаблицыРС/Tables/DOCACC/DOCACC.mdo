@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Table xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b154a730-40a6-4b31-96e3-7cb5ad41f600">
+  <producedTypes>
+    <refType typeId="4b8c545a-603d-4e96-be89-1b23928861f9" valueTypeId="b1c25661-dd36-4c75-a022-80ef3e9a826c"/>
+    <listType typeId="a8fbfd77-5e73-44ef-9994-0eb7729337e4" valueTypeId="6dfbc16c-1b84-4fe2-a388-99cfa6fc207e"/>
+    <objectType typeId="13d05758-2901-48f0-9eff-11cdbd327703" valueTypeId="fe5fd808-612e-4cd1-a049-b0e99d6528b8"/>
+    <managerType typeId="ab01ad1d-ab01-481b-b80b-105d240ece91" valueTypeId="41789e08-5b96-4481-87bf-ac844f30b9cc"/>
+    <recordManagerType typeId="43bc3019-9157-406c-ab9b-bc6078876839" valueTypeId="4515889d-57a0-48f1-bc41-f764974e6e4d"/>
+    <recordSetType typeId="2e1d9a07-e83e-4b4e-9d1d-1a300ee2e449" valueTypeId="efbe13ab-8820-4f45-92e6-45a963eee871"/>
+    <recordType typeId="29df860a-93e8-4c9c-b9a0-30131bce9932" valueTypeId="d824677a-5073-4c5e-b396-9c25c0e45a7f"/>
+    <recordKeyType typeId="660649c1-9da6-47a2-9b50-62f76a0de6fc" valueTypeId="b1cb85e1-2479-494d-8ce9-3292f66a3e0b"/>
+  </producedTypes>
+  <name>DOCACC</name>
+  <parentDataSource>ExternalDataSource.ТаблицыРС</parentDataSource>
+  <nameInDataSource>DOCACC</nameInDataSource>
+  <keyFields>ExternalDataSource.ТаблицыРС.Table.DOCACC.Field.DA_ID</keyFields>
+  <unfilledParentValue xsi:type="core:UndefinedValue"/>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>ExternalDataSource.ТаблицыРС.Table.DOCACC.Field.DA_ID</inputByString>
+  <editType>InDialog</editType>
+  <tableFields uuid="d65c9459-b510-4646-8a32-2d28ff7697b4">
+    <name>DA_ID</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DA_ID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="ff12f520-4180-4ae0-8495-398ea52085fe">
+    <name>DAK_ID</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DAK_ID</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="9644d8f9-94d0-42c5-88af-7649cd74ffd8">
+    <name>CORR_ID_CREDIT</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CORR_ID_CREDIT</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="42fd9856-abb9-4694-968e-cc7423050085">
+    <name>CURR_ID</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CURR_ID</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="aa5b0fca-b10b-4833-9903-7f17e564b7aa">
+    <name>DD_ID</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DD_ID</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="0fa2ceff-bfdd-4e5e-ae78-19e55e2f1a40">
+    <name>DA_DATE</name>
+    <type>
+      <types>Date</types>
+      <dateQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:DateValue">
+      <value>0001-01-01T00:00:00</value>
+    </fillValue>
+    <nameInDataSource>DA_DATE</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="cce33891-7794-4af8-a85a-232c00bb7e79">
+    <name>DA_NO</name>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>40</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <nameInDataSource>DA_NO</nameInDataSource>
+  </tableFields>
+  <tableFields uuid="6eaf1ea0-197d-4058-a74a-9a30801a1141">
+    <name>CNT_ID_DEBIT</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CNT_ID_DEBIT</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="658c895b-fec6-4adb-8719-3d4d4a57b24f">
+    <name>CNT_ID_CREDIT</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>CNT_ID_CREDIT</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+  <tableFields uuid="b4949620-857b-4049-b435-7bfe60f16b00">
+    <name>DA_SUM_CURR</name>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>38</precision>
+        <scale>8</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:NumberValue">
+      <value>0</value>
+    </fillValue>
+    <nameInDataSource>DA_SUM_CURR</nameInDataSource>
+    <allowNull>true</allowNull>
+  </tableFields>
+</mdclass:Table>

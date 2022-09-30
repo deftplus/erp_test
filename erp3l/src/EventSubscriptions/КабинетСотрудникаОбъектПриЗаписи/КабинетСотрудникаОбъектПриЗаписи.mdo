@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b8f116e7-55ea-4b7c-bac8-9a6844585609">
+  <name>КабинетСотрудникаОбъектПриЗаписи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кабинет сотрудника объект при записи</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Employee account object on writing</value>
+  </synonym>
+  <source>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаОтсутствиеПоБолезни</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаНалоговыйВычет</types>
+    <types>CatalogObject.УчетныеЗаписиЭлектроннойПочты</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаОтпуск</types>
+    <types>ConstantValueManager.ИспользоватьЭлектронныеПодписи</types>
+    <types>CatalogObject.Должности</types>
+    <types>CatalogObject.ФизическиеЛица</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаИзменитьЛичныеДанные</types>
+    <types>CatalogObject.ШтатноеРасписание</types>
+    <types>BusinessProcessObject.ЗаявкаСотрудникаСправка2НДФЛ</types>
+    <types>CatalogObject.СтруктураПредприятия</types>
+    <types>CatalogObject.ПодразделенияОрганизаций</types>
+    <types>CatalogObject.Организации</types>
+    <types>DocumentObject.ДокументКадровогоЭДО</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.КабинетСотрудникаСобытия.ОбъектПриЗаписи</handler>
+</mdclass:EventSubscription>

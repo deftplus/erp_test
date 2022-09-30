@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7ea11f1d-26c8-4aba-8c9b-1f66b8591bd9">
+  <name>ПолныйРегистрацияНабораВстраиваниеОПК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полный регистрация набора встраивание ОПК</value>
+  </synonym>
+  <source>
+    <types>AccumulationRegisterRecordSet.ЛимитыПоБюджетам</types>
+    <types>InformationRegisterRecordSet.УстановкаЛимитовПоДаннымБюджетированияПараметрыЛимитированияСтатейБюджетов</types>
+    <types>InformationRegisterRecordSet.ПараметрыЛимитирования</types>
+    <types>InformationRegisterRecordSet.АктуальностьУстановленныхЛимитов</types>
+    <types>InformationRegisterRecordSet.УстановкаЛимитовПоДаннымБюджетированияПараметрыЛимитирования</types>
+    <types>InformationRegisterRecordSet.УстановкаЛимитовПоДаннымБюджетированияПараметрыБюджетирования</types>
+    <types>InformationRegisterRecordSet.ПараметрыОперативногоПланирования</types>
+    <types>AccumulationRegisterRecordSet.ОперацииБюджетов</types>
+    <types>InformationRegisterRecordSet.АналитикаКонтроляБюджетныхЛимитовРезервов</types>
+    <types>InformationRegisterRecordSet.УстановкаЛимитовПоДаннымБюджетированияЗначенияПоказателей</types>
+    <types>InformationRegisterRecordSet.ПараметрыКонтроляЛимитаСтатейБюджетов</types>
+    <types>AccumulationRegisterRecordSet.ОперативныйПланПоБюджетам</types>
+    <types>InformationRegisterRecordSet.АналитикаПланированияСтатейБюджетов</types>
+    <types>InformationRegisterRecordSet.АналитикаКонтроляЗадолженностиПоКонтрагенту</types>
+    <types>InformationRegisterRecordSet.УстановкаЛимитовПоДаннымБюджетированияСостояния</types>
+    <types>InformationRegisterRecordSet.СостояниеУстановкиЛимитовОбъектами</types>
+    <types>InformationRegisterRecordSet.АналитикаПланированияНоменклатуры</types>
+    <types>InformationRegisterRecordSet.НазначениеРезервов</types>
+    <types>InformationRegisterRecordSet.АналитикаПланированияСтруктуры</types>
+    <types>InformationRegisterRecordSet.ФункциональныеНаправленияРазвернутые</types>
+    <types>AccumulationRegisterRecordSet.ФактПоБюджетам</types>
+    <types>InformationRegisterRecordSet.АналитикаКонтроляПоДоговорам</types>
+    <types>InformationRegisterRecordSet.РезультатыКонтроляДокументовПоВидамКонтроля</types>
+    <types>InformationRegisterRecordSet.АналитикаПланированияПотребностей</types>
+    <types>InformationRegisterRecordSet.РезультатыКонтроляДокументов</types>
+    <types>InformationRegisterRecordSet.СостояниеПериодовЛимитирования</types>
+    <types>InformationRegisterRecordSet.СтруктураОперативногоПланирования</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОПК.ОбменДаннымиПолныйПередЗаписьюРегистра</handler>
+</mdclass:EventSubscription>

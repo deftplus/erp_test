@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="0aa78206-c207-4115-b240-161715a71226">
+  <name>ОбработкаПолученияПредставленияДопЯзык</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка получения представления доп язык</value>
+  </synonym>
+  <source>
+    <types>CatalogManager.Сценарии</types>
+    <types>CatalogManager.КолонкиОтчетов</types>
+    <types>CatalogManager.Организации</types>
+    <types>CatalogManager.Периоды</types>
+    <types>CatalogManager.ГруппыРаскрытия</types>
+    <types>CatalogManager.ПроизвольныйКлассификаторУХ</types>
+    <types>CatalogManager.ГруппыВНАМСФО</types>
+    <types>CatalogManager.СтатьиДвиженияРесурсов</types>
+    <types>CatalogManager.Номенклатура</types>
+    <types>CatalogManager.ПоказателиОтчетов</types>
+    <types>CatalogManager.ДоговорыКредитовИДепозитов</types>
+    <types>CatalogManager.ДоговорыАренды</types>
+    <types>CatalogManager.ВидыВыручкиМСФО</types>
+    <types>CatalogManager.Контрагенты</types>
+    <types>CatalogManager.ГруппыКонтрагентов</types>
+    <types>CatalogManager.ВидыОтчетов</types>
+    <types>CatalogManager.СчетаБД</types>
+    <types>CatalogManager.СтатьиДвиженияДенежныхСредств</types>
+    <types>CatalogManager.СтрокиОтчетов</types>
+    <types>CatalogManager.ВидыВременныхРазниц</types>
+    <types>CatalogManager.ДоговорыКонтрагентов</types>
+    <types>CatalogManager.СтатьиДоходовИРасходовКИК</types>
+    <types>CatalogManager.СтатьиДоходовИРасходов</types>
+    <types>ChartOfCharacteristicTypesManager.ВидыСубконтоКорпоративные</types>
+  </source>
+  <event>PresentationGetProcessing</event>
+  <handler>CommonModule.ДополнительныеЯзыкиУХ.ОбработкаПолученияПредставленияЯзыкОбработкаПолученияПредставления</handler>
+</mdclass:EventSubscription>

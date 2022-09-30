@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="25e21e89-92d1-4ff0-8cb3-a07482eec364">
+  <name>ПолныйРегистрацияУдаленияВстраиваниеОПК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полный регистрация удаления встраивание ОПК</value>
+  </synonym>
+  <source>
+    <types>DocumentObject.ЗаявкаНаКорректировкуЛимитов</types>
+    <types>CatalogObject.КлючиАналитикиПланированияПотребностей</types>
+    <types>DocumentObject.ОперативныйПлан</types>
+    <types>CatalogObject.ВидыОперативныхПланов</types>
+    <types>ChartOfCharacteristicTypesObject.ВидыКонтроляДокументов</types>
+    <types>CatalogObject.КлючиАналитикиПланированияСтруктуры</types>
+    <types>DocumentObject.ОтражениеФактическихДанныхБюджетирования</types>
+    <types>CatalogObject.АналитикиОперативногоПланирования</types>
+    <types>CatalogObject.КлючиАналитикиПланированияНоменклатуры</types>
+    <types>CatalogObject.КлючиКонтроляБюджетныхЛимитовРезервов</types>
+    <types>CatalogObject.СтатьиДоходовИРасходов</types>
+    <types>CatalogObject.СтатьиДвиженияРесурсов</types>
+    <types>CatalogObject.КлючиАналитикиПланированияСтатейБюджетов</types>
+    <types>CatalogObject.КлючиКонтроляЗадолженностиПоКонтрагенту</types>
+    <types>ChartOfCharacteristicTypesObject.ВидыБюджетов</types>
+    <types>DocumentObject.КорректировкаЛимитов</types>
+    <types>CatalogObject.КлючиКонтроляПоДоговорам</types>
+    <types>CatalogObject.ГруппыАналитикСтатьи</types>
+    <types>CatalogObject.ФункциональныеНаправления</types>
+    <types>DocumentObject.ПереносЛимитов</types>
+    <types>DocumentObject.УправлениеЛимитами</types>
+  </source>
+  <event>BeforeDelete</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОПК.ОбменДаннымиПолныйПередУдалением</handler>
+</mdclass:EventSubscription>

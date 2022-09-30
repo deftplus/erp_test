@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="87883cfb-f416-4364-b1fc-131e4d6ca2e9">
+  <name>КабинетСотрудникаОбъектПередЗаписью</name>
+  <synonym>
+    <key>ru</key>
+    <value>Кабинет сотрудника объект перед записью</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Employee account object before writing</value>
+  </synonym>
+  <source>
+    <types>CatalogObject.Должности</types>
+    <types>CatalogObject.ШтатноеРасписание</types>
+    <types>CatalogObject.СтруктураПредприятия</types>
+    <types>CatalogObject.ПодразделенияОрганизаций</types>
+    <types>CatalogObject.Организации</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.КабинетСотрудникаСобытия.ОбъектПередЗаписью</handler>
+</mdclass:EventSubscription>

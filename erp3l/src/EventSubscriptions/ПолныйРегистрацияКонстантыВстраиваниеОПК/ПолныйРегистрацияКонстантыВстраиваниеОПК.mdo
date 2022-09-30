@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bd6987ab-23db-43b6-84cb-556060bb82d5">
+  <name>ПолныйРегистрацияКонстантыВстраиваниеОПК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Полный регистрация константы встраивание ОПК</value>
+  </synonym>
+  <source>
+    <types>ConstantValueManager.ИспользоватьЗаявкиНаКорректировкуЛимитов</types>
+    <types>ConstantValueManager.АвтоматическиФормироватьОФДПоДокументамПТУРТУ</types>
+    <types>ConstantValueManager.СтатьиДвиженияРесурсовИспользуются</types>
+    <types>ConstantValueManager.РегистрироватьДефицитРезерва</types>
+    <types>ConstantValueManager.СтатьиДоходовИРасходовИспользуются</types>
+    <types>ConstantValueManager.СтатьиДвиженияДенежныхСредствИспользуются</types>
+    <types>ConstantValueManager.АвтоматическиФормироватьОФДПоДокументамДДС</types>
+    <types>ConstantValueManager.БюджетДвиженияДенежныхСредствИспользуется</types>
+    <types>ConstantValueManager.БюджетЗакупокИспользуется</types>
+    <types>ConstantValueManager.БюджетДоходовРасходовИспользуется</types>
+  </source>
+  <event>BeforeWrite</event>
+  <handler>CommonModule.ОбменДаннымиСобытияОПК.ОбменДаннымиПолныйПередЗаписьюКонстанты</handler>
+</mdclass:EventSubscription>

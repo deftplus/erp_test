@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:EventSubscription xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="4fd196a8-7852-4665-abb0-8e0322151f5d">
+  <name>СП_ПриЗаписиРегистра</name>
+  <synonym>
+    <key>ru</key>
+    <value>При записи регистра (СП)</value>
+  </synonym>
+  <source>
+    <types>InformationRegisterRecordSet</types>
+  </source>
+  <event>OnWrite</event>
+  <handler>CommonModule.СП_ПодпискиНаСобытия.ЗарегистрироватьИсходящееСообщениеПриЗаписиРегистра</handler>
+</mdclass:EventSubscription>
