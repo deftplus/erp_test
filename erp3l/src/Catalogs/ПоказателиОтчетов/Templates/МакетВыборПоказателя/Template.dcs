@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомерКолонки</dataPath>
+			<field>ПорядковыйНомерКолонки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер колонки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомер</dataPath>
+			<field>ПорядковыйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Строка</dataPath>
+			<field>Строка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КодКолонки</dataPath>
+			<field>КодКолонки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код колонки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Колонка</dataPath>
+			<field>Колонка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Показатель</dataPath>
+			<field>Показатель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показатель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомерРодителя</dataPath>
+			<field>ПорядковыйНомерРодителя</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер родителя</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СтрокаРодитель</dataPath>
+			<field>СтрокаРодитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка родитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	СтрокиОтчетов.СуммироватьПодчиненные КАК СуммироватьПодчиненные,
+	СтрокиОтчетов.ПорядковыйНомер КАК ПорядковыйНомер,
+	СтрокиОтчетов.Владелец КАК Владелец,
+	СтрокиОтчетов.Ссылка КАК Ссылка,
+	ЕСТЬNULL(СтрокиОтчетов.Родитель.ПорядковыйНомер, -1) КАК ПорядковыйНомерРодителя
+ПОМЕСТИТЬ ВТ_СтрокиОтчетов
+ИЗ
+	Справочник.СтрокиОтчетов КАК СтрокиОтчетов
+ГДЕ
+	СтрокиОтчетов.Владелец = &amp;ВидОтчета
+	И НЕ СтрокиОтчетов.ПометкаУдаления
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	КолонкиОтчетов.Ссылка КАК Ссылка
+ПОМЕСТИТЬ ВТ_КолонкиОтчетов
+ИЗ
+	Справочник.КолонкиОтчетов КАК КолонкиОтчетов
+ГДЕ
+	КолонкиОтчетов.Владелец = &amp;ВидОтчета
+	И НЕ КолонкиОтчетов.ПометкаУдаления
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ЕСТЬNULL(ВТ_КолонкиОтчетов.Ссылка, ЗНАЧЕНИЕ(Справочник.КолонкиОтчетов.ПустаяСсылка)) КАК Колонка,
+	ЕСТЬNULL(ВТ_СтрокиОтчетов.Ссылка, ЗНАЧЕНИЕ(Справочник.СтрокиОтчетов.ПустаяСсылка)) КАК Строка
+ПОМЕСТИТЬ ВТ_КолонкиСтроки
+ИЗ
+	ВТ_СтрокиОтчетов КАК ВТ_СтрокиОтчетов
+		ПОЛНОЕ СОЕДИНЕНИЕ ВТ_КолонкиОтчетов КАК ВТ_КолонкиОтчетов
+		ПО (ИСТИНА)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПоказателиОтчетов.Ссылка КАК Ссылка,
+	ПоказателиОтчетов.Колонка КАК Колонка,
+	ПоказателиОтчетов.Строка КАК Строка
+ПОМЕСТИТЬ ВТ_ПоказателиОтчетов
+ИЗ
+	Справочник.ПоказателиОтчетов КАК ПоказателиОтчетов
+ГДЕ
+	ПоказателиОтчетов.Владелец = &amp;ВидОтчета
+	И НЕ ПоказателиОтчетов.ПометкаУдаления
+
+ИНДЕКСИРОВАТЬ ПО
+	Колонка,
+	Строка
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВТ_КолонкиСтроки.Строка КАК Строка,
+	ВТ_КолонкиСтроки.Колонка КАК Колонка,
+	ЕСТЬNULL(ВТ_ПоказателиОтчетов.Ссылка, ЗНАЧЕНИЕ(Справочник.ПоказателиОтчетов.ПустаяСсылка)) КАК Показатель
+ПОМЕСТИТЬ ВТ_СтрокиПоказателиКолонки
+ИЗ
+	ВТ_КолонкиСтроки КАК ВТ_КолонкиСтроки
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_ПоказателиОтчетов КАК ВТ_ПоказателиОтчетов
+		ПО ВТ_КолонкиСтроки.Колонка = ВТ_ПоказателиОтчетов.Колонка
+			И ВТ_КолонкиСтроки.Строка = ВТ_ПоказателиОтчетов.Строка
+			И (ВТ_КолонкиСтроки.Колонка &lt;&gt; ЗНАЧЕНИЕ(Справочник.КолонкиОтчетов.ПустаяСсылка))
+			И (ВТ_КолонкиСтроки.Строка &lt;&gt; ЗНАЧЕНИЕ(Справочник.СтрокиОтчетов.ПустаяСсылка))
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_СтрокиПоказателиКолонки.Строка.ПорядковыйНомер КАК ПорядковыйНомер,
+	ВТ_СтрокиПоказателиКолонки.Строка КАК Строка,
+	ЕСТЬNULL(ВТ_СтрокиПоказателиКолонки.Колонка.Код, "") КАК КодКолонки,
+	ЕСТЬNULL(ВТ_СтрокиПоказателиКолонки.Колонка.ПорядковыйНомер, 0) КАК ПорядковыйНомерКолонки,
+	ВТ_СтрокиПоказателиКолонки.Показатель КАК Показатель,
+	ЕСТЬNULL(ВТ_СтрокиПоказателиКолонки.Строка.Родитель.ПорядковыйНомер, -1) КАК ПорядковыйНомерРодителя,
+	ЕСТЬNULL(ВТ_СтрокиПоказателиКолонки.Колонка, ЗНАЧЕНИЕ(Справочник.КолонкиОтчетов.ПустаяСсылка)) КАК Колонка,
+	ВТ_СтрокиПоказателиКолонки.Строка.Родитель КАК СтрокаРодитель
+ИЗ
+	ВТ_СтрокиПоказателиКолонки КАК ВТ_СтрокиПоказателиКолонки
+
+УПОРЯДОЧИТЬ ПО
+	ПорядковыйНомерРодителя,
+	ПорядковыйНомер,
+	ПорядковыйНомерКолонки</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>НаборДанных1</sourceDataSet>
+		<destinationDataSet>НаборДанных1</destinationDataSet>
+		<sourceExpression>Строка</sourceExpression>
+		<destinationExpression>СтрокаРодитель</destinationExpression>
+		<startExpression>ЗНАЧЕНИЕ(Справочник.СтрокиОтчетов.ПустаяСсылка)</startExpression>
+	</dataSetLink>
+	<totalField>
+		<dataPath>ПорядковыйНомер</dataPath>
+		<expression>Максимум(ПорядковыйНомер)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПорядковыйНомерКолонки</dataPath>
+		<expression>Максимум(ПорядковыйНомерКолонки)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПорядковыйНомерРодителя</dataPath>
+		<expression>Максимум(ПорядковыйНомерРодителя)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Показатель</dataPath>
+		<expression>ПоказательРодителяСтроки</expression>
+		<group>Строка Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>Показатель</dataPath>
+		<expression>Показатель</expression>
+		<group>Строка</group>
+	</totalField>
+	<parameter>
+		<name>ВидОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ШаблоныТрансформационныхКорректировок</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыОтчетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">Колонка</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>Колонка</dcsat:name>
+			<dcsat:expression>Представление(Колонка)</dcsat:expression>
+		</parameter>
+	</template>
+	<groupTemplate>
+		<groupName>ГруппировкаКолонка</groupName>
+		<templateType>Header</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Колонка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Показатель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Строка</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВидОтчета</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:Field"/>
+					<dcsset:userSettingID>cec0e333-d44d-4a44-ab8f-008d985b0c3f</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПорядковыйНомерКолонки</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПорядковыйНомер</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПорядковыйНомерРодителя</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>РасположениеИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:name>ГруппировкаКолонка</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Колонка</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Показатель</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Строка</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Показатель</dataPath>
+			<field>Показатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика1</dataPath>
+			<field>Аналитика1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика2</dataPath>
+			<field>Аналитика2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика3</dataPath>
+			<field>Аналитика3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика4</dataPath>
+			<field>Аналитика4</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика5</dataPath>
+			<field>Аналитика5</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтоговоеЗначение</dataPath>
+			<field>ИтоговоеЗначение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодОтчета</dataPath>
+			<field>ПериодОтчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Значение</dataPath>
+			<field>Значение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Версия</dataPath>
+			<field>Версия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Аналитика6</dataPath>
+			<field>Аналитика6</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ЗначенияПоказателейОтчетов.Показатель КАК Показатель,
+	СУММА(ЗначенияПоказателейОтчетов.Значение) КАК Значение,
+	ЗначенияПоказателейОтчетов.Аналитика1 КАК Аналитика1,
+	ЗначенияПоказателейОтчетов.Аналитика2 КАК Аналитика2,
+	ЗначенияПоказателейОтчетов.Аналитика3 КАК Аналитика3,
+	ЗначенияПоказателейОтчетов.Аналитика4 КАК Аналитика4,
+	ЗначенияПоказателейОтчетов.Аналитика5 КАК Аналитика5,
+	ЗначенияПоказателейОтчетов.Аналитика6 КАК Аналитика6,
+	ЗначенияПоказателейОтчетов.ИтоговоеЗначение КАК ИтоговоеЗначение,
+	ВерсияЗначенийПоказателей.ПериодОтчета КАК ПериодОтчета,
+	ВерсияЗначенийПоказателей.Сценарий КАК Сценарий,
+	ВерсияЗначенийПоказателей.Валюта КАК Валюта,
+	ВерсияЗначенийПоказателей.Организация КАК Организация
+ИЗ
+	(ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов6.Версия КАК Версия,
+		ЗначенияПоказателейОтчетов6.Показатель КАК Показатель,
+		ЗначенияПоказателейОтчетов6.Аналитика1 КАК Аналитика1,
+		ЗначенияПоказателейОтчетов6.Аналитика2 КАК Аналитика2,
+		ЗначенияПоказателейОтчетов6.Аналитика3 КАК Аналитика3,
+		ЗначенияПоказателейОтчетов6.Аналитика4 КАК Аналитика4,
+		ЗначенияПоказателейОтчетов6.Аналитика5 КАК Аналитика5,
+		ЗначенияПоказателейОтчетов6.Аналитика6 КАК Аналитика6,
+		ЗначенияПоказателейОтчетов6.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов6.ИтоговоеЗначение КАК ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов6 КАК ЗначенияПоказателейОтчетов6
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов5.Версия,
+		ЗначенияПоказателейОтчетов5.Показатель,
+		ЗначенияПоказателейОтчетов5.Аналитика1,
+		ЗначенияПоказателейОтчетов5.Аналитика2,
+		ЗначенияПоказателейОтчетов5.Аналитика3,
+		ЗначенияПоказателейОтчетов5.Аналитика4,
+		ЗначенияПоказателейОтчетов5.Аналитика5,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов5.Значение,
+		ЗначенияПоказателейОтчетов5.ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов5 КАК ЗначенияПоказателейОтчетов5
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов4.Версия,
+		ЗначенияПоказателейОтчетов4.Показатель,
+		ЗначенияПоказателейОтчетов4.Аналитика1,
+		ЗначенияПоказателейОтчетов4.Аналитика2,
+		ЗначенияПоказателейОтчетов4.Аналитика3,
+		ЗначенияПоказателейОтчетов4.Аналитика4,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов4.Значение,
+		ЗначенияПоказателейОтчетов4.ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов4 КАК ЗначенияПоказателейОтчетов4
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов3.Версия,
+		ЗначенияПоказателейОтчетов3.Показатель,
+		ЗначенияПоказателейОтчетов3.Аналитика1,
+		ЗначенияПоказателейОтчетов3.Аналитика2,
+		ЗначенияПоказателейОтчетов3.Аналитика3,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов3.Значение,
+		ЗначенияПоказателейОтчетов3.ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов3 КАК ЗначенияПоказателейОтчетов3
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов2.Версия,
+		ЗначенияПоказателейОтчетов2.Показатель,
+		ЗначенияПоказателейОтчетов2.Аналитика1,
+		ЗначенияПоказателейОтчетов2.Аналитика2,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов2.Значение,
+		ЗначенияПоказателейОтчетов2.ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов2 КАК ЗначенияПоказателейОтчетов2
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов1.Версия,
+		ЗначенияПоказателейОтчетов1.Показатель,
+		ЗначенияПоказателейОтчетов1.Аналитика1,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов1.Значение,
+		ЗначенияПоказателейОтчетов1.ИтоговоеЗначение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов1 КАК ЗначенияПоказателейОтчетов1
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетовСинтетика.Версия,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетовСинтетика.Значение,
+		ИСТИНА
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика) КАК ЗначенияПоказателейОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВерсииЗначенийПоказателей КАК ВерсияЗначенийПоказателей
+		ПО (ВерсияЗначенийПоказателей.Ссылка = ЗначенияПоказателейОтчетов.Версия)
+
+СГРУППИРОВАТЬ ПО
+	ЗначенияПоказателейОтчетов.Показатель,
+	ЗначенияПоказателейОтчетов.Аналитика1,
+	ЗначенияПоказателейОтчетов.Аналитика2,
+	ЗначенияПоказателейОтчетов.Аналитика3,
+	ЗначенияПоказателейОтчетов.Аналитика4,
+	ЗначенияПоказателейОтчетов.Аналитика5,
+	ЗначенияПоказателейОтчетов.Аналитика6,
+	ЗначенияПоказателейОтчетов.ИтоговоеЗначение,
+	ВерсияЗначенийПоказателей.ПериодОтчета,
+	ВерсияЗначенийПоказателей.Сценарий,
+	ВерсияЗначенийПоказателей.Валюта,
+	ВерсияЗначенийПоказателей.Организация</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Значение</dataPath>
+		<expression>Сумма(Значение)</expression>
+	</totalField>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИтоговоеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Показатель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сценарий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПериодОтчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Валюта</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика3</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика4</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика5</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Аналитика6</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Значение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="150b7e79-b2ba-4802-8c98-0fb39df77a4a">
+  <producedTypes>
+    <objectType typeId="4ff7da83-b0c9-4436-9f87-f5f054245b47" valueTypeId="874d55c9-c7cc-4643-8e73-f6897c83a7ea"/>
+    <refType typeId="407672a7-517f-4033-a172-1509bc44b110" valueTypeId="ab57d19e-0368-4423-8019-f232ff8587cc"/>
+    <selectionType typeId="7f69b38f-0727-4c41-8746-575ca50a5ef2" valueTypeId="19ad327f-e1fb-490a-a7e6-ab8b8360947b"/>
+    <listType typeId="96da296d-70fa-4c92-b762-517e1513ba7b" valueTypeId="aacaffd0-674c-4aba-9ccb-5bbba158888d"/>
+    <managerType typeId="82d92c50-dcb4-4958-88f1-755520001212" valueTypeId="347de27b-683e-45e5-8790-19b77201b494"/>
+  </producedTypes>
+  <name>ГосударственныеКонтракты</name>
+  <synonym>
+    <key>ru</key>
+    <value>Государственные контракты</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>State contracts</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ГосударственныеКонтракты.StandardAttribute.Description</inputByString>
+  <inputByString>Catalog.ГосударственныеКонтракты.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <synonym>
+      <key>ru</key>
+      <value>Предмет контракта</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Contract subject</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификатор</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>ID</value>
+    </synonym>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <characteristics>
+    <characteristicTypes>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты</characteristicTypes>
+    <keyField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</keyField>
+    <typesFilterField>Catalog.НаборыДополнительныхРеквизитовИСведений.TabularSection.ДополнительныеРеквизиты.Attribute.ИмяПредопределенногоНабора</typesFilterField>
+    <typesFilterValue xsi:type="core:StringValue">
+      <value>Справочник_ГосударственныеКонтракты</value>
+    </typesFilterValue>
+    <dataPathField>-1</dataPathField>
+    <characteristicValues>Catalog.ГосударственныеКонтракты.TabularSection.ДополнительныеРеквизиты</characteristicValues>
+    <objectField>Catalog.ГосударственныеКонтракты.TabularSection.ДополнительныеРеквизиты.StandardAttribute.Ref</objectField>
+    <typeField>Catalog.ГосударственныеКонтракты.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</typeField>
+    <valueField>Catalog.ГосударственныеКонтракты.TabularSection.ДополнительныеРеквизиты.Attribute.Значение</valueField>
+  </characteristics>
+  <createOnInput>Use</createOnInput>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Государственный контракт</value>
+  </objectPresentation>
+  <objectPresentation>
+    <key>en</key>
+    <value>State contract</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>25</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.ГосударственныеКонтракты.Form.ФормаЭлемента</defaultObjectForm>
+  <defaultListForm>Catalog.ГосударственныеКонтракты.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Catalog.ГосударственныеКонтракты.Form.ФормаВыбора</defaultChoiceForm>
+  <attributes uuid="5d2f440d-6a94-404f-87fe-4a8c2ae2f06d">
+    <name>ГоловнойИсполнитель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Головной исполнитель</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Main assignee</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Головной исполнитель госконтракта</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Main assignee of the state contact</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="c8625f65-9845-43c2-b0d2-744a8435a4b2">
+    <name>УполномоченныйБанк</name>
+    <synonym>
+      <key>ru</key>
+      <value>Уполномоченный банк</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Authorized bank</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.КлассификаторБанков</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Уполномоченный банк, в котором открыт счет расчетов по госконтракту</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Authorized bank where the settlement account under the state contract is opened</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="11cd2fde-baae-4e08-aaaf-a8e1a87b9d61">
+    <name>Состояние</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояние</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Status</value>
+    </synonym>
+    <type>
+      <types>EnumRef.СостоянияГосударственныхКонтрактов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Текущее состояние</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Current state</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.СостоянияГосударственныхКонтрактов.EnumValue.Готовится</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="4a3012a7-a307-43fa-99df-9112aa5d6559">
+    <name>ДатаЗаключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата заключения</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Conclusion date</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Дата заключения госконтракта</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>State contract conclusion date</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="cb42f6dd-b144-4b51-afa6-9db46735fb94">
+    <name>ГодЗаключения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год заключения</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Year of conclusion </value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </format>
+    <format>
+      <key>en</key>
+      <value>NG=</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </editFormat>
+    <editFormat>
+      <key>en</key>
+      <value>NG=</value>
+    </editFormat>
+    <toolTip>
+      <key>ru</key>
+      <value>Год заключения госконтракта</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>State contract conclusion year</value>
+    </toolTip>
+    <minValue xsi:type="core:StringValue">
+      <value>2000</value>
+    </minValue>
+    <maxValue xsi:type="core:StringValue">
+      <value>3999</value>
+    </maxValue>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="99ee56c0-c55c-458e-99c4-bd1f2bbc0679">
+    <name>ГодОкончанияСрокаДействия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Год окончания срока действия</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Expiration year</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>4</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <format>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </format>
+    <format>
+      <key>en</key>
+      <value>NG=</value>
+    </format>
+    <editFormat>
+      <key>ru</key>
+      <value>ЧГ=</value>
+    </editFormat>
+    <editFormat>
+      <key>en</key>
+      <value>NG=</value>
+    </editFormat>
+    <toolTip>
+      <key>ru</key>
+      <value>Год окончания выполнения работ в рамках госконтракта</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Year by which works under the state contract are to be performed</value>
+    </toolTip>
+    <minValue xsi:type="core:StringValue">
+      <value>2000</value>
+    </minValue>
+    <maxValue xsi:type="core:StringValue">
+      <value>3999</value>
+    </maxValue>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1fd133c5-f2ec-46c8-a8b9-9b089a3f2396">
+    <name>КодСпособаОпределенияПоставщика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код способа определения поставщика</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Code of supplier determination method</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Определяет способ определения поставщика</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Determines supplier determination method</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="1fd013a7-a718-44c1-ae5e-4bc9d14d8d24">
+    <name>КодГосударственногоЗаказчика</name>
+    <synonym>
+      <key>ru</key>
+      <value>Код государственного заказчика</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>State customer code</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>3</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Идентификационный код государственного заказчика</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>State customer's identification code</value>
+    </toolTip>
+    <mask>999</mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value>   </value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="983cf79d-f499-4fc4-bf5d-3b444c927aee">
+    <name>ВидЦены</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид цены</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Price type</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Определяет вид цены на продукцию по госконтракту</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Determines a price type for products under the state contract</value>
+    </toolTip>
+    <minValue xsi:type="core:StringValue">
+      <value>1</value>
+    </minValue>
+    <maxValue xsi:type="core:StringValue">
+      <value>3</value>
+    </maxValue>
+    <fillValue xsi:type="core:NumberValue">
+      <value>1</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="2ad74b1b-5490-44ec-afa9-66ece19ed197">
+    <name>ДополнительныеРазряды</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные разряды</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Additional categories</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>12</length>
+        <fixed>true</fixed>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Код, присвоенный государственным заказчиком</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Code assigned by the state customer</value>
+    </toolTip>
+    <mask>999999999999</mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value>000000000000</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="fd58e5d8-bf49-45c0-a9d8-2dc14f6d6fc4">
+    <name>ПорядковыйНомер</name>
+    <synonym>
+      <key>ru</key>
+      <value>Порядковый номер</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Serial number</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>4</length>
+      </stringQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Порядковый номер госконтракта</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>State contract sequence number</value>
+    </toolTip>
+    <mask>9999</mask>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:StringValue">
+      <value>0000</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="5068f8ae-d5dd-44aa-b1ec-e46a77206b14">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Comment</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Произвольный текст</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>User text</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="af035e59-fff9-4d61-94cf-ae7a0c3d0d3f">
+    <producedTypes>
+      <objectType typeId="4827ff8d-54df-448d-bc8f-fd9372a892a4" valueTypeId="5baf26e4-e241-4603-a93a-41057c9db243"/>
+      <rowType typeId="94b1895b-291b-41fc-82f9-69298ba9b70c" valueTypeId="bc6786d8-b38a-4716-8faa-97303a7c8468"/>
+    </producedTypes>
+    <name>ДополнительныеРеквизиты</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дополнительные реквизиты</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Additional attributes</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="38a788f3-44c5-47e1-b2e6-10db2ce9d7ab">
+      <name>Свойство</name>
+      <synonym>
+        <key>ru</key>
+        <value>Свойство</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Property</value>
+      </synonym>
+      <type>
+        <types>ChartOfCharacteristicTypesRef.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Дополнительный реквизит</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>An additional attribute.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="c2a8c447-a705-4621-9995-6d570159ff08">
+      <name>Значение</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Value</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ДополнительныеРеквизитыИСведения</types>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Значение дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Value</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <choiceParameterLinks>
+        <name>Отбор.Владелец</name>
+        <field>Catalog.ГосударственныеКонтракты.TabularSection.ДополнительныеРеквизиты.Attribute.Свойство</field>
+      </choiceParameterLinks>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="7b62586c-4af9-4b76-b7f5-ebd1c359a490">
+      <name>ТекстоваяСтрока</name>
+      <synonym>
+        <key>ru</key>
+        <value>Текстовая строка</value>
+      </synonym>
+      <synonym>
+        <key>en</key>
+        <value>Text string</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers/>
+      </type>
+      <toolTip>
+        <key>ru</key>
+        <value>Полный текст строкового дополнительного реквизита</value>
+      </toolTip>
+      <toolTip>
+        <key>en</key>
+        <value>Text of the additional String attribute.</value>
+      </toolTip>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="8fb27be1-494e-4da5-8ed0-619c02efeae7">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Item form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="75d724bb-7f8e-4106-94b0-ec8c97f5f86e">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>List form</value>
+    </synonym>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="4bf15151-4f06-4ada-9faf-1d212853c1c5">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Choice form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="29344df3-96a6-4dde-9662-7cb98f591657">
+    <name>ВыборКодаИзКлассификатора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор кода из классификатора</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Select code from the classifier</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="6bca164c-4419-40e0-9f69-a5ab2ea1a97b">
+    <name>МакетАдминистраторыДоходовБюджетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет &quot;Администраторы доходов бюджетов&quot;</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Template &quot;Budget income administrators&quot;</value>
+    </synonym>
+  </templates>
+  <templates uuid="004d3864-9149-4c1d-a928-271c5d7b4270">
+    <name>ИдентификаторыИнформацииОЗакупке</name>
+    <synonym>
+      <key>ru</key>
+      <value>Идентификаторы информации о закупке</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>IDs of information on purchase.</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+  <templates uuid="0502062e-881b-44ec-8c0c-59d1c5d791e6">
+    <name>АдминистраторыДоходовБюджетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Администраторы доходов бюджетов</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Budget income administrators</value>
+    </synonym>
+    <templateType>TextDocument</templateType>
+  </templates>
+</mdclass:Catalog>

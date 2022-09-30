@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6d4a84d2-def1-4317-b44a-4e8d0b323e8a">
+  <producedTypes>
+    <objectType typeId="619ac1c7-7145-46e0-b029-dc050d1db2aa" valueTypeId="727ee9c3-d6d9-4e10-89c4-e36392e72535"/>
+    <refType typeId="192cda85-d2ea-40a8-85f7-1a52a22a1934" valueTypeId="e424023b-0193-4fb7-b65c-02d733045bc6"/>
+    <selectionType typeId="51613c23-0a35-415b-b22f-6e68a2e20434" valueTypeId="0fb3107a-59b9-411a-92bc-5801b226c13c"/>
+    <listType typeId="ecfd8ef0-fd5d-4a37-b096-f6e36ad47619" valueTypeId="a4d28850-777c-4797-94e0-6edaca86263e"/>
+    <managerType typeId="1a0e0bcf-b1e8-4317-970e-a19889894954" valueTypeId="4bf6c3ab-6d52-4ee4-8aba-a5fdc36a6a7b"/>
+  </producedTypes>
+  <name>УдалитьВидыОперацийБюджетирование</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Виды операций для планирования и контроля</value>
+  </synonym>
+  <inputByString>Catalog.УдалитьВидыОперацийБюджетирование.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>PredefinedDataName</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Predefined</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>DeletionMark</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>IsFolder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Owner</name>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Parent</name>
+    <synonym>
+      <key>ru</key>
+      <value>Входит в группу</value>
+    </synonym>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Catalog.УдалитьВидыОперацийБюджетирование.EmptyRef</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Description</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Code</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Вид операции для планирования и контроля</value>
+  </objectPresentation>
+  <hierarchical>true</hierarchical>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <predefined>
+    <items id="c0c4d800-b526-4eca-940d-660a82833365">
+      <name>ВнутриГрупповоеПеремещение</name>
+      <description>Внутригрупповое перемещение</description>
+      <code xsi:type="core:StringValue">
+        <value></value>
+      </code>
+    </items>
+  </predefined>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <attributes uuid="fd881d15-c4e2-457a-a7a2-8a4bfb2026b3">
+    <name>ВидБюджета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид бюджета</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ПредназначенияЭлементовСтруктурыОтчета</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>ТолькоВидыБюджетов</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ПредназначенияЭлементовСтруктурыОтчета.EnumValue.БюджетДвиженияДенежныхСредств</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="538cacaf-619e-4b15-a76c-41cce68b1a3c">
+    <name>ПриходРасход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыДвиженийПриходРасход</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыДвиженийПриходРасход.EnumValue.Расход</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="d102f9b0-2f4b-4844-92e2-49f99bd2b8f6">
+    <name>УдалитьТипОперацииБюджетирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Тип операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыОперацийБюджетирование</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:ReferenceValue">
+      <value>Enum.ТипыОперацийБюджетирование.EnumValue.РасчетыСКонтрагентами</value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="ade203f7-9483-4aac-85ab-5b75add05b83">
+    <name>УдалитьИспользоватьПоУмолчанию</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) использовать по умолчанию</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="31b51301-1397-4f9b-b8a9-a1d8ce1d9abd">
+    <name>ТипОперацииФИ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Тип периодической операции</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ТипыОперацийГрафикаФинансовыхИнструментов</types>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Используется в справочнике &quot;Настройки периодических операций&quot;</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="f63aaebf-800c-4fef-be0c-743bc256eeb9">
+    <name>УдалитьВидОперацииДвиженияДС</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) вид операции движения ДС</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВидОперацииДДСБезналичные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="aaacd799-fc3d-495f-bda2-24df5996e8a0">
+    <name>УдалитьВидОперацииДвиженияДСНаличные</name>
+    <synonym>
+      <key>ru</key>
+      <value>(не используется) Вид операции движения ДС (наличные)</value>
+    </synonym>
+    <type>
+      <types>DefinedType.ВидОперацииДДСНаличные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <attributes uuid="20c3ccf1-d7bd-4bc3-8eb1-9f9a030a52c4">
+    <name>ВидОперацииУХ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид операции</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОперацийУХ</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameterLinks>
+      <name>Отбор.ВидБюджета</name>
+      <field>Catalog.УдалитьВидыОперацийБюджетирование.Attribute.ВидБюджета</field>
+    </choiceParameterLinks>
+    <choiceParameterLinks>
+      <name>Отбор.ПриходРасход</name>
+      <field>Catalog.УдалитьВидыОперацийБюджетирование.Attribute.ПриходРасход</field>
+    </choiceParameterLinks>
+    <fillFromFillingValue>true</fillFromFillingValue>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="b7c11e2c-873b-44e4-952e-9479f478ec53">
+    <producedTypes>
+      <objectType typeId="b23f50d6-09ac-41dc-9b6b-e02cd3ecbe0f" valueTypeId="dc929b6f-7fd5-40ec-8af2-bbe3a967011d"/>
+      <rowType typeId="62499493-8117-4a1f-9d60-a36f3b6407d4" valueTypeId="5854bc94-4f40-4fdf-a72a-26e7d6143b5a"/>
+    </producedTypes>
+    <name>ДвиженияОперации</name>
+    <synonym>
+      <key>ru</key>
+      <value>Движения операции</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="b384c7f9-0847-4b9d-880b-fca073c68139">
+      <name>СтатьяДвиженияДенежныхСредств</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья движения денежных средств</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="dce9ad40-65a6-4d5e-95ce-415a80e1733a">
+      <name>АналитикаБДДС1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДДС1</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="1c02a3fa-9b0b-4692-82ce-764691e51fd6">
+      <name>АналитикаБДДС2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДДС2</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="92b784c5-9b87-48fd-95a0-085e83ac924e">
+      <name>АналитикаБДДС3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДДС3</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="aa8bf8cd-4d80-4f1d-9d66-72b7cbc9b96f">
+      <name>СтатьяДоходовИРасходов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья доходов и расходов</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДоходовИРасходов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="6de092ee-7681-42c1-9942-06b392e033cd">
+      <name>АналитикаБДР1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДР1</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b3ed1f7d-73d5-4f1a-8f65-f19132fa8a1a">
+      <name>АналитикаБДР2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДР2</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="4757e32a-ca59-4857-ba64-28c38489bbdc">
+      <name>АналитикаБДР3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика БДР3</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="b6823e62-4e20-4807-9298-8ec781eb3cc7">
+      <name>СтатьяДвиженияРесурсов</name>
+      <synonym>
+        <key>ru</key>
+        <value>Статья движения ресурсов</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.СтатьиДвиженияРесурсов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="68671c9b-ade3-4461-9632-7ab20310b65f">
+      <name>АналитикаРесурсы1</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика ресурсы1</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="9f42fb4d-36c0-4e4b-8f13-196a4ede780d">
+      <name>АналитикаРесурсы2</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика ресурсы2</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="ac81bd6f-1ff8-4b62-92da-69cdde3fc8b1">
+      <name>АналитикаРесурсы3</name>
+      <synonym>
+        <key>ru</key>
+        <value>Аналитика ресурсы3</value>
+      </synonym>
+      <type>
+        <types>Characteristic.ВидыСубконтоКорпоративные</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+</mdclass:Catalog>

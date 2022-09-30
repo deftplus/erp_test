@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="3f0e53dc-d402-42a4-bb37-a2817aefb5f7">
+  <producedTypes>
+    <objectType typeId="0795694b-8241-476f-8cf8-94d415976114" valueTypeId="298fd942-62c1-4d7b-936c-ec6824f28496"/>
+    <refType typeId="22d2ad32-0f6b-4315-8fb0-84052638cec8" valueTypeId="e3d3aa5e-0ea5-46c2-b95b-a94a992e613d"/>
+    <selectionType typeId="f304b413-e959-4179-8f0c-c13b228ffc14" valueTypeId="8329912a-91ea-4a18-a57e-56434b47228c"/>
+    <listType typeId="99ce90df-07bb-479a-b344-eb1e511eb7e5" valueTypeId="cad077fe-3280-496d-8f66-4d5e4190d62c"/>
+    <managerType typeId="1b67142c-7a59-418d-8de4-0dfbae5c5b7c" valueTypeId="045f1723-7834-462a-882f-2050e63f1ab4"/>
+  </producedTypes>
+  <name>инт_ПроверкаСоответствияЗагружаемыхПакетовОбменаТекущейБазе</name>
+  <synonym>
+    <key>ru</key>
+    <value>Проверка соответствия загружаемых пакетов обмена текущей базе (3l)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.инт_ПроверкаСоответствияЗагружаемыхПакетовОбменаТекущейБазе.StandardAttribute.Code</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <codeLength>9</codeLength>
+  <descriptionLength>150</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+  <defaultObjectForm>Catalog.инт_ПроверкаСоответствияЗагружаемыхПакетовОбменаТекущейБазе.Form.ФормаЭлемента</defaultObjectForm>
+  <attributes uuid="48f3a0f7-9e9e-4f63-b833-73aef3f90f47">
+    <name>Активность</name>
+    <synonym>
+      <key>ru</key>
+      <value>Активность</value>
+    </synonym>
+    <type>
+      <types>Boolean</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="a5058e79-a955-4605-9693-40ed082f00b5">
+    <name>Пользователь</name>
+    <synonym>
+      <key>ru</key>
+      <value>Пользователь</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Пользователи</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="eb238987-4a50-4307-9b38-9eef80970659">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="558d1caf-6e08-4cf6-a590-395157bfb980">
+    <name>Комментарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Комментарий</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillValue xsi:type="core:StringValue">
+      <value></value>
+    </fillValue>
+    <fullTextSearch>Use</fullTextSearch>
+    <dataHistory>Use</dataHistory>
+  </attributes>
+  <tabularSections uuid="63fdea4d-bd37-4907-8f5e-2ff1619f241d">
+    <producedTypes>
+      <objectType typeId="7d63df1d-2332-4628-aa90-355002b9d82e" valueTypeId="c995b309-e29b-4c18-ba8a-e83ad420d3fc"/>
+      <rowType typeId="2ef42fc1-181c-48a9-81dc-160935fa9818" valueTypeId="f078c212-8738-4c64-af1e-799f1ea40747"/>
+    </producedTypes>
+    <name>ЗначенияJSON</name>
+    <synonym>
+      <key>ru</key>
+      <value>Значения JSON</value>
+    </synonym>
+    <attributes uuid="1ce968cd-d8ce-4f98-a664-98d28043ef10">
+      <name>НаименованиеСвойства</name>
+      <synonym>
+        <key>ru</key>
+        <value>Наименование свойства</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+    </attributes>
+    <attributes uuid="3d52f4f6-cd92-4cf9-8a9e-cabea14ded71">
+      <name>ЗначениеСвойства</name>
+      <synonym>
+        <key>ru</key>
+        <value>Значение свойства</value>
+      </synonym>
+      <type>
+        <types>Boolean</types>
+        <types>String</types>
+        <types>Date</types>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+        <stringQualifiers>
+          <length>150</length>
+        </stringQualifiers>
+        <dateQualifiers>
+          <dateFractions>Date</dateFractions>
+        </dateQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="9ec862e9-b408-47db-a375-ed363358905b">
+      <name>ЛогическийОператор</name>
+      <synonym>
+        <key>ru</key>
+        <value>Логический оператор</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>30</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillChecking>ShowError</fillChecking>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+    <attributes uuid="d81d3297-65c8-43d3-83be-2881e8230190">
+      <name>ЛогическоеУсловие</name>
+      <synonym>
+        <key>ru</key>
+        <value>Логическое условие</value>
+      </synonym>
+      <type>
+        <types>String</types>
+        <stringQualifiers>
+          <length>16</length>
+        </stringQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <dataHistory>Use</dataHistory>
+      <fullTextSearch>Use</fullTextSearch>
+    </attributes>
+  </tabularSections>
+  <forms uuid="d98ea48c-673e-4316-bed0-8bdb3329f410">
+    <name>ФормаЭлемента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма элемента</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Catalog>

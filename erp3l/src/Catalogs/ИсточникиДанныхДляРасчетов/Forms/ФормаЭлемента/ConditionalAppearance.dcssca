@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<use>false</use>
+				<field>СпособВычисленияПараметра</field>
+			</item>
+			<item>
+				<field>УточнениеСпособаОпределения</field>
+			</item>
+			<item>
+				<field>ЗначениеДляПроверки</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаИ</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаИЛИ</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаНЕ</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>УточнениеСпособаОпределения</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ФиксированноеЗначение</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ПериодОтчетаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаНачалаПериодаОтчетаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаКонцаПериодаОтчетаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаНачалаГодаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаКонцаГодаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.АналогичныйПериодГодаСоСдвигом</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ПериметрОтчета</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.НеПериметрОтчета</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.Дата</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ФункцияНаВстроенномЯзыкеЗначение</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.Строка</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.Число</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.Булево</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.СписокФиксированныхЗначений</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.СписокПоИерархии</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.НеРавноФиксированномуЗначению</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.НеВСпискеФиксированныхЗначений</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.НеВСпискеПоИерархии</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ИнтервалПериодов</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ФункцияНаВстроенномЯзыкеСписокЗначений</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ТипЗначения</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.СписокТиповЗначений</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаНачалаВышестоящегоПериода</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ДатаКонцаВышестоящегоПериода</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ИмяПараметра</field>
+			</item>
+			<item>
+				<field>СпособВычисленияПараметра</field>
+			</item>
+			<item>
+				<field>УточнениеСпособаОпределения</field>
+			</item>
+			<item>
+				<field>ЗначениеДляПроверки</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>AndGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.СпособПолучения</left>
+					<comparisonType>InList</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнешниеДанныеРегистрБухгалтерии</right>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнешниеДанныеРегистрНакопления</right>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнутренниеДанныеРегистрНакопления</right>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнутренниеДанныеРегистрБухгалтерии</right>
+				</item>
+				<item xsi:type="FilterItemGroup">
+					<groupType>OrGroup</groupType>
+					<item xsi:type="FilterItemGroup">
+						<groupType>AndGroup</groupType>
+						<item xsi:type="FilterItemComparison">
+							<left xsi:type="dcscor:Field">Объект.ВидИтога</left>
+							<comparisonType>InList</comparisonType>
+							<right xsi:type="xs:string">НачальныйОстаток</right>
+							<right xsi:type="xs:string">НачальныйОстаток#</right>
+							<right xsi:type="xs:string">НачальныйРазвернутыйОстаток#</right>
+						</item>
+						<item xsi:type="FilterItemComparison">
+							<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.ПолеБД</left>
+							<comparisonType>Equal</comparisonType>
+							<right xsi:type="xs:string">ДатаКон</right>
+						</item>
+					</item>
+					<item xsi:type="FilterItemGroup">
+						<groupType>AndGroup</groupType>
+						<item xsi:type="FilterItemComparison">
+							<left xsi:type="dcscor:Field">Объект.ВидИтога</left>
+							<comparisonType>InList</comparisonType>
+							<right xsi:type="xs:string">КонечныйОстаток</right>
+							<right xsi:type="xs:string">КонечныйОстаток#</right>
+							<right xsi:type="xs:string">КонечныйРазвернутыйОстаток#</right>
+						</item>
+						<item xsi:type="FilterItemComparison">
+							<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.ПолеБД</left>
+							<comparisonType>Equal</comparisonType>
+							<right xsi:type="xs:string">ДатаНач</right>
+						</item>
+					</item>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ИмяПараметра</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemGroup">
+					<groupType>AndGroup</groupType>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">Объект.СпособПолучения</left>
+						<comparisonType>InList</comparisonType>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнешниеДанныеРегистрСведений</right>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнутренниеДанныеРегистрСведений</right>
+					</item>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">Объект.ВидСреза</left>
+						<comparisonType>InList</comparisonType>
+						<right xsi:type="xs:string">СрезПервых</right>
+						<right xsi:type="xs:string">СрезПоследних</right>
+					</item>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.ПолеБД</left>
+						<comparisonType>Equal</comparisonType>
+						<right xsi:type="xs:string">ДатаНач</right>
+					</item>
+				</item>
+				<item xsi:type="FilterItemGroup">
+					<groupType>AndGroup</groupType>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">Объект.СпособПолучения</left>
+						<comparisonType>InList</comparisonType>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнешниеДанныеРегистрБухгалтерии</right>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнешниеДанныеРегистрНакопления</right>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнутренниеДанныеРегистрНакопления</right>
+						<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыПолученияОперандов.ВнутренниеДанныеРегистрБухгалтерии</right>
+					</item>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">Объект.ВидИтога</left>
+						<comparisonType>InList</comparisonType>
+						<right xsi:type="xs:string">НачальныйОстаток</right>
+						<right xsi:type="xs:string">НачальныйОстаток#</right>
+						<right xsi:type="xs:string">НачальныйРазвернутыйОстаток#</right>
+						<right xsi:type="xs:string">КонечныйОстаток</right>
+						<right xsi:type="xs:string">КонечныйОстаток#</right>
+						<right xsi:type="xs:string">КонечныйРазвернутыйОстаток#</right>
+					</item>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.ПолеБД</left>
+						<comparisonType>InList</comparisonType>
+						<right xsi:type="xs:string">ДатаКон</right>
+						<right xsi:type="xs:string">ДатаНач</right>
+					</item>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Дата</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<use>false</use>
+		<selection>
+			<item>
+				<field>СпособВычисленияПараметра</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаИ</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаИЛИ</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоПараметровОтбораБД.СпособВычисленияПараметра</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыВычисленияПараметровОперандов.ГруппаНЕ</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

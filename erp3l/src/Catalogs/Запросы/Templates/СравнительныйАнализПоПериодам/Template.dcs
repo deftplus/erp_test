@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>БазисноеЗначение</dataPath>
+			<field>БазисноеЗначение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеСравнения</dataPath>
+			<field>ЗначениеСравнения</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодОтчета</dataPath>
+			<field>ПериодОтчета</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Показатель</dataPath>
+			<field>Показатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Версия</dataPath>
+			<field>Версия</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Значение</dataPath>
+			<field>Значение</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВерсияЗначенийПоказателей.Организация КАК Организация,
+	ЗначенияПоказателейОтчетов.Показатель КАК Показатель,
+	СУММА(ЗначенияПоказателейОтчетов.Значение) КАК Значение
+ПОМЕСТИТЬ РезультатВыбора
+ИЗ
+	(ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов5.Версия КАК Версия,
+		ЗначенияПоказателейОтчетов5.Показатель КАК Показатель,
+		ЗначенияПоказателейОтчетов5.Значение КАК Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов5 КАК ЗначенияПоказателейОтчетов5
+	ГДЕ
+		ЗначенияПоказателейОтчетов5.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов4.Версия,
+		ЗначенияПоказателейОтчетов4.Показатель,
+		ЗначенияПоказателейОтчетов4.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов4 КАК ЗначенияПоказателейОтчетов4
+	ГДЕ
+		ЗначенияПоказателейОтчетов4.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов3.Версия,
+		ЗначенияПоказателейОтчетов3.Показатель,
+		ЗначенияПоказателейОтчетов3.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов3 КАК ЗначенияПоказателейОтчетов3
+	ГДЕ
+		ЗначенияПоказателейОтчетов3.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов2.Версия,
+		ЗначенияПоказателейОтчетов2.Показатель,
+		ЗначенияПоказателейОтчетов2.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов2 КАК ЗначенияПоказателейОтчетов2
+	ГДЕ
+		ЗначенияПоказателейОтчетов2.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов1.Версия,
+		ЗначенияПоказателейОтчетов1.Показатель,
+		ЗначенияПоказателейОтчетов1.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов1 КАК ЗначенияПоказателейОтчетов1
+	ГДЕ
+		ЗначенияПоказателейОтчетов1.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетовСинтетика.Версия,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель,
+		ЗначенияПоказателейОтчетовСинтетика.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов6.Версия,
+		ЗначенияПоказателейОтчетов6.Показатель,
+		ЗначенияПоказателейОтчетов6.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов6 КАК ЗначенияПоказателейОтчетов6
+	ГДЕ
+		ЗначенияПоказателейОтчетов6.ИтоговоеЗначение) КАК ЗначенияПоказателейОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВерсииЗначенийПоказателей КАК ВерсияЗначенийПоказателей
+		ПО (ВерсияЗначенийПоказателей.Ссылка = ЗначенияПоказателейОтчетов.Версия)
+ГДЕ
+	ВерсияЗначенийПоказателей.ПериодОтчета = &amp;ПериодБазис
+	И ВерсияЗначенийПоказателей.Валюта = &amp;Валюта
+	И ВерсияЗначенийПоказателей.Сценарий = &amp;Сценарий
+
+СГРУППИРОВАТЬ ПО
+	ВерсияЗначенийПоказателей.Организация,
+	ЗначенияПоказателейОтчетов.Показатель
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВерсияЗначенийПоказателей.Организация КАК Организация,
+	ВерсияЗначенийПоказателей.ПериодОтчета КАК ПериодОтчета,
+	ЗначенияПоказателейОтчетов.Показатель КАК Показатель,
+	СУММА(РезультатВыбора.Значение) КАК БазисноеЗначение,
+	СУММА(ЗначенияПоказателейОтчетов.Значение) КАК ЗначениеСравнения
+ИЗ
+	(ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов5.Версия КАК Версия,
+		ЗначенияПоказателейОтчетов5.Показатель КАК Показатель,
+		ЗначенияПоказателейОтчетов5.Значение КАК Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов5 КАК ЗначенияПоказателейОтчетов5
+	ГДЕ
+		ЗначенияПоказателейОтчетов5.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов4.Версия,
+		ЗначенияПоказателейОтчетов4.Показатель,
+		ЗначенияПоказателейОтчетов4.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов4 КАК ЗначенияПоказателейОтчетов4
+	ГДЕ
+		ЗначенияПоказателейОтчетов4.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов3.Версия,
+		ЗначенияПоказателейОтчетов3.Показатель,
+		ЗначенияПоказателейОтчетов3.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов3 КАК ЗначенияПоказателейОтчетов3
+	ГДЕ
+		ЗначенияПоказателейОтчетов3.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов2.Версия,
+		ЗначенияПоказателейОтчетов2.Показатель,
+		ЗначенияПоказателейОтчетов2.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов2 КАК ЗначенияПоказателейОтчетов2
+	ГДЕ
+		ЗначенияПоказателейОтчетов2.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов1.Версия,
+		ЗначенияПоказателейОтчетов1.Показатель,
+		ЗначенияПоказателейОтчетов1.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов1 КАК ЗначенияПоказателейОтчетов1
+	ГДЕ
+		ЗначенияПоказателейОтчетов1.ИтоговоеЗначение
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетовСинтетика.Версия,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель,
+		ЗначенияПоказателейОтчетовСинтетика.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов6.Версия,
+		ЗначенияПоказателейОтчетов6.Показатель,
+		ЗначенияПоказателейОтчетов6.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов6 КАК ЗначенияПоказателейОтчетов6
+	ГДЕ
+		ЗначенияПоказателейОтчетов6.ИтоговоеЗначение) КАК ЗначенияПоказателейОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ВерсииЗначенийПоказателей КАК ВерсияЗначенийПоказателей
+		ПО (ВерсияЗначенийПоказателей.Ссылка = ЗначенияПоказателейОтчетов.Версия)
+		ЛЕВОЕ СОЕДИНЕНИЕ РезультатВыбора КАК РезультатВыбора
+		ПО (РезультатВыбора.Организация = ВерсияЗначенийПоказателей.Организация)
+			И (РезультатВыбора.Показатель = ЗначенияПоказателейОтчетов.Показатель)
+ГДЕ
+	ВерсияЗначенийПоказателей.Валюта = &amp;Валюта
+	И ВерсияЗначенийПоказателей.Сценарий = &amp;Сценарий
+
+СГРУППИРОВАТЬ ПО
+	ВерсияЗначенийПоказателей.Организация,
+	ВерсияЗначенийПоказателей.ПериодОтчета,
+	ЗначенияПоказателейОтчетов.Показатель</query>
+	</dataSet>
+	<calculatedField>
+		<dataPath>АбсолютноеОтклонение</dataPath>
+		<expression>ЗначениеСравнения-БазисноеЗначение</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Абсолютное отклонение</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>18</v8:Digits>
+				<v8:FractionDigits>5</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>ОтносительноеОтклонение</dataPath>
+		<expression>ВЫБОР КОГДА БазисноеЗначение = 0 ТОГДА 0 ИНАЧЕ 100*(ЗначениеСравнения-БазисноеЗначение)/БазисноеЗначение КОНЕЦ</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Относительное отклонение</v8:content>
+			</v8:item>
+		</title>
+		<appearance>
+			<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+				<dcscor:parameter>Формат</dcscor:parameter>
+				<dcscor:value xsi:type="xs:string">ЧЦ=6; ЧДЦ=2</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>18</v8:Digits>
+				<v8:FractionDigits>5</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+	</calculatedField>
+	<totalField>
+		<dataPath>БазисноеЗначение</dataPath>
+		<expression>Сумма(БазисноеЗначение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеСравнения</dataPath>
+		<expression>Сумма(ЗначениеСравнения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>АбсолютноеОтклонение</dataPath>
+		<expression>Сумма(АбсолютноеОтклонение)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ОтносительноеОтклонение</dataPath>
+		<expression>Сумма(ОтносительноеОтклонение)</expression>
+	</totalField>
+	<parameter>
+		<name>ПериодБазис</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период базис</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Периоды</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Периоды.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Валюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Валюты.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Сценарий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Сценарии</v8:Type>
+		</valueType>
+		<value xsi:type="dcscor:DesignTimeValue">Справочник.Сценарии.ПустаяСсылка</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Показатель</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>БазисноеЗначение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеСравнения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>АбсолютноеОтклонение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ОтносительноеОтклонение</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ПериодОтчета</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

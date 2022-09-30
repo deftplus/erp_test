@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт1</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоДт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт1Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт2</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоДт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт2Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт3</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоДт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт3Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт1</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоКт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт1Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт2</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоКт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт2Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт3</field>
+			</item>
+			<item>
+				<field>ПроводкиСпособЗаполненияСубконтоКт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт3Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОДт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт1</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт1Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОДт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт2</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт2Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОДт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт3</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт3Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОКт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт1</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт1Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОКт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт2</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт2Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиАналитикаВГОКт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт3</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.АналитикаСверки</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт3Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт1Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт1</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт2Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт2</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоДт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт3Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоДт3</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт1</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт1Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт1</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт2</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоДт2Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт2</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПроводкиСубконтоКт3</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.ЗначениеСубконтоКт3Доступность</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">false</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">Объект.Проводки.СпособЗаполненияСубконтоКт3</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СпособыЗаполненияСубконтоВГО.ФиксированноеЗначение</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

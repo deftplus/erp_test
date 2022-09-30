@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="31ffd7f7-20bc-462c-89b3-b421c2d9e49c">
+  <producedTypes>
+    <selectionType typeId="6288941a-8718-46b5-8171-45e96aa7ce20" valueTypeId="4dedce61-6b88-43f3-92e9-afafde755b50"/>
+    <listType typeId="a114f146-fff5-4a83-b67b-293d60a42736" valueTypeId="c063da05-5911-48bb-93a4-f14527382f56"/>
+    <managerType typeId="9afe8d96-fcf8-496a-9506-a39307891151" valueTypeId="bbc24dd8-e1b5-49c0-8259-7ff159a6c8b6"/>
+    <recordSetType typeId="0675f8ef-4444-45ca-8d3a-09e8d9497937" valueTypeId="778031e0-faab-44d5-b2c6-f85c9f509761"/>
+    <recordKeyType typeId="31981210-1663-4b9c-8bda-8f16c4dd0572" valueTypeId="e6ed050d-ebab-494a-ae4d-6df4997a760e"/>
+    <recordType typeId="b0fdc71a-1dd6-461b-98a5-6897c7858dce" valueTypeId="b731b670-9767-4a0b-86da-9e6eaafa3275"/>
+  </producedTypes>
+  <name>УдалитьДвиженияДенежныхСредствУХ</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Движения денежных средств</value>
+  </synonym>
+  <registerType>Turnovers</registerType>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <resources uuid="8948b11e-2487-42a2-a563-6358a55299a7">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <comment>Сумма в валюте банковского счета (кассы)</comment>
+    <type>
+      <types>DefinedType.ДенежнаяСуммаЛюбогоЗнака</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="2a3f7f09-416c-4d26-b80b-9e394caad9cb">
+    <name>СуммаУпр</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма упр. учета</value>
+    </synonym>
+    <comment>Сумма в валюте упр. учета</comment>
+    <type>
+      <types>DefinedType.ДенежнаяСуммаЛюбогоЗнака</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="935fc019-cc42-4a2b-a36d-077d51f09074">
+    <name>Организация</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>DefinedType.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ec4759a7-b7fb-41a0-a65e-e5f2b614fb88">
+    <name>БанковскийСчетКасса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Банковский счет / касса</value>
+    </synonym>
+    <type>
+      <types>DefinedType.БанковскиеСчетаКассыОрганизаций</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ce2e732d-133b-4fa2-999b-383a8ce09a6f">
+    <name>ПриходРасход</name>
+    <synonym>
+      <key>ru</key>
+      <value>Приход расход</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВидыДвиженийПриходРасход</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="5ba62bd8-3707-4882-9272-a831bb69db84">
+    <name>ВидДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид денежных средств</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ФормыОплаты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e89612ba-79ae-43fe-920f-fffc659eaa03">
+    <name>СтатьяДвиженияДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Статья движения денежных средств</value>
+    </synonym>
+    <comment>(Регл)</comment>
+    <type>
+      <types>Characteristic.ВидыБюджетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="1147ade4-7719-4dc1-8cc9-5f0af6b7fc0b">
+    <name>Контрагент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Контрагент, подотчетник, касса ККМ</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>CatalogRef.Организации</types>
+      <types>CatalogRef.Контрагенты</types>
+      <types>CatalogRef.ФизическиеЛица</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="77fb8175-26e6-45ec-8a9f-d852e82bd8ff">
+    <name>ДоговорКонтрагента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Договор контрагента</value>
+    </synonym>
+    <comment>(Общ)</comment>
+    <type>
+      <types>DefinedType.Договор</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="a0a4202e-82c4-4692-b391-02d8cf6e9bb1">
+    <name>Аналитика1</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика1</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ace21634-e17a-44e3-b74c-1e979b04fbb4">
+    <name>Аналитика2</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика2</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="e0dd3310-e34f-4f21-b09d-d72a0dac5184">
+    <name>Аналитика3</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика3</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="beb134ff-dada-4ee6-b397-342c7bfff830">
+    <name>УдалитьВидДенежныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>(Не используется) вид денежных средств</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers>
+        <length>10</length>
+      </stringQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <indexing>Index</indexing>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="860df73a-a022-4e88-b8a1-d5528f7fdc37">
+    <name>Аналитика4</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика4</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="9ddf4f9d-4ee9-4fd5-a639-6458825da645">
+    <name>Аналитика5</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика5</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="ba3f5b3a-22f3-4d3c-a4b8-124df999a693">
+    <name>Аналитика6</name>
+    <synonym>
+      <key>ru</key>
+      <value>Аналитика6</value>
+    </synonym>
+    <type>
+      <types>Characteristic.ВидыСубконтоКорпоративные</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
