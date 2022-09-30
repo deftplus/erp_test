@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.НаименованиеСтраницы</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.ТекущаяСтраница</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.ТекущаяСтраница</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">3</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:ReportHeaderBackColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.Доступность</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">false</right>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.НаименованиеСтраницы</left>
+				<comparisonType>Filled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериод_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериод_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериод_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериод_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.СреднийКурсЗаПериод_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериодМСФО_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериодМСФО_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериодМСФО_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПериодМСФО_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.СреднийКурсЗаПериодМСФО_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаНачалоПериода_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаНачалоПериода_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаНачалоПериода_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаНачалоПериода_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.КурсНаНачалоПериода_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПериода_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПериода_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПериода_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПериода_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.КурсНаКонецПериода_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднеквадратичныйКурсЗаПериод_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднеквадратичныйКурсЗаПериод_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднеквадратичныйКурсЗаПериод_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднеквадратичныйКурсЗаПериод_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.СреднийКурсЗаПредыдущийПериод_ИсходноеЗначение</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Оглавление</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Оглавление.ТекущаяСтраница</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:decimal">3</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПрошлогоПериода_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПрошлогоПериода_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПрошлогоПериода_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовКурсНаКонецПрошлогоПериода_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.КурсНаКонецПредыдущегоПериода_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПрошлыйПериод_ИсходноеЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПрошлыйПериод_ТекущееЗначение</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПрошлыйПериод_АбсИзм</field>
+			</item>
+			<item>
+				<field>ТаблицаРедактированияКурсовСреднийКурсЗаПрошлыйПериод_ОтнИзм</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ТабличноеПолеРедактированияКурсов.СреднийКурсЗаПредыдущийПериод_Изменен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

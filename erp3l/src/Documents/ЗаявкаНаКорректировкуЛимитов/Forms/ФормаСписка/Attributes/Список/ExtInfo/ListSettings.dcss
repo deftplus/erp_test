@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Settings xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core">
+	<filter>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.ВидБюджета</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>f97c01bf-368e-4b12-8f28-2f48fe71a35d</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.ЦФО</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>fa5035a8-8e26-4f3d-89d1-5af4d73bfbfe</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.Валюта</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>6d78dfb1-ceba-45ab-88e1-83f558a46276</userSettingID>
+		</item>
+		<item xsi:type="FilterItemGroup">
+			<use>false</use>
+			<groupType>AndGroup</groupType>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Проведен</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Обеспечено</left>
+				<comparisonType>NotEqual</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+			<presentation xsi:type="xs:string">Ожидают обеспечения</presentation>
+			<userSettingID>5f1a3644-e037-4f9f-9950-826b3bbd440f</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.Проект</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>40d72c87-dc79-4231-bdc8-f95b2509e198</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.ПериодЛимитирования</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>fe4075d1-fd95-421f-a7d0-d590468aaba3</userSettingID>
+		</item>
+		<item xsi:type="FilterItemComparison">
+			<use>false</use>
+			<left xsi:type="dcscor:Field">ЛимитыПоБюджетам.СтатьяБюджета</left>
+			<comparisonType>Equal</comparisonType>
+			<userSettingID>4e0b0643-b998-435b-9cf3-df564301fa82</userSettingID>
+		</item>
+		<viewMode>Normal</viewMode>
+		<userSettingID>e7752e1f-0bbb-4a23-87b3-1a9ea86fddce</userSettingID>
+	</filter>
+	<order>
+		<viewMode>Normal</viewMode>
+		<userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</userSettingID>
+	</order>
+	<conditionalAppearance>
+		<viewMode>Normal</viewMode>
+		<userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</userSettingID>
+	</conditionalAppearance>
+	<itemsViewMode>Normal</itemsViewMode>
+	<itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</itemsUserSettingID>
+</Settings>

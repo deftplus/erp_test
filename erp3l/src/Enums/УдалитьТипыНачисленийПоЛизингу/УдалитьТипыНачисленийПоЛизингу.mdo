@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2504009a-d558-4ceb-a793-b8fb28a6dd69">
+  <producedTypes>
+    <refType typeId="f39de851-678b-4626-bb32-d0805dcc9476" valueTypeId="52d09cd4-63c1-4d1a-a3f1-908a83d280e0"/>
+    <listType typeId="dfd9aa2a-bd41-44c9-a8dd-612bde5f00a5" valueTypeId="e27deadc-9bf9-4c2d-942d-5a3bac255173"/>
+    <managerType typeId="751e2e29-01ed-4797-8030-57df65d0b09f" valueTypeId="95ae88d5-bd34-454d-9814-6923d996b839"/>
+  </producedTypes>
+  <name>УдалитьТипыНачисленийПоЛизингу</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Типы начислений по лизингу</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>(not used) Leasing accrual types</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="f307354c-41e9-4530-84c0-ed82daac0cf9">
+    <name>УслугаПоЛизингу</name>
+    <synonym>
+      <key>ru</key>
+      <value>Услуга по лизингу</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Leasing service</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8f040503-4e4f-4e5e-a915-04223331b2ea">
+    <name>ВыкупнаяСтоимость</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выкуп предмета лизинга</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Leasing item redemption</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="1853d897-1674-4ced-99f2-ef5ef82add3a">
+    <name>ЗачетОбеспечительногоПлатежа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Зачет обеспечительного платежа</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Security payment offset</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="4f950c23-7e4f-4aab-b9b5-599ad72d330c">
+    <name>АрендныеОбязательства</name>
+    <synonym>
+      <key>ru</key>
+      <value>Арендные обязательства</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Lease obligations</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="d5bb6bcb-7414-490c-b2c0-92312e072375">
+  <producedTypes>
+    <refType typeId="87e661d8-f7fd-4ee8-a17c-7b8fec24f30a" valueTypeId="a9bd83da-9ad0-411e-ab9e-ff3520b1e286"/>
+    <listType typeId="39abf677-6eec-4653-ba16-62322f728d6e" valueTypeId="cc7b0bc2-c9f4-4f31-9a3c-c9a405be03b6"/>
+    <managerType typeId="6a8c3329-c90e-499f-be34-0209f98dab6b" valueTypeId="15e92d14-c53b-40eb-b85f-4c3e6dc5e77c"/>
+  </producedTypes>
+  <name>УдалитьВидыДоговоровКонтрагентовУХ</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) виды договоров контрагентов УХ</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <enumValues uuid="5381f040-e809-4084-ada6-4d1e20ba1baf">
+    <name>СПоставщиком</name>
+    <synonym>
+      <key>ru</key>
+      <value>С поставщиком (исполнителем, подрядчиком)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="e80b826b-d7ce-4481-ae0b-bb8e2bd6214a">
+    <name>СПокупателем</name>
+    <synonym>
+      <key>ru</key>
+      <value>С покупателем (заказчиком)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2223b826-bb31-4d14-8729-c7e9bf23ce84">
+    <name>СКомитентом</name>
+    <synonym>
+      <key>ru</key>
+      <value>С комитентом (принципалом) на продажу</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c873542b-06aa-4bc1-a87e-d076172edf4d">
+    <name>СКомиссионером</name>
+    <synonym>
+      <key>ru</key>
+      <value>С комиссионером (агентом) на продажу</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="03719d92-7adb-466d-982e-f19aae357d7b">
+    <name>СКомитентомНаЗакупку</name>
+    <synonym>
+      <key>ru</key>
+      <value>С комитентом (принципалом) на закупку</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="2677e62e-728e-4d87-9126-f0a3ef5c9f6a">
+    <name>СКомиссионеромНаЗакупку</name>
+    <synonym>
+      <key>ru</key>
+      <value>С комиссионером (агентом) на закупку</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="07eaf2ff-e5ed-411f-b3f8-148347e782a1">
+    <name>ПривлечениеЗаемныхСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Привлечение средств</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="119978a2-3873-422a-aa94-b1ff43ffc704">
+    <name>РазмещениеСредств</name>
+    <synonym>
+      <key>ru</key>
+      <value>Размещение средств</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="078b92d2-5a67-4462-8282-ce662bc3f90e">
+    <name>ДокументарныеОперацииИсходящие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документарные операции (исходящие)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="bd8de12d-3b81-42db-a77a-ce5fc070b891">
+    <name>ЗалогиИПоручительстваВходящие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Залоги и поручительства (входящие)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="8a9b4318-0f1f-4077-9edd-3c7919b15f22">
+    <name>ЗалогиИПоручительстваИсходящие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Залоги и поручительства (исходящие)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="15329037-343d-429b-8d71-6f3bda5ae21d">
+    <name>Прочее</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прочее</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d6b9abef-54cd-4d05-ae0a-2ac2b997f9b4">
+    <name>РасчетыСБрокером</name>
+    <synonym>
+      <key>ru</key>
+      <value>Расчеты с брокером</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="5a32decb-67ff-4ca8-b880-7ddfbf7423b9">
+    <name>Страхование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Страхование</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="470c6396-dc3b-4738-9e39-890e4e7b346f">
+    <name>ПроизводныйФинансовыйИнструмент</name>
+    <synonym>
+      <key>ru</key>
+      <value>Производный финансовый инструмент</value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

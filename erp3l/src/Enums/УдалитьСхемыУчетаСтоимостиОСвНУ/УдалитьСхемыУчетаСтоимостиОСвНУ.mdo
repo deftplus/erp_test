@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cba857ed-63bd-4d9d-95e4-814d3433e577">
+  <producedTypes>
+    <refType typeId="9f1031dc-7be6-48c8-aa82-f4161d9a0d93" valueTypeId="0b2fc8c8-90a2-4653-87a1-2b1f6a38ffd2"/>
+    <listType typeId="a6b25c5a-0e2c-4195-abfa-7cbbdb62f701" valueTypeId="0c91ca1f-ead5-4284-9673-5bc45f6e4f08"/>
+    <managerType typeId="30bae9d0-33f9-4096-a460-94a37ab16627" valueTypeId="c025485f-f7da-4bf0-bee1-03b71f89a7ae"/>
+  </producedTypes>
+  <name>УдалитьСхемыУчетаСтоимостиОСвНУ</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Схемы учета стоимости ОС в НУ</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>(not used) FA cost accounting schemes in TA</value>
+  </synonym>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <listPresentation>
+    <key>ru</key>
+    <value>(не используется) Схемы учета стоимости ОС в налоговом учете</value>
+  </listPresentation>
+  <listPresentation>
+    <key>en</key>
+    <value>(not used) FA cost accounting schemes in tax accounting </value>
+  </listPresentation>
+  <enumValues uuid="0179e098-90ca-4ea5-928a-f9e55187bb5d">
+    <name>СФормированиемВР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема учета стоимости ОС в налоговом учете с формированием ВР (рекомендуется)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>FA cost accounting scheme in tax accounting with TD generation (recommended)</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="d5920d67-9274-4dea-915d-4f259a0c1a0f">
+    <name>СФормированиемПР</name>
+    <synonym>
+      <key>ru</key>
+      <value>Схема учета стоимости ОС в налоговом учете с формированием ПР</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>FA cost accounting scheme in tax accounting with PD generation </value>
+    </synonym>
+  </enumValues>
+</mdclass:Enum>

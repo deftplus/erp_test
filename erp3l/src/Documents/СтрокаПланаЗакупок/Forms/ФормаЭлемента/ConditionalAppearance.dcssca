@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ФинансированиеСумма</field>
+			</item>
+			<item>
+				<field>ФинансированиеСуммаСМП</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Финансирование.Сумма</left>
+				<comparisonType>Less</comparisonType>
+				<right xsi:type="dcscor:Field">Объект.Финансирование.СуммаСМП</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ФинансированиеОстаток</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ФинансированиеОстаток</left>
+				<comparisonType>Greater</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПотребностиПоГодамОтклонениеОтносительное</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ПотребностиВНоменклатуреПоПериодам.ОтклонениеОтносительное</left>
+				<comparisonType>Less</comparisonType>
+				<right xsi:type="xs:decimal">0</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:NegativeTextColor</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПотребностиПоГодамХарактеристика</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>AndGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ПотребностиПоГодам.ХарактеристикиИспользуются</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="xs:boolean">true</right>
+				</item>
+				<item xsi:type="FilterItemGroup">
+					<groupType>NotGroup</groupType>
+					<item xsi:type="FilterItemComparison">
+						<left xsi:type="dcscor:Field">ПотребностиПоГодам.Характеристика</left>
+						<comparisonType>Filled</comparisonType>
+					</item>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ОтметкаНезаполненного</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПотребностиПоГодамКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейЯнварьКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейФевральКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейМартКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейАпрельКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейМайКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейИюньКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейИюльКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейАвгустКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейСентябрьКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейОктябрьКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейНоябрьКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейДекабрьКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейПервыйКварталКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейВторойКварталКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейТретийКварталКоличество</field>
+			</item>
+			<item>
+				<field>РасшифровкаПотребностейЧетвертыйКварталКоличество</field>
+			</item>
+			<item>
+				<field>ПотребностиПоГодамЦена</field>
+			</item>
+			<item>
+				<field>ПотребностиПоГодамЦенаПервоначальная</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ПотребностиПоГодам.ЭтоКатегорияНоменклатуры</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;не заполняется&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+		<presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ОтображениеНеЗаполняется</v8:content>
+			</v8:item>
+		</presentation>
+	</item>
+</ConditionalAppearance>

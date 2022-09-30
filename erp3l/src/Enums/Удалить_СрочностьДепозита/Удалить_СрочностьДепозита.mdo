@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Enum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="34f796a7-5599-4921-b2d4-fae8e27ded6a">
+  <producedTypes>
+    <refType typeId="7f47ce34-1293-4330-a83c-68dee029d1bf" valueTypeId="aeb13065-a1bd-4ed2-a0c8-8ef934111b5d"/>
+    <listType typeId="5b7cb9c0-16a9-46f8-b798-b44831bffe42" valueTypeId="64fe116a-a0d2-494d-bbec-2d74f89f2cbb"/>
+    <managerType typeId="69957b56-092d-4b93-8dfe-643cb5b9d61f" valueTypeId="8a136bca-d231-4805-aabb-9056fd621416"/>
+  </producedTypes>
+  <name>Удалить_СрочностьДепозита</name>
+  <synonym>
+    <key>ru</key>
+    <value>(Не используется) срочность депозита</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Order</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Ref</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <quickChoice>true</quickChoice>
+  <choiceMode>BothWays</choiceMode>
+  <defaultListForm>Enum.Удалить_СрочностьДепозита.Form.ФормаСписка</defaultListForm>
+  <defaultChoiceForm>Enum.Удалить_СрочностьДепозита.Form.ФормаВыбора</defaultChoiceForm>
+  <listPresentation>
+    <key>ru</key>
+    <value>Срочность депозита</value>
+  </listPresentation>
+  <extendedListPresentation>
+    <key>ru</key>
+    <value>Срочность депозита</value>
+  </extendedListPresentation>
+  <enumValues uuid="838609ea-ddcf-486e-a03c-1f6003b248d8">
+    <name>МенееТрехМесяцев</name>
+    <synonym>
+      <key>ru</key>
+      <value>менее 3-х месяцев</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="f9b2a9a7-18e7-4305-9752-c63da83cb855">
+    <name>ОтТрехМесяцевДоГода</name>
+    <synonym>
+      <key>ru</key>
+      <value>более 3 месяцев, но менее года</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="43bbee43-7c3b-4f18-937f-942199439be4">
+    <name>БолееГода</name>
+    <synonym>
+      <key>ru</key>
+      <value>более года</value>
+    </synonym>
+  </enumValues>
+  <enumValues uuid="c4ba3136-8821-4666-91da-279bc3796295">
+    <name>Прочие</name>
+    <synonym>
+      <key>ru</key>
+      <value>Прочие</value>
+    </synonym>
+  </enumValues>
+  <forms uuid="7bd8e56a-ee70-42a4-a0bf-f37abaeef873">
+    <name>ФормаСписка</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма списка</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="20ba9613-bd21-4f89-bbb0-415c0c3fea4b">
+    <name>ФормаВыбора</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма выбора</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:Enum>
