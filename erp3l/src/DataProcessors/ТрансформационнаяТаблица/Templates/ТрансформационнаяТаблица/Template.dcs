@@ -1,0 +1,1347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КО</dataPath>
+			<field>КО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДО</dataPath>
+			<field>ДО</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Версия</dataPath>
+			<field>Версия</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипОперации</dataPath>
+			<field>ТипОперации</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип операции</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетБД</dataPath>
+			<field>СчетБД</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Счет БД</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеКт</dataPath>
+			<field>ЗначениеКт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение кт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеДт</dataPath>
+			<field>ЗначениеДт</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение дт</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеКтИтог</dataPath>
+			<field>ЗначениеКтИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение кт итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеДтИтог</dataPath>
+			<field>ЗначениеДтИтог</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение дт итог</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипКолонки</dataPath>
+			<field>ТипКолонки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип колонки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	ВерсииЗначенийПоказателей.Ссылка,
+	ВерсииЗначенийПоказателей.Регистратор,
+	ЕСТЬNULL(ВерсииЗначенийПоказателей.Регистратор.ВидОперации, ЗНАЧЕНИЕ(Справочник.ВидыОпераций.УчетныеОперации)) КАК ВидОперации
+ПОМЕСТИТЬ ВерсииЗначенийПоказателей
+ИЗ
+	Справочник.ВерсииЗначенийПоказателей КАК ВерсииЗначенийПоказателей
+ГДЕ
+	ВерсииЗначенийПоказателей.ВидОтчета = &amp;ВидОтчета
+	И ВерсииЗначенийПоказателей.Организация = &amp;Организация
+	И ВерсииЗначенийПоказателей.ПериодОтчета = &amp;ПериодОтчета
+	И ВерсииЗначенийПоказателей.Сценарий = &amp;Сценарий
+	И ВерсииЗначенийПоказателей.Валюта = &amp;ОсновнаяВалюта
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.СКД)
+			ТОГДА ЗначенияПоказателейОтчетовСинтетика.Значение
+		ИНАЧЕ 0
+	КОНЕЦ КАК СКД,
+	ВЫБОР
+		КОГДА ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.СКК)
+			ТОГДА ЗначенияПоказателейОтчетовСинтетика.Значение
+		ИНАЧЕ 0
+	КОНЕЦ КАК СКК,
+	ВЫБОР
+		КОГДА ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.ДО)
+			ТОГДА ЗначенияПоказателейОтчетовСинтетика.Значение
+		ИНАЧЕ 0
+	КОНЕЦ КАК ДО,
+	ВЫБОР
+		КОГДА ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.КО)
+			ТОГДА ЗначенияПоказателейОтчетовСинтетика.Значение
+		ИНАЧЕ 0
+	КОНЕЦ КАК КО,
+	ВерсииЗначенийПоказателей.ВидОперации,
+	ВерсииЗначенийПоказателей.Ссылка КАК Версия,
+	ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету КАК ВидИтогаПоСчету,
+	ЗначенияПоказателейОтчетовСинтетика.Показатель,
+	ЗначенияПоказателейОтчетовСинтетика.Показатель.СчетБД КАК СчетБД,
+	ВЫБОР
+		КОГДА ЗначенияПоказателейОтчетовСинтетика.Показатель.СчетБД.РазделПланаСчетов В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.Баланс))
+			ТОГДА ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.Баланс)
+		ИНАЧЕ ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)
+	КОНЕЦ КАК БалансОПУ
+ПОМЕСТИТЬ ДвиженияПоОперациям
+ИЗ
+	РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВерсииЗначенийПоказателей КАК ВерсииЗначенийПоказателей
+		ПО ЗначенияПоказателейОтчетовСинтетика.Версия = ВерсииЗначенийПоказателей.Ссылка
+ГДЕ
+	ЗначенияПоказателейОтчетовСинтетика.Показатель.Владелец.ПланСчетов = &amp;ПланСчетов
+	И НЕ ЗначенияПоказателейОтчетовСинтетика.Показатель.СчетБД = ЗНАЧЕНИЕ(Справочник.СчетаБД.ПустаяСсылка)
+	И (ЗначенияПоказателейОтчетовСинтетика.Показатель.СчетБД.РазделПланаСчетов В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.Баланс))
+			ИЛИ ЗначенияПоказателейОтчетовСинтетика.Показатель.СчетБД.РазделПланаСчетов В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)))
+	И ЗначенияПоказателейОтчетовСинтетика.Показатель.ВидИтогаПоСчету В(&amp;МассивВидовИтога)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДвиженияПоОперациям.ВидОперации,
+	ДвиженияПоОперациям.Версия,
+	ДвиженияПоОперациям.СчетБД,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияПоОперациям.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.СКД)
+				ТОГДА ДвиженияПоОперациям.СКД
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СКД,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияПоОперациям.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.СКК)
+				ТОГДА ДвиженияПоОперациям.СКК
+			ИНАЧЕ 0
+		КОНЕЦ) КАК СКК,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияПоОперациям.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.ДО)
+				ТОГДА ДвиженияПоОперациям.ДО
+			ИНАЧЕ 0
+		КОНЕЦ) КАК ДО,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияПоОперациям.ВидИтогаПоСчету = ЗНАЧЕНИЕ(Перечисление.ВидыБухгалтерскихИтогов.КО)
+				ТОГДА ДвиженияПоОперациям.КО
+			ИНАЧЕ 0
+		КОНЕЦ) КАК КО,
+	ДвиженияПоОперациям.БалансОПУ
+ПОМЕСТИТЬ ДвиженияОперацииСвод
+ИЗ
+	ДвиженияПоОперациям КАК ДвиженияПоОперациям
+
+СГРУППИРОВАТЬ ПО
+	ДвиженияПоОперациям.ВидОперации,
+	ДвиженияПоОперациям.Версия,
+	ДвиженияПоОперациям.СчетБД,
+	ДвиженияПоОперациям.БалансОПУ
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДвиженияОперацииСвод.СчетБД,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияОперацииСвод.БалансОПУ = ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)
+				ТОГДА ДвиженияОперацииСвод.ДО
+			ИНАЧЕ ДвиженияОперацииСвод.СКД
+		КОНЕЦ) КАК ЗначениеДтИтог,
+	СУММА(ВЫБОР
+			КОГДА ДвиженияОперацииСвод.БалансОПУ = ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)
+				ТОГДА ДвиженияОперацииСвод.КО
+			ИНАЧЕ ДвиженияОперацииСвод.СКК
+		КОНЕЦ) КАК ЗначениеКтИтог
+ПОМЕСТИТЬ ЗначенияИтог
+ИЗ
+	ДвиженияОперацииСвод КАК ДвиженияОперацииСвод
+
+СГРУППИРОВАТЬ ПО
+	ДвиженияОперацииСвод.СчетБД
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ДвиженияОперацииСвод.Версия,
+	ДвиженияОперацииСвод.ДО КАК ДО,
+	ДвиженияОперацииСвод.КО КАК КО,
+	ВЫБОР
+		КОГДА ДвиженияОперацииСвод.Версия.ВидОперации = ЗНАЧЕНИЕ(Справочник.ВидыОпераций.Трансляция)
+			ТОГДА "Трансляция"
+		ИНАЧЕ "Трансформационные корректировки"
+	КОНЕЦ КАК ТипОперации,
+	ДвиженияОперацииСвод.СчетБД,
+	ВЫБОР
+		КОГДА ДвиженияОперацииСвод.БалансОПУ = ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)
+			ТОГДА ДвиженияОперацииСвод.ДО
+		ИНАЧЕ ДвиженияОперацииСвод.СКД
+	КОНЕЦ КАК ЗначениеДт,
+	ВЫБОР
+		КОГДА ДвиженияОперацииСвод.БалансОПУ = ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)
+			ТОГДА ДвиженияОперацииСвод.КО
+		ИНАЧЕ ДвиженияОперацииСвод.СКК
+	КОНЕЦ КАК ЗначениеКт,
+	"ДвиженияПоВерсиям" КАК ТипКолонки,
+	NULL КАК ЗначениеДтИтог,
+	NULL КАК ЗначениеКтИтог
+ИЗ
+	ДвиженияОперацииСвод КАК ДвиженияОперацииСвод
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	ЗначенияИтог.СчетБД,
+	NULL,
+	NULL,
+	"Итого",
+	ЗначенияИтог.ЗначениеДтИтог,
+	ЗначенияИтог.ЗначениеКтИтог
+ИЗ
+	ЗначенияИтог КАК ЗначенияИтог</query>
+	</dataSet>
+	<dataSet xsi:type="DataSetQuery">
+		<name>Все счета</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СчетБД</dataPath>
+			<field>СчетБД</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ПоказателиОтчетов.СчетБД КАК СчетБД
+ИЗ
+	Справочник.ПоказателиОтчетов КАК ПоказателиОтчетов
+ГДЕ
+	ПоказателиОтчетов.Владелец = &amp;ВидОтчета
+	И (ПоказателиОтчетов.СчетБД.РазделПланаСчетов В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.Баланс))
+			ИЛИ ПоказателиОтчетов.СчетБД.РазделПланаСчетов В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.ОПУ)))</query>
+	</dataSet>
+	<dataSetLink>
+		<sourceDataSet>Все счета</sourceDataSet>
+		<destinationDataSet>НаборДанных1</destinationDataSet>
+		<sourceExpression>СчетБД</sourceExpression>
+		<destinationExpression>СчетБД</destinationExpression>
+	</dataSetLink>
+	<calculatedField>
+		<dataPath>КодСчета</dataPath>
+		<expression>СчетБД,Код</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Счет</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<calculatedField>
+		<dataPath>КодСчета1</dataPath>
+		<expression>СчетБД,Наименование</expression>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Код счета1</v8:content>
+			</v8:item>
+		</title>
+	</calculatedField>
+	<totalField>
+		<dataPath>ДО</dataPath>
+		<expression>Сумма(ДО)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КО</dataPath>
+		<expression>Сумма(КО)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеДт</dataPath>
+		<expression>Сумма(ЗначениеДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеКт</dataPath>
+		<expression>Сумма(ЗначениеКт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеДтИтог</dataPath>
+		<expression>Сумма(ЗначениеДтИтог)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗначениеКтИтог</dataPath>
+		<expression>Сумма(ЗначениеКтИтог)</expression>
+	</totalField>
+	<parameter>
+		<name>ВидОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыОтчетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПериодОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Периоды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПланСчетов</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План счетов</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПланыСчетовБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Сценарий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Сценарии</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЗаголовокОтчета</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Заголовок отчета</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:string</v8:Type>
+			<v8:StringQualifiers>
+				<v8:Length>0</v8:Length>
+				<v8:AllowedLength>Variable</v8:AllowedLength>
+			</v8:StringQualifiers>
+		</valueType>
+		<value xsi:type="xs:string"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ОсновнаяВалюта</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Основная валюта</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Валюты</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>МассивВидовИтога</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Массив видов итога</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:EnumRef.ВидыБухгалтерскихИтогов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеДт</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДт</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеКт</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКт</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеДт</dcsat:name>
+			<dcsat:expression>ЗначениеДт</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДт</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеДт</dcsat:field>
+				<dcsat:expression>ЗначениеДт</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.Регистратор</dcsat:field>
+				<dcsat:expression>Версия.Регистратор</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеКт</dcsat:name>
+			<dcsat:expression>ЗначениеКт</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКт</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеКт</dcsat:field>
+				<dcsat:expression>ЗначениеКт</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.Регистратор</dcsat:field>
+				<dcsat:expression>Версия.Регистратор</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет2</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДО</dcsat:name>
+			<dcsat:expression>ДО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ДО</dcsat:field>
+				<dcsat:expression>ДО</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.Регистратор</dcsat:field>
+				<dcsat:expression>Версия.Регистратор</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КО</dcsat:name>
+			<dcsat:expression>КО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>КО</dcsat:field>
+				<dcsat:expression>КО</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.Регистратор</dcsat:field>
+				<dcsat:expression>Версия.Регистратор</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет3</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеДтИтог</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДтИтог</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеКтИтог</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКтИтог</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеДтИтог</dcsat:name>
+			<dcsat:expression>ЗначениеДтИтог</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДтИтог</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ТипКолонки</dcsat:field>
+				<dcsat:expression>ТипКолонки</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеДтИтог</dcsat:field>
+				<dcsat:expression>ЗначениеДтИтог</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеКтИтог</dcsat:name>
+			<dcsat:expression>ЗначениеКтИтог</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКтИтог</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ТипКолонки</dcsat:field>
+				<dcsat:expression>ТипКолонки</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеКтИтог</dcsat:field>
+				<dcsat:expression>ЗначениеКтИтог</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет4</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеДт</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДт</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ЗначениеКт</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКт</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеДт</dcsat:name>
+			<dcsat:expression>ЗначениеДт</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДт</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеДт</dcsat:field>
+				<dcsat:expression>ЗначениеДт</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ЗначениеКт</dcsat:name>
+			<dcsat:expression>ЗначениеКт</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКт</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ЗначениеКт</dcsat:field>
+				<dcsat:expression>ЗначениеКт</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет5</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДО</dcsat:name>
+			<dcsat:expression>ДО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.ВидОперации</dcsat:field>
+				<dcsat:expression>Версия.ВидОперации</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ДО</dcsat:field>
+				<dcsat:expression>ДО</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КО</dcsat:name>
+			<dcsat:expression>КО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>Версия.ВидОперации</dcsat:field>
+				<dcsat:expression>Версия.ВидОперации</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>КО</dcsat:field>
+				<dcsat:expression>КО</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<template>
+		<name>Макет6</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">ДО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаДО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="dcscor:Parameter">КО</dcsat:value>
+					</dcsat:item>
+					<dcsat:appearance>
+						<dcscor:item>
+							<dcscor:parameter>Расшифровка</dcscor:parameter>
+							<dcscor:value xsi:type="dcscor:Parameter">РасшифровкаКО</dcscor:value>
+						</dcscor:item>
+					</dcsat:appearance>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>ДО</dcsat:name>
+			<dcsat:expression>ДО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаДО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>ДО</dcsat:field>
+				<dcsat:expression>ДО</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:ExpressionAreaTemplateParameter">
+			<dcsat:name>КО</dcsat:name>
+			<dcsat:expression>КО</dcsat:expression>
+		</parameter>
+		<parameter xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:DetailsAreaTemplateParameter">
+			<dcsat:name>РасшифровкаКО</dcsat:name>
+			<dcsat:fieldExpression>
+				<dcsat:field>СчетБД</dcsat:field>
+				<dcsat:expression>СчетБД</dcsat:expression>
+			</dcsat:fieldExpression>
+			<dcsat:fieldExpression>
+				<dcsat:field>КО</dcsat:field>
+				<dcsat:expression>КО</dcsat:expression>
+			</dcsat:fieldExpression>
+		</parameter>
+	</template>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>РегистраторТрансляция</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет1</template>
+	</totalFieldsTemplate>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>РегистраторТрансформация</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет2</template>
+	</totalFieldsTemplate>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>ТипКолонки</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет3</template>
+	</totalFieldsTemplate>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>Трансляция</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет4</template>
+	</totalFieldsTemplate>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>ТрансформацияВидОперации</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет5</template>
+	</totalFieldsTemplate>
+	<totalFieldsTemplate>
+		<groupName1>СчетаБД</groupName1>
+		<templateType1>Header</templateType1>
+		<groupName2>Трансформация</groupName2>
+		<templateType2>Header</templateType2>
+		<template>Макет6</template>
+	</totalFieldsTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КО</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеДт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеКт</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Версия.Регистратор</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Версия.ВидОперации</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СчетБД</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">СчетБД</dcsset:left>
+					<dcsset:comparisonType>InHierarchy</dcsset:comparisonType>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СчетБД.Код</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СчетБД.ГруппирующийСчет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:БазовыйЦветФонаЭтапаОтправки</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection/>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Lavender</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>СтильГраницы</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Line" width="0" gap="false">
+								<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">None</v8ui:style>
+							</dcscor:value>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Слева</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Сверху</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Справа</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>СтильГраницы.Снизу</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Line" width="1" gap="false">
+									<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+								</dcscor:value>
+							</dcscor:item>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СКД</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СКД_Инд</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СНД</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СНД_Инд</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СКК</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СНК</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>СНК_Инд</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОД_Инд</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОД</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОК_Инд</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ОК</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">СчетБД.ГруппирующийСчет</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:БазовыйЦветФонаЭтапаОтправки</dcscor:value>
+						</dcscor:item>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьОтбор</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:name>Трансляция</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипОперации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Версия.ВидОперации</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВидыОпераций.Трансляция</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТипКолонки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ДвиженияПоВерсиям</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТипОперации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеДт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеКт</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:name>РегистраторТрансляция</dcsset:name>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Версия.Регистратор</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+								<dcsset:use>false</dcsset:use>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Версия.Регистратор</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЗначениеДт</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ЗначениеКт</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>Трансформация</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипОперации</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemGroup">
+							<dcsset:groupType>AndGroup</dcsset:groupType>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Версия.ВидОперации</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВидыОпераций.Трансляция</dcsset:right>
+							</dcsset:item>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТипКолонки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ДвиженияПоВерсиям</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТипОперации</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДО</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КО</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:name>ТрансформацияВидОперации</dcsset:name>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Версия.ВидОперации</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Версия.ВидОперации</dcsset:left>
+								<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+								<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.ВидыОпераций.Трансляция</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+								<dcsset:use>false</dcsset:use>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>Версия.ВидОперации</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>ДО</dcsset:field>
+							</dcsset:item>
+							<dcsset:item xsi:type="dcsset:SelectedItemField">
+								<dcsset:field>КО</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:item>
+							<dcsset:name>РегистраторТрансформация</dcsset:name>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Версия.Регистратор</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+									<dcsset:use>false</dcsset:use>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>Версия.Регистратор</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ДО</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>КО</dcsset:field>
+								</dcsset:item>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:column>
+				<dcsset:column>
+					<dcsset:name>ТипКолонки</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТипКолонки</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ТипКолонки</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Итого</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ТипКолонки</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеДтИтог</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеКтИтог</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:name>СчетаБД</dcsset:name>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>СчетБД</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto">
+							<dcsset:use>false</dcsset:use>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СчетБД.Код</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Счет</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СчетБД.Наименование</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>СчетБД.РазделПланаСчетов</dcsset:field>
+							<dcsset:lwsTitle>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content> Раздел отчетности</v8:content>
+								</v8:item>
+							</dcsset:lwsTitle>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДО</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>КО</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеДт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеКт</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеДтИтог</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеКтИтог</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:row>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

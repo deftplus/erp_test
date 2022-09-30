@@ -1,0 +1,2547 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns="http://www.1c.ru/CPM/SCM/IntermediateFormat" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.1c.ru/CPM/SCM/IntermediateFormat" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:complexType name="applicationItem">
+		<xs:annotation>
+			<xs:documentation>Позиция номенклатуры в предложении поставщика</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="period" type="period" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ожидаемый период поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryItem" type="product" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номенклатура</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itemProperties" type="productPropertiesItems" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Характеристики номенклаутры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryPlace" type="deliveryPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okei" type="okeiProductType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Единица измерения количества потребности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qty" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество потребности в единице измерения строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coefficient" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Коэффициент пересчета единицы измерения строки потребности в базовую единицу номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="price" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена за единицу строки в валюте строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма по строке потребности с учетом всех налогов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATPersent" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>% НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATSum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATInPrice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена включает НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="applicationsSubmissionType">
+		<xs:annotation>
+			<xs:documentation>Информация об условиях приема заявок</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="place" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="order" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>График работы и порядок приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Email" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>E-mail приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="attachmentType">
+		<xs:annotation>
+			<xs:documentation>Данные прикрепленного файла</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>Глобальный идентификатор файла</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата и время создания файла</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fileName">
+				<xs:annotation>
+					<xs:documentation>Имя файла</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="255"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="fileSize" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Размер файла</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="description" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание прикрепляемого файла</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="content" type="xs:base64Binary">
+					<xs:annotation>
+						<xs:documentation>Содержимое файла</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="url" type="nonEmptyString">
+					<xs:annotation>
+						<xs:documentation>Ссылка для скачивания документа</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="codeOkatoType">
+		<xs:annotation>
+			<xs:documentation>Код ОКАТО</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{11}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeOkopfType">
+		<xs:annotation>
+			<xs:documentation>Код ОКОПФ</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{2}|\d{5}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeOkpd2Type">
+		<xs:annotation>
+			<xs:documentation>Код ОКПД2</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{7}|[A-Q]{1}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeOkpoType">
+		<xs:annotation>
+			<xs:documentation>Код ОКПО</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{10}|\d{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="codeOkved2Type">
+		<xs:annotation>
+			<xs:documentation>Код ОКВЭД2</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="[A-Q]{1,2}|(\d{2}((\.\d{1,2})|(\.\d{2}\.\d{1,2}))?)"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="comparsionMethodType">
+		<xs:annotation>
+			<xs:documentation>Метод оценки предложений поставщиков</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="BY_PRICE">
+				<xs:annotation>
+					<xs:documentation>По ценам</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="BY_CRITERIA">
+				<xs:annotation>
+					<xs:documentation>По критериям</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="contactInfo">
+		<xs:annotation>
+			<xs:documentation>Информация о контактном лице</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="firstName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Имя</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="300"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="middleName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Отчество</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="300"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="lastName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Фамилия</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="300"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="phone" type="phoneType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Телефон</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fax" type="phoneType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Факс</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="email" type="emailType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Email</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="contract">
+		<xs:annotation>
+			<xs:documentation>Договор</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="number" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createDateTime" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата и время создания договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата заключения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startExecutionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endExecutionDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="price" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exchangeRate" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Курс валюты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exchangeRateDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата, на которую установлен курс валюты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rubPrice" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена договора в рублевом эквиваленте</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organization" type="organization" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Организация заключившая договор</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="partner" type="partner" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Контрагент</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationNumber" type="registrationNumber23Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер сведений о договоре в ЕИС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="termination" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак «Договором предусмотрено прекращение обязательств сторон по договору в связи с окончанием срока действия договора»</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="extension" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак «Договором предусмотрена возможность продления срока действия договора после его окончания»</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="prolongation" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак «Пролонгация»</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startExecutionTerm" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условие начала исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endExecutionTerm" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условие начала исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractPositions" type="requirementItemDeliveryPlan" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>План поставок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="countryType">
+		<xs:annotation>
+			<xs:documentation>Страна</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="digitalCode">
+				<xs:annotation>
+					<xs:documentation>Код страны</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:pattern value="\d{3}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Название</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="500"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="criterionType">
+		<xs:annotation>
+			<xs:documentation>Критерий выбора</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Описание критерия</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="currency">
+		<xs:annotation>
+			<xs:documentation>Валюта</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:choice>
+				<xs:element name="letterCode">
+					<xs:annotation>
+						<xs:documentation>Код валюты</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="nonEmptyString">
+							<xs:minLength value="3"/>
+							<xs:maxLength value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="digitalCode">
+					<xs:annotation>
+						<xs:documentation>Цифровой код валюты</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="nonEmptyString">
+							<xs:minLength value="3"/>
+							<xs:maxLength value="3"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:choice>
+			<xs:element name="name" type="nonEmptyString" minOccurs="0"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="deliveryPlace">
+		<xs:annotation>
+			<xs:documentation>Место поставки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="nonEmptyString" minOccurs="0"/>
+			<xs:element name="type" type="deliveryPlaceType" minOccurs="0"/>
+			<xs:element name="okato" type="codeOkatoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКАТО региона поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="address" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес места поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:simpleType name="deliveryPlaceType">
+		<xs:annotation>
+			<xs:documentation>Вид места поставки</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="Store">
+				<xs:annotation>
+					<xs:documentation>Склад хранения</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CustomsTerminal">
+				<xs:annotation>
+					<xs:documentation>Таможенный терминал</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="RailTerminal">
+				<xs:annotation>
+					<xs:documentation>ЖД станция</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ForwardingAgent">
+				<xs:annotation>
+					<xs:documentation>Экспедиционная компания</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="documentationDeliveryType">
+		<xs:annotation>
+			<xs:documentation>Информация о предоставлении документации по закупке</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="deliveryStartDateTime" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Дата начала предоставления разьяснений, извещения, документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryEndDateTime" type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Дата окончания предоставления разьяснений, извещения, документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="place" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место предоставления документации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="procedure" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Порядок предоставления документации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="needPayment" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Необходима оплата за предоставление документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentOrder" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Порядок оплаты за предоставления документации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="sum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма оплаты за предоставление документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="documentRequirementType">
+		<xs:annotation>
+			<xs:documentation>Требование наличия документа</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Описание документа</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="electronicPlaceType">
+		<xs:annotation>
+			<xs:documentation>Информация о ЭТП</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Наименование электронной площадки</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="url" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес электронной площадки</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:simpleType name="emailType">
+		<xs:annotation>
+			<xs:documentation>Адрес электронной почты</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:maxLength value="300"/>
+			<xs:minLength value="1"/>
+			<xs:pattern value="[\-a-zA-Zа-яА-Я0-9!#%&amp;'\*\+/=\?\^_`\{\|\}~]+(\.[\-a-zA-Zа-яА-Я0-9!#%&amp;'\*\+/=\?\^_`\{\|\}~]+)*@([a-zA-Zа-яА-Я0-9]([\-_a-zA-Zа-яА-Я0-9]{0,61}[a-zA-Zа-яА-Я0-9])?\.)*[\-a-zA-Zа-яА-Я0-9]+(\.[\-a-zA-Zа-яА-Я0-9]+)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="examinationOrderType">
+		<xs:annotation>
+			<xs:documentation>Условия рассмотрения заявок</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала рассмотрения заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания рассмотрения заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="place" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес рассмотрения заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="order" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>График и порядок рассмотрения заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="auctionNotByPrice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Торги не по цене</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="auctionBid" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Торги не по цене</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="auctionPriceChanges" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Разрешается изменять цены в процессе торгов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="guidType">
+		<xs:annotation>
+			<xs:documentation>Уникальный идентификатор</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:length value="36"/>
+			<xs:pattern value="[a-fA-F0-9]{8}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{4}\-[a-fA-F0-9]{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="innType">
+		<xs:annotation>
+			<xs:documentation>ИНН</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:minLength value="1"/>
+			<xs:pattern value="\d{10}|\d{12}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="kppType">
+		<xs:annotation>
+			<xs:documentation>КПП</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:minLength value="1"/>
+			<xs:pattern value="\d{9}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="lot">
+		<xs:annotation>
+			<xs:documentation>Лот закупочной процедуры</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID лота в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="planItemGuid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GUID строки плана закупок в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keyFields" type="lotKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля лота</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirements" type="requirementItem" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Потребности в номенклатуре для которых зарегистрирлована строка плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isGeneralDeliveryPlace" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак указания адреса поставки для всех потребностей лота</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryPlace" type="deliveryPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subject" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Предмет договора</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="minimumRequirements" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Общие требования</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"/>
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="contractEndDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата планируемого исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта лота</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maxContractPrice" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>НМЦ лота в валюте лота</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maxContractPricePlanCurrency" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Начальная (максимальная цена) договора в валюте плана, которому принадлежит строка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orderPricing" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Порядок формирования цены договора</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="deliveryOrder" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Пояснение условий договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentConditions" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условия оплаты</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="deliveryPlan" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание графика поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="forSmallOrMiddle" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Участниками закупки могут быть только субъекты малого и среднего предпринимательства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="excludePurchaseFromPlan" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Закупка не включена в план закупки в соответствии с частью 15 статьи 4 Закона № 223-ФЗ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subcontractorsRequirement" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>В отношении участников закупки установлено требование о привлечении к исполнению договора субподрядчиков (соисполнителей) из числа субъектов малого и среднего предпринимательства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ignoredPurchase" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Закупка не учитывается в соответствии с пунктом 7 постановления Правительства РФ от 11.12.2014 № 1352</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseCategoryEISCode" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код в ЕИС категории закупки для исключения из ГОЗ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationSupplyNeeded" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Обеспечение заявки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationSupplySumm" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Величина обеспечения заявки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comparsionMethod" type="comparsionMethodType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Метод оценки предложений поставщиков</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="lotApplicationsSelection">
+		<xs:annotation>
+			<xs:documentation>Выбор предложений по лоту</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lotKeyFields" type="lotKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Лот для которого перечислены предложения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lotGuid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>УИД лота в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applications" type="supplierApplication" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Предложения по лоту</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="winners" type="lotWinerType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="deliveryPlan" type="requirementItemDeliveryPlan" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание поставок номенклатуры распределенное по победителям</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="lotKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля строки плана закупок</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="purchasePlanItemKeyFields">
+				<xs:sequence>
+					<xs:element name="ordinalNumber" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Код лота</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="lotWinerType">
+		<xs:annotation>
+			<xs:documentation>Описание места победившего предложения поставщика</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="place" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место победителя</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="winnerGuid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>УИД предложение победитель</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="manager">
+		<xs:annotation>
+			<xs:documentation>Менеджер управляющий закупками</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" type="nonEmptyString" minOccurs="0"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="namespaceAny">
+		<xs:annotation>
+			<xs:documentation>Произвольный набор реквизитов с указанием содержащего их пространства имен</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="namespaceProperties" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Перечень произвольных реквизитов сгруппированных по пространствам имен</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="namespace">
+							<xs:annotation>
+								<xs:documentation>Имя пространства имен. Для разделения реквизитов с одинаковыми наименованиями</xs:documentation>
+							</xs:annotation>
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="3"/>
+									<xs:whiteSpace value="collapse"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:any namespace="##any" processContents="lax" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>Произвольный набор реквизитов в указанном пространствае имен</xs:documentation>
+							</xs:annotation>
+						</xs:any>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="nonEmptyString">
+		<xs:annotation>
+			<xs:documentation>Непустая строка</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:minLength value="1"/>
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="ogrnType">
+		<xs:annotation>
+			<xs:documentation>Код ОГРН</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString"/>
+	</xs:simpleType>
+	<xs:complexType name="okeiProductType">
+		<xs:annotation>
+			<xs:documentation>Единица измерения по ОКЕИ</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code">
+				<xs:annotation>
+					<xs:documentation>Код единицы измерения</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="20"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование единицы измерения</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="organization">
+		<xs:annotation>
+			<xs:documentation>Организация</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="organizationBaseInfo">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="organizationBaseInfo" abstract="true">
+		<xs:annotation>
+			<xs:documentation>Общая информация для организаций и контрагентов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="keyFields" type="organizationKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля организации/контрагента</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fullName" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование полное</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="1000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="legalAddress" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Юридический адрес</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="postalAddress" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Почтовый адрес</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="phone" type="phoneType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Телефон</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="email" type="emailType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Email</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fax" type="phoneType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Факс</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okopf" type="codeOkopfType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКОПФ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okopfName" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКОПФ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okpo" type="codeOkpoType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКПО</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата постанвки на учет в налоговом органе</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationCountry" type="countryType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="organizationKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля организации или контрагента</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="entityType" type="organizationType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Юридическое или физическое лицо</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationNumber" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер в стране регистрации</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="50"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="inn" type="innType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ИНН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="kpp" type="kppType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>КПП</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ogrn" type="ogrnType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОГРН</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:simpleType name="organizationType">
+		<xs:annotation>
+			<xs:documentation>Тип организации или контрагента: юридическое или физическое лицо</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="LegalEntity">
+				<xs:annotation>
+					<xs:documentation>Юридическое лицо</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="NaturalEntity">
+				<xs:annotation>
+					<xs:documentation>Физическое лицо</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="participantRequirementType">
+		<xs:annotation>
+			<xs:documentation>Требование к участникам закупки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Описание требования к участнику</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="100"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="criterion" type="criterionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Критерий оценки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentRequirement" type="documentRequirementType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Связанное требование, налиция документа подтверждающего требование к участнику</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="partner">
+		<xs:annotation>
+			<xs:documentation>Контрагент</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="organizationBaseInfo">
+				<xs:sequence/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="period">
+		<xs:annotation>
+			<xs:documentation>Период времени</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="periodType" type="periodicity" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип периода</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:simpleType name="periodicity">
+		<xs:annotation>
+			<xs:documentation>Периодичность</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="YEAR">
+				<xs:annotation>
+					<xs:documentation>Год</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="TENMONTHS">
+				<xs:annotation>
+					<xs:documentation>Декада</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="HALFYEAR">
+				<xs:annotation>
+					<xs:documentation>Полугодие</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="QUARTER">
+				<xs:annotation>
+					<xs:documentation>Квартал</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="MONTH">
+				<xs:annotation>
+					<xs:documentation>Месяц</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="WEEK">
+				<xs:annotation>
+					<xs:documentation>Неделя</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="DAY">
+				<xs:annotation>
+					<xs:documentation>День</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="phoneType">
+		<xs:annotation>
+			<xs:documentation>Телефон (строгое ограничение)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:minLength value="1"/>
+			<xs:maxLength value="300"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="planType">
+		<xs:annotation>
+			<xs:documentation>Вид плана закупки</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:enumeration value="COMMODITY">
+				<xs:annotation>
+					<xs:documentation>Позиции плана</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="INNOVATION">
+				<xs:annotation>
+					<xs:documentation>Инновационные позиции плана</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="product">
+		<xs:annotation>
+			<xs:documentation>Описание номенклатуры</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okved2" type="codeOkved2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКВЭД2 номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okpd2" type="codeOkpd2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКПД2 номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okei" type="okeiProductType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Базовая единица измерения количества номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="productProperties">
+		<xs:annotation>
+			<xs:documentation>Характеристики номенклатуры</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Представление характеристики</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="properties" type="productPropertiesItems" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание значений свойств характеристики номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="productPropertiesItems">
+		<xs:annotation>
+			<xs:documentation>Значение свойства характеристики номенклатуры</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="name">
+				<xs:annotation>
+					<xs:documentation>Наименование свойства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="value" type="xs:anyType">
+				<xs:annotation>
+					<xs:documentation>Значение свойства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="project">
+		<xs:annotation>
+			<xs:documentation>Проект</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование проекта</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchase">
+		<xs:annotation>
+			<xs:documentation>Закупочная процедура</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="planGuid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID плана закупок в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keyFields" type="purchaseKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля закупочной процеудры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contact" type="contactInfo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация о контактном лице</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractSubject" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование предмета договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала подготовки закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentationDelivery" type="documentationDeliveryType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Информация о предоставлении документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isElectronic" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак закупки в электронном виде</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lots" type="lot" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Лоты закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="placer" type="organization" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные организации размещающей закупку</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publicationDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата официального объявления закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseMethod" type="purchaseMethod" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Способ выбора поставщика</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationNumber" type="registrationNumber11Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер извещения в ЕИС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isGeneralDeliveryPlace" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак единого места поставки</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Итоговая сумма НМЦ всех лотов закупки</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта закупочной процеудры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentationRequirement" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Требования к оформлению документации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="documentationRequirements" type="documentRequirementType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Требования к составу документов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qualificationNeeded" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Требуется квалификационный отбор</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="emergency" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Экстренная закупка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="hasRebidding" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Предусмотрена переторжка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationsSubmission" type="applicationsSubmissionType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условия приема заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="examinationOrder" type="examinationOrderType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условия рассмотрения заявок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="summingupOrder" type="summingupOrderType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условия подведения итогов и оглашения результата</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETP" type="electronicPlaceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Электронная торговая площадка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchaseKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля строки плана закупок</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="purchasePlanItemKeyFields">
+				<xs:sequence>
+					<xs:element name="purchaseNumber" type="nonEmptyString" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Номер закупочной процедуры</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:simpleType name="purchaseMethod" final="#all">
+		<xs:annotation>
+			<xs:documentation>Базовый способа закупки (способ выбора поставщика)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Single">
+				<xs:annotation>
+					<xs:documentation>Закупка у единственного поставщика</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Tender">
+				<xs:annotation>
+					<xs:documentation>Конкурс</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Auction">
+				<xs:annotation>
+					<xs:documentation>Аукцион</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="QuotationsRequest">
+				<xs:annotation>
+					<xs:documentation>Запрос котировок</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ProposalsRequest">
+				<xs:annotation>
+					<xs:documentation>Запрос предложений</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="Qualification">
+				<xs:annotation>
+					<xs:documentation>Квалификационный отбор</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="ReverseAuction">
+				<xs:annotation>
+					<xs:documentation>Редукцион</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+			<xs:enumeration value="CompetitiveDialogue">
+				<xs:annotation>
+					<xs:documentation>Конкурентные переговоры</xs:documentation>
+				</xs:annotation>
+			</xs:enumeration>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="purchasePlan">
+		<xs:annotation>
+			<xs:documentation>План закупок</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType" nillable="true">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keyFields" type="purchasePlanKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля плана закупок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="confirmationDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата утверждения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itemsCount" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Число строк в плане для пакетной передачи</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationNumber" type="registrationNumberType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер плана в ЕИС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchasePlanItem">
+		<xs:annotation>
+			<xs:documentation>Строка плана закупок</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keyFields" type="purchasePlanItemKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля строки плана закупок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="changedGWSAndDates" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Изменение ТРУ и сроков</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="changedNMSKMoreTenPercent" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Изменение более чем на 10 процентов НМЦД</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractEndDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата планируемого исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractSubject" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование предмета договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта НМЦ данной строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exchangeRate" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Курс валюты. Указываем, если валюта плана и строки отличаются</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="exchangeRateDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата, на которую установлен курс валюты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="forSmallOrMiddle" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак "Участниками закупки могут быть только субъекты малого и среднего предпринимательства"</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="generalDeliveryPlace" type="deliveryPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место поставки, если оно едино для всех строк потребности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isElectronic" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак закупки в электронном виде</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isGeneralDeliveryPlace" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак указания адреса поставки для всей позиции плана в целом</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="isPurchaseIgnored" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак «Закупка не учитывается в соответствии с пунктом 7 постановления Правительства РФ от 11.12.2014 № 1352»</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maximumContractPrice" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Начальная (максимальная) цена договора</xs:documentation>
+					<xs:documentation>Указание необязательно только в случае аннулирования позиции</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="maximumContractPricePlanCurrency" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Начальная (максимальная цена) договора в валюте плана, которому принадлежит строка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="minimumRequirements" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Общие требования</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:whiteSpace value="collapse"/>
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="okpd2" type="codeOkpd2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКПД2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okved2" type="codeOkved2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКВЭД2</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="orderPricing" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Порядок формирования цены договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="otherChanges" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Изменение в иных случаях</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="previousItemKeyFields" type="purchasePlanItemKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля предыдущей версии строки плана закупок</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publicationPlannedDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата официального объявления закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseCategoryEISCode" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Код в ЕИС категории закупки для исключения из ГОЗ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseMethod" type="purchaseMethod" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Способ выбора поставщика</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="requirements" type="requirementItem" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Потребности в номенклатуре для которых зарегистрирлована строка плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subcontractorsRequirement" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>В отношении участников закупки установлено требование о привлечении к исполнению договора субподрядчиков (соисполнителей) из числа субъектов малого и среднего предпринимательства</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchasePlanItemKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля строки плана закупок</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="purchasePlanKeyFields">
+				<xs:sequence>
+					<xs:element name="number" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Номер строки в плане закупок</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="versionNumber" type="xs:int" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>Номер версии строки</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="purchasePlanItemsPacket">
+		<xs:annotation>
+			<xs:documentation>Пакет со строками плана закупки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="planGuid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID плана закупок с которым связаны строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="packetNumber" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Номер пакета со строками плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="packetCount" type="xs:int">
+				<xs:annotation>
+					<xs:documentation>Число пакетов со строками плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="fromNumber" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>Минимальный номер плана в пакете</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="toNumber" type="xs:long">
+				<xs:annotation>
+					<xs:documentation>Максимальный номер плана в пакете</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Items" type="purchasePlanItem" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Описание строк</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchasePlanKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля плана закупок</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="startDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата начала действия плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="endDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата окончания действия плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="planType" type="planType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Тип плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="customer" type="organization" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Данные заказчика закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта плана</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="purchaseRejectionProtocol">
+		<xs:annotation>
+			<xs:documentation>Протокол отказа от проведения закупки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата создания извещения об отказе</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="cancelNoticeRegistrationNumber" type="registrationNumber11Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер извещения о закупке в ЕИС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="causeForRejection" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Причина отказа от проведения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="number" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер протокола в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseKeyFields" type="purchaseKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rejectionDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата отказа от проведения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="signingDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата подписания</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="registrationNumber11-2Type">
+		<xs:annotation>
+			<xs:documentation>Регистрационный номер 11 цифр-2цифры</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{11}-\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="registrationNumber11Type">
+		<xs:annotation>
+			<xs:documentation>Регистрационный номер в ЕИС 11 цифр</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{11}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="registrationNumber23Type">
+		<xs:annotation>
+			<xs:documentation>Регистрационный номер 23 разряды</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{23}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="registrationNumberType">
+		<xs:annotation>
+			<xs:documentation>Регистрационный номер в ЕИС 10 цифр</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="nonEmptyString">
+			<xs:pattern value="\d{10}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="requirementItem">
+		<xs:annotation>
+			<xs:documentation>Позиция потребности в номенклатуре</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keyFields" type="requirementKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля потребности в номенклатуре</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okei" type="okeiProductType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Единица измерения количества потребности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="qty" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество потребности в единице измерения строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="coefficient" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Коэффициент пересчета единицы измерения строки потребности в базовую единицу номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="price" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена за единицу строки в валюте строки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Sum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма по строке потребности с учетом всех налогов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATPersent" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>% НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATSum" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="VATInPrice" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Цена включает НДС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="requirementItemDeliveryPlan">
+		<xs:annotation>
+			<xs:documentation>План поставки одной позиции потребности от одного поставщика</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="requirementItem">
+				<xs:sequence>
+					<xs:element name="supplierGUID" type="guidType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>GUID поставщика в УХ</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="contractGUID" type="guidType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>GUID договора в УХ</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+					<xs:element name="lotGUID" type="guidType" minOccurs="0">
+						<xs:annotation>
+							<xs:documentation>GUID лота в УХ, по которому осуществляется поставка</xs:documentation>
+						</xs:annotation>
+					</xs:element>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="requirementKeyFields">
+		<xs:annotation>
+			<xs:documentation>Ключевые поля потребности в номенклатуре</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryItem" type="product" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номенклатура</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="itemProperties" type="productPropertiesItems" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Характеристики номенклаутры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="priority" type="requirementPriority" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Приоритет потребности</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="organization" type="organization" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Организация зарегистрировавшая потребность</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="deliveryPlace" type="deliveryPlace" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место поставки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okpd2" type="codeOkpd2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКПД2 номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="okved2" type="codeOkved2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>ОКВЭД2 номенклатуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="project" type="project" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Проект</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="manager" type="manager" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Менеджер ответственный за потребность</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="customerContract" type="contract" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Договор с покупателем</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="requirementPriority">
+		<xs:annotation>
+			<xs:documentation>Приоритеты потребностей</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="name" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Наименование приоритета</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Importance" type="xs:long" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Важность: чем больше, тем важнее</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+	<xs:complexType name="summingupOrderType">
+		<xs:annotation>
+			<xs:documentation>Условия подведения итогов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="dateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата и время оглашения результатов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="order" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Порядок подведения итогов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="place" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Адрес подведения итогов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="minApplicationsNumber" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Минимальное число заявок, для признания торгов состоявшимися</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="applicationsNumberToContract" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Количество мест, при присвоении которых обязанность участника заключить договор сохраняется до завершения процедуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="summingupProtocol">
+		<xs:annotation>
+			<xs:documentation>Протокол выбора победителей закупки</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="createDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата создания протокола</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="number" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Номер протокола в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedureDate" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата и время проведения процедуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="protocolSignDate" type="xs:date" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата подписания протокола</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseKeyFields" type="purchaseKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Ключевые поля закупки</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="purchaseGuid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>GUID закупочной процедуры в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="procedurePlace" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Место проведения процедуры</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lotsApplicationsSelection" type="lotApplicationsSelection" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Результаты выбора предложений поставщиков по лотам</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="registrationNumber" type="registrationNumber11-2Type" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Регистрационный номер протокола в ЕИС</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="summingupDescription" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Описание торгов</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="missedReason" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Причина признания несостоявшимся</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="missedContest" type="xs:boolean" default="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Несостоявшаяся закупка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ETP" type="electronicPlaceType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Электронная торговая площадка</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="supplierApplication">
+		<xs:annotation>
+			<xs:documentation>Предложение участника торгов</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="any" type="namespaceAny" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Набор произвольных полей</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="guid" type="guidType">
+				<xs:annotation>
+					<xs:documentation>GUID объекта в системе, которая заполняет данные</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="accepted" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Признак допуска</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="attachments" type="attachmentType" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Прикрепленные файлы</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contact" type="contactInfo" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Контактное лицо поставщика</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="contractExecutionTerm" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Срок исполнения договора</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="currency" type="currency" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Валюта лота</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lotKeyFields" type="lotKeyFields" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Лот для которого, подается предложение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="lotGuid" type="guidType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>УИД лота в УХ</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="partial" type="xs:boolean" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Частичное предложение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="paymentOrder" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Условия оплаты</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rejectionReason" type="nonEmptyString" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Причина отказа в допуске</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="items" type="applicationItem" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Условия по номенклатуре</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="sendDateTime" type="xs:dateTime" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Дата отправки на рассмотрение</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="subject" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Предмет договора</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="nonEmptyString">
+						<xs:maxLength value="2000"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="commodityAmount" type="xs:decimal" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Сумма предложения в валюте предложения</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supplier" type="partner" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Поставщик</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supplyDaysDelay" type="xs:int" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Кол-во дней между заказом и поставкой</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+		<xs:anyAttribute namespace="##any" processContents="lax"/>
+	</xs:complexType>
+</xs:schema>

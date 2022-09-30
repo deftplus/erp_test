@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="163ac33b-514a-4962-bfe9-d0fcb7c7ee29">
+  <producedTypes>
+    <objectType typeId="108aa60b-da88-47fd-a3a3-e4dd4e49caca" valueTypeId="fd575944-64b6-4127-a189-bc0ae34f33fa"/>
+    <managerType typeId="01d3ba8f-0553-41f0-878c-e1a77301b2a9" valueTypeId="e204e34e-741a-4073-a013-e173ad3a6df7"/>
+  </producedTypes>
+  <name>ОтражениеДокументовВМеждународномУчете</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отражение документов в международном учете</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Financial accounting posting</value>
+  </synonym>
+  <defaultForm>DataProcessor.ОтражениеДокументовВМеждународномУчете.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="a7c9fd29-6006-4a03-a713-582929c799a5">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="42d1a911-8bd4-4c41-a1ea-6a4f4de2dc59">
+    <name>ДокументыОжидающиеОтраженияВУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы, ожидающие отражения в учете</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents awaiting posting in accounting</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="36bf0e5e-78e6-4496-83ec-ae09de907039">
+    <name>ДокументыОжидающиеОтраженияВУчетеВручную</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы, ожидающие отражения в учете вручную</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents awaiting posting in accounting manually</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="bfccde7a-3dd5-4423-9722-f5ac392db95c">
+    <name>ДокументыОтраженныеВУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы отраженные в учете</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents posted to accounting</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="43959c06-3c87-47af-9347-6027d8e8cd0a">
+    <name>ДокументыОтраженныеВУчетеВручную</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы отраженные в учете вручную</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents posted to accounting manually</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b0f60558-04fe-4c81-a4f4-4df7c858edcb">
+    <name>ДокументыНеОтраженныеВУчетеОтсутствуютПравилаОтражения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы не отраженные в учете из-за ошибок</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents not posted to accounting due to errors</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8647c875-0eef-4ca2-9f42-00c8d2460f2a">
+    <name>ДокументыНеОтраженныеВУчетеОжидаютОтраженияВРеглУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы не отраженные в учете из-за ожидания отражения в регл. учете</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents not posted to accounting due to awaiting posting in local accounting</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="386181c9-9f38-4d9b-b5fa-caf162c53ab2">
+    <name>НеобходимыеПравилаОтражения</name>
+    <synonym>
+      <key>ru</key>
+      <value>Необходимые правила отражения</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Required recording rules</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="506ec8e2-2bfb-4e08-ae60-ca0a96322793">
+    <name>ДокументыНеОтраженныеВУчетеНарушенаДвойнаяЗаписьФинансовыхРегистров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Документы не отраженные в учете из-за нарушения двойной записи в финансовых регистрах</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Documents not recorded in accounting due to violation of double entry in financial registers</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="593c9110-ae30-4fab-b01e-41cfd0e7c5bc">
+    <name>ОтражениеДокументовВМеждународномУчете</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отражение документов в международном учете</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Financial accounting posting</value>
+    </synonym>
+    <group>NavigationPanelImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

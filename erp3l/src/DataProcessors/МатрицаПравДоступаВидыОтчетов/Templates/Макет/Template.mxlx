@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns="http://v8.1c.ru/8.2/data/spreadsheet" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<languageSettings>
+		<currentLanguage>ru</currentLanguage>
+		<defaultLanguage>ru</defaultLanguage>
+		<languageInfo>
+			<id>ru</id>
+			<code>Русский</code>
+			<description>Русский</description>
+		</languageInfo>
+		<languageInfo>
+			<id>en</id>
+			<code>Английский</code>
+			<description>Английский</description>
+		</languageInfo>
+	</languageSettings>
+	<columns>
+		<size>4</size>
+		<columnsItem>
+			<index>0</index>
+			<column>
+				<formatIndex>1</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>1</index>
+			<column>
+				<formatIndex>2</formatIndex>
+			</column>
+		</columnsItem>
+		<columnsItem>
+			<index>2</index>
+			<column>
+				<formatIndex>3</formatIndex>
+			</column>
+		</columnsItem>
+	</columns>
+	<rowsItem>
+		<index>0</index>
+		<row>
+			<formatIndex>4</formatIndex>
+			<c>
+				<i>1</i>
+				<c>
+					<f>5</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид отчета \ бланк</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>6</f>
+					<parameter>Субъект</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>1</index>
+		<row>
+			<formatIndex>7</formatIndex>
+			<c>
+				<i>1</i>
+				<c>
+					<f>8</f>
+					<parameter>ВидОтчета</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>9</f>
+					<parameter>ПраваДоступа</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>2</index>
+		<row>
+			<formatIndex>10</formatIndex>
+			<c>
+				<i>1</i>
+				<c>
+					<f>11</f>
+					<parameter>БланкОтчета</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>12</f>
+					<parameter>ПраваДоступа</parameter>
+					<detailParameter>Расшифровка</detailParameter>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>3</index>
+		<indexTo>20</indexTo>
+		<row>
+			<empty>true</empty>
+		</row>
+	</rowsItem>
+	<rowsItem>
+		<index>21</index>
+		<row>
+			<c>
+				<i>3</i>
+				<c>
+					<f>13</f>
+				</c>
+			</c>
+		</row>
+	</rowsItem>
+	<templateMode>true</templateMode>
+	<defaultFormatIndex>14</defaultFormatIndex>
+	<height>22</height>
+	<vgRows>22</vgRows>
+	<namedItem xsi:type="NamedItemCells">
+		<name>БланкОтчета</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>2</beginRow>
+			<endRow>2</endRow>
+			<beginColumn>1</beginColumn>
+			<endColumn>1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ВидОтчета</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>1</beginRow>
+			<endRow>1</endRow>
+			<beginColumn>1</beginColumn>
+			<endColumn>1</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ДетализацияБланкОтчета</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>2</beginRow>
+			<endRow>2</endRow>
+			<beginColumn>2</beginColumn>
+			<endColumn>2</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>ДетализацияВидОтчета</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>1</beginRow>
+			<endRow>1</endRow>
+			<beginColumn>2</beginColumn>
+			<endColumn>2</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Субъект</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>0</beginRow>
+			<endRow>0</endRow>
+			<beginColumn>2</beginColumn>
+			<endColumn>2</endColumn>
+		</area>
+	</namedItem>
+	<namedItem xsi:type="NamedItemCells">
+		<name>Шапка</name>
+		<area>
+			<type>Rectangle</type>
+			<beginRow>0</beginRow>
+			<endRow>0</endRow>
+			<beginColumn>1</beginColumn>
+			<endColumn>1</endColumn>
+		</area>
+	</namedItem>
+	<line width="1" gap="false">
+		<v8ui:style xsi:type="v8ui:SpreadsheetDocumentCellLineType">Solid</v8ui:style>
+	</line>
+	<font faceName="Arial" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="9" bold="true" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<font faceName="Arial" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
+	<format>
+		<width>16</width>
+	</format>
+	<format>
+		<width>263</width>
+	</format>
+	<format>
+		<width>192</width>
+	</format>
+	<format>
+		<height>110</height>
+	</format>
+	<format>
+		<font>0</font>
+		<leftBorder>0</leftBorder>
+		<topBorder>0</topBorder>
+		<bottomBorder>0</bottomBorder>
+		<borderColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:ActiveTitleBar</borderColor>
+		<horizontalAlignment>Left</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<textColor>#303030</textColor>
+		<pattern>WithoutPattern</pattern>
+		<picIndex>1</picIndex>
+		<pictureSizeMode>Stretch</pictureSizeMode>
+		<textPosition>OnTop</textPosition>
+	</format>
+	<format>
+		<font>1</font>
+		<border>0</border>
+		<borderColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:ActiveTitleBar</borderColor>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Center</verticalAlignment>
+		<textColor>#303030</textColor>
+		<pattern>WithoutPattern</pattern>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<picIndex>2</picIndex>
+		<pictureSizeMode>Stretch</pictureSizeMode>
+	</format>
+	<format>
+		<height>98</height>
+	</format>
+	<format>
+		<font>1</font>
+		<leftBorder>0</leftBorder>
+		<topBorder>0</topBorder>
+		<borderColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:ActiveTitleBar</borderColor>
+		<width>198</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textColor>#303030</textColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+		<picIndex>3</picIndex>
+		<pictureSizeMode>Stretch</pictureSizeMode>
+	</format>
+	<format>
+		<font>2</font>
+		<border>0</border>
+		<borderColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:ActiveTitleBar</borderColor>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<textColor>#303030</textColor>
+		<backColor>#F6F6F6</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<height>82</height>
+	</format>
+	<format>
+		<leftBorder>0</leftBorder>
+		<verticalAlignment>Top</verticalAlignment>
+		<backColor>style:FieldAlternativeBackColor</backColor>
+		<fillType>Parameter</fillType>
+		<indent>2</indent>
+	</format>
+	<format>
+		<font>2</font>
+		<border>0</border>
+		<borderColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:InactiveTitleBar</borderColor>
+		<horizontalAlignment>Center</horizontalAlignment>
+		<verticalAlignment>Top</verticalAlignment>
+		<textColor>#303030</textColor>
+		<backColor>#F6F6F6</backColor>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
+		<backColor xmlns:d3p1="http://v8.1c.ru/8.1/data/ui/colors/windows">d3p1:MenuBar</backColor>
+	</format>
+	<format>
+		<width>72</width>
+	</format>
+	<picture>
+		<index>0</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAAB8AAAAsCAIAAAASIvRtAAAAAXNSR0IArs4c6QAA
+AARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVFhH7ZTt
+bsMgDEV5/yddN7VpGz5CAXvXQKNq6qZ1OD8mBR2h25QcEgMx7461OFj+8Pxm+eCk
+B+ZsWZFppuPMJ8tHS+jFfnJCm2MkQ90l1wIPptG0Q40J2hyTlzdQrgy8l1oGzLGJ
+fa1Pr4zWqspKPq6fbmW+7ojdfj+P/7oyOOqP74FVxebXApXBEW02hMl1O10caH+M
+5PV2sYn96nkL2uObc3jBjsG/H4+RZg68BagHtGZeqGGD8HNeBz8d7xaGAT2QkbDL
+pSi0qyO5GdxSgHgWNj6yj1RBUMnd5qKmvUlXWOzhxpokinehT2yWxFqERAB2AGfI
+bG6wZwFhMDfDCiYwKTOIRfrxvErEiWevvwnk1Ox/zLg9Q3IHHjyxKYVzpWQezLgd
+UPU0ldgraP2qUi5iJ2LqDUEzFxL7Vk3svFkj3u3Pi7tX5rtNt1dmr8yrHyTsmU+l
+KqVLOG4ozwAAAABJRU5ErkJggg==</picture>
+	</picture>
+	<picture>
+		<index>1</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAAB8AAAAsCAIAAAASIvRtAAAAAXNSR0IArs4c6QAA
+AARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVFhH7ZTt
+bsMgDEV5/yddN7VpGz5CAXvXQKNq6qZ1OD8mBR2h25QcEgMx7461OFj+8Pxm+eCk
+B+ZsWZFppuPMJ8tHS+jFfnJCm2MkQ90l1wIPptG0Q40J2hyTlzdQrgy8l1oGzLGJ
+fa1Pr4zWqspKPq6fbmW+7ojdfj+P/7oyOOqP74FVxebXApXBEW02hMl1O10caH+M
+5PV2sYn96nkL2uObc3jBjsG/H4+RZg68BagHtGZeqGGD8HNeBz8d7xaGAT2QkbDL
+pSi0qyO5GdxSgHgWNj6yj1RBUMnd5qKmvUlXWOzhxpokinehT2yWxFqERAB2AGfI
+bG6wZwFhMDfDCiYwKTOIRfrxvErEiWevvwnk1Ox/zLg9Q3IHHjyxKYVzpWQezLgd
+UPU0ldgraP2qUi5iJ2LqDUEzFxL7Vk3svFkj3u3Pi7tX5rtNt1dmr8yrHyTsmU+l
+KqVLOG4ozwAAAABJRU5ErkJggg==</picture>
+	</picture>
+	<picture>
+		<index>2</index>
+		<picture t="false">iVBORw0KGgoAAAANSUhEUgAAAIAAAAA0CAIAAADNB6f/AAAAAXNSR0IArs4c6QAA
+AARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJySURBVHhe7Zxb
+b5tAEIX9/39ZG8f4Aiz3q7lj7NgmttunzrJ4g1CiKFFlV+6RPo0GHhntnJ0Dy+Rp
+lUp+qDz/qWVTNZOREuJZy4fM9OJZz2ZaPmM55cSU8aiwUjI3KsoXRkXJ0qwpLq5x
+YVWCpV0LVtZmZTeq3YioOlvVbXSXR81pNG9LOUXm7SS6vyNY8CIwg70R7vsYHcwO
+K+yjHR171q0Tt/YgOsnRXR8p8iQ9EV72SrhpS9FPz152phhklyA7CcL8TMhEXEqi
+4iKIRSx/SdbV7xETFAAFwAq4diG0ILQgaABEGCKMXRC2odiGYg7AIIZB7D+ZhNXk
+SUIDgZpMtXRIb0Vw44FDDgSh6Lm45Am5EVcUo5DMzXLOioVBbkS5NCueWBXd7E0I
+s1gS3IQoO2rV3ki4/eBQATaaUxOUCJjXjDD8rcAMdhIrfBlhR3uBEx9GkA/hJnuB
+l7SEnx0JLz3wJCU3gtP7EHkb5G1YvBIiiXKei0TkUXmKiwHVeV1yYkrqiyCpeiZv
+T5/KgAKgAGIRYAW8dSG0ILQgaECnvRBhrsMQYeyCsA3FNnQwDWAOwCCGQeyxJ2H6
+QoJ4dxekqJ9aEdnfsCK4KcTIh/jAimDBlnhYKwIFuPMghgKgAGhB0IA72tFoQWhB
+aEFoQWhBmAPesaMxiN3inTBEGCIMEYYIQ4QhwhDh7oDY7d8JQ4QhwhBhiDBEGCIM
+EYYI453w6HwAvKB7ekH09L93QEOxu79EfHZAQ7f7Axr8dxH8XxEb3av67xL9mgm8
+5vE/zPpoDkABbnRCBgX4RwcxrACsAGjAt05JQoS/dkoSGgANeORt6B89tpHFmNiE
+KgAAAABJRU5ErkJggg==</picture>
+	</picture>
+</document>

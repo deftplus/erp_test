@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link></head><body>
+<h1 style="font-size: 17.920000076293945px;">Связь размещенного плана закупок на ЕИС с программой закупки в системе 1С</h1>
+<p>В данном разделе описываются шаги по созданию программы закупок прошлого периода (размещенной на ЕИС) для дальнейшего ведения программы закупок в системе 1С. Описываются реквизиты используемые для связывания данных ЕИС и 1С. То есть рассматривается случай, когда в новом плане нужно отразить позиции прошлого периода. Если план на новый период не имеет переходящих позиций, то ничего из описанного делать не нужно. Достаточно создать в 1С программу закупок на следующий период и выгрузить на ЕИС. Информация предназначена для технических специалистов имеющих представление о xml формате и УИД (уникальных идентификаторах guid). </p>
+<hr></hr><h2 style="font-size: 15.680000305175781px;">Описание примера</h2>
+<div>Организация, ведущая учет закупок по 223-ФЗ отражала план закупок в ЕИС в ручном режиме до 2021 года включительно. План на 2021год размещен на ЕИС, имеет номер.</div>
+<div>Принято решение о планировании закупок в 1С. Задача создать план закупок на 2022 год в системе 1С и выгрузить его на ЕИС. </div>
+<div><b>Проблематика</b>: План может содержать позиции, которые организация не закупила в 2021 году, а также позиции долгосрочные, на несколько лет. Данные позиции плана должны перейти в план 2022 года, иначе план не выгрузится и не разместиться на ЕИС. </div>
+<div>
+<h2 style="font-size: 15.680000305175781px;">Решение</h2>
+<dd><span style="font-size: x-small;">План закупок</span><span style="font-size: x-small;"> - наименование плана закупок в ЕИС.</span></dd>
+<dd><font size="1">Позиция плана - наименование отдельной позиции плана в ЕИС. </font></dd>
+<dd><font size="1">Программа закупок - наименование плана закупок в 1С.</font></dd>
+<dd><font size="1">СПЗ - строка плана закупок 1С (документ, описывающий одну позицию плана закупок). СПЗ принадлежат только одной программе закупок (одному плану). СПЗ представляет собой проект будущей закупки. По каждой СПЗ в дальнейшем создается лот и проводятся закупочные процедуры. Каждая строка плана содержит способ закупки, период закупки (год в котором будут проводится закупочные процедуры), форму проведения, закупаемые товары, работы, услуги. Сведения об оплате на весь период планирования и объемах привлечения к закупке МСП.</font></dd></div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+<h4 style="font-size: 11.199999809265137px;"></h4></blockquote>
+<div style="display: flex;">
+<dd><font size="1"><br></font></dd></div><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><br><table width="100%" rules="all" border="0" style="font-size: 10px;"><tbody><tr><td height="30px" style="border: none;">
+<div style="font-size: 11.199999809265137px;"><b style="font-size: 10px;">Скриншот. наши действия схематично</b></div>
+<div style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b><br></b></span></div>
+<div style="font-size: 11.199999809265137px;"><br><img src="_files/Схема.png" align="bottom"></img></div>
+<div><br></div></td></tr></tbody></table></span></h4>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;">Скриншот. План закупок на ЕИС<br></span></h4>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b>
+<table width="100%" rules="all" border="0" style="font-size: 10px;"><tbody><tr><td height="30px"><blockquote style="font-size: 11.199999809265137px; margin: 0px 0px 0px 40px; border: none; padding: 0px;"></blockquote>
+<div style="font-size: 11.199999809265137px; display: flex;">
+<dd></dd>
+<dd><br><img src="_files/План ЕИС.png" align="bottom"></img></dd></div></td></tr></tbody></table></b></span></h4>
+<h3 style="font-size: 13.4399995803833px;"><span style="font-size: medium;">Проверка на наличие в плане переходящих позиций</span></h3>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b>
+<table width="100%" rules="all" border="0" style="font-size: 10px;"><tbody><tr><td height="30px">
+<div style="font-size: 11.199999809265137px;"><font size="1">Первым делом нужно проверить наличие в размещенном на ЕИС плане закупок позиций переходящего периода. Позиций, которые обязательно должны перейти в план следующего периода. Выполнять данную проверку правильнее после предоставления на ЕИС отчетности по заключенным договорам отчетного года так как именно они содержат информацию об исполнении плана. Также целесообразно получить информацию у менеджера по закупкам, который точно может ответить на вопрос о наличие в плане позиций переходящих в следующий период. Чтобы проверить наличие переходящих позиций на текущий момент выполните несколько шагов: </font></div>
+<div style="font-size: 11.199999809265137px;"><font size="1"><br></font></div>
+<dd style="font-size: 11.199999809265137px;"><font size="1"><b>Действия в ЕИС:</b><br></font><font size="1">1. Откройте ЕИС (план на 2021 год имеет статус размещен и номер 2210007555). <br></font><font size="1">2. Вводим <u>вручную</u> в ЕИС новый план закупок на 2022 год.  <br></font><font size="1">3. Если план содержит строки переходящие из плана предыдущего периода, то будет выдано сообщение с перечислением номеров позиций. Можно нажать кнопку отменить тк мы получили необходимую информацию и сохранять план нет необходимости. Если создали, не страшно, можно удалить.</font></dd>
+<div><font size="1"><br></font></div></td></tr></tbody></table></b></span></h4>
+<h4 style="font-size: 11.199999809265137px;"><font size="1">Скриншот. Сообщение о наличие в плане переходящих позиций</font></h4>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b><br><img src="_files/Сообщение 2022.png" align="bottom"></img></b></span></h4>
+<h3 style="font-size: 13.4399995803833px;"><font size="3">Поиск УИД размещенного плана на ЕИС</font></h3>
+<h3 style="font-size: 13.4399995803833px;"><span style="font-size: x-small; font-weight: normal;">Связывание планов разных систем выполняется по УИД. Нам понадобятся УИД размещенного плана и УИД каждой переходящей позиции. Чтобы найти эти УИД нужно выполнить следующие шаги:</span></h3>
+<h3 style="font-size: 13.4399995803833px;">
+<dd style="font-size: 18.143999099731445px;"><font size="1">Действия в ЕИС:<br></font><span style="font-weight: normal;"><font size="1">1. Находим в списке планов наш размещенный план закупок.<br></font></span><span style="font-weight: normal;"><font size="1">2. Открываем печатную форму.</font></span></dd>
+<dd style="font-size: 18.143999099731445px;"><span style="font-weight: normal;"><font size="1">3. Сохраняем ее в xml файл.</font></span></dd>
+<dd style="font-size: 18.143999099731445px;"><span style="font-weight: normal;"><font size="1">4. Открываем файл и копируем значения</font></span><span style="font-weight: normal; font-size: x-small;">(УИД плана),(УИД позиций) </span></dd>
+<dd style="font-size: 18.143999099731445px;"><span style="font-size: x-small;"><br></span></dd>
+<dd style="font-size: 18.143999099731445px;"><span style="font-size: x-small;">Скриншот. Печатная форма</span></dd></h3>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b>
+<table width="100%" rules="all" border="0" style="font-size: 10px;"><tbody><tr><td height="30px" style="border: none;"><br><img src="_files/Печатная форма 1.png" align="bottom"></img></td></tr><tr><td height="30px" style="border: none;"><span style="border: none; border-image-width: 0px; font-size: x-small; font-weight: bold;">Скриншот. Сохранение печатной формы плана в файл xml</span></td></tr><tr><td height="30px" style="border: none;"><br><img src="_files/Печатная форма xml.png" align="bottom"></img></td></tr><tr><td height="30px" style="border: none;"><span style="font-size: x-small; font-weight: bold;">Скриншот. УИД плана на схеме xml</span></td></tr><tr><td height="30px" style="border: none;"><br><img src="_files/УИД плана и позиции.png" align="bottom"></img></td></tr></tbody></table></b></span></h4>
+<h3 style="font-size: 13.4399995803833px;"><span style="font-size: medium;">Создание программы закупок на 2021 год в 1С</span></h3>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b></b></span></h4>
+<h3 style="font-size: 13.4399995803833px;">
+<dd><span style="font-size: x-small; font-weight: normal;">Наличие переходящих позиций информирует нас о необходимости создания в 1С программы закупок за 2021 год и связыванию по УИД размещенного плана закупок 2021 на ЕИС с УИД программы закупок 1С. Нам понадобиться зарегистрировать и переходящие позиции (строки плана) в 1С. Другие позиции плана ЕИС переносить в 1С не нужно.</span></dd>
+<dd><span style="font-size: x-small; font-weight: normal;"><br></span></dd>
+<dd><font size="1">Действия в 1С:<br></font><span style="font-weight: normal;"><font size="1">1. Создаем программу закупок на 2021 год. </font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">2. Создаем переходящие строки плана закупок на 2021 год. </font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">3. Утверждаем каждую строку плана, вводим (УИД позиции из ЕИС) </font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">4. Заполняем программу закупок строками плана (вкладка "Позиции"), вписываем номер размещенного плана ЕИС, вводим (УИД плана закупок ЕИС), меняем статус на Размещен.</font></span></dd></h3>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b>
+<table width="100%" rules="all" border="0" style="font-size: 10px;"><tbody><tr><td height="30px" style="border: none;"><span style="font-size: x-small;"><b>Скриншот. Программа закупок</b></span></td></tr><tr><td height="30px" style="border: none;"><br><br><br><img src="_files/Программа закупок 2021.png" align="bottom"></img></td></tr><tr><td height="30px" style="border: none;"><span style="font-size: x-small; font-weight: bold;">Скриншот. СПЗ (строка плана закупок)</span></td></tr><tr><td height="30px" style="border: none;"><font size="1"><br><br><br><img src="_files/СПЗ 2021.png" align="bottom"></img></font><font size="1"></font></td></tr></tbody></table></b></span></h4></blockquote><span style="font-size: 15.680000305175781px; font-weight: bold;"><br></span><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><span style="font-size: 15.680000305175781px; font-weight: bold;">Создание программы закупок на 2022 год</span></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+<h3 style="font-size: 18.143999099731445px;">
+<dd><span style="font-size: x-small; font-weight: normal;">Вся подготовительная работа выполнена. Нам осталось только создать программу закупок на 2022 год. Строки плана переходящего периода она перенесет автоматически, а точнее по нажатию кнопки "Учесть переходящий остаток"</span></dd>
+<dd><span style="font-size: x-small; font-weight: normal;"><br></span></dd>
+<dd><font size="1">Действия в 1С:<br></font><span style="font-weight: normal;"><font size="1">1. Создаем программу закупок на 2022 год. </font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">2. Переходим на закладку "Строки плана (неутвержденные)" и нажимаем кнопку "Создать строки закупок переходящего периода".</font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">3. Проверяем, корректируем данные на 2022 и последующие годы при необходимости.</font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">4. Утверждаем строки и программу закупок.</font></span></dd>
+<dd><span style="font-weight: normal;"><font size="1">5. Выгружаем программу 2022 года на ЕИС.</font></span></dd></h3>
+<h4 style="font-size: 11.199999809265137px;"><span style="font-size: x-small;"><b></b></span><br></h4><table width="100%" rules="all" border="0"><tbody><tr><td height="30px"><b>Скриншот. Программа закупок. Создать строки переходящего периода<br></b><br><br><img src="_files/ПЗ_2022.png" align="bottom"></img></td></tr><tr><td height="30px"><b>Скриншот. План закупок на ЕИС<br><br><img src="_files/План ЕИС 1.png" align="bottom"></img></b></td></tr><tr><td height="30px"><b>Скриншот. План закупок на ЕИС. Переходящие позиции</b><br><br><img src="_files/ЕИС_2022.png" align="bottom"></img></td></tr></tbody></table><div><span style="font-size: x-small;"><b><br></b></span></div></blockquote><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;"><blockquote style="margin: 0px 0px 0px 40px; border: none; padding: 0px;">
+<h3 style="font-size: 18.143999099731445px;">
+<dd><br></dd></h3>
+<p><font size="1">. </font></p>
+<div><font size="1"><br></font></div>
+<h3 style="font-size: 18.143999099731445px;"></h3></blockquote></blockquote>
+
+
+</body></html>

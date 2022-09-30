@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:Decoration">
+    <name>НадписьЗагрузка</name>
+    <id>1</id>
+    <title>
+      <key>ru</key>
+      <value>Выполняется получение данных из информационной базы</value>
+    </title>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <extendedTooltip>
+      <name>НадписьЗагрузкаExtendedTooltip</name>
+      <id>3</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>НадписьЗагрузкаКонтекстноеМеню</name>
+      <id>2</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <type>Label</type>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <horizontalStretch>true</horizontalStretch>
+    <skipOnInput>false</skipOnInput>
+    <textColor xsi:type="core:ColorRef">
+      <color>Web.DarkViolet</color>
+    </textColor>
+    <extInfo xsi:type="form:LabelDecorationExtInfo">
+      <horizontalAlign>Center</horizontalAlign>
+      <verticalAlign>Center</verticalAlign>
+    </extInfo>
+  </items>
+  <commandBarLocation>None</commandBarLocation>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <excludedCommands>Abort</excludedCommands>
+  <excludedCommands>Cancel</excludedCommands>
+  <excludedCommands>Close</excludedCommands>
+  <excludedCommands>Help</excludedCommands>
+  <excludedCommands>Ignore</excludedCommands>
+  <excludedCommands>No</excludedCommands>
+  <excludedCommands>OK</excludedCommands>
+  <excludedCommands>RestoreValues</excludedCommands>
+  <excludedCommands>Retry</excludedCommands>
+  <excludedCommands>SaveValues</excludedCommands>
+  <excludedCommands>Yes</excludedCommands>
+  <width>45</width>
+  <windowOpeningMode>LockOwnerWindow</windowOpeningMode>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.ГрупповоеРедактированиеЭкземпляровОтчета</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

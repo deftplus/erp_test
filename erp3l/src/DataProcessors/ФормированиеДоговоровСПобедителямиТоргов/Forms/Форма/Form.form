@@ -1,0 +1,921 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаРеквизитыТоргов</name>
+    <id>40</id>
+    <items xsi:type="form:FormField">
+      <name>ПротоколВыбораПобедителейПроведен</name>
+      <id>42</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СтатусПротокола</segments>
+      </dataPath>
+      <titleLocation>None</titleLocation>
+      <extendedTooltip>
+        <name>ПротоколВыбораПобедителейПроведенРасширеннаяПодсказка</name>
+        <id>44</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПротоколВыбораПобедителейПроведенКонтекстноеМеню</name>
+        <id>43</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>PictureField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:ImageFieldExtInfo">
+        <autoMaxHeight>true</autoMaxHeight>
+        <pictureSize>AutoSize</pictureSize>
+        <valuesPicture xsi:type="core:PictureRef">
+          <picture>CommonPicture.СостояниеПротоколовЗакупок</picture>
+        </valuesPicture>
+        <border xsi:type="core:BorderDef">
+          <width>1</width>
+        </border>
+        <fileDragMode>AsFileRef</fileDragMode>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПротоколВыбораПобедителей</name>
+      <id>34</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПротоколВыбораПобедителей</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПротоколВыбораПобедителейРасширеннаяПодсказка</name>
+        <id>36</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПротоколВыбораПобедителейКонтекстноеМеню</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxHeight>true</autoMaxHeight>
+        <hyperlink>true</hyperlink>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ЗакупочнаяПроцедура</name>
+      <id>37</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ЗакупочнаяПроцедура</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ЗакупочнаяПроцедураРасширеннаяПодсказка</name>
+        <id>39</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ЗакупочнаяПроцедураКонтекстноеМеню</name>
+        <id>38</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <hyperlink>true</hyperlink>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Группа реквизиты торгов</value>
+    </title>
+    <toolTip>
+      <key>ru</key>
+      <value>Группа реквизиты торгов</value>
+    </toolTip>
+    <extendedTooltip>
+      <name>ГруппаРеквизитыТорговРасширеннаяПодсказка</name>
+      <id>41</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>UsualGroup</type>
+    <extInfo xsi:type="form:UsualGroupExtInfo">
+      <group>HorizontalIfPossible</group>
+      <showLeftMargin>true</showLeftMargin>
+      <united>true</united>
+      <throughAlign>Auto</throughAlign>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <items xsi:type="form:Table">
+    <name>ПобедившиеПредложенияПоставщиков</name>
+    <id>1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков</segments>
+    </dataPath>
+    <titleLocation>None</titleLocation>
+    <items xsi:type="form:FormField">
+      <name>ПобедившиеПредложенияПоставщиковЛот</name>
+      <id>14</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПобедившиеПредложенияПоставщиков.Лот</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковЛотРасширеннаяПодсказка</name>
+        <id>16</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковЛотКонтекстноеМеню</name>
+        <id>15</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>10</width>
+        <maxWidth>15</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПобедившиеПредложенияПоставщиковДоговор</name>
+      <id>20</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПобедившиеПредложенияПоставщиков.Договор</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковДоговорРасширеннаяПодсказка</name>
+        <id>22</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковДоговорКонтекстноеМеню</name>
+        <id>21</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>10</width>
+        <maxWidth>20</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПобедившиеПредложенияПоставщиковМесто</name>
+      <id>23</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПобедившиеПредложенияПоставщиков.Место</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковМестоРасширеннаяПодсказка</name>
+        <id>25</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковМестоКонтекстноеМеню</name>
+        <id>24</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>3</width>
+        <maxWidth>5</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПобедившиеПредложенияПоставщиковПоставщик</name>
+      <id>26</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПобедившиеПредложенияПоставщиков.Поставщик</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковПоставщикРасширеннаяПодсказка</name>
+        <id>28</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковПоставщикКонтекстноеМеню</name>
+        <id>27</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>10</width>
+        <maxWidth>15</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ПобедившиеПредложенияПоставщиковПредложениеПоставщика</name>
+      <id>29</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>ПобедившиеПредложенияПоставщиков.ПредложениеПоставщика</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковПредложениеПоставщикаРасширеннаяПодсказка</name>
+        <id>31</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковПредложениеПоставщикаКонтекстноеМеню</name>
+        <id>30</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <width>10</width>
+        <maxWidth>20</maxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <autoCommandBar>
+      <name>ПобедившиеПредложенияПоставщиковКоманднаяПанель</name>
+      <id>3</id>
+      <items xsi:type="form:Button">
+        <name>СоздатьДоговорПоВыбранномуПредложениюПоставщика</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <extendedTooltip>
+          <name>СоздатьДоговорПоВыбранномуПредложениюПоставщикаРасширеннаяПодсказка</name>
+          <id>33</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <commandName>Form.Command.СоздатьДоговорПоВыбранномуПредложениюПоставщика</commandName>
+        <representation>Auto</representation>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <placementArea>UserCmds</placementArea>
+        <representationInContextMenu>Auto</representationInContextMenu>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
+    </autoCommandBar>
+    <handlers>
+      <event>Selection</event>
+      <name>ПобедившиеПредложенияПоставщиковВыбор</name>
+    </handlers>
+    <handlers>
+      <event>OnActivateRow</event>
+      <name>ПобедившиеПредложенияПоставщиковПриАктивизацииСтроки</name>
+    </handlers>
+    <searchStringAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>ПобедившиеПредложенияПоставщиковСтрокаПоиска</name>
+      <id>5</id>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковСтрокаПоискаРасширеннаяПодсказка</name>
+        <id>7</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковСтрокаПоискаКонтекстноеМеню</name>
+        <id>6</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchStringAddition>
+    <viewStatusAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>ПобедившиеПредложенияПоставщиковСостояниеПросмотра</name>
+      <id>8</id>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковСостояниеПросмотраРасширеннаяПодсказка</name>
+        <id>10</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковСостояниеПросмотраКонтекстноеМеню</name>
+        <id>9</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>ViewStatusAddition</type>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </viewStatusAddition>
+    <searchControlAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>ПобедившиеПредложенияПоставщиковУправлениеПоиском</name>
+      <id>11</id>
+      <extendedTooltip>
+        <name>ПобедившиеПредложенияПоставщиковУправлениеПоискомРасширеннаяПодсказка</name>
+        <id>13</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПобедившиеПредложенияПоставщиковУправлениеПоискомКонтекстноеМеню</name>
+        <id>12</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SearchControlAddition</type>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchControlAddition>
+    <extendedTooltip>
+      <name>ПобедившиеПредложенияПоставщиковРасширеннаяПодсказка</name>
+      <id>4</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>ПобедившиеПредложенияПоставщиковКонтекстноеМеню</name>
+      <id>2</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <representation>HierarchicalList</representation>
+    <changeRowSet>true</changeRowSet>
+    <changeRowOrder>true</changeRowOrder>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <autoMaxRowsCount>true</autoMaxRowsCount>
+    <selectionMode>MultiRow</selectionMode>
+    <header>true</header>
+    <headerHeight>1</headerHeight>
+    <footerHeight>1</footerHeight>
+    <horizontalScrollBar>AutoUse</horizontalScrollBar>
+    <verticalScrollBar>AutoUse</verticalScrollBar>
+    <horizontalLines>true</horizontalLines>
+    <verticalLines>true</verticalLines>
+    <useAlternationRowColor>true</useAlternationRowColor>
+    <searchOnInput>Auto</searchOnInput>
+    <initialListView>Auto</initialListView>
+    <horizontalStretch>true</horizontalStretch>
+    <verticalStretch>true</verticalStretch>
+    <enableStartDrag>true</enableStartDrag>
+    <fileDragMode>AsFileRef</fileDragMode>
+    <rowPictureDataPath xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.DefaultPicture</segments>
+    </rowPictureDataPath>
+    <extInfo xsi:type="form:DynamicListTableExtInfo">
+      <autoRefreshPeriod>60</autoRefreshPeriod>
+      <period>
+        <startDate>0001-01-01T00:00:00</startDate>
+        <endDate>0001-01-01T00:00:00</endDate>
+      </period>
+      <topLevelParent xsi:type="core:UndefinedValue"/>
+      <showRoot>true</showRoot>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+  </autoCommandBar>
+  <handlers>
+    <event>OnOpen</event>
+    <name>ПриОткрытии</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <autoTitle>true</autoTitle>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.ФормированиеДоговоровСПобедителямиТоргов</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ПобедившиеПредложенияПоставщиков</name>
+    <title>
+      <key>ru</key>
+      <value>Победившие предложения поставщиков</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.ВыборПобедителейЛота</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Выбран</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Ссылка</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Договор</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.ЕстьДоговор</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Лот</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Место</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.Поставщик</segments>
+    </notDefaultUseAlwaysAttributes>
+    <notDefaultUseAlwaysAttributes xsi:type="form:DataPath">
+      <segments>ПобедившиеПредложенияПоставщиков.ПредложениеПоставщика</segments>
+    </notDefaultUseAlwaysAttributes>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ПротоколВыбораПобедителей.ЗакупочнаяПроцедура КАК ЗакупочнаяПроцедура,
+	ПротоколВыбораПобедителей.Ссылка КАК ПротоколПобедителей,
+	Лоты.Ссылка КАК Лот,
+	ОбъектыВыбора.Выбран КАК Выбран,
+	ОбъектыВыбора.Объект КАК Предложение
+ПОМЕСТИТЬ ВТ_ВыбранныеОбъекты
+ИЗ
+	Документ.ПротоколВыбораПобедителей КАК ПротоколВыбораПобедителей
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Лоты КАК Лоты
+			ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.ОбъектыВыбора КАК ОбъектыВыбора
+			ПО Лоты.Ссылка = ОбъектыВыбора.Владелец
+		ПО ПротоколВыбораПобедителей.ЗакупочнаяПроцедура = Лоты.ЗакупочнаяПроцедура
+ГДЕ
+	НЕ Лоты.ПометкаУдаления
+	И ПротоколВыбораПобедителей.Ссылка = &amp;ПротоколВыбораПобедителей
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ДокументПредложениеПоставщика.Ссылка КАК ПредложениеПоставщика,
+	ДокументПредложениеПоставщика.Контрагент КАК Поставщик,
+	ЕСТЬNULL(ДоговорыПоЗакупочнымПроцедурамСрезПоследних.Договор, ЗНАЧЕНИЕ(Справочник.ДоговорыКонтрагентов.ПустаяСсылка)) КАК Договор,
+	НЕ ДоговорыПоЗакупочнымПроцедурамСрезПоследних.Договор ЕСТЬ NULL КАК ЕстьДоговор,
+	ВТ_ВыбранныеОбъекты.Лот КАК Лот,
+	ВТ_ВыбранныеОбъекты.ПротоколПобедителей КАК ПротоколПобедителей
+ПОМЕСТИТЬ ВТ_Договоры
+ИЗ
+	Документ.ПредложениеПоставщика КАК ДокументПредложениеПоставщика
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ДоговорыПоЗакупочнымПроцедурам.СрезПоследних КАК ДоговорыПоЗакупочнымПроцедурамСрезПоследних
+		ПО ДокументПредложениеПоставщика.Лот = ДоговорыПоЗакупочнымПроцедурамСрезПоследних.Лот
+			И (ДокументПредложениеПоставщика.Контрагент = &amp;ДоговорыПоЗакупочнымПроцедурамСрезПоследнихДоговорВладелец)
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ВТ_ВыбранныеОбъекты КАК ВТ_ВыбранныеОбъекты
+		ПО ДокументПредложениеПоставщика.Ссылка = ВТ_ВыбранныеОбъекты.Предложение
+			И (ВТ_ВыбранныеОбъекты.Выбран)
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ВТ_Договоры.ПредложениеПоставщика КАК ПредложениеПоставщика,
+	ВТ_Договоры.Поставщик КАК Поставщик,
+	ВТ_Договоры.Договор КАК Договор,
+	ВТ_Договоры.ЕстьДоговор КАК ЕстьДоговор,
+	ВТ_Договоры.Лот КАК Лот,
+	ЕСТЬNULL(ПротоколВыбораПобедителейПредложенияПобедителей.Место, 0) КАК Место
+ИЗ
+	ВТ_Договоры КАК ВТ_Договоры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.ПротоколВыбораПобедителей.ПредложенияПобедителей КАК ПротоколВыбораПобедителейПредложенияПобедителей
+		ПО ВТ_Договоры.ПротоколПобедителей = ПротоколВыбораПобедителейПредложенияПобедителей.Ссылка
+			И ВТ_Договоры.ПредложениеПоставщика = ПротоколВыбораПобедителейПредложенияПобедителей.ПредложениеПоставщика</queryText>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>флМожноСоздаватьДоговоры</name>
+    <title>
+      <key>ru</key>
+      <value>Можно создавать договоры</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>Boolean</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ПротоколВыбораПобедителей</name>
+    <title>
+      <key>ru</key>
+      <value>Протокол выбора победителей</value>
+    </title>
+    <id>4</id>
+    <valueType>
+      <types>DocumentRef.ПротоколВыбораПобедителей</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>ЗакупочнаяПроцедура</name>
+    <title>
+      <key>ru</key>
+      <value>Закупочная процедура</value>
+    </title>
+    <id>5</id>
+    <valueType>
+      <types>CatalogRef.ЗакупочныеПроцедуры</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>флПротоколУтвержден</name>
+    <title>
+      <key>ru</key>
+      <value>Протокол утвержден</value>
+    </title>
+    <id>6</id>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <attributes>
+    <name>СтатусПротокола</name>
+    <title>
+      <key>ru</key>
+      <value>Статус протокола</value>
+    </title>
+    <id>7</id>
+    <valueType>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+  </attributes>
+  <formCommands>
+    <name>СоздатьДоговорПоВыбранномуПредложениюПоставщика</name>
+    <title>
+      <key>ru</key>
+      <value>Создать договор</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Создать договор по выбранному предложению поставщика</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СоздатьДоговорПоВыбранномуПредложениюПоставщика</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <parameters>
+    <name>ПротоколВыбораПобедителей</name>
+    <valueType>
+      <types>DocumentRef.ПротоколВыбораПобедителей</types>
+    </valueType>
+    <keyParameter>true</keyParameter>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

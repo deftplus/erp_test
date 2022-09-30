@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоЭтапыСостояниеЭтапа</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыЭтапОрганизация</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыПрогрессОпераций</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыОтветственныйЗаЭтап</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыДатаНачала</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыДатаОкончания</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыОтклонениеВДнях</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыАктуальныйЭтап</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>AndGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.ОтклонениеВДнях</left>
+					<comparisonType>Greater</comparisonType>
+					<right xsi:type="xs:decimal">0</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповУниверсальныхПроцессов.ВОбработке</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">style:SpecialTextColor</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоЭтапыСостояниеЭтапа</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>AndGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповПроцессов.Утвержден</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповУниверсальныхПроцессов.Завершен</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповУниверсальныхПроцессов.НеАктивен</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>NotEqual</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповПроцессов.Запланирован</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:DodgerBlue</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоЭтапыСостояниеЭтапа</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemGroup">
+				<groupType>OrGroup</groupType>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповПроцессов.Утвержден</right>
+				</item>
+				<item xsi:type="FilterItemComparison">
+					<left xsi:type="dcscor:Field">ДеревоЭтапы.СостояниеЭтапа</left>
+					<comparisonType>Equal</comparisonType>
+					<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияЭтаповУниверсальныхПроцессов.Завершен</right>
+				</item>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumSeaGreen</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<use>false</use>
+		<selection>
+			<item>
+				<field>ДеревоОперацииСостояние</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоОперации.Состояние</left>
+				<comparisonType>NotEqual</comparisonType>
+				<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияОтчетов.Утвержден</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:DodgerBlue</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<use>false</use>
+		<selection>
+			<item>
+				<field>ДеревоОперацииСостояние</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоОперации.Состояние</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:DesignTimeValue">Перечисление.СостоянияОтчетов.Утвержден</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumSeaGreen</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоЭтапыЭтапОрганизация</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоЭтапы.ЭтапОрганизация</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:DesignTimeValue">Справочник.Организации.ПустаяСсылка</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;Все организации&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоЭтапыЭтапОрганизация</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыСостояниеЭтапа</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыПрогрессОпераций</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыОтветственныйЗаЭтап</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыДатаНачала</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыДатаОкончания</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыОтклонениеВДнях</field>
+			</item>
+			<item>
+				<field>ДеревоЭтапыАктуальныйЭтап</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоЭтапы.ЭтапОрганизация</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:Field">ДеревоЭтапы.Организация</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:ForestGreen</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ДеревоОперацииОрганизацияВидОтчета</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииСостояние</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииИсполняющий</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииСогласование</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииДатаПоследнегоИзменения</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииИзменивший</field>
+			</item>
+			<item>
+				<field>ДеревоОперацииИндексКартинкиОбязательный</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">ДеревоОперации.ОрганизацияВидОтчета</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="dcscor:Field">ДеревоОперации.Организация</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветФона</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:HoneyDew</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:ForestGreen</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Шрифт</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

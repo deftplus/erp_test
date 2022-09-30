@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c4709e00-b9ad-4cb3-9716-2c4a668fe8e6">
+  <producedTypes>
+    <objectType typeId="6efc9f5e-f19b-435c-907a-daad7e2a796d" valueTypeId="f11a5740-e6f2-4c29-925f-f7e359776083"/>
+    <managerType typeId="f1937c9f-d87c-457b-ac2f-07a4d2b1d7d8" valueTypeId="d26e5796-42b3-4ea8-81ce-4ca8ea069539"/>
+  </producedTypes>
+  <name>МатрицаУправленияУниверсальнымПроцессом</name>
+  <synonym>
+    <key>ru</key>
+    <value>Управление процессом подготовки отчетности (схема процесса)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.МатрицаУправленияУниверсальнымПроцессом.Form.ФормаУправляемая</defaultForm>
+  <attributes uuid="142fbcad-9984-450e-9952-b96dca784468">
+    <name>ПериодСценария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период сценария</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Периоды</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="56ce6faf-3cf8-4113-923d-639b4c3f3ed6">
+    <name>ПериодСценарияОкончание</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период сценария окончание</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Периоды</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="22b52a1e-0e46-4225-8823-4856d57ea5ac">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="b97d16b1-a4a5-408c-90cd-a5a551ff0e81">
+    <name>ВерсияРегламента</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия регламента</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииРегламентовПодготовкиОтчетности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="0a6ea1e3-1268-4279-9616-3deab7a42a20">
+    <name>Дата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="18212c0e-ded7-4cb0-9898-05fc77ab4a6f">
+    <producedTypes>
+      <objectType typeId="fc8b0955-e053-4fcb-875e-d0318e8a3193" valueTypeId="db303808-4f44-4bd6-97b1-2dbfe8641257"/>
+      <rowType typeId="bd4d8cf2-9772-4c85-afe9-9f58462dbd9f" valueTypeId="a0603b33-20ae-4f81-9b1b-0abf184b4504"/>
+    </producedTypes>
+    <name>СостоянияВыполненияПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Состояния выполнения процесса</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+    <attributes uuid="40919871-2e6d-4b32-b791-34524ad313e5">
+      <name>МодификацияСтроки</name>
+      <synonym>
+        <key>ru</key>
+        <value>Модификация строки</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>1</precision>
+          <nonNegative>true</nonNegative>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dfe4c5ec-a0fc-4018-8352-e271a31b7477">
+      <name>Этап</name>
+      <synonym>
+        <key>ru</key>
+        <value>Этап</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ЭтапыУниверсальныхПроцессов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="95f18403-aa12-4871-86da-f21a92db179b">
+      <name>Организация</name>
+      <synonym>
+        <key>ru</key>
+        <value>Организация</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Организации</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="bbbc823e-2cd2-4319-bde2-941f1d4a5e7f">
+      <name>СостояниеЭтапа</name>
+      <synonym>
+        <key>ru</key>
+        <value>Состояние этапа</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СостоянияЭтаповПроцессов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="85a674aa-1b57-4f72-8202-9707087b985d">
+      <name>ДатаНачала</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="70f26166-36c1-49e0-873d-e62ef22228cd">
+      <name>ДатаОкончания</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="2a7a2f1f-afcd-45cf-a7b3-1d64fd9ed6e4">
+      <name>СостояниеЭтапаРасчетное</name>
+      <synonym>
+        <key>ru</key>
+        <value>Состояние этапа расчетное</value>
+      </synonym>
+      <type>
+        <types>EnumRef.СостоянияЭтаповПроцессов</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="deffee57-085a-4288-8d4c-f5fae47a4373">
+      <name>ДатаНачалаРасчетная</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата начала расчетная</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="84ce7fd1-fdca-4fd7-9449-5de93d8e2fb7">
+      <name>ДатаОкончанияРасчетная</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания расчетная</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="5d095fe6-016f-4c5e-8abe-577fd5b46e8c">
+      <name>ПлановаяДлительностьЭтапа</name>
+      <synonym>
+        <key>ru</key>
+        <value>Плановая длительность этапа</value>
+      </synonym>
+      <type>
+        <types>Number</types>
+        <numberQualifiers>
+          <precision>10</precision>
+        </numberQualifiers>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="dd454034-1dda-452e-a72f-54d4ac69d739">
+      <name>ПрофильОрганизации</name>
+      <synonym>
+        <key>ru</key>
+        <value>Профиль организации</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.ВидыОрганизационныхЕдиниц</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="39a5e7b4-dc0a-4bc5-b840-d832f1741663">
+      <name>ОтветственныйЗаЭтап</name>
+      <synonym>
+        <key>ru</key>
+        <value>Ответственный за этап</value>
+      </synonym>
+      <type>
+        <types>CatalogRef.Пользователи</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="a722f7e7-42dd-4990-80f9-0c91d859c654">
+      <name>ДатаОкончанияПлановая</name>
+      <synonym>
+        <key>ru</key>
+        <value>Дата окончания плановая</value>
+      </synonym>
+      <type>
+        <types>Date</types>
+        <dateQualifiers/>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+    <attributes uuid="d00bf267-bb22-4c38-9b7a-b81b73a9f12c">
+      <name>ВидДокументовЭтапа</name>
+      <synonym>
+        <key>ru</key>
+        <value>Вид документов этапа</value>
+      </synonym>
+      <type>
+        <types>EnumRef.ВидыДокументовЭтапа</types>
+      </type>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+      <fillValue xsi:type="core:UndefinedValue"/>
+    </attributes>
+  </tabularSections>
+  <forms uuid="383d57e9-783b-4afe-a6d5-4bd5bcaff4d7">
+    <name>ФормаУправляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="38ca2899-cf4a-4bbe-a307-15c2c66bc7a1">
+    <name>ФормаОрганизацийПроцесса</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма организаций процесса</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="8e1da43e-67ea-480d-afbb-c9245146e772">
+    <name>ФормаУточненияДатыЭтапа</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма уточнения даты этапа</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="23ea632a-5385-4699-b29f-e1f4e08b38de">
+    <name>МатрицаОтчетов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Матрица отчетов</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="17aaa965-96e8-4556-b3aa-34897ed5ebfa">
+    <name>ОтборыАналитик</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отборы аналитик</value>
+    </synonym>
+    <comment>(-УХ)</comment>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+  <templates uuid="7d4cb82e-21a8-4c11-8369-b21ec60aa6d8">
+    <name>ОрганизацииЭтапов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организации этапов</value>
+    </synonym>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

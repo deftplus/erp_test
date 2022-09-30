@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто3</dataPath>
+			<field>Субконто3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОперации</dataPath>
+			<field>ВидОперации</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Счет</dataPath>
+			<field>Счет</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Валюта</dataPath>
+			<field>Валюта</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто1</dataPath>
+			<field>Субконто1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Субконто2</dataPath>
+			<field>Субконто2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СредняяСтоимостьЕдиницы</dataPath>
+			<field>СредняяСтоимостьЕдиницы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Средняя стоимость единицы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоОборотДт</dataPath>
+			<field>КоличествоОборотДт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоНачальныйОстаток</dataPath>
+			<field>КоличествоНачальныйОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВВалютеУчетаНачальныйОстаток</dataPath>
+			<field>СуммаВВалютеУчетаНачальныйОстаток</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаВВалютеУчетаОборотДт</dataPath>
+			<field>СуммаВВалютеУчетаОборотДт</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПараметрыУчетаВНА</dataPath>
+			<field>ПараметрыУчетаВНА</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВариантУчета</dataPath>
+			<field>ВариантУчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант учета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВышеПорогаСущестенности</dataPath>
+			<field>ВышеПорогаСущестенности</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выше порога сущестенности</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Запас</dataPath>
+			<field>Запас</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запас</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НаправлениеДеятельности</dataPath>
+			<field>НаправлениеДеятельности</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	СчетаБД.Ссылка КАК СчетИБ,
+	СчетаБД.СчетСсылка КАК СчетМСФО
+ПОМЕСТИТЬ втСчетаИБ
+ИЗ
+	Справочник.СчетаБД КАК СчетаБД
+ГДЕ
+	СчетаБД.РазделПланаСчетов = ЗНАЧЕНИЕ(Справочник.РазделыПланаСчетов.Запасы)
+	И СчетаБД.Владелец = &amp;ПланСчетовМСФО
+
+ИНДЕКСИРОВАТЬ ПО
+	СчетМСФО
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ПараметрыУчетаВНАПоУмолчанию.ВНА КАК ВНА,
+	ПараметрыУчетаВНАПоУмолчанию.ПараметрыУчетаВНА КАК ПараметрыУчетаВНА,
+	ПараметрыУчетаВНАПоУмолчанию.ПараметрыУчетаВНА.КлассВНА КАК ТипВНА
+ПОМЕСТИТЬ втПараметрыУчетаВНА
+ИЗ
+	РегистрСведений.ПараметрыУчетаВНАПоУмолчанию КАК ПараметрыУчетаВНАПоУмолчанию
+ГДЕ
+	ПараметрыУчетаВНАПоУмолчанию.ВНА ССЫЛКА Справочник.Номенклатура
+
+ИНДЕКСИРОВАТЬ ПО
+	ВНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА МСФООстаткиИОбороты.Субконто1 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто1
+		КОГДА МСФООстаткиИОбороты.Субконто2 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто2
+		КОГДА МСФООстаткиИОбороты.Субконто3 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто3
+		ИНАЧЕ NULL
+	КОНЕЦ КАК ИсточникВНА,
+	МСФООстаткиИОбороты.Счет КАК Счет,
+	МСФООстаткиИОбороты.Организация КАК Организация,
+	СУММА(МСФООстаткиИОбороты.СуммаВВалютеУчетаНачальныйОстаток) КАК СуммаВВалютеУчетаНачальныйОстаток,
+	СУММА(МСФООстаткиИОбороты.КоличествоНачальныйОстаток) КАК КоличествоНачальныйОстаток,
+	СУММА(МСФООстаткиИОбороты.СуммаВВалютеУчетаОборотДт) КАК СуммаВВалютеУчетаОборотДт,
+	СУММА(МСФООстаткиИОбороты.КоличествоОборотДт) КАК КоличествоОборотДт,
+	СУММА(ЕСТЬNULL(МСФООстаткиИОбороты.СуммаВВалютеУчетаНачальныйОстаток, 0) + ЕСТЬNULL(МСФООстаткиИОбороты.СуммаВВалютеУчетаОборотДт, 0)) / ВЫБОР
+		КОГДА СУММА(ЕСТЬNULL(МСФООстаткиИОбороты.КоличествоНачальныйОстаток, 0) + ЕСТЬNULL(МСФООстаткиИОбороты.КоличествоОборотДт, 0)) = 0
+			ТОГДА 1
+		ИНАЧЕ СУММА(МСФООстаткиИОбороты.КоличествоНачальныйОстаток + МСФООстаткиИОбороты.КоличествоОборотДт)
+	КОНЕЦ КАК СредняяСтоимостьЕдиницы
+ПОМЕСТИТЬ втСтоимостьЕдиниц
+ИЗ
+	РегистрБухгалтерии.МСФО.ОстаткиИОбороты(
+			{(&amp;НачалоПериода)},
+			{(&amp;КонецПериода)},
+			,
+			,
+			Счет В
+				(ВЫБРАТЬ
+					т.СчетМСФО
+				ИЗ
+					втСчетаИБ КАК т),
+			,
+			Сценарий = &amp;Сценарий {(Организация).* КАК Организация}) КАК МСФООстаткиИОбороты
+
+СГРУППИРОВАТЬ ПО
+	МСФООстаткиИОбороты.Организация,
+	ВЫБОР
+		КОГДА МСФООстаткиИОбороты.Субконто1 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто1
+		КОГДА МСФООстаткиИОбороты.Субконто2 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто2
+		КОГДА МСФООстаткиИОбороты.Субконто3 ССЫЛКА Справочник.Номенклатура
+			ТОГДА МСФООстаткиИОбороты.Субконто3
+		ИНАЧЕ NULL
+	КОНЕЦ,
+	МСФООстаткиИОбороты.Счет
+
+ИНДЕКСИРОВАТЬ ПО
+	ИсточникВНА
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втСтоимостьЕдиниц.ИсточникВНА КАК Запас,
+	втСтоимостьЕдиниц.Счет КАК Счет,
+	втСтоимостьЕдиниц.Организация КАК Организация,
+	втСтоимостьЕдиниц.СуммаВВалютеУчетаНачальныйОстаток КАК СуммаВВалютеУчетаНачальныйОстаток,
+	втСтоимостьЕдиниц.КоличествоНачальныйОстаток КАК КоличествоНачальныйОстаток,
+	втСтоимостьЕдиниц.СуммаВВалютеУчетаОборотДт КАК СуммаВВалютеУчетаОборотДт,
+	втСтоимостьЕдиниц.КоличествоОборотДт КАК КоличествоОборотДт,
+	втСтоимостьЕдиниц.СредняяСтоимостьЕдиницы КАК СредняяСтоимостьЕдиницы,
+	втСтоимостьЕдиниц.СредняяСтоимостьЕдиницы &gt; &amp;ПорогСущественностиВНА КАК ВышеПорогаСущестенности,	
+	ЕСТЬNULL(втПараметрыУчетаВНА.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА1.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА2.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА3.ПараметрыУчетаВНА, НЕОПРЕДЕЛЕНО)))) КАК ПараметрыУчетаВНА,
+	ВЫБОР ЕСТЬNULL(втПараметрыУчетаВНА.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА1.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА2.ПараметрыУчетаВНА, ЕСТЬNULL(втПараметрыУчетаВНА3.ПараметрыУчетаВНА, НЕОПРЕДЕЛЕНО))))
+		КОГДА НЕОПРЕДЕЛЕНО
+			ТОГДА ВЫБОР
+					КОГДА втСтоимостьЕдиниц.СредняяСтоимостьЕдиницы &gt; &amp;ПорогСущественностиВНА
+						ТОГДА "Трансляция (требуется реклассификация)"
+					ИНАЧЕ "Трансляция (реклассификация не требуется)"
+				КОНЕЦ
+		КОГДА ЗНАЧЕНИЕ(Справочник.ГруппыВНАМСФО.ПустаяСсылка)
+			ТОГДА "Трансляция (Не реклассифицировать в ОС)"
+		ИНАЧЕ ВЫБОР
+				КОГДА ЕСТЬNULL(втПараметрыУчетаВНА.ТипВНА, ЕСТЬNULL(втПараметрыУчетаВНА1.ТипВНА, ЕСТЬNULL(втПараметрыУчетаВНА2.ТипВНА, ЕСТЬNULL(втПараметрыУчетаВНА3.ТипВНА, НЕОПРЕДЕЛЕНО)))) = ЗНАЧЕНИЕ(Перечисление.КлассыВНА.НезавершенноеСтроительство)
+					ТОГДА "Параллельный учет (вложение во внеоборотные активы)"
+				ИНАЧЕ "Параллельный учет (рекласс из МПЗ в ОС)"
+			КОНЕЦ
+	КОНЕЦ КАК ВариантУчета
+ИЗ
+	втСтоимостьЕдиниц КАК втСтоимостьЕдиниц
+		ЛЕВОЕ СОЕДИНЕНИЕ втПараметрыУчетаВНА КАК втПараметрыУчетаВНА
+		ПО втСтоимостьЕдиниц.ИсточникВНА = втПараметрыУчетаВНА.ВНА
+		ЛЕВОЕ СОЕДИНЕНИЕ втПараметрыУчетаВНА КАК втПараметрыУчетаВНА1
+		ПО втСтоимостьЕдиниц.ИсточникВНА.Родитель = втПараметрыУчетаВНА1.ВНА
+		ЛЕВОЕ СОЕДИНЕНИЕ втПараметрыУчетаВНА КАК втПараметрыУчетаВНА2
+		ПО втСтоимостьЕдиниц.ИсточникВНА.Родитель.Родитель = втПараметрыУчетаВНА2.ВНА
+		ЛЕВОЕ СОЕДИНЕНИЕ втПараметрыУчетаВНА КАК втПараметрыУчетаВНА3
+		ПО втСтоимостьЕдиниц.ИсточникВНА.Родитель.Родитель.Родитель = втПараметрыУчетаВНА3.ВНА
+ГДЕ
+	втСтоимостьЕдиниц.СредняяСтоимостьЕдиницы &gt; 0</query>
+	</dataSet>
+	<totalField>
+		<dataPath>КоличествоНачальныйОстаток</dataPath>
+		<expression>Сумма(КоличествоНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоОборотДт</dataPath>
+		<expression>Сумма(КоличествоОборотДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВВалютеУчетаНачальныйОстаток</dataPath>
+		<expression>Сумма(СуммаВВалютеУчетаНачальныйОстаток)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаВВалютеУчетаОборотДт</dataPath>
+		<expression>Сумма(СуммаВВалютеУчетаОборотДт)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СредняяСтоимостьЕдиницы</dataPath>
+		<expression>ВЫБОР
+		КОГДА ЕСТЬNULL(КоличествоНачальныйОстаток, 0) + ЕСТЬNULL(КоличествоОборотДт, 0) = 0
+			ТОГДА 0
+		ИНАЧЕ (ЕСТЬNULL(СуммаВВалютеУчетаНачальныйОстаток, 0) + ЕСТЬNULL(СуммаВВалютеУчетаОборотДт, 0)) / (КоличествоНачальныйОстаток + КоличествоОборотДт)
+	КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВышеПорогаСущестенности</dataPath>
+		<expression>0</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ВариантУчета</dataPath>
+		<expression>ВЫБОР КОГДА КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ВариантУчета) &gt; 1 ТОГДА КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ВариантУчета) ИНАЧЕ МАКСИМУМ(ВариантУчета) КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПараметрыУчетаВНА</dataPath>
+		<expression>ВЫБОР КОГДА КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПараметрыУчетаВНА) &gt; 1 ТОГДА КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ПараметрыУчетаВНА) ИНАЧЕ Максимум(ПараметрыУчетаВНА) КОНЕЦ</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>&amp;Период.ДатаНачала</expression>
+	</parameter>
+	<parameter>
+		<name>Сценарий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Сценарии</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ПланСчетовМСФО</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>План счетов МСФО</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПланыСчетовБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<expression>МСФОВызовСервераУХ.ПланСчетовУП(Неопределено)</expression>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<expression>КОНЕЦПЕРИОДА(&amp;Период.ДатаОкончания "ДЕНЬ")</expression>
+	</parameter>
+	<parameter>
+		<name>ПорогСущественностиВНА</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Порог существенности ВНА</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Запасы для рекласса в ВНА</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Запас</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>СредняяСтоимостьЕдиницы</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВариантУчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПараметрыУчетаВНА</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:left xsi:type="dcscor:Field">Организация</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:userSettingID>fefe971d-06e0-46b3-9d92-aec4d575e219</dcsset:userSettingID>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Сценарий</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DesignTimeValue">Справочник.Сценарии.Факт</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Период</dcscor:parameter>
+					<dcscor:value xsi:type="v8:StandardPeriod">
+						<v8:variant xsi:type="v8:StandardPeriodVariant">ThisYear</v8:variant>
+					</dcscor:value>
+					<dcsset:userSettingID>279faf38-be8f-4924-8d62-2f3e5a395b94</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>СредняяСтоимостьЕдиницы</dcsset:field>
+					<dcsset:orderType>Desc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ПараметрыУчетаВНА</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ВариантУчета</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВышеПорогаСущестенности</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ВариантУчета</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Трансляция</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">style:ПоясняющийОшибкуТекст</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>СредняяСтоимостьЕдиницы</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Формат</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ОформлениеОтчетовЗеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>РасположениеПолейГруппировки</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionGroupFieldsPlacement">SeparatelyAndInTotalsOnly</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запасы для рекласса в ВНА</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

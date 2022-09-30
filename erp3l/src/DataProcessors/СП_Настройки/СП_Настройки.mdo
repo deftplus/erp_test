@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2041c341-d716-4c76-91e5-3a45e1783952">
+  <producedTypes>
+    <objectType typeId="da747a90-9bee-4ac2-902d-465794798d9a" valueTypeId="190695b1-75f6-4f0c-af98-bdd4c246f696"/>
+    <managerType typeId="94a97277-c22b-49a2-8669-926eb9e563f1" valueTypeId="574b1bdc-2e5c-452c-a616-a7bfe751b2c4"/>
+  </producedTypes>
+  <name>СП_Настройки</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройки (СП)</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.СП_Настройки.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="de574441-884a-4bcd-afed-90379c2cbf6c">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="217be64a-1fe2-447d-9eb3-11799c92c0cc">
+    <name>Настройки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки (СП)</value>
+    </synonym>
+    <group>ActionsPanelTools</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

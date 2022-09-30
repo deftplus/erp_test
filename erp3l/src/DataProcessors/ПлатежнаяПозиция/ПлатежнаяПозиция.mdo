@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8a1e6f2c-c2f1-4737-b336-e1f7d01e4fb3">
+  <producedTypes>
+    <objectType typeId="e622ea4a-e811-4fe6-b465-626882a45df2" valueTypeId="754b294d-6e9f-442b-abaa-16c7aca1009d"/>
+    <managerType typeId="21a11bee-bf23-4e10-896e-d10bae50955f" valueTypeId="7b8b323b-32d7-4e43-9ecb-cf6f50888be8"/>
+  </producedTypes>
+  <name>ПлатежнаяПозиция</name>
+  <synonym>
+    <key>ru</key>
+    <value>Платежная позиция</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПлатежнаяПозиция.Form.Форма</defaultForm>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <attributes uuid="f9f9f411-c0b6-4705-b98b-c74e4829e43c">
+    <name>ПлатежнаяДата</name>
+    <synonym>
+      <key>ru</key>
+      <value>Платежная дата</value>
+    </synonym>
+    <type>
+      <types>Date</types>
+      <dateQualifiers>
+        <dateFractions>Date</dateFractions>
+      </dateQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="42e6a4c5-7fdb-4757-978d-aeb6a29baedb">
+    <name>КомпоновщикНастроек</name>
+    <synonym>
+      <key>ru</key>
+      <value>Компоновщик настроек</value>
+    </synonym>
+    <type>
+      <types>DataCompositionSettingsComposer</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="09d546d4-d8c8-440c-9b38-ffb2136e43d7">
+    <name>АдресСхемыКомпоновкиДанных</name>
+    <synonym>
+      <key>ru</key>
+      <value>Адрес схемы компоновки данных</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="142d0fe7-a046-439c-9c23-c9e66e34b980">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="ecdc3350-e931-46e6-a2f1-5b2f442ed0c7">
+    <name>ОстаткиНаСчетахПереопределяемый</name>
+    <synonym>
+      <key>ru</key>
+      <value>Остатки на счетах переопределяемый</value>
+    </synonym>
+    <comment>(-УХ)</comment>
+    <templateType>DataCompositionSchema</templateType>
+  </templates>
+</mdclass:DataProcessor>

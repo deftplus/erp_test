@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПорядковыйНомерЭтапаПроцесса</dataPath>
+			<field>ПорядковыйНомерЭтапаПроцесса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порядковый номер этапа процесса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Исполняющий</dataPath>
+			<field>Исполняющий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исполняющий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидОтчета</dataPath>
+			<field>ВидОтчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отчета</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Организация</dataPath>
+			<field>Организация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d5p1:EnumRef.СостоянияОтчетов</v8:Type>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Согласование</dataPath>
+			<field>Согласование</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Согласование</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтапПроцесса</dataPath>
+			<field>ЭтапПроцесса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Этап процесса</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СостояниеЭтапа</dataPath>
+			<field>СостояниеЭтапа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Изменивший</dataPath>
+			<field>Изменивший</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменивший</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаПоследнегоИзменения</dataPath>
+			<field>ДатаПоследнегоИзменения</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата последнего изменения</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИндексКартинкиСостояние</dataPath>
+			<field>ИндексКартинкиСостояние</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс картинки состояние</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:parentDimension>Состояние</dcscom:parentDimension>
+				<dcscom:required>true</dcscom:required>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПериодСценария</dataPath>
+			<field>ПериодСценария</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сценарий</dataPath>
+			<field>Сценарий</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Объект</dataPath>
+			<field>Объект</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрольный</dataPath>
+			<field>Контрольный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИндексКартинкиОбязательный</dataPath>
+			<field>ИндексКартинкиОбязательный</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индекс картинки обязательный</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоВерсий</dataPath>
+			<field>КоличествоВерсий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество версий</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭлиминирующаяОрганизация</dataPath>
+			<field>ЭлиминирующаяОрганизация</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элиминирующая организация</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ РАЗРЕШЕННЫЕ
+	ОрганизационныеЕдиницыЭтаповПроцессов.ОрганизационнаяЕдиница КАК Организация,
+	ОрганизационныеЕдиницыЭтаповПроцессов.ЭтапПроцесса КАК ЭтапПроцесса,
+	СостоянияВыполненияПроцессовСрезПоследних.СостояниеЭтапа КАК СостояниеЭтапа,
+	СостоянияВыполненияПроцессовСрезПоследних.ДатаНачала КАК ДатаНачала,
+	СостоянияВыполненияПроцессовСрезПоследних.ДатаОкончания КАК ДатаОкончания,
+	СостоянияВыполненияПроцессовСрезПоследних.ОтветственныйЗаЭтап КАК ОтветственныйЗаЭтап
+ПОМЕСТИТЬ ТаблицаОрганизаций
+ИЗ
+	РегистрСведений.ОрганизационныеЕдиницыЭтаповПроцессов КАК ОрганизационныеЕдиницыЭтаповПроцессов
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияВыполненияПроцессов.СрезПоследних(
+				,
+				ПериодСценария = &amp;ПериодСценария
+					И Сценарий = &amp;Сценарий) КАК СостоянияВыполненияПроцессовСрезПоследних
+		ПО ОрганизационныеЕдиницыЭтаповПроцессов.ОрганизационнаяЕдиница = СостоянияВыполненияПроцессовСрезПоследних.Организация
+			И ОрганизационныеЕдиницыЭтаповПроцессов.ЭтапПроцесса = СостоянияВыполненияПроцессовСрезПоследних.ЭтапПроцесса
+ГДЕ
+	ОрганизационныеЕдиницыЭтаповПроцессов.ВерсияРегламентаПодготовкиОтчетности = &amp;ВерсияОрганизационнойСтруктуры
+	И ВЫБОР
+			КОГДА НЕ &amp;СЗависимымиОрганизациями
+				ТОГДА ОрганизационныеЕдиницыЭтаповПроцессов.ОрганизационнаяЕдиница = &amp;Организация
+			ИНАЧЕ ОрганизационныеЕдиницыЭтаповПроцессов.ОрганизационнаяЕдиница В ИЕРАРХИИ (&amp;Организация)
+		КОНЕЦ
+	И ВЫБОР
+			КОГДА &amp;ЭтапПроцесса = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ ВЫБОР
+					КОГДА &amp;ЭтапПроцесса = ЗНАЧЕНИЕ(Справочник.ЭтапыУниверсальныхПроцессов.ПустаяСсылка)
+						ТОГДА ИСТИНА
+					ИНАЧЕ ОрганизационныеЕдиницыЭтаповПроцессов.ЭтапПроцесса = &amp;ЭтапПроцесса
+				КОНЕЦ
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ЭтапыПроцессовФормируемыеОтчеты.Ссылка КАК ЭтапПроцесса,
+	ЭтапыПроцессовФормируемыеОтчеты.ШаблонДокумента КАК ВидОтчета,
+	ЭтапыПроцессовФормируемыеОтчеты.ВидДокумента КАК ВидДокумента,
+	ЭтапыПроцессовФормируемыеОтчеты.ДокументБД КАК ДокументБД,
+	ЭтапыПроцессовФормируемыеОтчеты.Контрольный КАК Контрольный
+ПОМЕСТИТЬ ТаблицаВидовОтчетов
+ИЗ
+	Справочник.ШаблоныУниверсальныхПроцессов КАК ВерсииОрганизационнойСтруктуры
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.ЭтапыУниверсальныхПроцессов.ФормируемыеДокументы КАК ЭтапыПроцессовФормируемыеОтчеты
+		ПО ВерсииОрганизационнойСтруктуры.Ссылка = ЭтапыПроцессовФормируемыеОтчеты.Ссылка.Владелец
+ГДЕ
+	ВерсииОрганизационнойСтруктуры.СвязанныйРегламент = &amp;ВерсияОрганизационнойСтруктуры
+	И ВЫБОР
+			КОГДА &amp;ЭтапПроцесса = НЕОПРЕДЕЛЕНО
+				ТОГДА ИСТИНА
+			ИНАЧЕ ВЫБОР
+					КОГДА &amp;ЭтапПроцесса = ЗНАЧЕНИЕ(Справочник.ЭтапыУниверсальныхПроцессов.ПустаяСсылка)
+						ТОГДА ИСТИНА
+					ИНАЧЕ ЭтапыПроцессовФормируемыеОтчеты.Ссылка = &amp;ЭтапПроцесса
+				КОНЕЦ
+		КОНЕЦ
+
+ИНДЕКСИРОВАТЬ ПО
+	ДокументБД,
+	ВидОтчета,
+	ВидДокумента
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ РАЗРЕШЕННЫЕ РАЗЛИЧНЫЕ
+	ЗначенияПоказателейОтчетовСинтетика.Версия КАК Версия,
+	ЗначенияПоказателейОтчетовСинтетика.Версия.Валюта КАК Валюта,
+	ЗначенияПоказателейОтчетовСинтетика.Версия.ВидОтчета КАК ВидОтчета,
+	ЗначенияПоказателейОтчетовСинтетика.Версия.Организация КАК Организация,
+	ЗначенияПоказателейОтчетовСинтетика.Версия.ПериодОтчета КАК ПериодОтчета,
+	ЗначенияПоказателейОтчетовСинтетика.Версия.Сценарий КАК Сценарий
+ПОМЕСТИТЬ ВТ_Версии
+ИЗ
+	РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика
+ГДЕ
+	ЗначенияПоказателейОтчетовСинтетика.Версия.Сценарий = &amp;Сценарий
+	И ЗначенияПоказателейОтчетовСинтетика.Версия.ПериодОтчета = &amp;ПериодСценария
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗначенияПоказателейОтчетовНечисловые.Версия,
+	ЗначенияПоказателейОтчетовНечисловые.Версия.Валюта,
+	ЗначенияПоказателейОтчетовНечисловые.Версия.ВидОтчета,
+	ЗначенияПоказателейОтчетовНечисловые.Версия.Организация,
+	ЗначенияПоказателейОтчетовНечисловые.Версия.ПериодОтчета,
+	ЗначенияПоказателейОтчетовНечисловые.Версия.Сценарий
+ИЗ
+	РегистрСведений.ЗначенияПоказателейОтчетовНечисловые КАК ЗначенияПоказателейОтчетовНечисловые
+ГДЕ
+	ЗначенияПоказателейОтчетовНечисловые.Версия.Сценарий = &amp;Сценарий
+	И ЗначенияПоказателейОтчетовНечисловые.Версия.ПериодОтчета = &amp;ПериодСценария
+
+ОБЪЕДИНИТЬ
+
+ВЫБРАТЬ РАЗЛИЧНЫЕ
+	ЗначенияПоказателейОтчетовВалютные.Версия,
+	ЗначенияПоказателейОтчетовВалютные.Версия.Валюта,
+	ЗначенияПоказателейОтчетовВалютные.Версия.ВидОтчета,
+	ЗначенияПоказателейОтчетовВалютные.Версия.Организация,
+	ЗначенияПоказателейОтчетовВалютные.Версия.ПериодОтчета,
+	ЗначенияПоказателейОтчетовВалютные.Версия.Сценарий
+ИЗ
+	РегистрСведений.ЗначенияПоказателейОтчетовВалютные КАК ЗначенияПоказателейОтчетовВалютные
+ГДЕ
+	ЗначенияПоказателейОтчетовВалютные.Версия.Сценарий = &amp;Сценарий
+	И ЗначенияПоказателейОтчетовВалютные.Версия.ПериодОтчета = &amp;ПериодСценария
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НастраиваемыйОтчет.ВидОтчета КАК ПолеШаблона,
+	НастраиваемыйОтчет.Организация КАК Организация,
+	НастраиваемыйОтчет.Ссылка КАК Ссылка,
+	NULL КАК Аналитика1,
+	NULL КАК Аналитика2,
+	NULL КАК Аналитика3,
+	РегистрСостоянийОбъектов.СостояниеОбъекта КАК Состояние,
+	НастраиваемыйОтчет.Сценарий КАК Сценарий,
+	ТаблицаВидовОтчетов.Контрольный КАК Контрольный,
+	КОЛИЧЕСТВО(РАЗЛИЧНЫЕ ВТ_Версии.Версия) КАК КоличествоВерсий
+ПОМЕСТИТЬ НастраиваемыйОтчетВрем
+ИЗ
+	Документ.НастраиваемыйОтчет КАК НастраиваемыйОтчет
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РегистрСостоянийОбъектов.СрезПоследних(, ) КАК РегистрСостоянийОбъектов
+		ПО НастраиваемыйОтчет.Ссылка = РегистрСостоянийОбъектов.Объект
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ПО НастраиваемыйОтчет.ВидОтчета = ТаблицаВидовОтчетов.ВидОтчета
+		ЛЕВОЕ СОЕДИНЕНИЕ ВТ_Версии КАК ВТ_Версии
+		ПО НастраиваемыйОтчет.Организация = ВТ_Версии.Организация
+			И НастраиваемыйОтчет.ПериодОтчета = ВТ_Версии.ПериодОтчета
+			И НастраиваемыйОтчет.Сценарий = ВТ_Версии.Сценарий
+			И НастраиваемыйОтчет.ВидОтчета = ВТ_Версии.ВидОтчета
+			И НастраиваемыйОтчет.ОсновнаяВалюта = ВТ_Версии.Валюта
+ГДЕ
+	НастраиваемыйОтчет.Сценарий = &amp;Сценарий
+	И НастраиваемыйОтчет.ПериодОтчета = &amp;ПериодСценария
+
+СГРУППИРОВАТЬ ПО
+	РегистрСостоянийОбъектов.СостояниеОбъекта,
+	НастраиваемыйОтчет.Ссылка,
+	ТаблицаВидовОтчетов.Контрольный,
+	НастраиваемыйОтчет.ВидОтчета,
+	НастраиваемыйОтчет.Организация,
+	НастраиваемыйОтчет.Сценарий
+
+ИНДЕКСИРОВАТЬ ПО
+	ПолеШаблона,
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТрансформационнаяКорректировка.ШаблонКорректировки КАК ПолеШаблона,
+	ТрансформационнаяКорректировка.Организация КАК Организация,
+	ТрансформационнаяКорректировка.Ссылка КАК Ссылка,
+	NULL КАК Аналитика1,
+	NULL КАК Аналитика2,
+	NULL КАК Аналитика3,
+	ВЫБОР
+		КОГДА ТрансформационнаяКорректировка.Проведен
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден)
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Выполняется)
+	КОНЕЦ КАК Состояние,
+	ТрансформационнаяКорректировка.Сценарий КАК Сценарий,
+	ТаблицаВидовОтчетов.Контрольный КАК Контрольный,
+	ВЫБОР
+		КОГДА ТрансформационнаяКорректировка.Проведен
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВерсий
+ПОМЕСТИТЬ КорректировкаВрем
+ИЗ
+	Документ.ТрансформационнаяКорректировка КАК ТрансформационнаяКорректировка
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ПО ТрансформационнаяКорректировка.ШаблонКорректировки = ТаблицаВидовОтчетов.ВидОтчета
+ГДЕ
+	ТрансформационнаяКорректировка.Сценарий = &amp;Сценарий
+	И ТрансформационнаяКорректировка.ПериодОтчета = &amp;ПериодСценария
+
+ИНДЕКСИРОВАТЬ ПО
+	ПолеШаблона,
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	Трансляция.ШаблонКорректировки КАК ПолеШаблона,
+	Трансляция.Организация КАК Организация,
+	Трансляция.Ссылка КАК Ссылка,
+	NULL КАК Аналитика1,
+	NULL КАК Аналитика2,
+	NULL КАК Аналитика3,
+	ВЫБОР
+		КОГДА Трансляция.Проведен
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден)
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Выполняется)
+	КОНЕЦ КАК Состояние,
+	Трансляция.Сценарий КАК Сценарий,
+	ТаблицаВидовОтчетов.Контрольный КАК Контрольный,
+	ВЫБОР
+		КОГДА Трансляция.Проведен
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВерсий
+ПОМЕСТИТЬ ТрансляцияВрем
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Документ.Трансляция КАК Трансляция
+		ПО (Трансляция.ШаблонКорректировки = ТаблицаВидовОтчетов.ВидОтчета)
+ГДЕ
+	Трансляция.Сценарий = &amp;Сценарий
+	И Трансляция.ПериодОтчета = &amp;ПериодСценария
+
+ИНДЕКСИРОВАТЬ ПО
+	ПолеШаблона,
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	НЕОПРЕДЕЛЕНО КАК ПолеШаблона,
+	Элиминация.ОрганизацияДляЭлиминации КАК Организация,
+	Элиминация.Ссылка КАК Ссылка,
+	NULL КАК Аналитика1,
+	NULL КАК Аналитика2,
+	NULL КАК Аналитика3,
+	ВЫБОР
+		КОГДА Элиминация.Проведен
+			ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден)
+		ИНАЧЕ ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Выполняется)
+	КОНЕЦ КАК Состояние,
+	Элиминация.Сценарий КАК Сценарий,
+	ТаблицаВидовОтчетов.Контрольный КАК Контрольный,
+	ВЫБОР
+		КОГДА Элиминация.Проведен
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК КоличествоВерсий
+ПОМЕСТИТЬ ЭлиминацияВрем
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов,
+	Документ.Элиминация КАК Элиминация
+ГДЕ
+	Элиминация.Сценарий = &amp;Сценарий
+	И Элиминация.ПериодОтчета = &amp;ПериодСценария
+
+ИНДЕКСИРОВАТЬ ПО
+	ПолеШаблона,
+	Организация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ТаблицаВидовОтчетов.ЭтапПроцесса КАК ЭтапПроцесса,
+	ТаблицаВидовОтчетов.ВидОтчета КАК ВидОтчета,
+	ТаблицаВидовОтчетов.ДокументБД КАК ДокументБД,
+	ТаблицаОрганизаций.Организация КАК Организация,
+	ТаблицаОрганизаций.СостояниеЭтапа КАК СостояниеЭтапа,
+	ЕСТЬNULL(НастраиваемыйОтчетВрем.Ссылка, ЗНАЧЕНИЕ(Документ.НастраиваемыйОтчет.ПустаяСсылка)) КАК Ссылка,
+	ЕСТЬNULL(НастраиваемыйОтчетВрем.Состояние, ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован)) КАК Состояние,
+	ТаблицаВидовОтчетов.ЭтапПроцесса.ПорядковыйНомер КАК ПорядковыйНомерЭтапаПроцесса,
+	ТаблицаОрганизаций.ДатаНачала КАК ДатаНачала,
+	ТаблицаОрганизаций.ДатаОкончания КАК ДатаОкончания,
+	НастраиваемыйОтчетВрем.Ссылка.ПоследнийРедактировавший КАК ПоследнийРедактировавший,
+	НастраиваемыйОтчетВрем.Ссылка.ДатаИзменения КАК ДатаИзменения,
+	НастраиваемыйОтчетВрем.Контрольный КАК Контрольный,
+	НастраиваемыйОтчетВрем.КоличествоВерсий КАК КоличествоВерсий
+ПОМЕСТИТЬ ВТ_Объединение
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаОрганизаций КАК ТаблицаОрганизаций
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Периметр
+			ПО (Периметр.Ссылка = ТаблицаОрганизаций.Организация.Родитель)
+		ПО (ТаблицаОрганизаций.ЭтапПроцесса = ТаблицаВидовОтчетов.ЭтапПроцесса)
+		ЛЕВОЕ СОЕДИНЕНИЕ НастраиваемыйОтчетВрем КАК НастраиваемыйОтчетВрем
+		ПО (НастраиваемыйОтчетВрем.ПолеШаблона = ТаблицаВидовОтчетов.ВидОтчета)
+			И (НастраиваемыйОтчетВрем.Организация = ТаблицаОрганизаций.Организация)
+ГДЕ
+	ТаблицаВидовОтчетов.ДокументБД = &amp;ПарНастраиваемыйОтчет
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТаблицаВидовОтчетов.ЭтапПроцесса,
+	ТаблицаВидовОтчетов.ВидОтчета,
+	ТаблицаВидовОтчетов.ДокументБД,
+	ТаблицаОрганизаций.Организация,
+	ТаблицаОрганизаций.СостояниеЭтапа,
+	ЕСТЬNULL(КорректировкаВрем.Ссылка, ЗНАЧЕНИЕ(Документ.ТрансформационнаяКорректировка.ПустаяСсылка)),
+	ЕСТЬNULL(КорректировкаВрем.Состояние, ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован)),
+	ТаблицаВидовОтчетов.ЭтапПроцесса.ПорядковыйНомер,
+	ТаблицаОрганизаций.ДатаНачала,
+	ТаблицаОрганизаций.ДатаОкончания,
+	ЕСТЬNULL(КорректировкаВрем.Ссылка.ПоследнийРедактировавший, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)),
+	ЕСТЬNULL(КорректировкаВрем.Ссылка.ДатаИзменения, &amp;ПустаяДата),
+	КорректировкаВрем.Контрольный,
+	КорректировкаВрем.КоличествоВерсий
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаОрганизаций КАК ТаблицаОрганизаций
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Периметр
+			ПО (Периметр.Ссылка = ТаблицаОрганизаций.Организация.Родитель)
+		ПО (ТаблицаОрганизаций.ЭтапПроцесса = ТаблицаВидовОтчетов.ЭтапПроцесса)
+		ЛЕВОЕ СОЕДИНЕНИЕ КорректировкаВрем КАК КорректировкаВрем
+		ПО ТаблицаВидовОтчетов.ВидОтчета = КорректировкаВрем.ПолеШаблона
+			И (ТаблицаОрганизаций.Организация = КорректировкаВрем.Организация)
+ГДЕ
+	ТаблицаВидовОтчетов.ДокументБД = &amp;ПарТрансформационнаяКорректировка
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТаблицаВидовОтчетов.ЭтапПроцесса,
+	ТаблицаВидовОтчетов.ВидОтчета,
+	ТаблицаВидовОтчетов.ДокументБД,
+	ТаблицаОрганизаций.Организация,
+	ТаблицаОрганизаций.СостояниеЭтапа,
+	ЕСТЬNULL(ТрансляцияВрем.Ссылка, ЗНАЧЕНИЕ(Документ.Трансляция.ПустаяСсылка)),
+	ЕСТЬNULL(ТрансляцияВрем.Состояние, ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован)),
+	ТаблицаВидовОтчетов.ЭтапПроцесса.ПорядковыйНомер,
+	ТаблицаОрганизаций.ДатаНачала,
+	ТаблицаОрганизаций.ДатаОкончания,
+	ЕСТЬNULL(ТрансляцияВрем.Ссылка.ПоследнийРедактировавший, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)),
+	ЕСТЬNULL(ТрансляцияВрем.Ссылка.ДатаИзменения, &amp;ПустаяДата),
+	ТаблицаВидовОтчетов.Контрольный,
+	ТрансляцияВрем.КоличествоВерсий
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаОрганизаций КАК ТаблицаОрганизаций
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Периметр
+			ПО (Периметр.Ссылка = ТаблицаОрганизаций.Организация.Родитель)
+		ПО (ТаблицаОрганизаций.ЭтапПроцесса = ТаблицаВидовОтчетов.ЭтапПроцесса)
+		ЛЕВОЕ СОЕДИНЕНИЕ ТрансляцияВрем КАК ТрансляцияВрем
+		ПО ТаблицаВидовОтчетов.ВидОтчета = ТрансляцияВрем.ПолеШаблона
+			И (ТаблицаОрганизаций.Организация = ТрансляцияВрем.Организация)
+ГДЕ
+	ТаблицаВидовОтчетов.ДокументБД = &amp;ПарТрансляция
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	ТаблицаВидовОтчетов.ЭтапПроцесса,
+	"&lt; Документ ""Элиминация"" &gt;",
+	ТаблицаВидовОтчетов.ДокументБД,
+	ТаблицаОрганизаций.Организация,
+	ТаблицаОрганизаций.СостояниеЭтапа,
+	ЕСТЬNULL(ЭлиминацияВрем.Ссылка, ЗНАЧЕНИЕ(Документ.Элиминация.ПустаяСсылка)),
+	ЕСТЬNULL(ЭлиминацияВрем.Состояние, ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован)),
+	ТаблицаВидовОтчетов.ЭтапПроцесса.ПорядковыйНомер,
+	ТаблицаОрганизаций.ДатаНачала,
+	ТаблицаОрганизаций.ДатаОкончания,
+	ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка),
+	&amp;ПустаяДата,
+	ТаблицаВидовОтчетов.Контрольный,
+	ЭлиминацияВрем.КоличествоВерсий
+ИЗ
+	ТаблицаВидовОтчетов КАК ТаблицаВидовОтчетов
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ ТаблицаОрганизаций КАК ТаблицаОрганизаций
+			ЛЕВОЕ СОЕДИНЕНИЕ Справочник.Организации КАК Периметр
+			ПО (Периметр.Ссылка = ТаблицаОрганизаций.Организация.Родитель)
+		ПО (ТаблицаОрганизаций.ЭтапПроцесса = ТаблицаВидовОтчетов.ЭтапПроцесса)
+		ЛЕВОЕ СОЕДИНЕНИЕ ЭлиминацияВрем КАК ЭлиминацияВрем
+		ПО ТаблицаВидовОтчетов.ВидОтчета = ЭлиминацияВрем.ПолеШаблона
+			И (ТаблицаОрганизаций.Организация = ЭлиминацияВрем.Организация)
+ГДЕ
+	ТаблицаВидовОтчетов.ДокументБД = &amp;ПарЭлиминация
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Объединение.ЭтапПроцесса КАК ЭтапПроцесса,
+	ВТ_Объединение.ВидОтчета КАК ВидОтчета,
+	ВТ_Объединение.Организация КАК Организация,
+	ВТ_Объединение.СостояниеЭтапа КАК СостояниеЭтапа,
+	ВТ_Объединение.Ссылка КАК Ссылка,
+	ВТ_Объединение.Состояние КАК Состояние,
+	ВТ_Объединение.ПорядковыйНомерЭтапаПроцесса КАК ПорядковыйНомерЭтапаПроцесса,
+	ЕСТЬNULL(РегистрМатрицыПолномочий.Исполняющий, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК Исполняющий,
+	ЕСТЬNULL(РегистрМатрицыПолномочий.Согласование, ЗНАЧЕНИЕ(Справочник.Пользователи.ПустаяСсылка)) КАК Согласование,
+	ВТ_Объединение.ДатаИзменения КАК ДатаПоследнегоИзменения,
+	ВТ_Объединение.ПоследнийРедактировавший КАК Изменивший,
+	ВЫБОР
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован)
+			ТОГДА 1
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Выполняется)
+			ТОГДА 2
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Подготовлен)
+			ТОГДА 3
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Возвращен)
+			ТОГДА 4
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.ЗаписанСОшибкой)
+			ТОГДА 5
+		КОГДА ВТ_Объединение.Состояние = ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден)
+			ТОГДА 6
+		ИНАЧЕ 0
+	КОНЕЦ КАК ИндексКартинкиСостояние,
+	ВТ_Объединение.Контрольный КАК Контрольный,
+	ВЫБОР
+		КОГДА ВТ_Объединение.Состояние &lt;&gt; ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден)
+			ТОГДА ВЫБОР
+					КОГДА ВТ_Объединение.ЭтапПроцесса.КритерийУтвержденияЭтапа = ЗНАЧЕНИЕ(Перечисление.КритерииУтвержденияЭтапаПроцесса.УтвержденыВсеЭкземплярыОтчетовЭтапа)
+						ТОГДА 2
+					КОГДА ВТ_Объединение.ЭтапПроцесса.КритерийУтвержденияЭтапа = ЗНАЧЕНИЕ(Перечисление.КритерииУтвержденияЭтапаПроцесса.УтвержденыКонтрольныеЭкземплярыОтчетов)
+						ТОГДА ВЫБОР
+								КОГДА ВТ_Объединение.Контрольный
+									ТОГДА 2
+								ИНАЧЕ 0
+							КОНЕЦ
+					КОГДА ВТ_Объединение.ЭтапПроцесса.КритерийУтвержденияЭтапа = ЗНАЧЕНИЕ(Перечисление.КритерииУтвержденияЭтапаПроцесса.УтвержденыЗаполненныеЭкземплярыОтчетов)
+						ТОГДА ВЫБОР
+								КОГДА ВТ_Объединение.Контрольный
+										ИЛИ ВТ_Объединение.КоличествоВерсий &gt; 0
+									ТОГДА 2
+								ИНАЧЕ 0
+							КОНЕЦ
+					ИНАЧЕ 0
+				КОНЕЦ
+		ИНАЧЕ 1
+	КОНЕЦ КАК ИндексКартинкиОбязательный,
+	ВТ_Объединение.КоличествоВерсий КАК КоличествоВерсий,
+	ЕСТЬNULL(ВТ_Объединение.Организация.ЭлиминирующаяОрганизация, ЛОЖЬ) КАК ЭлиминирующаяОрганизация
+ИЗ
+	ВТ_Объединение КАК ВТ_Объединение
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.РегистрМатрицыПолномочий КАК РегистрМатрицыПолномочий
+		ПО ВТ_Объединение.ВидОтчета = РегистрМатрицыПолномочий.ШаблонДокументаБД
+			И ВТ_Объединение.Организация = РегистрМатрицыПолномочий.Организация
+			И (РегистрМатрицыПолномочий.ДокументБД = &amp;ПарНастраиваемыйОтчет)
+			И (РегистрМатрицыПолномочий.ВерсияРегламентаПодготовкиОтчетности = &amp;ВерсияОрганизационнойСтруктуры)</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Исполняющий</dataPath>
+		<expression>Максимум(Исполняющий)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Согласование</dataPath>
+		<expression>Максимум(Согласование)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Состояние</dataPath>
+		<expression>ВЫБОР 
+КОГДА Минимум(ИндексКартинкиСостояние) = 1 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Запланирован) 
+КОГДА Минимум(ИндексКартинкиСостояние) = 2 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Выполняется) 
+КОГДА Минимум(ИндексКартинкиСостояние) = 3 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Подготовлен) 
+КОГДА Минимум(ИндексКартинкиСостояние) = 4 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Возвращен) 
+КОГДА Минимум(ИндексКартинкиСостояние) = 5 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.ЗаписанСОшибкой) 
+КОГДА Минимум(ИндексКартинкиСостояние) = 6 ТОГДА ЗНАЧЕНИЕ(Перечисление.СостоянияОтчетов.Утвержден) 
+ИНАЧЕ
+Минимум(Состояние)
+КОНЕЦ</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ДатаПоследнегоИзменения</dataPath>
+		<expression>Максимум(ДатаПоследнегоИзменения)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Изменивший</dataPath>
+		<expression>Изменивший</expression>
+		<group>ВидОтчета</group>
+		<group>ВидОтчета Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>Ссылка</dataPath>
+		<expression>Ссылка</expression>
+		<group>ВидОтчета</group>
+		<group>ВидОтчета Иерархия</group>
+	</totalField>
+	<totalField>
+		<dataPath>ИндексКартинкиСостояние</dataPath>
+		<expression>Минимум(ИндексКартинкиСостояние)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИндексКартинкиОбязательный</dataPath>
+		<expression>Максимум(ИндексКартинкиОбязательный)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЭлиминирующаяОрганизация</dataPath>
+		<expression>Максимум(ЭлиминирующаяОрганизация)</expression>
+	</totalField>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ВерсияОрганизационнойСтруктуры</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия организационной структуры</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВерсииРегламентовПодготовкиОтчетности</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Организация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Организация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Организации</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПарНастраиваемыйОтчет</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пар настраиваемый отчет</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДокументыБД</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СправочникиБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПериодСценария</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период сценария</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Периоды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>Сценарий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Сценарии</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ЭтапПроцесса</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Этап процесса</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ЭтапыУниверсальныхПроцессов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПарТрансформационнаяКорректировка</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пар трансформационная корректировка</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДокументыБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПустаяДата</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пустая дата</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПарТрансляция</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пар трансляция</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДокументыБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>СЗависимымиОрганизациями</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>С зависимыми организациями</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">true</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<parameter>
+		<name>ПарЭлиминация</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Пар элиминация</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДокументыБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Организация</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидОтчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Ссылка</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Исполняющий</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Согласование</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Состояние</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаПоследнегоИзменения</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Изменивший</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИндексКартинкиСостояние</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИндексКартинкиОбязательный</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВерсияОрганизационнойСтруктуры</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>b8559da2-845f-4da0-adc8-bc141f816115</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Организация</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>11fe6d31-3fa6-43a1-b468-8c75bb5325b2</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПериодСценария</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>7baf589b-19d9-4714-91ba-a5ac63482a13</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Сценарий</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>2b8f8a08-5eef-4979-bf7f-a1d193197421</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ЭтапПроцесса</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>3a093f5b-cf17-4b5c-8b8b-b508915b7a19</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ПарТрансляция</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+					<dcsset:userSettingID>53aa15d3-b7d2-42c8-9582-ac9d3a4d9774</dcsset:userSettingID>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>СЗависимымиОрганизациями</dcscor:parameter>
+					<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					<dcsset:userSettingID>b5dca0d2-1b68-4f46-ae46-1edb9fba7acd</dcsset:userSettingID>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВертикальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ВидОтчета</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>ЭтапПроцесса</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ВидОтчета</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Исполняющий</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Согласование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Состояние</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ДатаПоследнегоИзменения</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Изменивший</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИндексКартинкиСостояние</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИндексКартинкиОбязательный</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЭлиминирующаяОрганизация</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Организация</dcsset:field>
+							<dcsset:groupType>Hierarchy</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Организация</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Исполняющий</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Согласование</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Состояние</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ДатаПоследнегоИзменения</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Изменивший</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИндексКартинкиСостояние</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Ссылка</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ИндексКартинкиОбязательный</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЭлиминирующаяОрганизация</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

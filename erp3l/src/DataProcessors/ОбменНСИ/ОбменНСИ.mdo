@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b4929eca-3c21-4da3-81f1-7ab522f369a7">
+  <producedTypes>
+    <objectType typeId="9fdfad8b-d304-4a85-ad06-d888913bb898" valueTypeId="d7ec2ec1-0cb8-40a6-97a1-3af944100893"/>
+    <managerType typeId="2e021287-c457-4ed8-bfd7-132ee1b0565f" valueTypeId="8bcb2cba-a9c3-48e9-8b1c-5bfc6d526dd4"/>
+  </producedTypes>
+  <name>ОбменНСИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обмен нормативно - справочной информацией</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ОбменНСИ.Form.Форма</defaultForm>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="6406e4c9-9995-4664-b3e5-2f07b1033650">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="89c15b89-6d41-4d17-8a53-7915670f0b75">
+    <name>ОбменНСИ</name>
+    <synonym>
+      <key>ru</key>
+      <value>Обмен НСИ</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

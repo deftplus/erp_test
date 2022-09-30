@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="110d5ddd-331a-4e93-95d6-aae353de52f4">
+  <producedTypes>
+    <objectType typeId="4f2cc384-80ce-44c1-a991-97a80fa9fef3" valueTypeId="065c3b04-a29d-4f24-a8d8-e32d821ca6d1"/>
+    <managerType typeId="41294fea-6113-4454-bb62-90930a98a3cb" valueTypeId="b41c6bcc-c07d-4553-a870-c9665a744e93"/>
+  </producedTypes>
+  <name>инт_json_РаспознаваниеИмениОбъектаСообщенияJSON</name>
+  <synonym>
+    <key>ru</key>
+    <value>(инт) (json) Распознавание имени объекта сообщения JSON</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.инт_json_РаспознаваниеИмениОбъектаСообщенияJSON.Form.Форма</defaultForm>
+  <attributes uuid="2121121b-571c-426a-a791-9664705faca2">
+    <name>Сообщение</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сообщение</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.СП_СообщенияОбмена</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="3a4a5868-add4-4d2e-8876-cfcb739ff629">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

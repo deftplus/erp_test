@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c069c288-21a3-45a8-a1ff-ec9422ac9e80">
+  <producedTypes>
+    <objectType typeId="5f715ea6-d090-4c2c-8eaf-f39e8c1a988f" valueTypeId="6b3aa8af-8f45-4897-9821-cc601cb03d04"/>
+    <managerType typeId="c3739330-a08d-417b-955d-c6b4c71ac194" valueTypeId="7b77cd44-4cb0-4519-9858-1744ea66692f"/>
+  </producedTypes>
+  <name>НастройкаПараметровОтчетовПоУмолчанию</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка правил заполнения отчетов</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.НастройкаПараметровОтчетовПоУмолчанию.Form.Форма_Управляемая</defaultForm>
+  <attributes uuid="6e4d592d-439b-4114-bd0a-e0af3143f316">
+    <name>ВерсияОрганизационнойСтруктуры</name>
+    <synonym>
+      <key>ru</key>
+      <value>Версия организационной структуры</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииРегламентовПодготовкиОтчетности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="81ba2419-e0eb-4aad-964f-0d06e4e26c4f">
+    <name>НаправлениеОбмена</name>
+    <synonym>
+      <key>ru</key>
+      <value>Направление обмена</value>
+    </synonym>
+    <type>
+      <types>EnumRef.ВыгрузкаЗагрузка</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="f82dc9f7-0081-453d-a600-be9032db32fc">
+    <name>ПериодОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период отчета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Периоды</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="ee25f0fc-30b3-4474-9839-0bad9d49369d">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <forms uuid="429ea437-86ef-4567-8ea7-3a79143d91fc">
+    <name>Форма_Управляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="7d61d2fd-1ca5-4ab5-984e-133532de2585">
+    <name>ФормаВыбора_Управляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки параметров отчета по умолчанию</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <templates uuid="99613103-9748-4601-83df-a1a8688f1ac0">
+    <name>Макет</name>
+    <synonym>
+      <key>ru</key>
+      <value>Макет</value>
+    </synonym>
+  </templates>
+</mdclass:DataProcessor>

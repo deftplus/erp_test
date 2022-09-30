@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6263bacd-1352-4b20-95ca-8903ce7dc2e2">
+  <producedTypes>
+    <objectType typeId="a03a8a56-26d2-4d57-ad75-107121b6cbc6" valueTypeId="213f9519-2f12-4e0f-9c91-a552768e48f3"/>
+    <managerType typeId="fc550ba1-6ead-43f5-b1d1-5099748c7864" valueTypeId="1c0bef42-de29-4fb2-a4dc-d83b69903b35"/>
+  </producedTypes>
+  <name>ЖурналДокументовОтчетыКомиссионеров</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отчеты комиссионеров (агентов) о продажах</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Consignment reports from customers</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ЖурналДокументовОтчетыКомиссионеров.Form.СписокДокументов</defaultForm>
+  <forms uuid="84f8f485-f287-4f77-9b12-07cf6b9142c7">
+    <name>СписокДокументов</name>
+    <synonym>
+      <key>ru</key>
+      <value>Список документов</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Document list</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="92b99ba5-62d2-4581-a6f3-5762786dc13f">
+    <name>ОтчетыКомиссионеров</name>
+    <synonym>
+      <key>ru</key>
+      <value>Отчеты комиссионеров (агентов)</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Consignment reports (2.0)</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+    <toolTip>
+      <key>ru</key>
+      <value>Отчеты комиссионеров (агентов) о продажах / списании</value>
+    </toolTip>
+    <toolTip>
+      <key>en</key>
+      <value>Account sales/write-off reports from commission agents</value>
+    </toolTip>
+  </commands>
+</mdclass:DataProcessor>

@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.18710"></meta></head><body>
+<h1 style="font-size: 17.920000076293945px;">Интегральная оценка предложений участников</h1>
+<h1>
+</h1><p style="font-weight: normal;"><font size="2">Обработка предназначена для оценки экспертами имеющихся альтернатив.  Эксперт последовательно выполняет оценку варианта по заранее определенным критериям заданным в настройке процесса выбора. Эксперт неоднократно может возвращаться к оценке. Для завершения оценки варианта в строке варианта объекта оценки проставляется признак "Оценка завершена". </font></p>
+<p style="font-size: 11.199999809265137px; font-weight: normal;"></p>
+<table width="100%" bgcolor="#ffefd5" style="font-size: 11.199999809265137px;"><tbody><tr><td>
+<p><strong><font face="Verdana" size="3">Графическая схема справки</font></strong></p></td></tr></tbody></table><div style="font-weight: normal;"><font face="Verdana" size="2">С особенностями оформления и использования объектов можно ознакомиться на схемах: </font></div>
+<div style="font-weight: normal;"><font face="Verdana" size="2">- <a href="DataProcessor.СхемыСправки.Form.ПодготовкаИПроведениеТоргов/Help">Подготовка и проведение торгов</a></font></div>
+<div style="font-weight: normal;"><font face="Verdana" size="2">- <a href="DataProcessor.СхемыСправки.Form.ЗакупкиОбщаяСхема/Help">Корпоративные закупки</a></font></div>
+<div style="font-weight: normal;"><font face="Verdana" size="2">- <a href="DataProcessor.СхемыСправки.Form.ИнвестиционныеПроекты/Help"><font color="#0066cc">Инвестиционные проекты</font></a> </font></div>
+<div style="font-weight: normal;"><font size="2"><font face="Verdana">С другими схемами системы можно ознакомиться по </font><a href="DataProcessor.СхемыСправки/Help"><font color="#0066cc" face="Verdana">ссылке</font></a><font face="Verdana">.</font></font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font size="1" face="Verdana"><br></font></div>
+<h4><font face="Verdana" size="3">Особенности настройки и оценки</font></h4>
+<h1>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Настройка процесса оценки выполняется в закупочной процедуре по кнопке "Настройка процесса оценки". Ввод значений и выбор предложения победителя выполняется из протокола выбора победителя.</font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Процесс оценки выполняется в следующем порядке. Сначала каждый эксперт оценивает каждое предложение. Пункт команды меню "Ввести значения критериев". </font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">По завершению оценки экспертами пользователь, у которого в настройках установлен флажок "Закрывает этап оценки" нажимает на кнопку меню "Выбрать альтернативы".</font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Если оценка проводится в несколько этапов, то процесс повторяется. </font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Эксперты для оценки заполняются из документа "Приказ о назначении закупочной комиссии". </font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Оценить критерий может эксперт, входящий в функциональное направление, заданное при настройке критерия оценки. Если в критерии функциональное направление не задано, то оценить может любой эксперт.</font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Совокупный вес критериев должен равняться 100% ( в терминах системы = 1). Контролируется системой.</font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font size="2"><font face="Verdana">При настройке критериев используется бальная оценка. То есть каждому значению назначается балл. Если задано несколько критериев, то баллы обязательно задавать в обеих критериях. В противном случае значения оценки будут несопоставимыми. </font><span style="font-family: Verdana;">Для оценки критериев с установленными балами предназначен отчет "Интегральная оценка". </span></font></div>
+<div style="font-size: 11.199999809265137px; font-weight: normal;"><font face="Verdana" size="2">Если нужно оценить критерии линейно, то есть сравнить абсолютные значения введенные пользователями, нужно снять флажок "Использовать баллы". Шкалу баллов оставить незаполненной.</font></div></h1>
+<h4><font face="Verdana" size="3">Формула расчета</font></h4>
+<h1>
+<div style="font-size: 11.199999809265137px; font-weight: normal;">
+<div><font face="Verdana" size="2">По каждому критерию возможен свой диапазон допустимых значений. В системе используется универсальный подход для сопоставления различный значений. </font></div>
+<div><font face="Verdana" size="2">Формулы расчета приведены на скриншоте. Полученные по формуле значения соотносят с пятибальной шкалой. То есть устанавливают соответствие диапазона значений баллу. </font></div>
+<div><font face="Verdana" size="2">Пользователь в результате оценки получает определенное количество баллов. Побеждает предложение, набравшее наибольшее количество баллов.</font><font face="Verdana" size="1"> </font></div><br><img src="_files/Интегральная оценка.png" align="left"></img></div></h1></body></html>

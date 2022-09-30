@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="1c8b5157-28b8-4a2a-89bb-d016d7a370f1">
+  <producedTypes>
+    <objectType typeId="14c3bf8d-c648-44f4-ac75-b29136531c16" valueTypeId="88741e47-f567-493d-bb19-ff56277b51f5"/>
+    <managerType typeId="0c919f39-0f54-4608-88de-778a1d8b063b" valueTypeId="280e10ce-b83d-442e-8f6a-6c33dc84e989"/>
+  </producedTypes>
+  <name>РегистрацияОбъектовКПубликацииКабинетСотрудника</name>
+  <synonym>
+    <key>ru</key>
+    <value>Регистрация изменений для обмена с сервисом 1С:Кабинет сотрудника</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Register changes for exchange with 1C:Employee Account service</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.РегистрацияОбъектовКПубликацииКабинетСотрудника.Form.Форма</defaultForm>
+  <forms uuid="aa6b5cf9-35e3-4f1b-8a58-568f303e3043">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Form</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="90c555ce-58e7-4cd2-ad4e-6b0b55b73a35">
+    <name>ВыборОбъектовОтбором</name>
+    <synonym>
+      <key>ru</key>
+      <value>Выбор объектов отбором</value>
+    </synonym>
+    <synonym>
+      <key>en</key>
+      <value>Select objects (apply filter)</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

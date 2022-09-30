@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://zakupki.gov.ru/223fz/customerListInfo/1" xmlns:t="http://zakupki.gov.ru/223fz/types/1" targetNamespace="http://zakupki.gov.ru/223fz/customerListInfo/1" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://zakupki.gov.ru/223fz/types/1" schemaLocation="Types.xsd"/>
+	<xs:element name="customerListInfo">
+		<xs:annotation>
+			<xs:documentation>Перечень Заказчиков, в отношении которых проводится оценка и мониторинг</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="status" type="status" minOccurs="1">
+	                <xs:annotation>
+	                    <xs:documentation>Допустимые значения (P - Опубликовано, C - Отменено)</xs:documentation>
+	                </xs:annotation>
+            	</xs:element>
+            	<xs:element name="type" type="type" minOccurs="1">
+	                <xs:annotation>
+	                    <xs:documentation>Допустимые значения (O - Оценка, M - Мониторинг)</xs:documentation>
+	                </xs:annotation>
+            	</xs:element>
+            	<xs:element name="authority" type="xs:string">
+			    	<xs:annotation>
+			    		<xs:documentation>Орган</xs:documentation>
+			    	</xs:annotation>
+			    </xs:element>
+			    <xs:element name="customers" type="customers" minOccurs="1">
+	                <xs:annotation>
+	                    <xs:documentation>Организации</xs:documentation>
+	                </xs:annotation>
+            	</xs:element>
+			</xs:sequence>
+		</xs:complexType>		
+	</xs:element>
+	<xs:simpleType name="status">
+        <xs:annotation>
+            <xs:documentation>Статус</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="C">
+                <xs:annotation>
+                    <xs:documentation>Отмененная версия</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="P">
+                <xs:annotation>
+                    <xs:documentation>Актуальная версия</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="type">
+        <xs:annotation>
+            <xs:documentation>Тип</xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="O">
+                <xs:annotation>
+                    <xs:documentation>Оценка</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="M">
+                <xs:annotation>
+                    <xs:documentation>Мониторинг</xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>    
+    <xs:complexType name="customers">
+		<xs:annotation>
+			<xs:documentation>Список организаций</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="customer" type="customer" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Организации</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+    <xs:complexType name="customer">
+        <xs:annotation>
+            <xs:documentation>Организация</xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+            <xs:element name="name" type="xs:string">
+                <xs:annotation>
+                    <xs:documentation>Наименование организации</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="inn" type="t:innType">
+                <xs:annotation>
+                    <xs:documentation>ИНН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="kpp" type="t:kppType">
+                <xs:annotation>
+                    <xs:documentation>КПП</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="ogrn" type="t:ogrnType">
+                <xs:annotation>
+                    <xs:documentation>ОГРН</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+            <xs:element name="innovVolumeChecked" type="t:innovVolumeChecked">
+                <xs:annotation>
+                    <xs:documentation>Признак «Проверка закупки инновационной продукции»</xs:documentation>
+                </xs:annotation>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

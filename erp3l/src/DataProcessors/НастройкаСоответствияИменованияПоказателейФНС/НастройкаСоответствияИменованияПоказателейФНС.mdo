@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="753bdca3-d9d7-4d2b-8f7e-c429e807bc19">
+  <producedTypes>
+    <objectType typeId="f382f37f-7bbd-43e7-ac76-1d7f5c0dbf59" valueTypeId="618105bb-840f-412c-995c-a40bf723d102"/>
+    <managerType typeId="da2c019d-1842-4bbc-afc7-83c22b633aeb" valueTypeId="318db4de-0981-44e9-9d3a-fc88e712e0df"/>
+  </producedTypes>
+  <name>НастройкаСоответствияИменованияПоказателейФНС</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка соответствия именования показателей ФНС</value>
+  </synonym>
+  <defaultForm>DataProcessor.НастройкаСоответствияИменованияПоказателейФНС.Form.Форма</defaultForm>
+  <attributes uuid="93a05a61-a0b7-49a6-86b4-e6ce8e8696e8">
+    <name>ИмяФайла</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="1f732ec8-2e6a-4a29-9004-44d611aab439">
+    <name>ИмяМакетаСопоставления</name>
+    <synonym>
+      <key>ru</key>
+      <value>Имя файла макета сопоставления</value>
+    </synonym>
+    <type>
+      <types>String</types>
+      <stringQualifiers/>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="5d150759-b890-406d-99c7-c348868b1a9c">
+    <name>БланкОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Бланк отчета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.БланкиОтчетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="e4730ffd-87ab-4614-a906-f72b27e7b797">
+    <name>ВидОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Вид отчета</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВидыОтчетов</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="fc5f3dc2-dfe9-46f6-843f-2136e987ae25">
+    <name>СпособНастройкиСоответствия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Способ настройки соответствия</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>1</precision>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <tabularSections uuid="28fbbb48-331b-4a09-82dd-3b0c6375c947">
+    <producedTypes>
+      <objectType typeId="ff75ec07-6a44-4609-afb1-5e96c17dbfdc" valueTypeId="c18860e6-4fbe-460f-bd1e-3fc4dff5d677"/>
+      <rowType typeId="a6dcc0b2-6d3c-498e-9461-e5cac8e9b169" valueTypeId="ae8cf8ef-2d3c-473a-9c80-e4b0daac2d97"/>
+    </producedTypes>
+    <name>ТаблицаСоответствия</name>
+    <synonym>
+      <key>ru</key>
+      <value>Таблица соответствия</value>
+    </synonym>
+    <standardAttributes>
+      <dataHistory>Use</dataHistory>
+      <name>LineNumber</name>
+      <fillValue xsi:type="core:UndefinedValue"/>
+      <fullTextSearch>Use</fullTextSearch>
+      <minValue xsi:type="core:UndefinedValue"/>
+      <maxValue xsi:type="core:UndefinedValue"/>
+    </standardAttributes>
+  </tabularSections>
+  <forms uuid="ec5d3c22-2fdc-4696-9dcd-48db37fd7e83">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="e9b9f185-8106-4c87-95ab-b3bb4945b86b">
+    <name>ФормаНастройкиОтчета</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма настройки отчета</value>
+    </synonym>
+    <formType>Ordinary</formType>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="cca651d5-c2df-4ec0-b2ed-9c185b5b5066">
+    <name>Форма_Управляемая</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма управляемая</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

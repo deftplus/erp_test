@@ -1,0 +1,1413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Работа с претензиями по дебиторской задолженности</value>
+  </title>
+  <items xsi:type="form:FormGroup">
+    <name>ГруппаСтраницы</name>
+    <id>1</id>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаПросроченнаяЗадолженность</name>
+      <id>3</id>
+      <items xsi:type="form:Table">
+        <name>ПросроченнаяЗадолженность</name>
+        <id>5</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>ПросроченнаяЗадолженность</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьОрганизация</name>
+          <id>27</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.Организация</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьОрганизацияРасширеннаяПодсказка</name>
+            <id>29</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьОрганизацияКонтекстноеМеню</name>
+            <id>28</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьКонтрагент</name>
+          <id>21</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.Контрагент</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьКонтрагентРасширеннаяПодсказка</name>
+            <id>23</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьКонтрагентКонтекстноеМеню</name>
+            <id>22</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьДоговор</name>
+          <id>93</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.Договор</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьДоговорРасширеннаяПодсказка</name>
+            <id>95</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьДоговорКонтекстноеМеню</name>
+            <id>94</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьОбъектРасчетов</name>
+          <id>36</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.ОбъектРасчетов</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьОбъектРасчетовРасширеннаяПодсказка</name>
+            <id>38</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьОбъектРасчетовКонтекстноеМеню</name>
+            <id>37</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьРасчетныйДокумент</name>
+          <id>18</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.РасчетныйДокумент</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьРасчетныйДокументРасширеннаяПодсказка</name>
+            <id>20</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьРасчетныйДокументКонтекстноеМеню</name>
+            <id>19</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьСумма</name>
+          <id>42</id>
+          <title>
+            <key>ru</key>
+            <value>Основная задолженность</value>
+          </title>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.Сумма</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьСуммаРасширеннаяПодсказка</name>
+            <id>44</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьСуммаКонтекстноеМеню</name>
+            <id>43</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьКоличествоДнейПросрочки</name>
+          <id>88</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.ДнейПросрочки</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьКоличествоДнейПросрочкиРасширеннаяПодсказка</name>
+            <id>90</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьКоличествоДнейПросрочкиКонтекстноеМеню</name>
+            <id>89</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>ПросроченнаяЗадолженностьПени</name>
+          <id>33</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>ПросроченнаяЗадолженность.Пени</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьПениРасширеннаяПодсказка</name>
+            <id>35</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьПениКонтекстноеМеню</name>
+            <id>34</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <autoCommandBar>
+          <name>ПросроченнаяЗадолженностьКоманднаяПанель</name>
+          <id>7</id>
+          <items xsi:type="form:Button">
+            <name>ПросроченнаяЗадолженностьСоздатьПретензию</name>
+            <id>86</id>
+            <title>
+              <key>ru</key>
+              <value>Создать претензию по текущей задолженности</value>
+            </title>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>ПросроченнаяЗадолженностьСоздатьПретензиюРасширеннаяПодсказка</name>
+              <id>87</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.СоздатьПретензию</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>Selection</event>
+          <name>ПросроченнаяЗадолженностьВыбор</name>
+        </handlers>
+        <searchStringAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>ПросроченнаяЗадолженностьСтрокаПоиска</name>
+          <id>9</id>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьСтрокаПоискаРасширеннаяПодсказка</name>
+            <id>11</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьСтрокаПоискаКонтекстноеМеню</name>
+            <id>10</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>ПросроченнаяЗадолженностьСостояниеПросмотра</name>
+          <id>12</id>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьСостояниеПросмотраРасширеннаяПодсказка</name>
+            <id>14</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьСостояниеПросмотраКонтекстноеМеню</name>
+            <id>13</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>ПросроченнаяЗадолженностьУправлениеПоиском</name>
+          <id>15</id>
+          <extendedTooltip>
+            <name>ПросроченнаяЗадолженностьУправлениеПоискомРасширеннаяПодсказка</name>
+            <id>17</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>ПросроченнаяЗадолженностьУправлениеПоискомКонтекстноеМеню</name>
+            <id>16</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>ПросроченнаяЗадолженностьРасширеннаяПодсказка</name>
+          <id>8</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>ПросроченнаяЗадолженностьКонтекстноеМеню</name>
+          <id>6</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <representation>HierarchicalList</representation>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <useAlternationRowColor>true</useAlternationRowColor>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <enableStartDrag>true</enableStartDrag>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>ПросроченнаяЗадолженность.DefaultPicture</segments>
+        </rowPictureDataPath>
+        <extInfo xsi:type="form:DynamicListTableExtInfo">
+          <autoRefreshPeriod>60</autoRefreshPeriod>
+          <period>
+            <startDate>0001-01-01T00:00:00</startDate>
+            <endDate>0001-01-01T00:00:00</endDate>
+          </period>
+          <topLevelParent xsi:type="core:UndefinedValue"/>
+          <showRoot>true</showRoot>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Задолженность к обработке</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаПросроченнаяЗадолженностьРасширеннаяПодсказка</name>
+        <id>4</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormGroup">
+      <name>ГруппаОткрытыеПретензии</name>
+      <id>48</id>
+      <items xsi:type="form:Table">
+        <name>НеЗакрытыеПретензии</name>
+        <id>50</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <dataPath xsi:type="form:DataPath">
+          <segments>НеЗакрытыеПретензии</segments>
+        </dataPath>
+        <titleLocation>None</titleLocation>
+        <items xsi:type="form:FormField">
+          <name>НеЗакрытыеПретензииПретензия</name>
+          <id>69</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НеЗакрытыеПретензии.Претензия</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииПретензияРасширеннаяПодсказка</name>
+            <id>71</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииПретензияКонтекстноеМеню</name>
+            <id>70</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НеЗакрытыеПретензииТипПретензии</name>
+          <id>75</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НеЗакрытыеПретензии.ТипПретензии</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииТипПретензииРасширеннаяПодсказка</name>
+            <id>77</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииТипПретензииКонтекстноеМеню</name>
+            <id>76</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НеЗакрытыеПретензииЭтапРаботы</name>
+          <id>78</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НеЗакрытыеПретензии.ЭтапРаботы</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииЭтапРаботыРасширеннаяПодсказка</name>
+            <id>80</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииЭтапРаботыКонтекстноеМеню</name>
+            <id>79</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <items xsi:type="form:FormField">
+          <name>НеЗакрытыеПретензииСумма</name>
+          <id>72</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <dataPath xsi:type="form:DataPath">
+            <segments>НеЗакрытыеПретензии.Сумма</segments>
+          </dataPath>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииСуммаРасширеннаяПодсказка</name>
+            <id>74</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииСуммаКонтекстноеМеню</name>
+            <id>73</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>LabelField</type>
+          <editMode>Enter</editMode>
+          <showInHeader>true</showInHeader>
+          <headerHorizontalAlign>Left</headerHorizontalAlign>
+          <showInFooter>true</showInFooter>
+          <extInfo xsi:type="form:LabelFieldExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+          </extInfo>
+        </items>
+        <autoCommandBar>
+          <name>НеЗакрытыеПретензииКоманднаяПанель</name>
+          <id>52</id>
+          <items xsi:type="form:Button">
+            <name>НеЗакрытыеПретензииИзменитьЭтап</name>
+            <id>91</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>НеЗакрытыеПретензииИзменитьЭтапРасширеннаяПодсказка</name>
+              <id>92</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ИзменитьЭтап</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <items xsi:type="form:Button">
+            <name>НеЗакрытыеПретензииЗакрытьПретензию</name>
+            <id>84</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <extendedTooltip>
+              <name>НеЗакрытыеПретензииЗакрытьПретензиюРасширеннаяПодсказка</name>
+              <id>85</id>
+              <visible>true</visible>
+              <enabled>true</enabled>
+              <userVisible>
+                <common>true</common>
+              </userVisible>
+              <type>Label</type>
+              <autoMaxWidth>true</autoMaxWidth>
+              <autoMaxHeight>true</autoMaxHeight>
+              <extInfo xsi:type="form:LabelDecorationExtInfo">
+                <horizontalAlign>Left</horizontalAlign>
+              </extInfo>
+            </extendedTooltip>
+            <commandName>Form.Command.ЗакрытьПретензию</commandName>
+            <representation>Auto</representation>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <placementArea>UserCmds</placementArea>
+            <representationInContextMenu>Auto</representationInContextMenu>
+          </items>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <horizontalAlign>Left</horizontalAlign>
+          <autoFill>true</autoFill>
+        </autoCommandBar>
+        <handlers>
+          <event>Selection</event>
+          <name>НеЗакрытыеПретензииВыбор</name>
+        </handlers>
+        <searchStringAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>НеЗакрытыеПретензииСтрокаПоиска</name>
+          <id>54</id>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииСтрокаПоискаРасширеннаяПодсказка</name>
+            <id>56</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииСтрокаПоискаКонтекстноеМеню</name>
+            <id>55</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchStringAddition>
+        <viewStatusAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>НеЗакрытыеПретензииСостояниеПросмотра</name>
+          <id>57</id>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииСостояниеПросмотраРасширеннаяПодсказка</name>
+            <id>59</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииСостояниеПросмотраКонтекстноеМеню</name>
+            <id>58</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>ViewStatusAddition</type>
+          <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </viewStatusAddition>
+        <searchControlAddition>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <name>НеЗакрытыеПретензииУправлениеПоиском</name>
+          <id>60</id>
+          <extendedTooltip>
+            <name>НеЗакрытыеПретензииУправлениеПоискомРасширеннаяПодсказка</name>
+            <id>62</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <type>Label</type>
+            <autoMaxWidth>true</autoMaxWidth>
+            <autoMaxHeight>true</autoMaxHeight>
+            <extInfo xsi:type="form:LabelDecorationExtInfo">
+              <horizontalAlign>Left</horizontalAlign>
+            </extInfo>
+          </extendedTooltip>
+          <contextMenu>
+            <name>НеЗакрытыеПретензииУправлениеПоискомКонтекстноеМеню</name>
+            <id>61</id>
+            <visible>true</visible>
+            <enabled>true</enabled>
+            <userVisible>
+              <common>true</common>
+            </userVisible>
+            <autoFill>true</autoFill>
+          </contextMenu>
+          <type>SearchControlAddition</type>
+          <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+            <autoMaxWidth>true</autoMaxWidth>
+          </extInfo>
+        </searchControlAddition>
+        <extendedTooltip>
+          <name>НеЗакрытыеПретензииРасширеннаяПодсказка</name>
+          <id>53</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <type>Label</type>
+          <autoMaxWidth>true</autoMaxWidth>
+          <autoMaxHeight>true</autoMaxHeight>
+          <extInfo xsi:type="form:LabelDecorationExtInfo">
+            <horizontalAlign>Left</horizontalAlign>
+          </extInfo>
+        </extendedTooltip>
+        <contextMenu>
+          <name>НеЗакрытыеПретензииКонтекстноеМеню</name>
+          <id>51</id>
+          <visible>true</visible>
+          <enabled>true</enabled>
+          <userVisible>
+            <common>true</common>
+          </userVisible>
+          <autoFill>true</autoFill>
+        </contextMenu>
+        <representation>HierarchicalList</representation>
+        <changeRowSet>true</changeRowSet>
+        <changeRowOrder>true</changeRowOrder>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <autoMaxRowsCount>true</autoMaxRowsCount>
+        <selectionMode>MultiRow</selectionMode>
+        <header>true</header>
+        <headerHeight>1</headerHeight>
+        <footerHeight>1</footerHeight>
+        <horizontalScrollBar>AutoUse</horizontalScrollBar>
+        <verticalScrollBar>AutoUse</verticalScrollBar>
+        <horizontalLines>true</horizontalLines>
+        <verticalLines>true</verticalLines>
+        <useAlternationRowColor>true</useAlternationRowColor>
+        <searchOnInput>Auto</searchOnInput>
+        <initialListView>Auto</initialListView>
+        <horizontalStretch>true</horizontalStretch>
+        <verticalStretch>true</verticalStretch>
+        <enableStartDrag>true</enableStartDrag>
+        <rowPictureDataPath xsi:type="form:DataPath">
+          <segments>НеЗакрытыеПретензии.DefaultPicture</segments>
+        </rowPictureDataPath>
+        <extInfo xsi:type="form:DynamicListTableExtInfo">
+          <autoRefreshPeriod>60</autoRefreshPeriod>
+          <period>
+            <startDate>0001-01-01T00:00:00</startDate>
+            <endDate>0001-01-01T00:00:00</endDate>
+          </period>
+          <topLevelParent xsi:type="core:UndefinedValue"/>
+          <showRoot>true</showRoot>
+        </extInfo>
+      </items>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <title>
+        <key>ru</key>
+        <value>Открытые претензии</value>
+      </title>
+      <extendedTooltip>
+        <name>ГруппаОткрытыеПретензииРасширеннаяПодсказка</name>
+        <id>49</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <type>Page</type>
+      <extInfo xsi:type="form:PageGroupExtInfo">
+        <group>Vertical</group>
+        <showTitle>true</showTitle>
+      </extInfo>
+    </items>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <title>
+      <key>ru</key>
+      <value>Страницы</value>
+    </title>
+    <extendedTooltip>
+      <name>ГруппаСтраницыРасширеннаяПодсказка</name>
+      <id>2</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <type>Pages</type>
+    <extInfo xsi:type="form:PagesGroupExtInfo">
+      <pagesRepresentation>TabsOnTop</pagesRepresentation>
+      <currentRowUse>Auto</currentRowUse>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>NotificationProcessing</event>
+    <name>ОбработкаОповещения</name>
+  </handlers>
+  <handlers>
+    <event>NewWriteProcessing</event>
+    <name>ОбработкаЗаписиНового</name>
+  </handlers>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <allowFormCustomize>true</allowFormCustomize>
+  <enabled>true</enabled>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>Объект</name>
+    <id>1</id>
+    <valueType>
+      <types>DataProcessorObject.ВзысканиеДебиторскойЗадолженности</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <main>true</main>
+  </attributes>
+  <attributes>
+    <name>ПросроченнаяЗадолженность</name>
+    <title>
+      <key>ru</key>
+      <value>Просроченная задолженность</value>
+    </title>
+    <id>2</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>// Заменяется текстом из функции ПретензионноИсковаяРабота.ТекстЗапросаПросроченнаяЗадолженность
+//
+ВЫБРАТЬ
+	РасчетыСКлиентамиПоСрокамОстатки.АналитикаУчетаПоПартнерам КАК АналитикаУчетаПоПартнерам,
+	РасчетыСКлиентамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Организация КАК Организация,
+	РасчетыСКлиентамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Контрагент КАК Контрагент,
+	РасчетыСКлиентамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Договор КАК Договор,
+	РасчетыСКлиентамиПоСрокамОстатки.ОбъектРасчетов КАК ОбъектРасчетов,
+	РасчетыСКлиентамиПоСрокамОстатки.Валюта КАК Валюта,
+	РасчетыСКлиентамиПоСрокамОстатки.РасчетныйДокумент КАК РасчетныйДокумент,
+	РасчетыСКлиентамиПоСрокамОстатки.ДатаВозникновения КАК ДатаВозникновения,
+	РасчетыСКлиентамиПоСрокамОстатки.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	РасчетыСКлиентамиПоСрокамОстатки.ДатаПлановогоПогашения КАК ОжидаемаяДата,
+	ДОБАВИТЬКДАТЕ(РасчетыСКлиентамиПоСрокамОстатки.ДатаПлановогоПогашения, ДЕНЬ, ДнейПросрочки.Значение) КАК ДатаПлановойПросрочки,
+	РасчетыСКлиентамиПоСрокамОстатки.ПредоплатаОстаток КАК ПредоплатаОстаток,
+	РасчетыСКлиентамиПоСрокамОстатки.ДолгОстаток КАК ДолгОстаток,
+	РасчетыСКлиентамиПоСрокамОстатки.ДолгОстаток КАК СуммаОстаток
+ПОМЕСТИТЬ ВТ_Данные
+ИЗ
+	РегистрНакопления.РасчетыСКлиентамиПоСрокам.Остатки(&amp;ДатаДляГенерации, ) КАК РасчетыСКлиентамиПоСрокамОстатки,
+	Константа.КоличествоДнейПросрочкиПоПлатежамДляФормированияПретензий КАК ДнейПросрочки
+ГДЕ
+	РасчетыСКлиентамиПоСрокамОстатки.ДолгОстаток > 0
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	РасчетыСПоставщикамиПоСрокамОстатки.АналитикаУчетаПоПартнерам,
+	РасчетыСПоставщикамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Организация,
+	РасчетыСПоставщикамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Контрагент,
+	РасчетыСПоставщикамиПоСрокамОстатки.АналитикаУчетаПоПартнерам.Договор,
+	РасчетыСПоставщикамиПоСрокамОстатки.ОбъектРасчетов,
+	РасчетыСПоставщикамиПоСрокамОстатки.Валюта,
+	РасчетыСПоставщикамиПоСрокамОстатки.РасчетныйДокумент,
+	РасчетыСПоставщикамиПоСрокамОстатки.ДатаВозникновения,
+	РасчетыСПоставщикамиПоСрокамОстатки.ДатаПлановогоПогашения,
+	РасчетыСПоставщикамиПоСрокамОстатки.ДатаВозникновения,
+	ДОБАВИТЬКДАТЕ(РасчетыСПоставщикамиПоСрокамОстатки.ДатаВозникновения, ДЕНЬ, ДнейПросрочки.Значение),
+	РасчетыСПоставщикамиПоСрокамОстатки.ПредоплатаОстаток,
+	РасчетыСПоставщикамиПоСрокамОстатки.ДолгОстаток,
+	РасчетыСПоставщикамиПоСрокамОстатки.ПредоплатаОстаток
+ИЗ
+	РегистрНакопления.РасчетыСПоставщикамиПоСрокам.Остатки(&amp;ДатаДляГенерации, ) КАК РасчетыСПоставщикамиПоСрокамОстатки,
+	Константа.КоличествоДнейПросрочкиПоПлатежамДляФормированияПретензий КАК ДнейПросрочки
+ГДЕ
+	РасчетыСПоставщикамиПоСрокамОстатки.ПредоплатаОстаток > 0
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВТ_Данные.Организация КАК Организация,
+	ВТ_Данные.Контрагент КАК Контрагент,
+	ВТ_Данные.Договор КАК Договор,
+	ВТ_Данные.ОбъектРасчетов КАК ОбъектРасчетов,
+	ВТ_Данные.РасчетныйДокумент КАК РасчетныйДокумент,
+	ВТ_Данные.Валюта КАК Валюта,
+	ВТ_Данные.ДатаВозникновения КАК ДатаВозникновения,
+	ВТ_Данные.ДатаПлановогоПогашения КАК ДатаПлановогоПогашения,
+	ВТ_Данные.ОжидаемаяДата КАК ОжидаемаяДата,
+	ВТ_Данные.ДатаПлановойПросрочки КАК ДатаПлановойПросрочки,
+	ВТ_Данные.СуммаОстаток КАК Сумма,
+	ВТ_Данные.ПредоплатаОстаток КАК ПредоплатаОстаток,
+	ВТ_Данные.ДолгОстаток КАК ДолгОстаток,
+	ВТ_Данные.Договор.Ответственный КАК Ответственный,
+	РАЗНОСТЬДАТ(ВТ_Данные.ОжидаемаяДата, &amp;ДатаДляГенерации, ДЕНЬ) КАК ДнейПросрочки,
+	ВЫРАЗИТЬ(ВТ_Данные.СуммаОстаток * РАЗНОСТЬДАТ(ВТ_Данные.ОжидаемаяДата, &amp;ДатаДляГенерации, ДЕНЬ) * ВЫБОР
+			КОГДА ВТ_Данные.Договор.ПериодРасчетаПени = ЗНАЧЕНИЕ(Перечисление.Периодичность.День)
+				ТОГДА ВТ_Данные.Договор.СтавкаПени / 100
+			КОГДА ВТ_Данные.Договор.ПериодРасчетаПени = ЗНАЧЕНИЕ(Перечисление.Периодичность.Месяц)
+				ТОГДА ВТ_Данные.Договор.СтавкаПени / 100 / 30
+			КОГДА ВТ_Данные.Договор.ПериодРасчетаПени = ЗНАЧЕНИЕ(Перечисление.Периодичность.Год)
+				ТОГДА ВТ_Данные.Договор.СтавкаПени / 100 / 360
+			ИНАЧЕ 0
+		КОНЕЦ КАК ЧИСЛО(18, 2)) КАК Пени
+ИЗ
+	ВТ_Данные КАК ВТ_Данные
+		ЛЕВОЕ СОЕДИНЕНИЕ Документ.ИзменениеПретензии.РасшифровкаПредметаСпора КАК Претензия
+		ПО (Претензия.Ссылка.ПометкаУдаления = ЛОЖЬ)
+			И ВТ_Данные.Организация = Претензия.Ссылка.Организация
+			И ВТ_Данные.Контрагент = Претензия.Ссылка.Контрагент
+			И ВТ_Данные.Договор = Претензия.Ссылка.Договор
+			И ВТ_Данные.ОбъектРасчетов = Претензия.ОбъектРасчетов
+			И ВТ_Данные.РасчетныйДокумент = Претензия.РасчетныйДокумент
+ГДЕ
+	ВТ_Данные.ДатаПлановойПросрочки &lt; &amp;ДатаДляГенерации
+	И Претензия.Ссылка ЕСТЬ NULL</queryText>
+      <dynamicDataRead>true</dynamicDataRead>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+      <keyField>Организация</keyField>
+      <keyField>Контрагент</keyField>
+      <keyField>Договор</keyField>
+      <keyField>ОбъектРасчетов</keyField>
+      <keyField>РасчетныйДокумент</keyField>
+    </extInfo>
+  </attributes>
+  <attributes>
+    <name>НеЗакрытыеПретензии</name>
+    <title>
+      <key>ru</key>
+      <value>Не закрытые претензии</value>
+    </title>
+    <id>3</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	ХодПретензионноИсковойРаботыСрезПоследних.Претензия,
+	ХодПретензионноИсковойРаботыСрезПоследних.Претензия.ТипПретензии КАК ТипПретензии,
+	ХодПретензионноИсковойРаботыСрезПоследних.ЭтапРаботы,
+	ХодПретензионноИсковойРаботыСрезПоследних.Сумма,
+	ХодПретензионноИсковойРаботыСрезПоследних.Пени,
+	ХодПретензионноИсковойРаботыСрезПоследних.Вероятность
+ИЗ
+	РегистрСведений.ХодПретензионноИсковойРаботы.СрезПоследних КАК ХодПретензионноИсковойРаботыСрезПоследних
+ГДЕ
+	ХодПретензионноИсковойРаботыСрезПоследних.ЭтапРаботы &lt;> ЗНАЧЕНИЕ(Справочник.ЭтапыПретензионноИсковойРаботы.Закрыта)</queryText>
+      <mainTable>InformationRegister.ХодПретензионноИсковойРаботы.SliceLast</mainTable>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <formCommands>
+    <name>ЗакрытьПретензию</name>
+    <title>
+      <key>ru</key>
+      <value>Закрыть претензию</value>
+    </title>
+    <id>1</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Закрыть претензию</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ЗакрытьПретензию</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>СоздатьПретензию</name>
+    <title>
+      <key>ru</key>
+      <value>Создать претензию</value>
+    </title>
+    <id>2</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Создать претензию</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>СоздатьПретензию</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <formCommands>
+    <name>ИзменитьЭтап</name>
+    <title>
+      <key>ru</key>
+      <value>Изменить этап</value>
+    </title>
+    <id>3</id>
+    <toolTip>
+      <key>ru</key>
+      <value>Изменить этап</value>
+    </toolTip>
+    <use>
+      <common>true</common>
+    </use>
+    <action xsi:type="form:FormCommandHandlerContainer">
+      <handler>
+        <name>ИзменитьЭтап</name>
+      </handler>
+    </action>
+    <currentRowUse>DontUse</currentRowUse>
+  </formCommands>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+  <extInfo xsi:type="form:ObjectFormExtInfo"/>
+</form:Form>

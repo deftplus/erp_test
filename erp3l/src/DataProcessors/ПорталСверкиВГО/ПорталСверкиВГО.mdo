@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="259ed631-77c3-457c-a7ea-d909ccf59378">
+  <producedTypes>
+    <objectType typeId="2aadd2a8-79cd-411d-a3f6-35a8e7959818" valueTypeId="70aee0fd-e850-4b96-b787-a8cc578c804f"/>
+    <managerType typeId="575836ba-5c42-4ec9-9d1b-4466e5af7fd2" valueTypeId="cf3f71c9-46cb-4395-89d9-9558946484bd"/>
+  </producedTypes>
+  <name>ПорталСверкиВГО</name>
+  <synonym>
+    <key>ru</key>
+    <value>Портал сверки ВГО</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПорталСверкиВГО.Form.СверкаИУрегулирование</defaultForm>
+  <attributes uuid="fa7deef4-55fc-4480-b8a9-af3bb9e221c3">
+    <name>Сценарий</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сценарий</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Сценарии</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="8d56b346-c5ec-4ead-b653-cd5112395d51">
+    <name>ПериодСценария</name>
+    <synonym>
+      <key>ru</key>
+      <value>Период сценария</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Периоды</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+  </attributes>
+  <attributes uuid="b2de0ac8-14e2-4608-be28-815fc5357c28">
+    <name>Этап</name>
+    <synonym>
+      <key>ru</key>
+      <value>Этап</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.ВерсииРегламентовПодготовкиОтчетности</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="98e1493f-8206-4eb9-9a8a-2b8364a37486">
+    <name>ОрганизацияОтбор</name>
+    <synonym>
+      <key>ru</key>
+      <value>Организация</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Организации</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </attributes>
+  <attributes uuid="2b5c2d77-92e2-4288-8424-ee6abc73ff0b">
+    <name>ПериметрСверки</name>
+    <synonym>
+      <key>ru</key>
+      <value>Периметр сверки</value>
+    </synonym>
+    <type>
+      <types>DocumentRef.УправлениеПериодомСценария</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <choiceParameters>
+      <name>Отбор.ПометкаУдаления</name>
+      <value xsi:type="core:BooleanValue"/>
+    </choiceParameters>
+    <choiceParameters>
+      <name>ОтобратьПериметрыСверки</name>
+      <value xsi:type="core:BooleanValue">
+        <value>true</value>
+      </value>
+    </choiceParameters>
+    <choiceForm>Document.УправлениеПериодомСценария.Form.ФормаВыбора</choiceForm>
+  </attributes>
+  <forms uuid="a257daac-637e-4028-a2c5-ec41e8aa6c6e">
+    <name>СверкаИУрегулирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сверка и урегулирование</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <forms uuid="b6b1a2b0-2b9c-453f-949e-07c35a2217d5">
+    <name>АвтоматическоеУрегулирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Автоматическое урегулирование</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="7f7d04db-732c-4361-b8e7-ba673148c1d9">
+    <name>ПорталСверкиВГО</name>
+    <synonym>
+      <key>ru</key>
+      <value>Портал сверки ВГО</value>
+    </synonym>
+    <group>NavigationPanelOrdinary</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>

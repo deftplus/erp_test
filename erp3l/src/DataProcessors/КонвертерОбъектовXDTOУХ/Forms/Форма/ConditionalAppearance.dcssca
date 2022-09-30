@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConditionalAppearance xmlns="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+	<item>
+		<selection>
+			<item>
+				<field>КодыПространствИменXSDТекстXSD</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПространстваИменXSD.ЭтоСтандартныйТип</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;заполнение не требуется&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Объекты1СВXDTOПредставлениеПриемника</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Объекты1СВXDTO.СпособПолучения</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:string">МассивПравил</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Объекты1СВXDTOФункцияПередЗаполнением</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Объекты1СВXDTO.СпособПолучения</left>
+				<comparisonType>NotEqual</comparisonType>
+				<right xsi:type="xs:string">МассивПравил</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOСпособПолучения</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.СпособПолучения</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Исходный объект</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOИсточникПолучения</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.СпособПолучения</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;заполнение не требуется&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOСпособПреобразования</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.СпособПреобразования</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;не требуется&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOОписаниеПреобразования</field>
+			</item>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOПреобразованиеВСписок</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.СпособПреобразования</left>
+				<comparisonType>NotFilled</comparisonType>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:DarkGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;заполнение не требуется&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Объекты1СВXDTO</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Объекты1СВXDTO.Отключить</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Значения1СВXDTO</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Значения1СВXDTO.Отключить</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTO</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.Отключить</left>
+				<comparisonType>Equal</comparisonType>
+				<right xsi:type="xs:boolean">true</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">web:MediumGray</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>Значения1СВXDTOЕстьДопПараметры</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.Значения1СВXDTO.СпособПолучения</left>
+				<comparisonType>NotEqual</comparisonType>
+				<right xsi:type="xs:string">Функция</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ЦветТекста</dcscor:parameter>
+				<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType">
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>&lt;&gt;</v8:content>
+					</v8:item>
+				</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+	<item>
+		<selection>
+			<item>
+				<field>ПравилаПреобразованияРеквизитов1СВXDTOЕстьДопПараметры</field>
+			</item>
+		</selection>
+		<filter>
+			<item xsi:type="FilterItemComparison">
+				<left xsi:type="dcscor:Field">Объект.ПравилаПреобразованияРеквизитов1СВXDTO.СпособПреобразования</left>
+				<comparisonType>NotInList</comparisonType>
+				<right xsi:type="xs:string">ПоТипу</right>
+				<right xsi:type="xs:string">ПримитивноеЗначениеПоПравилу</right>
+			</item>
+		</filter>
+		<appearance>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Текст</dcscor:parameter>
+				<dcscor:value xsi:type="v8:LocalStringType"/>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:use>false</dcscor:use>
+				<dcscor:parameter>Видимость</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Доступность</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+			<dcscor:item xsi:type="SettingsParameterValue">
+				<dcscor:parameter>Отображать</dcscor:parameter>
+				<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+			</dcscor:item>
+		</appearance>
+	</item>
+</ConditionalAppearance>

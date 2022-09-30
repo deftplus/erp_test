@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗначениеСтатуса</dataPath>
+			<field>ЗначениеСтатуса</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение статуса</v8:content>
+				</v8:item>
+			</title>
+			<valueType>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</valueType>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Статус</dataPath>
+			<field>Статус</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РегистрМатрицыПолномочий.ШаблонДокументаБД,
+	РегистрМатрицыПолномочий.ШаблонДокументаБД КАК Ракурс,
+	РегистрМатрицыПолномочий.Исполняющий,
+	РегистрМатрицыПолномочий.Согласование,
+	РегистрМатрицыПолномочий.Проект,
+	РегистрМатрицыПолномочий.Организация,
+	ВложенныйЗапрос.ЗначениеЗаблокировано,
+	ВложенныйЗапрос.Ссылка КАК ДокументОбласти,
+	ВЫБОР
+		КОГДА ВложенныйЗапрос.ИндексСостояния ЕСТЬ NULL 
+				ИЛИ ВложенныйЗапрос.ИндексСостояния = 0
+			ТОГДА "Черновик"
+		ИНАЧЕ ВЫБОР
+				КОГДА ВложенныйЗапрос.ИндексСостояния = 1
+					ТОГДА "Выполняется"
+				ИНАЧЕ ВЫБОР
+						КОГДА ВложенныйЗапрос.ИндексСостояния = 3
+							ТОГДА "Утвержден"
+						ИНАЧЕ ВЫБОР
+								КОГДА ВложенныйЗапрос.ИндексСостояния = 2
+									ТОГДА "Отклонен"
+							КОНЕЦ
+					КОНЕЦ
+			КОНЕЦ
+	КОНЕЦ КАК Статус
+ПОМЕСТИТЬ ОбластиДанных
+ИЗ
+	РегистрСведений.РегистрМатрицыПолномочий КАК РегистрМатрицыПолномочий
+		ЛЕВОЕ СОЕДИНЕНИЕ (ВЫБРАТЬ
+			СогласованиеОбластиДанных.Ссылка КАК Ссылка,
+			СогласованиеОбластиДанных.ЗначениеЗаблокировано КАК ЗначениеЗаблокировано,
+			СогласованиеОбластиДанных.ИндексСостояния КАК ИндексСостояния,
+			СогласованиеОбластиДанных.Область КАК Область,
+			ИСТИНА КАК СостояниеПроверки,
+			СогласованиеОбластиДанных.Организация КАК Организация,
+			СогласованиеОбластиДанных.Проект КАК Проект
+		ИЗ
+			Документ.РакурсДанных КАК СогласованиеОбластиДанных
+		ГДЕ
+			СогласованиеОбластиДанных.Сценарий = &amp;Сценарий
+			И СогласованиеОбластиДанных.ПериодОтчета = &amp;ПериодСценария) КАК ВложенныйЗапрос
+		ПО РегистрМатрицыПолномочий.ШаблонДокументаБД = ВложенныйЗапрос.Область
+			И РегистрМатрицыПолномочий.Организация = ВложенныйЗапрос.Организация
+			И РегистрМатрицыПолномочий.Проект = ВложенныйЗапрос.Проект
+ГДЕ
+	РегистрМатрицыПолномочий.ДокументБД = &amp;ТипКлючевогоОбъектаРакурс
+	И РегистрМатрицыПолномочий.ВерсияРегламентаПодготовкиОтчетности = &amp;ВерсияРегламента
+	И ВЫРАЗИТЬ(РегистрМатрицыПолномочий.ШаблонДокументаБД КАК Справочник.ОбластиДанныхВидовОтчетов).Владелец В ИЕРАРХИИ (&amp;Модель)
+
+
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	"Черновик" КАК Статус,
+	1 КАК ЗначениеСтатуса
+ИЗ
+	ОбластиДанных КАК ОбластиДанных
+ГДЕ
+	ОбластиДанных.Статус = "Черновик"
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Утвержден",
+	1
+ИЗ
+	ОбластиДанных КАК ОбластиДанных
+ГДЕ
+	ОбластиДанных.Статус = "Утвержден"
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Отклонен",
+	1
+ИЗ
+	ОбластиДанных КАК ОбластиДанных
+ГДЕ
+	ОбластиДанных.Статус = "Отклонен"
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Выполняется",
+	1
+ИЗ
+	ОбластиДанных КАК ОбластиДанных
+ГДЕ
+	ОбластиДанных.Статус = "Выполняется"</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ЗначениеСтатуса</dataPath>
+		<expression>Количество(ЗначениеСтатуса)</expression>
+	</totalField>
+	<parameter>
+		<name>ПериодСценария</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период сценария</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Периоды</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Сценарий</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Сценарий</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.Сценарии</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВерсияРегламента</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Версия регламента</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВерсииРегламентовПодготовкиОтчетности</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ТипКлючевогоОбъектаРакурс</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Тип ключевого объекта ракурс</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ДокументыБД</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.СправочникиБД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Модель</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Модель</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ВидыОтчетов</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗначениеСтатуса</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Стаус</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ВерсияРегламента</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>ТипКлючевогоОбъектаРакурс</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ТипДиаграммы</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:ChartType">Pie3D</dcscor:value>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.ВидПодписей</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:ChartLabelType">ValuePercent</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ОтображатьТаблицуДанных</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.Окантовка</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.Градиент</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>ТипДиаграммы.ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:GhostWhite</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.РасположениеЛегенды</dcscor:parameter>
+						<dcscor:value xsi:type="dcsset:DataCompositionChartLegendPlacement">Bottom</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.РежимСглаживания</dcscor:parameter>
+						<dcscor:value xmlns:d7p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d7p1:ChartSplineMode">SmoothCurve</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТипДиаграммы.РежимПолупрозрачности</dcscor:parameter>
+						<dcscor:value xmlns:d7p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d7p1:ChartSemitransparencyMode">Use</dcscor:value>
+					</dcscor:item>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статистика</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemChart">
+				<dcsset:series>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Статус</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>Статус</dcsset:field>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:SelectedItemField">
+							<dcsset:field>ЗначениеСтатуса</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+				</dcsset:series>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЗначениеСтатуса</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:conditionalAppearance>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>Статус</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>ЗначениеСтатуса</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Выполняется</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#99CCFF</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#99CCFF</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ЗначениеСтатуса</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>Статус</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Утвержден</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">web:Lime</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ЗначениеСтатуса</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>Статус</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Черновик</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">#CCFFCC</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">web:Gainsboro</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:selection>
+							<dcsset:item>
+								<dcsset:field>ЗначениеСтатуса</dcsset:field>
+							</dcsset:item>
+							<dcsset:item>
+								<dcsset:field>Статус</dcsset:field>
+							</dcsset:item>
+						</dcsset:selection>
+						<dcsset:filter>
+							<dcsset:item xsi:type="dcsset:FilterItemComparison">
+								<dcsset:left xsi:type="dcscor:Field">Статус</dcsset:left>
+								<dcsset:comparisonType>Contains</dcsset:comparisonType>
+								<dcsset:right xsi:type="xs:string">Отклонен</dcsset:right>
+							</dcsset:item>
+						</dcsset:filter>
+						<dcsset:appearance>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:use>false</dcscor:use>
+								<dcscor:parameter>ЦветФона</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">web:Salmon</dcscor:value>
+							</dcscor:item>
+							<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+								<dcscor:parameter>ЦветВДиаграмме</dcscor:parameter>
+								<dcscor:value xsi:type="v8ui:Color">auto</dcscor:value>
+							</dcscor:item>
+						</dcsset:appearance>
+					</dcsset:item>
+				</dcsset:conditionalAppearance>
+			</dcsset:item>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

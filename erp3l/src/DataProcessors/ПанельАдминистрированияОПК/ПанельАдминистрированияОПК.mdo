@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6f02098d-e255-4b79-b9aa-e52b3c990a48">
+  <producedTypes>
+    <objectType typeId="cd698b2d-ec30-4ad9-a9c4-4cb53b83eb7c" valueTypeId="4faf7270-f182-4b36-b554-ff669e6fc342"/>
+    <managerType typeId="a6f72a98-4578-42f9-9c41-1fb8aa3c19e4" valueTypeId="a1e2601a-f774-4de4-8bb2-780a4d348e60"/>
+  </producedTypes>
+  <name>ПанельАдминистрированияОПК</name>
+  <synonym>
+    <key>ru</key>
+    <value>Панель администрирования ОПК</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <forms uuid="b04edaf6-45ec-49fd-886a-a13776ce5c57">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Настройки планирования и лимитирования</value>
+    </synonym>
+    <includeHelpInContents>true</includeHelpInContents>
+    <help>
+      <pages>
+        <lang>ru</lang>
+      </pages>
+    </help>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+  <commands uuid="71164b61-3ce4-4a4c-8e7e-893f73e1cfba">
+    <name>ОперативноеПланированиеИЛимитирование</name>
+    <synonym>
+      <key>ru</key>
+      <value>Параметры планирования и лимитирования</value>
+    </synonym>
+    <group>NavigationPanelImportant</group>
+    <commandParameterType/>
+    <representation>Auto</representation>
+  </commands>
+</mdclass:DataProcessor>
