@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="89cfff4a-53cb-4d9b-89b1-cfca167b39f3">
+  <name>КазначействоУХ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Казначейство</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <explanation>
+    <key>ru</key>
+    <value> </value>
+  </explanation>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.РазделФинансы16</picture>
+  </picture>
+  <content>CommonPicture.ПодсистемаДенежныеСредства</content>
+  <content>b9352c10-b667-4dd0-87e3-b788bca33cfc</content>
+  <content>7a487319-3603-4e37-86a1-5a5314d5645a</content>
+  <content>83b6403e-3f56-4756-817d-84e76cc3c583</content>
+  <content>833941e7-4a23-414e-8e6c-92b20f1c90cc</content>
+  <content>CommonModule.ДенежныеСредстваВстраиваниеУХ</content>
+  <content>CommonModule.ДенежныеСредстваВстраиваниеУХКлиентСервер</content>
+  <content>CommonModule.УправлениеДенежнымиСредствамиУХ</content>
+  <content>CommonModule.УправлениеДенежнымиСредствамиУХВызовСервера</content>
+  <content>CommonModule.УправлениеДенежнымиСредствамиУХКлиентСервер</content>
+  <content>CommonModule.УправлениеДоговорамиУХВызовСервераПовтИсп</content>
+  <content>CommonModule.УправлениеДоговорамиУХКлиентСерверПовтИсп</content>
+  <content>506c52a8-2e63-49ae-a539-a7d1d434731d</content>
+  <content>8241f591-dd75-4659-8c9b-25215d87abe4</content>
+  <content>Role.КазначействоЕХ</content>
+  <content>DataProcessor.ГенерацияПлатежныхПоручений</content>
+  <content>DataProcessor.ГенерацияКассовыхОрдеров</content>
+  <content>DataProcessor.СозданиеОтсутствующихВерсийСоглашенийДоговоров</content>
+  <subsystems>ЦентрализованноеКазначейство</subsystems>
+  <subsystems>ДоговорыИЦенныеБумаги</subsystems>
+  <subsystems>Банк</subsystems>
+  <subsystems>Касса</subsystems>
+  <subsystems>Эквайринг</subsystems>
+  <subsystems>Подотчетники</subsystems>
+  <subsystems>ВзаимозачетыИСписаниеЗадолженности</subsystems>
+  <subsystems>ВалютныйКонтроль</subsystems>
+  <subsystems>КазначействоСправочникиНастройки</subsystems>
+</mdclass:Subsystem>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c6be66f2-b1de-4538-99a3-cf1f658e9606">
+  <name>СП_ОчисткаСообщенийОбмена</name>
+  <synonym>
+    <key>ru</key>
+    <value>Очистка сообщений обмена (СП)</value>
+  </synonym>
+  <comment>Очистка сообщений обмена</comment>
+  <methodName>CommonModule.СП_РегламентныеЗадания.ОчиститьСообщенияОбмена</methodName>
+  <description>Очистка сообщений обмена</description>
+  <key>СП_ОчисткаСообщенийОбмена</key>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="40f634ed-b6ae-4a07-b629-011c9fa0cadc">
+  <name>НалоговыйМониторинг</name>
+  <synonym>
+    <key>ru</key>
+    <value>Налоговый мониторинг</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.КорпоративнаяНалоговаяОтчетность</picture>
+  </picture>
+  <content>Document.ОтветНаЗапросНалоговогоМониторинга</content>
+  <content>DataProcessor.НалоговыйМониторинг</content>
+  <content>InformationRegister.ИзмененияОбъектовНалоговогоМониторинга</content>
+  <content>Catalog.ВидыЗапрашиваемойОтчетностиНалоговогоМониторинга</content>
+  <content>InformationRegister.ДействияПользователяНалоговогоМониторинга</content>
+  <content>Document.ЗапросДанныхНалоговогоМониторинга</content>
+  <content>Role.НалоговыйМониторинг</content>
+  <content>EventSubscription.НалоговыйМониторингРегистрацияНабора</content>
+  <content>InformationRegister.ОценкаОтветаНаЗапросНалоговогоОргана</content>
+  <content>Catalog.ОснованияДляЗапросаНалоговогоМониторинга</content>
+  <content>CommonModule.НалоговыйМониторингКлиентГлобальный</content>
+  <content>Report.СтатусОтправкиОтчетностиВФНС</content>
+  <content>ExchangePlan.НалоговыйМониторинг</content>
+  <content>Catalog.ГлавыНалоговогоКодексаНалоговогоМониторинга</content>
+  <content>CommonForm.РегламентированнаяОтчетность</content>
+  <content>Report.ОтчетОРаботеНалоговогоОргана</content>
+  <content>Report.РегламентированноеУведомлениеУчетнаяПолитика</content>
+  <content>CommonModule.НалоговыйМониторингВызовСервера</content>
+  <content>Constant.ИнтервалЗаписиДействийНалоговогоМониторинга</content>
+  <content>CommonModule.НалоговыйМониторинг</content>
+  <content>Role.ЧтениеДанныхБухгалтерииУХ</content>
+  <content>CommonCommand.ПанельОтчетовСправкиРасчеты</content>
+  <content>EventSubscription.НалоговыйМониторингРегистрация</content>
+  <content>CommonModule.ОбновлениеИнформационнойБазыНМ</content>
+  <content>EventSubscription.НалоговыйМониторингРегистрацияКонстанты</content>
+  <content>EventSubscription.НалоговыйМониторингРегистрацияДокумента</content>
+  <content>Report.ОтчетОРаботеЗапроснойСистемы</content>
+  <content>Report.РегламентированноеУведомлениеРегламентИнформационногоВзаимодействия</content>
+  <content>InformationRegister.РеквизитыПоУмолчаниюНалоговогоМониторинга</content>
+  <content>ScheduledJob.ЗавершениеСеансовИнспектора</content>
+  <content>InformationRegister.ВыгрузкиОбъектовИнспекторами</content>
+  <content>CommonModule.НалоговыйМониторингКлиент</content>
+  <content>CommonModule.НалоговыйМониторингВызовСервераПовтИсп</content>
+  <content>Catalog.РасширенияПанелиНалоговогоМониторинга</content>
+  <content>EventSubscription.НалоговыйМониторингРегистрацияУдаления</content>
+  <content>CommonPicture.СтатусыВыполненияОпераций</content>
+  <content>CommonPicture.ОбъектыМетаданныхНалоговогоМониторинга</content>
+  <content>CommonPicture.КорпоративнаяНалоговаяОтчетность</content>
+  <content>Role.ДобавлениеИзменениеОтветовНаЗапросНалоговогоМониторинга</content>
+  <content>Report.РегламентированноеУведомлениеПроведениеНалоговогоМониторинга</content>
+  <content>Report.РегламентированноеУведомлениеИнформацияОбУчастниках</content>
+  <content>Report.РегламентированноеУведомлениеОрганизацияВнутреннегоКонтроля</content>
+  <content>CommonModule.ИнтернетПоддержкаПользователейУХ</content>
+  <content>CommonModule.РегламентированнаяОтчетностьУХ</content>
+  <content>CommonModule.НалоговыйМониторингПереопределяемый</content>
+  <subsystems>СистемаУправленияРисками</subsystems>
+  <parentSubsystem>Subsystem.КорпоративнаяНалоговаяОтчетность</parentSubsystem>
+</mdclass:Subsystem>

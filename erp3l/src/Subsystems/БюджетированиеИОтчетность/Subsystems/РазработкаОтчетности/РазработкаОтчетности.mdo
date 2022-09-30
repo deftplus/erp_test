@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="83b717f7-73e8-4371-985d-eae093766d4b">
+  <name>РазработкаОтчетности</name>
+  <synonym>
+    <key>ru</key>
+    <value>Разработка отчетности</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ВидыОтчетов</picture>
+  </picture>
+  <content>Catalog.ВидыОтчетов</content>
+  <content>Catalog.БланкиОтчетов</content>
+  <content>Catalog.ПравилаОбработки</content>
+  <content>Catalog.ПравилаПроверки</content>
+  <content>DataProcessor.НастройкаСтруктурыОтчета</content>
+  <content>Catalog.ГруппыДоступаКВидамОтчетов</content>
+  <content>Enum.ЭлементыСтруктурыОтчета</content>
+  <content>DataProcessor.ИмпортВидовОтчетовИзЭлектронныхТаблицMicrosoftExcel</content>
+  <content>DataProcessor.МастерСозданияВидаОтчетаОСВ</content>
+  <content>Catalog.ГруппыКонтрагентов</content>
+  <content>Report.ОтчетОСвязяхМеждуОтчетами</content>
+  <content>Report.ГрафическийОтчетСвязейОтчетов</content>
+  <content>FunctionalOption.ПроверятьУтверждениеДанных</content>
+  <content>FunctionalOption.ПроверятьУтверждениеНастроекОтчетов</content>
+  <content>InformationRegister.СтатусыОбъектовИнвестирования</content>
+  <content>CommonModule.РегламентыВызовСервера</content>
+  <content>CommonModule.РегламентыКлиентСервер</content>
+  <content>DataProcessor.ВыгрузкаЗагрузкаМетодическихМоделей</content>
+  <content>DataProcessor.ПереносПоказателейОтчетов</content>
+  <content>InformationRegister.ТекстыНаДополнительныхЯзыках</content>
+  <content>Report.СтруктураРегламентаОтчетности</content>
+  <content>Report.СтруктураРегламентаОтчетностиБПМСФО</content>
+  <content>Report.СоставИнвесторовПоПериметру</content>
+  <content>Report.СоставИнвесторовПоПериодуСценарию</content>
+  <content>DataProcessor.ПереносБюджетированияЕРП</content>
+  <parentSubsystem>Subsystem.БюджетированиеИОтчетность</parentSubsystem>
+</mdclass:Subsystem>

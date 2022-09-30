@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="9b22596f-0adb-461f-9412-a48072af2178">
+  <name>УправлениеНСИ</name>
+  <synonym>
+    <key>ru</key>
+    <value>Управление НСИ</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.ЗаявкаНаИзменениеНСИ</content>
+  <content>Report.СинхронизацияНСИ</content>
+  <content>DataProcessor.ОбменНСИ</content>
+  <content>DataProcessor.ПоискИСлияниеДублирующихсяЭлементов</content>
+  <content>DataProcessor.СинхронизацияЭлементов</content>
+  <content>InformationRegister.ИзмененныеОбъектыДляВыгрузки</content>
+  <content>InformationRegister.ПротоколыОбъектов</content>
+  <content>FunctionalOption.УправлениеНСИ</content>
+  <content>Catalog.СправочникиБД</content>
+  <content>Catalog.ПоказателиОбъектовБД</content>
+  <content>CommonAttribute.НСИ_Автор</content>
+  <content>CommonAttribute.НСИ_ВИБ</content>
+  <content>CommonAttribute.НСИ_ДатаИзменения</content>
+  <content>CommonAttribute.НСИ_НеАктивный</content>
+  <content>CommonAttribute.НСИ_ПоследнийРедактировавший</content>
+  <content>CommonAttribute.НСИ_Состояние</content>
+  <content>CommonAttribute.НСИ_ЭталонныйЭлемент</content>
+  <content>CommonAttribute.НСИ_ТребуетСинхронизации</content>
+  <content>CommonForm.ФормаИзмененияРеквизитовНСИ</content>
+  <content>CommonCommand.УправлениеЦНСИ_ВвестиЗаявкуНаИзменение</content>
+  <content>CommonCommand.УправлениеЦНСИ_ВвестиЗаявкуНаУдаление</content>
+  <content>CommonCommand.УправлениеЦНСИ_ОткрытьСписокЗаявокНаИзменение</content>
+  <content>CommonCommand.УправлениеЦНСИ_ПоказатьРеквизитыЦНСИ</content>
+  <content>CommandGroup.РеквизитыНСИ</content>
+  <content>CommandGroup.УправлениеЦНСИ</content>
+  <content>CommonPicture.НСИ</content>
+  <content>CommonPicture.ЦНСИ_ЗаявкаНаУдаление</content>
+  <content>Constant.ИспользоватьУправлениеНСИ</content>
+  <content>CommonCommand.ИзменитьРеквизиты</content>
+  <content>CommonModule.УправлениеНСИ</content>
+  <content>EventSubscription.ПередЗаписьюУстановитьРеквизитыКонтроляНСИ</content>
+  <content>EventSubscription.ПриЗаписиОтметитьИзменениеКонтролируемогоЭлемента</content>
+  <parentSubsystem>Subsystem.ИнтеграцияСВнешнимиИсточникамиДанных</parentSubsystem>
+</mdclass:Subsystem>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>DataProcessor.СП_Настройки.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsPlacement>
+    <placementFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>DataProcessor.СП_Настройки.Command.Настройки</commands>
+    </placementFragments>
+  </commandsPlacement>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>Catalog.СП_Кластеры.StandardCommand.OpenList</commands>
+      <commands>Catalog.СП_ОбъектыОбмена.StandardCommand.OpenList</commands>
+      <commands>Catalog.СП_ЗаданияОбмена.StandardCommand.OpenList</commands>
+      <commands>Catalog.СП_СообщенияОбмена.StandardCommand.OpenList</commands>
+      <commands>Catalog.СП_СхемыДанных.StandardCommand.OpenList</commands>
+      <commands>DataProcessor.СП_Настройки.Command.Настройки</commands>
+      <commands>InformationRegister.СП_ТаблицаСсылок.StandardCommand.OpenList</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

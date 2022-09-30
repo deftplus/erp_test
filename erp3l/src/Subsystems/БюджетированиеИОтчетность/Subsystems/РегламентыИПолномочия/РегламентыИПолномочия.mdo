@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="b2d08faf-935b-46c9-b7ce-778e1014fa8c">
+  <name>РегламентыИПолномочия</name>
+  <synonym>
+    <key>ru</key>
+    <value>Настройка регламентов обработки отчетности</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <explanation>
+    <key>ru</key>
+    <value> </value>
+  </explanation>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ЭтапыПроцесса</picture>
+  </picture>
+  <content>CommonPicture.ЗаменитьПользователя</content>
+  <content>CommonModule.УправлениеРабочимиПроцессамиУХ</content>
+  <content>Catalog.ВидыОрганизационныхЕдиниц</content>
+  <content>Catalog.ШаблоныПроцессов</content>
+  <content>Catalog.УдалитьЭтапыПроцессов</content>
+  <content>Document.УправлениеПериодомСценария</content>
+  <content>Enum.СостоянияЭтаповПроцессов</content>
+  <content>Enum.СпособыФормированияОтчетов</content>
+  <content>InformationRegister.СостоянияВыполненияПроцессов</content>
+  <content>Catalog.ВерсииРегламентовПодготовкиОтчетности</content>
+  <content>Enum.ТипыОрганизационныхЕдиниц</content>
+  <content>InformationRegister.ОрганизационныеЕдиницыЭтаповПроцессов</content>
+  <content>Enum.КритерииУтвержденияЭтапаПроцесса</content>
+  <parentSubsystem>Subsystem.БюджетированиеИОтчетность</parentSubsystem>
+</mdclass:Subsystem>

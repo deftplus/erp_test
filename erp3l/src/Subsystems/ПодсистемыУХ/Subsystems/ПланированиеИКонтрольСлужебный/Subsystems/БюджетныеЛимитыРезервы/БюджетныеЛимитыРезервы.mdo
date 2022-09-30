@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="cb93709b-47d0-4868-a4d5-c1a872882f61">
+  <name>БюджетныеЛимитыРезервы</name>
+  <synonym>
+    <key>ru</key>
+    <value>Бюджетные лимиты/резервы</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <content>CommonModule.КонтрольЛимитовУХ</content>
+  <content>CommonModule.КонтрольЛимитовУХПовтИсп</content>
+  <content>Role.НастройкаПараметровЛимитирования</content>
+  <content>AccumulationRegister.ЛимитыПоБюджетам</content>
+  <content>InformationRegister.ПараметрыЛимитирования</content>
+  <content>InformationRegister.ПараметрыКонтроляЛимитаСтатейБюджетов</content>
+  <content>Report.ОтчетПоЛимитам</content>
+  <content>Enum.УдалитьСпособыУстановкиЛимитов</content>
+  <content>Enum.СпособыОпределенияВалютыЛимитирования</content>
+  <content>InformationRegister.НазначениеРезервов</content>
+  <content>Constant.РегистрироватьДефицитРезерва</content>
+  <content>CommonForm.ФормаВыбораПериодаЛимитирования</content>
+  <content>InformationRegister.ПараметрыЛимитированияЦФО</content>
+  <subsystems>УстановкаЛимитовПоДаннымБюджетирования</subsystems>
+  <subsystems>КорректировкаЛимитов</subsystems>
+  <subsystems>ПереносЛимитов</subsystems>
+  <parentSubsystem>Subsystem.ПодсистемыУХ.Subsystem.ПланированиеИКонтрольСлужебный</parentSubsystem>
+</mdclass:Subsystem>

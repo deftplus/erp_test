@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>Report.СверкаВГО.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>DataProcessor.УрегулированиеДокументов.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Constant.ФормироватьВстречныйДокументУХ.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsPlacement>
+    <placementFragments>
+      <group>ActionsPanelTools</group>
+      <commands>Report.СверкаВГО.StandardCommand.Open</commands>
+    </placementFragments>
+  </commandsPlacement>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>Report.СверкаВГО.Command.СверкаВГО</commands>
+      <commands>DataProcessor.УрегулированиеДокументов.Command.УрегулированиеДокументов</commands>
+      <commands>Document.ЭлиминацияОпераций.StandardCommand.OpenList</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>ActionsPanelTools</group>
+      <commands>Report.СверкаВГО.StandardCommand.Open</commands>
+      <commands>DataProcessor.УрегулированиеДокументов.StandardCommand.Open</commands>
+      <commands>Constant.ФормироватьВстречныйДокументУХ.StandardCommand.Open</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

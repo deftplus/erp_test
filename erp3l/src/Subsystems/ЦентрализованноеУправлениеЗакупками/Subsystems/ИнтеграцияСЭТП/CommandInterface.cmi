@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>DataProcessor.УправлениеИнтеграциейЦУЗсЭТП.Command.ОбменСЭТП</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsPlacement>
+    <placementFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>DataProcessor.УправлениеИнтеграциейЦУЗсЭТП.Command.ОбменСЭТП</commands>
+    </placementFragments>
+  </commandsPlacement>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>DataProcessor.УправлениеИнтеграциейЦУЗсЭТП.Command.ОбменСЭТП</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>DataProcessor.ЗагрузкаКлассификаторовЕИС.Command.ЗагрузкаКлассификаторовЕИС</commands>
+      <commands>Document.РегистрацияРазмераКонтрагентаДляЕИС.StandardCommand.OpenList</commands>
+      <commands>Document.РегистрацияОбъемаЗакупокУМСП.StandardCommand.OpenList</commands>
+      <commands>Document.СведенияОбИсполненииДоговора.StandardCommand.OpenList</commands>
+      <commands>CommonCommand.КлассификаторОКВЭД2</commands>
+      <commands>CommonCommand.КлассификаторОКПД2</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

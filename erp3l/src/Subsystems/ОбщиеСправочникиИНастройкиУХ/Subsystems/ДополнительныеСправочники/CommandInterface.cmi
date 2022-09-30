@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>Catalog.ДоговорыКонтрагентов.Command.ДоговорыСКлиентами</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Catalog.ДоговорыКонтрагентов.Command.ДоговорыСПоставщиками</command>
+      <visible/>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelOrdinary</group>
+      <commands>Catalog.Контрагенты.StandardCommand.OpenList</commands>
+      <commands>Catalog.СтатьиДвиженияДенежныхСредств.StandardCommand.OpenList</commands>
+      <commands>Catalog.СтатьиДоходовИРасходов.StandardCommand.OpenList</commands>
+      <commands>Catalog.СтатьиДвиженияРесурсов.StandardCommand.OpenList</commands>
+      <commands>Catalog.ВидыОрганизационныхЕдиниц.StandardCommand.OpenList</commands>
+      <commands>Catalog.ФункциональныеНаправления.StandardCommand.OpenList</commands>
+      <commands>Catalog.ДоговорыКонтрагентов.Command.ДоговорыСКлиентами</commands>
+      <commands>Catalog.ДоговорыКонтрагентов.Command.ДоговорыСПоставщиками</commands>
+      <commands>Catalog.ПроизводственныеКалендари.StandardCommand.OpenList</commands>
+      <commands>Catalog.ШаблоныЗаполнения.StandardCommand.OpenList</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

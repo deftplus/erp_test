@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2b7b8a93-40f7-4079-b4f5-f4027917a768">
+  <name>СП_ОтправкаИсходящихСообщений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Отправка исходящих сообщений (СП)</value>
+  </synonym>
+  <methodName>CommonModule.СП_РегламентныеЗадания.ОтправитьИсходящиеСообщения</methodName>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

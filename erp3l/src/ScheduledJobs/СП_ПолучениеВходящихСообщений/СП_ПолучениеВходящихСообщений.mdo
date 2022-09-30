@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="fb8803c2-c751-4d45-a774-5e4e0e6c8d9f">
+  <name>СП_ПолучениеВходящихСообщений</name>
+  <synonym>
+    <key>ru</key>
+    <value>Получение входящих сообщений (СП)</value>
+  </synonym>
+  <methodName>CommonModule.СП_РегламентныеЗадания.ПолучитьВходящиеСообщения</methodName>
+  <description>Получение входящих сообщений (СП)</description>
+  <key>СП_ПолучениеВходящихСообщений</key>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>

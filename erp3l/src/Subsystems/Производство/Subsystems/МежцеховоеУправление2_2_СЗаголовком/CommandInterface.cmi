@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cmi:CommandInterface xmlns:cmi="http://g5.1c.ru/v8/dt/cmi">
+  <commandsVisibility>
+    <visibilityFragments>
+      <command>Document.ЭтапПроизводства2_2.StandardCommand.OpenList</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Document.ЗаказНаПроизводство2_2.StandardCommand.Create</command>
+      <visible>
+        <common>true</common>
+      </visible>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>Report.ПартииВПроизводстве.StandardCommand.Open</command>
+      <visible/>
+    </visibilityFragments>
+    <visibilityFragments>
+      <command>100:f432e4ac-daca-405e-b3bc-88db5d1077c3</command>
+      <visible/>
+    </visibilityFragments>
+  </commandsVisibility>
+  <commandsOrder>
+    <orderFragments>
+      <group>NavigationPanelImportant</group>
+      <commands>CommonCommand.УправлениеОчередьюЗаказовНаПроизводство</commands>
+      <commands>CommonCommand.ДиспетчированиеЭтаповПроизводства</commands>
+    </orderFragments>
+    <orderFragments>
+      <group>ActionsPanelTools</group>
+      <commands>100:f432e4ac-daca-405e-b3bc-88db5d1077c3</commands>
+    </orderFragments>
+  </commandsOrder>
+</cmi:CommandInterface>

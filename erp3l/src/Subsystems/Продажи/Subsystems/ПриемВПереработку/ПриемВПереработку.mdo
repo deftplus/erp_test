@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="28ef65d6-26eb-4613-a7b5-a9c743df7d62">
+  <name>ПриемВПереработку</name>
+  <synonym>
+    <key>ru</key>
+    <value>Прием в переработку</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Subcontracting service delivered</value>
+  </synonym>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <content>Document.ВозвратСырьяДавальцу</content>
+  <content>Document.ЗаказДавальца</content>
+  <content>Document.ОтчетДавальцу</content>
+  <content>Document.ПередачаДавальцу</content>
+  <content>Document.ПоступлениеСырьяОтДавальца</content>
+  <content>Enum.СтатусыЗаказовДавальцев</content>
+  <content>Report.РасшифровкаСтоимостиПереработки</content>
+  <content>CommonCommand.ЖурналДокументовПриемаВПереработку</content>
+  <content>CommonCommand.ДокументыПриемаВПереработкуКОформлению</content>
+  <content>DataProcessor.ЖурналДокументовПереработки</content>
+  <parentSubsystem>Subsystem.Продажи</parentSubsystem>
+</mdclass:Subsystem>

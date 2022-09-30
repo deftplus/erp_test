@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:ScheduledJob xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="2c0251fc-5f06-413d-96e6-019d851b4285">
+  <name>СП_ОбновлениеСхемДанных</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обновление схем данных (СП)</value>
+  </synonym>
+  <methodName>CommonModule.СП_РегламентныеЗадания.ОбновитьСхемыДанных</methodName>
+  <description>Обновление схем данных</description>
+  <key>СП_ОбновлениеСхемДанных</key>
+  <use>true</use>
+  <predefined>true</predefined>
+  <restartCountOnFailure>3</restartCountOnFailure>
+  <restartIntervalOnFailure>10</restartIntervalOnFailure>
+</mdclass:ScheduledJob>
