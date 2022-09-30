@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7d56f436-7887-4217-b56e-bb630e6bd600">
+  <producedTypes>
+    <managerType typeId="bd658e84-e9f2-4825-b0c1-d4bf3d6a6b13" valueTypeId="d8dbb4e2-050e-4667-abb6-59ff3f83d239"/>
+    <valueManagerType typeId="98535d2e-9a5d-418f-ac5c-875ec84c0abc" valueTypeId="c820a7ed-a118-4cdf-a250-76685bc87542"/>
+    <valueKeyType typeId="376ee351-c8d3-58aa-9deb-12f1392bbed9" valueTypeId="2745f443-5602-55dd-869d-387e3d38ac04"/>
+  </producedTypes>
+  <name>УчетВФункциональнойВалюте</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет в функциональной валюте</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>Accounting in functional currency</value>
+  </synonym>
+  <type>
+    <types>EnumRef.ВидыУчетаВФункциональнойВалюте</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <fillChecking>ShowError</fillChecking>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

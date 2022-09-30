@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="8b24a7f8-0da5-4284-bd63-730614ec2832">
+  <name>УправлениеЦНСИ_ВвестиЗаявкуНаИзменение</name>
+  <synonym>
+    <key>ru</key>
+    <value>Ввести заявку на изменение элемента</value>
+  </synonym>
+  <group>CommandGroup.УправлениеЦНСИ</group>
+  <commandParameterType>
+    <types>CatalogRef.Номенклатура</types>
+    <types>CatalogRef.Валюты</types>
+    <types>CatalogRef.СтатьиДоходовИРасходов</types>
+    <types>CatalogRef.ДоговорыКонтрагентов</types>
+    <types>CatalogRef.СтатьиДвиженияРесурсов</types>
+    <types>CatalogRef.Организации</types>
+    <types>CatalogRef.Пользователи</types>
+    <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+    <types>CatalogRef.Контрагенты</types>
+    <types>CatalogRef.Удалить_НоменклатурныеГруппыМСФО</types>
+    <types>CatalogRef.Проекты</types>
+    <types>CatalogRef.Периоды</types>
+    <types>CatalogRef.Сценарии</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ОтветитьНаКомментарий</picture>
+  </picture>
+</mdclass:CommonCommand>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="bb621cef-de5b-4e5d-968d-092db498ec9a">
+  <producedTypes>
+    <managerType typeId="453e5b2c-0cb3-466a-8acb-334ebd218266" valueTypeId="95505fbe-2fc1-4a87-b8aa-07116c7b17e6"/>
+    <valueManagerType typeId="2561a0eb-dedb-4709-875b-2241a1c1d35c" valueTypeId="0d5adca4-b1c7-421b-b8df-218afc68107a"/>
+    <valueKeyType typeId="dfc3744a-dc95-5362-a4db-97bad47e0937" valueTypeId="bd554f94-4f3a-5d51-88c5-f03cc137c4d8"/>
+  </producedTypes>
+  <name>УдалитьИспользоватьОсобыйПорядокУчетаНДСПриПроизводствеДЦ</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Использовать особый порядок учета НДС при производстве длит. цикла</value>
+  </synonym>
+  <synonym>
+    <key>en</key>
+    <value>(not used) Use special procedure of VAT accounting during long cycle production</value>
+  </synonym>
+  <type>
+    <types>Boolean</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <explanation>
+    <key>ru</key>
+    <value>При производстве продукции с длительным циклом производства определять налоговую базу по НДС в соответствии с п.13 ст. 167 НК</value>
+  </explanation>
+  <explanation>
+    <key>en</key>
+    <value>Determine VAT tax base according to cl.13 art. 167 of TC while manufacturing products with long production cycle</value>
+  </explanation>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

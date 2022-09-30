@@ -1,0 +1,907 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form:Form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:form="http://g5.1c.ru/v8/dt/form">
+  <title>
+    <key>ru</key>
+    <value>Список настраиваемых отчетов</value>
+  </title>
+  <items xsi:type="form:Table">
+    <name>СписокОтчетов</name>
+    <id>1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <dataPath xsi:type="form:DataPath">
+      <segments>СписокОтчетов</segments>
+    </dataPath>
+    <skipOnInput>false</skipOnInput>
+    <titleLocation>None</titleLocation>
+    <items xsi:type="form:FormField">
+      <name>НастраиваемыйОтчет</name>
+      <id>8</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.НастраиваемыйОтчет</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>НастраиваемыйОтчетExtendedTooltip</name>
+        <id>31</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>НастраиваемыйОтчетКонтекстноеМеню</name>
+        <id>9</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <horizontalAlign>Left</horizontalAlign>
+      <editMode>Enter</editMode>
+      <fixingInTable>Left</fixingInTable>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Показатель</name>
+      <id>26</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Показатель</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПоказательExtendedTooltip</name>
+        <id>32</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПоказательКонтекстноеМеню</name>
+        <id>27</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Значение</name>
+      <id>28</id>
+      <title>
+        <key>ru</key>
+        <value>Значение</value>
+      </title>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Знач</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ЗначениеExtendedTooltip</name>
+        <id>33</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ЗначениеКонтекстноеМеню</name>
+        <id>29</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <showInFooter>true</showInFooter>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>ВидОтчета</name>
+      <id>4</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.ВидОтчета</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ВидОтчетаExtendedTooltip</name>
+        <id>34</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ВидОтчетаКонтекстноеМеню</name>
+        <id>5</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Номер</name>
+      <id>10</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Номер</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>НомерExtendedTooltip</name>
+        <id>35</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>НомерКонтекстноеМеню</name>
+        <id>11</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Организация</name>
+      <id>12</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Организация</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ОрганизацияExtendedTooltip</name>
+        <id>36</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ОрганизацияКонтекстноеМеню</name>
+        <id>13</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Период</name>
+      <id>16</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Период</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>ПериодExtendedTooltip</name>
+        <id>37</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>ПериодКонтекстноеМеню</name>
+        <id>17</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <items xsi:type="form:FormField">
+      <name>Сценарий</name>
+      <id>20</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <dataPath xsi:type="form:DataPath">
+        <segments>СписокОтчетов.Сценарий</segments>
+      </dataPath>
+      <extendedTooltip>
+        <name>СценарийExtendedTooltip</name>
+        <id>38</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СценарийКонтекстноеМеню</name>
+        <id>21</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>LabelField</type>
+      <editMode>Enter</editMode>
+      <showInHeader>true</showInHeader>
+      <headerHorizontalAlign>Left</headerHorizontalAlign>
+      <extInfo xsi:type="form:LabelFieldExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+      </extInfo>
+    </items>
+    <autoCommandBar>
+      <name>СписокОтчетовКоманднаяПанель</name>
+      <id>3</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <horizontalAlign>Left</horizontalAlign>
+      <autoFill>true</autoFill>
+    </autoCommandBar>
+    <handlers>
+      <event>Selection</event>
+      <name>СписокОтчетовВыбор</name>
+    </handlers>
+    <searchStringAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>СписокОтчетовСтрокаПоиска</name>
+      <id>39</id>
+      <extendedTooltip>
+        <name>СписокОтчетовСтрокаПоискаРасширеннаяПодсказка</name>
+        <id>41</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СписокОтчетовСтрокаПоискаКонтекстноеМеню</name>
+        <id>40</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <extInfo xsi:type="form:SearchStringAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchStringAddition>
+    <viewStatusAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>СписокОтчетовСостояниеПросмотра</name>
+      <id>42</id>
+      <extendedTooltip>
+        <name>СписокОтчетовСостояниеПросмотраРасширеннаяПодсказка</name>
+        <id>44</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СписокОтчетовСостояниеПросмотраКонтекстноеМеню</name>
+        <id>43</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>ViewStatusAddition</type>
+      <extInfo xsi:type="form:ViewStatusAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </viewStatusAddition>
+    <searchControlAddition>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <name>СписокОтчетовУправлениеПоиском</name>
+      <id>45</id>
+      <extendedTooltip>
+        <name>СписокОтчетовУправлениеПоискомРасширеннаяПодсказка</name>
+        <id>47</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <type>Label</type>
+        <autoMaxWidth>true</autoMaxWidth>
+        <autoMaxHeight>true</autoMaxHeight>
+        <extInfo xsi:type="form:LabelDecorationExtInfo">
+          <horizontalAlign>Left</horizontalAlign>
+        </extInfo>
+      </extendedTooltip>
+      <contextMenu>
+        <name>СписокОтчетовУправлениеПоискомКонтекстноеМеню</name>
+        <id>46</id>
+        <visible>true</visible>
+        <enabled>true</enabled>
+        <userVisible>
+          <common>true</common>
+        </userVisible>
+        <autoFill>true</autoFill>
+      </contextMenu>
+      <type>SearchControlAddition</type>
+      <extInfo xsi:type="form:SearchControlAdditionExtInfo">
+        <autoMaxWidth>true</autoMaxWidth>
+      </extInfo>
+    </searchControlAddition>
+    <extendedTooltip>
+      <name>СписокОтчетовExtendedTooltip</name>
+      <id>30</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <type>Label</type>
+      <autoMaxWidth>true</autoMaxWidth>
+      <autoMaxHeight>true</autoMaxHeight>
+      <extInfo xsi:type="form:LabelDecorationExtInfo">
+        <horizontalAlign>Left</horizontalAlign>
+      </extInfo>
+    </extendedTooltip>
+    <contextMenu>
+      <name>СписокОтчетовКонтекстноеМеню</name>
+      <id>2</id>
+      <visible>true</visible>
+      <enabled>true</enabled>
+      <userVisible>
+        <common>true</common>
+      </userVisible>
+      <autoFill>true</autoFill>
+    </contextMenu>
+    <changeRowOrder>true</changeRowOrder>
+    <autoMaxWidth>true</autoMaxWidth>
+    <autoMaxHeight>true</autoMaxHeight>
+    <autoMaxRowsCount>true</autoMaxRowsCount>
+    <selectionMode>MultiRow</selectionMode>
+    <header>true</header>
+    <headerHeight>1</headerHeight>
+    <footer>true</footer>
+    <footerHeight>1</footerHeight>
+    <horizontalScrollBar>AutoUse</horizontalScrollBar>
+    <verticalScrollBar>AutoUse</verticalScrollBar>
+    <horizontalLines>true</horizontalLines>
+    <verticalLines>true</verticalLines>
+    <useAlternationRowColor>true</useAlternationRowColor>
+    <searchOnInput>Auto</searchOnInput>
+    <initialListView>Auto</initialListView>
+    <horizontalStretch>true</horizontalStretch>
+    <verticalStretch>true</verticalStretch>
+    <enableStartDrag>true</enableStartDrag>
+    <rowPictureDataPath xsi:type="form:DataPath">
+      <segments>СписокОтчетов.DefaultPicture</segments>
+    </rowPictureDataPath>
+    <searchStringLocation>None</searchStringLocation>
+    <viewStatusLocation>None</viewStatusLocation>
+    <searchControlLocation>None</searchControlLocation>
+    <extInfo xsi:type="form:DynamicListTableExtInfo">
+      <autoRefreshPeriod>60</autoRefreshPeriod>
+      <period>
+        <startDate>0001-01-01T00:00:00</startDate>
+        <endDate>0001-01-01T00:00:00</endDate>
+      </period>
+      <topLevelParent xsi:type="core:UndefinedValue"/>
+      <showRoot>true</showRoot>
+    </extInfo>
+  </items>
+  <autoCommandBar>
+    <name>ФормаКоманднаяПанель</name>
+    <id>-1</id>
+    <visible>true</visible>
+    <enabled>true</enabled>
+    <userVisible>
+      <common>true</common>
+    </userVisible>
+    <horizontalAlign>Left</horizontalAlign>
+    <autoFill>true</autoFill>
+  </autoCommandBar>
+  <handlers>
+    <event>OnCreateAtServer</event>
+    <name>ПриСозданииНаСервере</name>
+  </handlers>
+  <autoUrl>true</autoUrl>
+  <group>Vertical</group>
+  <autoFillCheck>true</autoFillCheck>
+  <enabled>true</enabled>
+  <verticalScroll>UseIfNecessary</verticalScroll>
+  <showTitle>true</showTitle>
+  <showCloseButton>true</showCloseButton>
+  <attributes>
+    <name>СписокОтчетов</name>
+    <title>
+      <key>ru</key>
+      <value>Список отчетов</value>
+    </title>
+    <id>1</id>
+    <valueType>
+      <types>DynamicList</types>
+    </valueType>
+    <view>
+      <common>true</common>
+    </view>
+    <edit>
+      <common>true</common>
+    </edit>
+    <extInfo xsi:type="form:DynamicListExtInfo">
+      <queryText>ВЫБРАТЬ
+	ЗначенияПоказателей.Версия.Регистратор.Ссылка КАК НастраиваемыйОтчет,
+	ЗначенияПоказателей.Версия.Регистратор.Номер КАК Номер,
+	ЗначенияПоказателей.Версия.Организация КАК Организация,
+	ЗначенияПоказателей.Версия.Представление КАК ОрганизацияПредставление,
+	ЗначенияПоказателей.Версия.ПериодОтчета КАК Период,
+	ЗначенияПоказателей.ИтоговоеЗначение КАК ИтоговоеЗначение,
+	ЗначенияПоказателей.Версия.ПериодОтчета.Представление КАК ПериодПредставление,
+	ЗначенияПоказателей.Версия.Сценарий КАК Сценарий,
+	ЗначенияПоказателей.Версия.Сценарий.Представление КАК СценарийПредставление,
+	ЗначенияПоказателей.Версия.Регистратор.ВидОтчета КАК ВидОтчета,
+	ЗначенияПоказателей.Версия.Регистратор.ВидОтчета.Представление КАК ВидОтчетаПредставление,
+	ЗначенияПоказателей.Показатель КАК Показатель,
+	СУММА(ВЫРАЗИТЬ(ЗначенияПоказателей.Значение КАК ЧИСЛО(15, 3))) КАК Знач
+{ВЫБРАТЬ
+	Показатель.*,
+	Организация.*,
+	Период.*,
+	Сценарий.*,
+	ВидОтчета.*}
+ИЗ
+	(ВЫБРАТЬ
+		ЗначенияПоказателейОтчетовСинтетика.Версия КАК Версия,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель КАК Показатель,
+		ИСТИНА КАК ИтоговоеЗначение,
+		НЕОПРЕДЕЛЕНО КАК Аналитика1,
+		НЕОПРЕДЕЛЕНО КАК Аналитика2,
+		НЕОПРЕДЕЛЕНО КАК Аналитика3,
+		НЕОПРЕДЕЛЕНО КАК Аналитика4,
+		НЕОПРЕДЕЛЕНО КАК Аналитика5,
+		НЕОПРЕДЕЛЕНО КАК Аналитика6,
+		ЗначенияПоказателейОтчетовСинтетика.Значение КАК Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетовСинтетика КАК ЗначенияПоказателейОтчетовСинтетика
+	{ГДЕ
+		ЗначенияПоказателейОтчетовСинтетика.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетовСинтетика.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетовСинтетика.Значение КАК Значение,
+		ЗначенияПоказателейОтчетовСинтетика.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов1.Версия,
+		ЗначенияПоказателейОтчетов1.Показатель,
+		ЗначенияПоказателейОтчетов1.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов1.Аналитика1,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов1.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов1 КАК ЗначенияПоказателейОтчетов1
+	{ГДЕ
+		ЗначенияПоказателейОтчетов1.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов1.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов1.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов1.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов1.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов1.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов1.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов1.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов1.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов1.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов2.Версия,
+		ЗначенияПоказателейОтчетов2.Показатель,
+		ЗначенияПоказателейОтчетов2.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов2.Аналитика1,
+		ЗначенияПоказателейОтчетов2.Аналитика2,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов2.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов2 КАК ЗначенияПоказателейОтчетов2
+	{ГДЕ
+		ЗначенияПоказателейОтчетов2.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов2.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов2.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов2.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов2.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов2.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов2.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов2.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов2.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов2.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов3.Версия,
+		ЗначенияПоказателейОтчетов3.Показатель,
+		ЗначенияПоказателейОтчетов3.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов3.Аналитика1,
+		ЗначенияПоказателейОтчетов3.Аналитика2,
+		ЗначенияПоказателейОтчетов3.Аналитика3,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов3.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов3 КАК ЗначенияПоказателейОтчетов3
+	{ГДЕ
+		ЗначенияПоказателейОтчетов3.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов3.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов3.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов3.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов3.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов3.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов3.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов3.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов3.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов3.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов4.Версия,
+		ЗначенияПоказателейОтчетов4.Показатель,
+		ЗначенияПоказателейОтчетов4.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов4.Аналитика1,
+		ЗначенияПоказателейОтчетов4.Аналитика2,
+		ЗначенияПоказателейОтчетов4.Аналитика3,
+		ЗначенияПоказателейОтчетов4.Аналитика4,
+		НЕОПРЕДЕЛЕНО,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов4.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов4 КАК ЗначенияПоказателейОтчетов4
+	{ГДЕ
+		ЗначенияПоказателейОтчетов4.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов4.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов4.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов4.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов4.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов4.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов4.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов4.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов4.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов4.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов5.Версия,
+		ЗначенияПоказателейОтчетов5.Показатель,
+		ЗначенияПоказателейОтчетов5.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов5.Аналитика1,
+		ЗначенияПоказателейОтчетов5.Аналитика2,
+		ЗначенияПоказателейОтчетов5.Аналитика3,
+		ЗначенияПоказателейОтчетов5.Аналитика4,
+		ЗначенияПоказателейОтчетов5.Аналитика5,
+		НЕОПРЕДЕЛЕНО,
+		ЗначенияПоказателейОтчетов5.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов5 КАК ЗначенияПоказателейОтчетов5
+	{ГДЕ
+		ЗначенияПоказателейОтчетов5.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов5.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов5.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов5.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов5.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов5.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов5.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов5.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов5.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов5.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетов6.Версия,
+		ЗначенияПоказателейОтчетов6.Показатель,
+		ЗначенияПоказателейОтчетов6.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетов6.Аналитика1,
+		ЗначенияПоказателейОтчетов6.Аналитика2,
+		ЗначенияПоказателейОтчетов6.Аналитика3,
+		ЗначенияПоказателейОтчетов6.Аналитика4,
+		ЗначенияПоказателейОтчетов6.Аналитика5,
+		ЗначенияПоказателейОтчетов6.Аналитика6,
+		ЗначенияПоказателейОтчетов6.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетов6 КАК ЗначенияПоказателейОтчетов6
+	{ГДЕ
+		ЗначенияПоказателейОтчетов6.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетов6.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетов6.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетов6.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетов6.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетов6.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетов6.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетов6.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетов6.Значение КАК Значение,
+		ЗначенияПоказателейОтчетов6.Показатель.Владелец.* КАК ВидОтчета}
+	
+	ОБЪЕДИНИТЬ ВСЕ
+	
+	ВЫБРАТЬ
+		ЗначенияПоказателейОтчетовНечисловые.Версия,
+		ЗначенияПоказателейОтчетовНечисловые.Показатель,
+		ЗначенияПоказателейОтчетовНечисловые.ИтоговоеЗначение,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика1,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика2,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика3,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика4,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика5,
+		ЗначенияПоказателейОтчетовНечисловые.Аналитика6,
+		ЗначенияПоказателейОтчетовНечисловые.Значение
+	ИЗ
+		РегистрСведений.ЗначенияПоказателейОтчетовНечисловые КАК ЗначенияПоказателейОтчетовНечисловые
+	ГДЕ
+		ЗначенияПоказателейОтчетовНечисловые.ИтоговоеЗначение = ИСТИНА
+	{ГДЕ
+		ЗначенияПоказателейОтчетовНечисловые.Версия.Регистратор.* КАК НастраиваемыйОтчет,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.Активность КАК Активность,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.Организация.* КАК Организация,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.ПериодОтчета.* КАК ПериодОтчета,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.Сценарий.* КАК Сценарий,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.Валюта.* КАК Валюта,
+		ЗначенияПоказателейОтчетовНечисловые.Версия.* КАК Версия,
+		ЗначенияПоказателейОтчетовНечисловые.Показатель.* КАК Показатель,
+		ЗначенияПоказателейОтчетовНечисловые.Значение КАК Значение,
+		ЗначенияПоказателейОтчетовНечисловые.Показатель.Владелец.* КАК ВидОтчета}) КАК ЗначенияПоказателей
+{ГДЕ
+	ЗначенияПоказателей.Аналитика1.* КАК Аналитика1,
+	ЗначенияПоказателей.Аналитика2.* КАК Аналитика2,
+	ЗначенияПоказателей.Аналитика3.* КАК Аналитика3,
+	ЗначенияПоказателей.Аналитика4.* КАК Аналитика4,
+	ЗначенияПоказателей.Аналитика5.* КАК Аналитика5,
+	ЗначенияПоказателей.Аналитика6.* КАК Аналитика6,
+	ЗначенияПоказателей.ИтоговоеЗначение КАК ИтоговоеЗначение}
+
+СГРУППИРОВАТЬ ПО
+	ЗначенияПоказателей.Версия.Регистратор.Ссылка,
+	ЗначенияПоказателей.Версия.Регистратор.Номер,
+	ЗначенияПоказателей.Версия.Организация,
+	ЗначенияПоказателей.Версия.Представление,
+	ЗначенияПоказателей.Версия.ПериодОтчета,
+	ЗначенияПоказателей.ИтоговоеЗначение,
+	ЗначенияПоказателей.Версия.ПериодОтчета.Представление,
+	ЗначенияПоказателей.Версия.Сценарий,
+	ЗначенияПоказателей.Версия.Сценарий.Представление,
+	ЗначенияПоказателей.Версия.Регистратор.ВидОтчета,
+	ЗначенияПоказателей.Версия.Регистратор.ВидОтчета.Представление,
+	ЗначенияПоказателей.Показатель</queryText>
+      <autoFillAvailableFields>true</autoFillAvailableFields>
+      <customQuery>true</customQuery>
+      <autoSaveUserSettings>true</autoSaveUserSettings>
+      <getInvisibleFieldPresentations>true</getInvisibleFieldPresentations>
+    </extInfo>
+  </attributes>
+  <parameters>
+    <name>АдресДанныхРасшифровки</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>АдресМассиваРасшифровок</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>Адрес_НастраиваемыеОтчеты</name>
+    <valueType>
+      <types>String</types>
+      <stringQualifiers/>
+    </valueType>
+  </parameters>
+  <parameters>
+    <name>Расшифровка</name>
+    <valueType/>
+  </parameters>
+  <commandInterface>
+    <navigationPanel/>
+    <commandBar/>
+  </commandInterface>
+</form:Form>

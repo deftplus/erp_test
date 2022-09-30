@@ -1,0 +1,92 @@
+'Функция определяет является ли текущая область областью раскрытия.
+Public Function Test(CurRow, Optional RegionSelect As Boolean = False) As Name
+    For Each CurName In ActiveWorkbook.Names
+        RegionName = CurName.Name
+        If InStr(RegionName, "_Шапка") = 0 And InStr(RegionName, "_Подвал") = 0 And (InStr(RegionName, "Область_Строка") = 0 Or RegionSelect = True) Then
+            Set CurRange = CurName.RefersToRange()
+            FirstRow = CurRange.Row
+            LastRow = CurRange.Rows(CurRange.Rows.Count).Row
+            If CurRow >= FirstRow And CurRow <= LastRow Then
+                Set Test = CurName
+                Exit Function
+            End If
+        End If
+    Next
+    
+End Function
+
+Public Sub AddNewLine()
+    
+    Set CurName = Test(ActiveCell().Row)
+    If Not (CurName Is Nothing) Then
+        Set CurRange = CurName.RefersToRange()
+        CurrentRow = CurRange.Rows(1).Row
+        Set MovedRow = CurRange.Rows(CurRange.Rows.Count)
+        
+        ActiveCell().EntireRow.Select
+        Protect_OFF
+        Application.CutCopyMode = False
+        Selection.Copy
+        Selection.Insert Shift:=xlDown
+        CurName.RefersToR1C1 = "=R" + CStr(CurrentRow) + ":R" + CStr(MovedRow.Row)
+        NumRows = CurRange.Rows.Count
+        On Error GoTo NoFormula
+        Set RangeFormulas = ActiveWorkbook.Names(CurName.Name + "_Подвал").RefersToRange().SpecialCells(xlCellTypeFormulas)
+        For Each CurCell In RangeFormulas.Cells
+            PosStart = InStr(CurCell.FormulaR1C1, "(")
+            StartFormula = Left(CurCell.FormulaR1C1, PosStart)
+            If ActiveCell().Row = CurrentRow Then
+            CurCell.FormulaR1C1 = StartFormula + "R[" + CStr(-NumRows - 1) + "]C:R[-1]C)"
+            Else
+            CurCell.FormulaR1C1 = StartFormula + "R[" + CStr(-NumRows) + "]C:R[-1]C)"
+            End If
+        Next
+NoFormula:
+        Protect_ON
+        On Error GoTo 0
+    End If
+    
+End Sub
+
+Public Sub RemoveLine()
+    
+    Set CurName = Test(ActiveCell().Row)
+    If Not (CurName Is Nothing) Then
+        Set CurRange = CurName.RefersToRange()
+        If CurRange.Rows.Count() <= 1 Then
+            MsgBox ("Нельзя удалить последнюю строчку в группе раскрытия")
+        Else
+            Protect_OFF
+            ActiveCell().EntireRow.Delete (xlShiftUp)
+            Protect_ON
+        End If
+        
+    End If
+    
+End Sub
+
+Public Sub ExpandLine()
+    Set CurName = Test(ActiveCell().Row, True)
+    If CurName Is Nothing Then
+        Set CurName = Test(ActiveCell().Row + 1, True)
+    End If
+    If Not (CurName Is Nothing) Then
+        On Error Resume Next
+        Protect_OFF
+        Rows(ActiveCell().Row + 1).ShowDetail = True
+        Protect_ON
+        On Error GoTo 0
+    End If
+End Sub
+
+Public Sub CollapseLine()
+    Set CurName = Test(ActiveCell().Row, True)
+    If Not (CurName Is Nothing) Then
+        On Error Resume Next
+        Protect_OFF
+        Rows(ActiveCell().Row).ShowDetail = False
+        Protect_ON
+        On Error GoTo 0
+    End If
+End Sub
+

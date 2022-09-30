@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Constant xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="89818a58-a960-4856-9dd3-55a9dcfb16da">
+  <producedTypes>
+    <managerType typeId="392e6c59-03fc-4669-a4ac-54fa3fe35ab2" valueTypeId="1cce551b-780e-490b-996f-7edcdf468aaa"/>
+    <valueManagerType typeId="8e6e775a-4483-4d66-9b5e-e45066606371" valueTypeId="644e71f8-38f7-4409-bd7b-17752c821e89"/>
+    <valueKeyType typeId="50b2a7fe-988c-549b-a73e-389f6d7ae6f4" valueTypeId="30af63a9-161d-5e85-b887-67d8416c0475"/>
+  </producedTypes>
+  <name>УдалитьСтатьяДвиженияДенежныхСредствКонвертацияВалютыСписание</name>
+  <synonym>
+    <key>ru</key>
+    <value>(не используется) Статья ДДС списания</value>
+  </synonym>
+  <type>
+    <types>CatalogRef.СтатьиДвиженияДенежныхСредств</types>
+  </type>
+  <useStandardCommands>true</useStandardCommands>
+  <minValue xsi:type="core:UndefinedValue"/>
+  <maxValue xsi:type="core:UndefinedValue"/>
+  <choiceParameters>
+    <name>Отбор.ПриходРасход</name>
+    <value xsi:type="core:ReferenceValue">
+      <value>Enum.ВидыДвиженийПриходРасход.EnumValue.Расход</value>
+    </value>
+  </choiceParameters>
+  <dataLockControlMode>Managed</dataLockControlMode>
+</mdclass:Constant>

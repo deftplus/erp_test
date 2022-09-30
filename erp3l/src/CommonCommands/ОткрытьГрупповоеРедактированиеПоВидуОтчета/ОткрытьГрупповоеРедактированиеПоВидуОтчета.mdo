@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonCommand xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="c22cf614-ca53-48ba-84d5-9c47fd01842e">
+  <name>ОткрытьГрупповоеРедактированиеПоВидуОтчета</name>
+  <synonym>
+    <key>ru</key>
+    <value>Обработка группового редактирования экземпляров отчета</value>
+  </synonym>
+  <group>FormCommandBarCreateBasedOn</group>
+  <commandParameterType>
+    <types>CatalogRef.ВидыОтчетов</types>
+  </commandParameterType>
+  <representation>Auto</representation>
+  <toolTip>
+    <key>ru</key>
+    <value>Групповое редактирование экземпляров отчетов</value>
+  </toolTip>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.ГрупповоеИзменениеДокументов</picture>
+  </picture>
+</mdclass:CommonCommand>

@@ -1,0 +1,43 @@
+    
+    On Error GoTo NoBar
+    
+    Set NewCB = Application.CommandBars.Add("Consolidation", , , True)
+    NewCB.Visible = True
+    
+    Set NewButton = NewCB.Controls.Add(msoControlButton, , , , True)
+    NewButton.Caption = "Добавить строку в группу раскрытия."
+    NewButton.Tag = "NewB"
+    NewButton.OnAction = "AddNewLine"
+    NewButton.Style = msoButtonIconAndCaption
+    NewButton.Width = 100
+    NewButton.FaceId = 240
+    NewButton.Visible = True
+    
+    Set NewButton = NewCB.Controls.Add(msoControlButton, , , , True)
+    NewButton.Caption = "Удалить строку из группы раскрытия."
+    NewButton.Tag = "NewB"
+    NewButton.OnAction = "RemoveLine"
+    NewButton.Style = msoButtonIconAndCaption
+    NewButton.Width = 100
+    NewButton.FaceId = 241
+    NewButton.Visible = True
+
+    Set NewButton = NewCB.Controls.Add(msoControlButton, , , , True)
+    NewButton.Caption = "Развернуть группу."
+    NewButton.Tag = "NewB"
+    NewButton.OnAction = "ExpandLine"
+    NewButton.Style = msoButtonIconAndCaption
+    NewButton.Width = 100
+    NewButton.FaceId = 242
+    NewButton.Visible = True
+
+    Set NewButton = NewCB.Controls.Add(msoControlButton, , , , True)
+    NewButton.Caption = "Свернуть группу."
+    NewButton.Tag = "NewB"
+    NewButton.OnAction = "CollapseLine"
+    NewButton.Style = msoButtonIconAndCaption
+    NewButton.Width = 100
+    NewButton.FaceId = 243
+    NewButton.Visible = True
+    
+    NoBar:
